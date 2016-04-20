@@ -4,6 +4,7 @@ import {HomeComponent} from "./home.component";
 import {AboutComponent} from "./about.component";
 import {FeaturesComponent} from "./features.component";
 import {ServicesComponent} from "./services.component";
+import {PricingComponent} from "./pricing.component";
 import {NavComponent} from "./nav.component";
 import {FooterComponent} from "./footer.component";
 
@@ -18,7 +19,9 @@ import {FooterComponent} from "./footer.component";
   { path: '/', name: 'Home', component: HomeComponent, useAsDefault: true },
   { path: '/about', name: 'About', component: AboutComponent},
   { path: '/features', name: 'Features', component: FeaturesComponent},
-   { path: '/services', name: 'Services', component: ServicesComponent},
+  { path: '/services', name: 'Services', component: ServicesComponent},
+  { path: '/pricing', name: 'Pricing', component: PricingComponent},
+ /*  { path: '/*', name: 'Default', redirectTo: 'Home'}*/
   /* { path: '/portfolio', name: 'Features', component: FeaturesComponent},
    { path: '/pricing', name: 'Features', component: FeaturesComponent},
    { path: '/portfolio', name: 'Features', component: FeaturesComponent},

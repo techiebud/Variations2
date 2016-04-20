@@ -1,11 +1,12 @@
 {
   "name": "variations2",
   "version": "1.0.0",
+  "scripts": {
+    "start": "live-server --entry-file=index.html",
+    "dev": "lite-server"
+  },
   "description": "This is for the new Variations web site.",
   "main": "main.js",
-  "scripts": {
-    "test": "dev"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/techiebud/Variations2.git"
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/techiebud/Variations2#readme",
   "devDependencies": {
     "jslint": "^0.9.6",
+    "lite-server": "^2.2.0",
     "tslint": "^3.5.0",
     "typescript": "^1.8.2"
   }
