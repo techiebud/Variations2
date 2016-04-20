@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Business Templates</title>
+    <title>The Variations Condominiums</title>
     <script>
         document.write('<base href="' + document.location + '" />');
     </script>
@@ -13,6 +13,7 @@
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/compiled/bootstrap-overrides.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="css/compiled/theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/site.css" />
 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet'
     type='text/css' />
@@ -25,14 +26,14 @@
     <script src="https://npmcdn.com/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
 
     <!-- Angular polyfill required everywhere -->
-    <script src="https://code.angularjs.org/2.0.0-beta.7/angular2-polyfills.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.9/angular2-polyfills.js"></script>
 
     <script src="https://code.angularjs.org/tools/system.js"></script>
      <script src="https://code.angularjs.org/tools/typescript.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-beta.7/Rx.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-beta.7/angular2.dev.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-beta.7/router.dev.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-beta.7/http.dev.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.9/Rx.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.9/angular2.dev.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.9/router.dev.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-beta.9/http.dev.js"></script>
 
 
     <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -41,7 +42,7 @@
 
     <script type="text/javascript" src="js/index-slider.js"></script>
 
-    <script>
+    <script type="text/javascript">
         System.config({
         transpiler: 'typescript', 
         typescriptOptions: { emitDecoratorMetadata: true }, 
@@ -49,6 +50,7 @@
           'app': {defaultExtension: 'ts'} 
         } 
       });
+    debugger;
     System.import('app/main')
           .then(null, console.error.bind(console));
     </script>
