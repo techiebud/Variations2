@@ -12,8 +12,10 @@
 
     <!-- Styles -->
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/compiled/bootstrap-overrides.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="css/compiled/theme.css" />
+    
     <link rel="stylesheet" type="text/css" href="css/site.css" />
 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet'
@@ -51,7 +53,7 @@
           'app': {defaultExtension: 'ts'} 
         } 
       });
-    debugger;
+     //debugger;
     System.import('app/main')
           .then(null, console.error.bind(console));
     </script>
@@ -59,8 +61,9 @@
 
 </head>
 
+<span class="sr-only">Loading...</span>
 <body class="pull_top">
-    <var-main>Loading Variations website.....please wait.</var-main>
+    <var-main><div class="loader"><i class="fa fa-spinner fa-spin fa-3x fa-fw margin-bottom"></i>&nbsp;Loading The Variations website.....please wait</div></var-main>
 </body>
 
 </html>

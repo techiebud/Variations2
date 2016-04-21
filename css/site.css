@@ -3,3 +3,10 @@ main > section {
     margin-top: 137px;
     color: blue;
 }
+
+.loader {
+    margin-top: 200px;
+    padding-left: 200px;
+    font-size: xx-large;
+    color: magenta;
+}
