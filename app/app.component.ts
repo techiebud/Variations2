@@ -8,11 +8,12 @@ import {PricingComponent} from "./pricing.component";
 import {ContactUsComponent} from "./contact-us.component";
 import {NavComponent} from "./nav.component";
 import {FooterComponent} from "./footer.component";
+import {AuthRouterOutlet} from "./shared/auth-router-outlet.directive";
 
 @Component({
     selector: "var-main",
     templateUrl: "app/app.component.html",
-    directives: [ROUTER_DIRECTIVES, HomeComponent, AboutComponent, NavComponent, FooterComponent],
+    directives: [AuthRouterOutlet, FooterComponent, NavComponent],
     providers: [ROUTER_PROVIDERS]
 })
 
