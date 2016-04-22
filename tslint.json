@@ -29,6 +29,7 @@
       140
     ],
     "member-access": true,
+    "member-no-default-access": false,
     "member-ordering": [
       true,
       "public-before-private",
@@ -50,7 +51,7 @@
     ],
     "no-construct": true,
     "no-constructor-vars": true,
-    "no-debugger": true,
+    "no-debugger": true,     
     "no-duplicate-key": true,
     "no-duplicate-variable": true,
     "no-empty": true,
