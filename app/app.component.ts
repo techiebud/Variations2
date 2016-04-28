@@ -6,9 +6,11 @@ import {FeaturesComponent} from "./features.component";
 import {ServicesComponent} from "./services.component";
 import {PricingComponent} from "./pricing.component";
 import {ContactUsComponent} from "./contact-us.component";
+import {SignupComponent} from "./unprotected/signup.component";
 import {NavComponent} from "./nav.component";
 import {FooterComponent} from "./footer.component";
 import {AuthRouterOutlet} from "./shared/auth-router-outlet.directive";
+// import * as toastr from 'toastr';
 
 @Component({
     selector: "var-main",
@@ -24,6 +26,8 @@ import {AuthRouterOutlet} from "./shared/auth-router-outlet.directive";
   { path: '/services', name: 'Services', component: ServicesComponent},
   { path: '/pricing', name: 'Pricing', component: PricingComponent},
   { path: '/contactus', name: 'ContactUs', component: ContactUsComponent},
+  { path: '/signup', name: 'Signup', component: SignupComponent},
+  
  /*  { path: '/*', name: 'Default', redirectTo: 'Home'}*/
   /* { path: '/portfolio', name: 'Features', component: FeaturesComponent},
    { path: '/pricing', name: 'Features', component: FeaturesComponent},
@@ -33,7 +37,10 @@ import {AuthRouterOutlet} from "./shared/auth-router-outlet.directive";
 ])
 export class AppComponent implements OnInit {
 
-    constructor() { }
+    constructor() {
+      
+     // toastr.info("Helllo World");
+     }
 
     ngOnInit() { }
 }

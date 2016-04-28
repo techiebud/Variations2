@@ -25,5 +25,8 @@
     "lite-server": "^2.2.0",
     "tslint": "^3.5.0",
     "typescript": "^1.8.2"
+  },
+  "dependencies": {
+    "toastr": "^2.1.2"
   }
 }
