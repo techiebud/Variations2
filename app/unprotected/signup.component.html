@@ -1,19 +1,68 @@
+<div class="container">
+
     <h3>Please sign up to use all features</h3>
-        <form [ngFormModel]="myForm" (ngSubmit)="onSignup()">
+    <!--<h3>Please sign up to use all features</h3>
+        <form [ngFormModel]="signUpForm" (ngSubmit)="onSignup()">
             <div class="input-group">
                 <label for="email">E-Mail</label>
-                <input [ngFormControl]="myForm.find('email')" type="email" id="email" #email="ngForm">
-                <span *ngIf="!email.pristine && email.errors != null && email.errors['noEmail']">Invalid mail address</span>
-                <!--<span *ngIf="email.errors['isTaken']">This username has already been taken</span>-->
+                <input [ngFormControl]="signUpForm.find('email')" type="email" id="email" #email="ngForm">
+                <span *ngIf="!email.pristine && email.errors != null && email.errors['noEmail']">Invalid mail address</span>       
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
-                <input [ngFormControl]="myForm.find('password')" type="password" id="password">
+                <input [ngFormControl]="signUpForm.find('password')" type="password" id="password">
             </div>
             <div class="input-group">
                 <label for="confirm-password">Confirm Password</label>
-                <input [ngFormControl]="myForm.find('confirmPassword')" type="password" id="confirm-password" #confirmPassword="ngForm">
+                <input [ngFormControl]="signUpForm.find('confirmPassword')" type="password" id="confirm-password" #confirmPassword="ngForm">
                 <span *ngIf="!confirmPassword.pristine && confirmPassword.errors != null && confirmPassword.errors['passwordsNotMatch']">Passwords do not match</span>
             </div>
-            <button type="submit" [disabled]="!myForm.valid">Sign Up</button>
+            <button type="submit" [disabled]="!signUpForm.valid">Sign Up</button>
         </form>
+        
+        </div>-->
+
+
+
+
+
+    <div class="form">
+        <form [ngFormModel]="signUpForm" (ngSubmit)="onSignup()">
+            <div class="input-group">
+                <label for="email">E-Mail</label>
+                <input [ngFormControl]="signUpForm.find('email')" type="email" id="email" #email="ngForm" placeholder="Email" class="form-control">
+                <span *ngIf="!email.pristine && email.errors != null && email.errors['noEmail']">Invalid mail address</span>
+            </div>
+            <div class="input-group">
+                <label for="firstNMme">First Name</label>
+                <input [ngFormControl]="signUpForm.find('firstName')" type="text" id="firstName" placeholder="First Name" class="form-control">
+            </div>
+             <div class="input-group">
+                <label for="lastName">Last Name</label>
+                <input [ngFormControl]="signUpForm.find('lastName')" type="text" id="lastName" placeholder="Last Name" class="form-control">
+            </div>
+              <div class="input-group">
+                <label for="Unit">Unit</label>
+                <input [ngFormControl]="signUpForm.find('unit')" type="text" id="unit" placeholder="Unit" class="form-control">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input [ngFormControl]="signUpForm.find('password')" type="password" id="password" placeholder="Password" class="form-control">
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input [ngFormControl]="signUpForm.find('confirmPassword')" type="password" id="confirm-password" #confirmPassword="ngForm"
+                    placeholder="Confirm Password" class="form-control">
+                <span *ngIf="!confirmPassword.pristine && confirmPassword.errors != null && confirmPassword.errors['passwordsNotMatch']">Passwords do not match</span>
+            </div>
+            <button type="submit" [disabled]="!signUpForm.valid">Sign Up</button>
+
+            <div class="forgot">
+                <span>Already have an account?</span>
+                <a href="" [routerLink]="['Signin']">Sign In</a>
+            </div>
+        </form>
+    </div>
+
+
+</div>

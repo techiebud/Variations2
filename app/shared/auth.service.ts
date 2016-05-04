@@ -6,27 +6,50 @@ declare var Firebase: any;
 declare var toastr: any;
 
 @Injectable(
-  
+
 )
 export class AuthService {
-    
-    constructor () {}
+
+    constructor() { }
     private _userLoggedOut = new EventEmitter<any>();
     private _userLoggedIn = new EventEmitter<any>();
-    
+
     signupUser(user: User) {
         const firebaseRef = new Firebase(AppSettings.FIREBASE_APP);
         localStorage.setItem("signedUp", "false");
         firebaseRef.createUser({
             email: user.email,
             password: user.password
-        }, function(error, userData) {
+        }, function (error, userData) {
+            var errorMessage: string = "";
             if (error) {
-                toastr.error(error);
-                console.error(error);
+                   localStorage.setItem("signedUp", "error");
+                switch (error.code) {
+                    case "EMAIL_TAKEN":
+                        errorMessage = "The new user account cannot be created because the email is already in use.";                      
+                        console.log(errorMessage);      
+                        toastr.error(errorMessage);            
+                        break;
+                    case "INVALID_EMAIL":
+                        errorMessage = "The specified email is not a valid email.";
+                        console.log(errorMessage);
+                        toastr.error(errorMessage);
+                        break;
+                    default:
+                        errorMessage = "Error creating user (" + error + ")";
+                        console.log(errorMessage);
+                        toastr.error(errorMessage);
+                }   //end switch statement          
+
             } else {
-                toastr.success("Successfully created user: " + userData.uid);
-                console.log('Successfully created user: ' + userData.uid);
+                const firebaseRef = new Firebase(AppSettings.FIREBASE_APP + "/users");
+                firebaseRef.child(userData.uid).set({firstName: user.firstName, lastName: user.lastName});
+              //  firebaseRef.push({firstName: 'Lohnny', lastName: 'sims', userKey: userData.uid});
+             //   var userIdKey : string  =  "'" + userData.uid + "'";
+              //  firebaseRef.push({: { 'text': 'testing'}});
+                
+                toastr.success("Congratulations!   Your user account has been successfully created."); 
+                console.log('Succesfully created user: ' + userData.uid);
                 localStorage.setItem("signedUp", "true");
             }
         });
@@ -37,7 +60,7 @@ export class AuthService {
         firebaseRef.authWithPassword({
             email: user.email,
             password: user.password
-        }, function(error, authData) {
+        }, function (error, authData) {
             if (error) {
                 toastr.error(error);
                 console.error(error);
@@ -52,12 +75,12 @@ export class AuthService {
         localStorage.removeItem('token');
         this._userLoggedOut.emit(null);
     }
-    
+
     getLoggedInEvent(): EventEmitter {
         return this._userLoggedIn;
-        
+
     }
-    
+
     getLoggedOutEvent(): EventEmitter {
         return this._userLoggedOut;
     }
