@@ -28,8 +28,10 @@
                         <li><a href="" [routerLink]="['Services']">Services</a></li>
                     </ul>
                 </li>
-                <li><a href="" [routerLink]="['Signup']">SIGN UP</a></li>
-                <li><a href="sign-in.html">SIGN IN</a></li>
+                <li *ngIf="!isAuth()"><a href="" [routerLink]="['Signup']">SIGN UP</a></li>
+                <li *ngIf="!isAuth()"><a href="" [routerLink]="['Signin']">SIGN IN</a></li>
+                <li *ngIf="isAuth()"><a (click)="logout()">LOG OUT</a></li>
+       
             </ul>
         </div>
     </div>
