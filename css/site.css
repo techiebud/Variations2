@@ -20,3 +20,6 @@ main {
 html {
     margin: -37px;
 }
+.fa-caret-down {
+    padding: 5px;
+}
