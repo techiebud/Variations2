@@ -23,12 +23,12 @@ export class AuthService {
         }, function (error, userData) {
             var errorMessage: string = "";
             if (error) {
-                   localStorage.setItem("signedUp", "error");
+                localStorage.setItem("signedUp", "error");
                 switch (error.code) {
                     case "EMAIL_TAKEN":
-                        errorMessage = "The new user account cannot be created because the email is already in use.";                      
-                        console.log(errorMessage);      
-                        toastr.error(errorMessage);            
+                        errorMessage = "The new user account cannot be created because the email is already in use.";
+                        console.log(errorMessage);
+                        toastr.error(errorMessage);
                         break;
                     case "INVALID_EMAIL":
                         errorMessage = "The specified email is not a valid email.";
@@ -43,20 +43,20 @@ export class AuthService {
 
             } else {
                 const firebaseRef = new Firebase(AppSettings.FIREBASE_APP + "/users");
-                firebaseRef.child(userData.uid).set({firstName: user.firstName, lastName: user.lastName});
-              //  firebaseRef.push({firstName: 'Lohnny', lastName: 'sims', userKey: userData.uid});
-             //   var userIdKey : string  =  "'" + userData.uid + "'";
-              //  firebaseRef.push({: { 'text': 'testing'}});
-                
-                toastr.success("Congratulations!   Your user account has been successfully created."); 
-                console.log('Succesfully created user: ' + userData.uid);
-                localStorage.setItem("signedUp", "true");
+                firebaseRef.child(userData.uid).set({ firstName: user.firstName, lastName: user.lastName, unit: user.unit }, (error) => {
+                    toastr.success("Congratulations!   Your user account has been successfully created.");
+                    console.log('Succesfully created user: ' + userData.uid);
+                    localStorage.setItem("signedUp", "true");
+                });
+
+
             }
         });
     }
 
     signinUser(user: User) {
         const firebaseRef = new Firebase(AppSettings.FIREBASE_APP);
+        localStorage.removeItem('token');
         firebaseRef.authWithPassword({
             email: user.email,
             password: user.password
@@ -65,7 +65,7 @@ export class AuthService {
                 toastr.error(error);
                 console.error(error);
             } else {
-                localStorage.setItem('token', authData.token);
+                localStorage.setItem('token', authData.token);     
                 console.log(authData);
             }
         });
@@ -86,6 +86,7 @@ export class AuthService {
     }
 
     isAuthenticated(): boolean {
+
         return localStorage.getItem('token') !== null;
     }
 

@@ -3,6 +3,7 @@ import {FormBuilder, ControlGroup, Validators, Control} from "angular2/common";
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router} from "angular2/router";
 import {AuthService} from "../shared/auth.service";
 declare var toastr: any;
+declare var $: any;  //jquery
 
 
 @Component({
@@ -14,12 +15,16 @@ export class SignupComponent implements OnInit {
     error = false;
     errorMessage = '';
     intervalId = 0;
+    $pleaseWait: any;
 
     constructor(private _fb: FormBuilder, private _authService: AuthService, private _router: Router) {
+        
+          this.$pleaseWait = $("#pleaseWaitDialog");
+           //  this.showWait();      
     }
 
     onSignup() {
-        toastr.info("onSignUp");
+        this.showWait();       
         localStorage.removeItem("signedUp");
         if (this.intervalId > 0) {
             clearInterval(this.intervalId);
@@ -28,16 +33,16 @@ export class SignupComponent implements OnInit {
         this._authService.signupUser(this.signUpForm.value);
 
         this.intervalId = setInterval(() => {
-            toastr.warning("signing up");
-            console.log("signing up");
+        
             if (localStorage.getItem("signedUp") != null) {
                 if (localStorage.getItem("signedUp") == "error") {
                     clearInterval(this.intervalId);
+                    this.hideWait();
                 }
                 else {
-                    if (localStorage.getItem("signedUp") == "true") {
-                        toastr.warning("navigating to home...");
+                    if (localStorage.getItem("signedUp") == "true") {                   
                         clearInterval(this.intervalId);
+                        this.hideWait();
                         this._router.navigate(['Signin']);
 
                     }
@@ -46,6 +51,14 @@ export class SignupComponent implements OnInit {
 
 
         }, 500);  //half seoond
+    }
+
+    showWait() : any {
+        this.$pleaseWait.modal();       
+        
+    }
+    hideWait(): any {
+        this.$pleaseWait.modal('hide');
     }
 
     ngOnInit(): any {

@@ -13,6 +13,7 @@ import {FooterComponent} from "./footer.component";
 import {AuthRouterOutlet} from "./shared/auth-router-outlet.directive";
 import {AuthService} from "./shared/auth.service";
 declare var toastr: any;
+declare var $: any;
 
 
 @Component({
@@ -41,9 +42,10 @@ export class AppComponent implements OnInit {
      }
 
     ngOnInit() : any {
-          toastr.info("Welcome!");
+        //  toastr.info("Welcome!");
           this._authService.getLoggedOutEvent().subscribe(() => this._router.navigate(['Signin']));
           this._authService.getLoggedInEvent().subscribe(() => this._router.navigate(['Home']));
+   
    
      }
 }
