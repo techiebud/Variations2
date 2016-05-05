@@ -20,6 +20,7 @@ main {
 html {
     margin: -37px;
 }
-.fa-caret-down {
-    padding: 5px;
+.dropdown:hover { 
+    background-color: #428bca;
 }
+
