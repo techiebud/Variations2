@@ -23,4 +23,6 @@ html {
 .dropdown:hover { 
     background-color: #428bca;
 }
-
+.section_header {
+    font-family: Courier New, Courier, monospace;
+}
