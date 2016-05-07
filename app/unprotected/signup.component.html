@@ -27,7 +27,7 @@
 
 
     <div class="form">
-        <form [ngFormModel]="signUpForm" (ngSubmit)="onSignup()">
+        <form [ngFormModel]="signUpForm" (ngSubmit)="onSignup()" novalidate>
             <div class="input-group">
                 <label for="email">E-Mail</label>
                 <input [ngFormControl]="signUpForm.find('email')" type="email" id="email" #email="ngForm" placeholder="Email" class="form-control">
