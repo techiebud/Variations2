@@ -79,11 +79,8 @@ export class SignupComponent implements OnInit {
     }
 
     isEmail(control: Control): { [s: string]: boolean } {
-<<<<<<< HEAD
-        if (!control.value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/)) {
-=======
+
         if (!control.value.match(/^[a-z0-9_\+-]+(\.[a-z0-9_\+-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*\.([a-z]{2,4})$/)) {
->>>>>>> 2b970ff67c8228af5d9434db2ab930f81e06bdbd
             return { noEmail: true };
         }
     }
