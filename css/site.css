@@ -20,9 +20,9 @@ main {
 html {
     margin: -37px;
 }
-.dropdown:hover { 
+/*.dropdown:hover { 
     background-color: #428bca;
-}
+}*/
 .section_header {
     font-family: Courier New, Courier, monospace;
 }

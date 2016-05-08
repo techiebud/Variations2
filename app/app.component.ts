@@ -5,7 +5,7 @@ import {AboutComponent} from "./about.component";
 import {FeaturesComponent} from "./features.component";
 import {BoardComponent} from "./board.component";
 import {ServicesComponent} from "./services.component";
-import {PricingComponent} from "./pricing.component";
+import {EventsComponent} from "./events.component";
 import {ContactUsComponent} from "./contact-us.component";
 import {SignupComponent} from "./unprotected/signup.component";
 import {SigninComponent} from "./unprotected/signin.component";
@@ -30,7 +30,7 @@ declare var $: any;
   { path: '/board', name: 'Board', component: BoardComponent},
   { path: '/features', name: 'Features', component: FeaturesComponent},
   { path: '/services', name: 'Services', component: ServicesComponent},
-  { path: '/pricing', name: 'Pricing', component: PricingComponent},
+  { path: '/events', name: 'Events', component: EventsComponent},
   { path: '/contactus', name: 'ContactUs', component: ContactUsComponent},
   { path: '/signup', name: 'Signup', component: SignupComponent},
   { path: '/signin', name: 'Signin', component: SigninComponent},
