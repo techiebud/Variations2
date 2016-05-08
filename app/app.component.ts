@@ -3,6 +3,7 @@ import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router } from "angular
 import {HomeComponent} from "./home.component";
 import {AboutComponent} from "./about.component";
 import {FeaturesComponent} from "./features.component";
+import {BoardComponent} from "./board.component";
 import {ServicesComponent} from "./services.component";
 import {PricingComponent} from "./pricing.component";
 import {ContactUsComponent} from "./contact-us.component";
@@ -26,6 +27,7 @@ declare var $: any;
 @RouteConfig([
   { path: '/', name: 'Home', component: HomeComponent, useAsDefault: true },
   { path: '/about', name: 'About', component: AboutComponent},
+  { path: '/board', name: 'Board', component: BoardComponent},
   { path: '/features', name: 'Features', component: FeaturesComponent},
   { path: '/services', name: 'Services', component: ServicesComponent},
   { path: '/pricing', name: 'Pricing', component: PricingComponent},

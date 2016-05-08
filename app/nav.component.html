@@ -12,7 +12,8 @@
 
         <div class="collapse navbar-collapse navbar-ex1-collapse" role="navigation">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="" [routerLink]="['About']">ABOUT US</a></li>
+                <li *ngIf="!isAuth()"><a href="" [routerLink]="['About']">ABOUT US</a></li>
+                <li *ngIf="isAuth()"><a href="" [routerLink]="['Board']">THE BOARD</a></li>
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">VARIATION INFO</a>
@@ -34,15 +35,11 @@
                     </ul>
                 </li>
                 <li class="dropdown" *ngIf="isAuth()">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">RESIDENTS</a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">DOCUMENTS</a>
                     <ul class="dropdown-menu">
-                        <li><a href="" target="_blank">The Board</a></li>
-                        <li><a href="" target="_blank">Documents</a></li>
-                        <li><a href="" target="_blank">Newsletters</a></li>
-                        <li><a href="" target="_blank">Board Meeting Minutes</a></li>
-                        <li><a href="" target="_blank">Financial Statements</a></li>
-                        <li><a href="" target="_blank">Calendar of Events</a></li>
-                        <li><a href="" target="_blank">Gallery</a></li>
+                        <li><a href="documents\Directory.pdf" target="_blank">Directory</a></li>
+                        <li><a href="documents\CertificateOfInsurance.pdf" target="_blank">Certificate of Liability Insurance</a></li>
+                        <li><a href="documents\2016Budget.pdf" target="_blank">2016 Budget</a></li>  
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -52,9 +49,8 @@
                         <li><a href="" [routerLink]="['Services']">Services</a></li>
                     </ul>
                 </li>
-                <li *ngIf="!isAuth()"><a href="" [routerLink]="['Signup']">SIGN UP</a></li>
                 <li *ngIf="!isAuth()"><a href="" [routerLink]="['Signin']">SIGN IN</a></li>
-                <li *ngIf="isAuth()"><a (click)="logout()">LOG OUT</a></li>
+                <li *ngIf="isAuth()"><a href="" (click)="logout()">LOG OUT</a></li>
 
             </ul>
         </div>

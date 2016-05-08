@@ -26,3 +26,8 @@ html {
 .section_header {
     font-family: Courier New, Courier, monospace;
 }
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
