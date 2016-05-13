@@ -4,14 +4,8 @@
     font-size: xx-large;
     color: seagreen;
 }
-.begin {
-    background: url(../img/varsign3.JPG);
-    background-size: cover;
-    background-position: center;
-     width: 100%;
-    height: 100%; 
-}
-.navbar-inverse{
+
+.navbar-inverse {
     background-color: #216839
  }
    .navbar-inverse .navbar-brand {
@@ -19,4 +13,13 @@
 }
 .navbar-inverse .navbar-nav>li>a {
     color: black;
+}
+
+#showcase{
+    margin-top: 100px;
+     background: url(../img/varsign3.JPG);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
 }
