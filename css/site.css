@@ -57,3 +57,12 @@
 .icon-next, .icon-prev{
     color: green;
 }
+.copyright {
+    border-top: #FFF 1px solid;
+    background: #eceae9;
+    font-size: 12px;
+    color: #999999;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+    padding: 30px 0;
+    margin-top: 94px;
+}
