@@ -7,50 +7,25 @@ declare var $: any;  //jquery
 
 
 @Component({
-    templateUrl: "app/unprotected/signup.component.html", 
+    templateUrl: "app/unprotected/signup.component.html",
     directives: [ROUTER_DIRECTIVES],
+    
 })
 export class SignupComponent implements OnInit {
     signUpForm: ControlGroup;
-    error = false;
-    errorMessage = '';
-    intervalId = 0;
+   
     $pleaseWait: any;
 
-    constructor(private _fb: FormBuilder, private _authService: AuthService, private _router: Router) {
+    constructor(private _fb: FormBuilder, private _authService: AuthService) {
         
           this.$pleaseWait = $("#pleaseWaitDialog");
            //  this.showWait();      
     }
 
     onSignup() {
-        this.showWait();       
-        localStorage.removeItem("signedUp");
-        if (this.intervalId > 0) {
-            clearInterval(this.intervalId);
-        }
-
-        this._authService.signupUser(this.signUpForm.value);
-
-        this.intervalId = setInterval(() => {
         
-            if (localStorage.getItem("signedUp") != null) {
-                if (localStorage.getItem("signedUp") == "error") {
-                    clearInterval(this.intervalId);
-                    this.hideWait();
-                }
-                else {
-                    if (localStorage.getItem("signedUp") == "true") {                   
-                        clearInterval(this.intervalId);
-                        this.hideWait();
-                        this._router.navigate(['Signin']);
-
-                    }
-                }
-            };
-
-
-        }, 500);  //half seoond
+        this._authService.signupUser(this.signUpForm.value);
+ 
     }
 
     showWait() : any {

@@ -3,7 +3,7 @@
 
 <head>
     <title>The Variations Condominiums</title>
-  <!--  <script>
+    <!--  <script>
         document.write('<base href="' + document.location + '" />');
     </script>-->
     <base href="/" />
@@ -15,19 +15,19 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <!--<link rel="stylesheet" href="css/compiled/bootstrap-overrides.css" type="text/css" />-->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" type="text/css" />
-    
+
     <!--<link rel="stylesheet" type="text/css" href="css/compiled/theme.css" />-->
-    
+
     <link rel="stylesheet" type="text/css" href="css/site.css" />
 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet'
-    type='text/css' />
+        type='text/css' />
 
     <!--<link rel="stylesheet" href="css/compiled/index.css" type="text/css" media="screen" />-->
-    <link rel="stylesheet" type="text/css" href="css/lib/animate.css" media="screen, projection" /> 
+    <link rel="stylesheet" type="text/css" href="css/lib/animate.css" media="screen, projection" />
     <!-- IE required polyfills, in this exact order -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.34.1/es6-shim.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.20/system-polyfills.js"></script>
     <script src="https://npmcdn.com/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
@@ -36,25 +36,37 @@
     <script src="https://code.angularjs.org/2.0.0-beta.9/angular2-polyfills.js"></script>
 
     <script src="https://code.angularjs.org/tools/system.js"></script>
-     <script src="https://code.angularjs.org/tools/typescript.js"></script>
+    <script src="https://code.angularjs.org/tools/typescript.js"></script>
     <script src="https://code.angularjs.org/2.0.0-beta.9/Rx.js"></script>
     <script src="https://code.angularjs.org/2.0.0-beta.9/angular2.dev.js"></script>
     <script src="https://code.angularjs.org/2.0.0-beta.9/router.dev.js"></script>
     <script src="https://code.angularjs.org/2.0.0-beta.9/http.dev.js"></script>
-     <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
-     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.js"></script>
-   
+    <script src="https://www.gstatic.com/firebasejs/3.0.0/firebase.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.js"></script>
 
 
-    
+
+
 
     <script src="js/theme.js"></script>
 
-    
+
 
     <script type="text/javascript" src="js/index-slider.js"></script>
 
+
+
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+     
+
+    </script>
+
+
     <script type="text/javascript">
+    
+    
         System.config({
         transpiler: 'typescript', 
         typescriptOptions: { emitDecoratorMetadata: true }, 
@@ -71,10 +83,13 @@
 </head>
 
 <span class="sr-only">Loading...</span>
+
 <body class="pull_top">
-    <var-main><div class="loader"><i class="fa fa-spinner fa-spin fa-3x fa-fw margin-bottom"></i>&nbsp;Loading The Variations website.....please wait</div></var-main>
-    
-<div class="modal hide" id="pleaseWaitDialog" data-backdrop="static" data-keyboard="false">
+    <var-main>
+        <div class="loader"><i class="fa fa-spinner fa-spin fa-3x fa-fw margin-bottom"></i>&nbsp;Loading The Variations website.....please wait</div>
+    </var-main>
+
+    <div class="modal hide" id="pleaseWaitDialog" data-backdrop="static" data-keyboard="false">
         <div class="modal-header">
             <h1>Processing...</h1>
         </div>
@@ -84,7 +99,7 @@
             </div>
         </div>
     </div>
-</div>
+    </div>
 </body>
 
 
