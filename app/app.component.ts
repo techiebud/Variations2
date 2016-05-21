@@ -48,25 +48,23 @@ declare var firebase: any;
 ])
 export class AppComponent implements OnInit {
 
-    constructor(private _router: Router, private _authService: AuthService) {
-        //.  toastr.error("Constructor AppComponent!");
-        
-         
-
+    constructor(private _router: Router, private _authService: AuthService) {     
 
     }
 
     ngOnInit(): any {
         //  toastr.info("Welcome!");        
-       this._authService.getLoggedInEvent().subscribe(() => {
-            toastr.info("LOGGED IN!");
-            this._router.navigate(['Home'])}
-            );
+        this._authService.getLoggedInEvent().subscribe(() => {           
+            console.log("user logged in");
+            this._router.navigate(['Home'])
+        }
+        );
+
+        this._authService.getLoggedOutEvent().subscribe(() => {           
+            toastr.success("You have successfully logged out.");
+            this._router.navigate(['Home']);
+        }
+        );
 
     }
-}
-
-export class AppSettings {
-
-  //  public static get FIREBASE_APP(): string { return 'https://thevariations.firebaseapp.com'; }
 }

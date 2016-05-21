@@ -1,16 +1,13 @@
 import {Injectable, EventEmitter} from "angular2/core";
-import {AppSettings}  from "../app.component";
 import {User} from "./user.interface";
 
 declare var firebase: any;
 declare var toastr: any;
 
 @Injectable(
-
 )
 export class AuthService {
-    
-    
+
     private _userLoggedOut = new EventEmitter<any>();
     private _userLoggedIn = new EventEmitter<any>();
 
@@ -24,23 +21,21 @@ export class AuthService {
         };
         firebase.initializeApp(config);
 
-        firebase.auth().onAuthStateChanged(function (user) {
+        firebase.auth().onAuthStateChanged((user) => {
             if (user) {
-                toastr.success("Congratulations, you have successfully logged in.");
-                this._userLoggedIn.emit(null);            
-                
+                console.log("User has signed in");
+                console.log(user);               
+                this._userLoggedIn.emit(null);
             } else {
-               toastr.info("Residents, please log in to view all features.");
+               // toastr.info("Residents, please log in to view all features.");
             }
         });
-        
-        this._userLoggedIn.emit(null);
+
     }
     signupUser(user: User) {
 
-    
-        var email: string = user.email,
-        var password: string = user.password
+        var email: string = user.email;
+        var password: string = user.password;
 
         firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
             localStorage.setItem("signedUp", "error");
@@ -67,13 +62,14 @@ export class AuthService {
                     toastr.error(errorMessage);
 
             }   //end switch statement      
-        });  
+        });
     }  //signup user
 
     signinUser(user: User) {
 
         firebase.auth().signInWithEmailAndPassword(user.email, user.password).catch(function (error) {
             // Handle Errors here.
+            console.log(error);
             var errorCode = error.code;
             var errorMessage = error.message;
             toastr.error(errorMessage);
@@ -83,8 +79,9 @@ export class AuthService {
 
 
 
-    logout() {
-        firebase.auth().signOut().then(function () {
+    logout() {     
+        console.log("auth: logout");
+        firebase.auth().signOut().then(() => {
             this._userLoggedOut.emit(null);
         }, function (error) {
             toastr.error("Cannot sign user out (" + error + ")");
@@ -93,13 +90,13 @@ export class AuthService {
     }
 
     getLoggedInEvent(): EventEmitter {
-      //  toastr.error("getLoggedInEvent()");
         return this._userLoggedIn;
 
     }
 
     getLoggedOutEvent(): EventEmitter {
- 
+
+        console.log(this._userLoggedOut);
         return this._userLoggedOut;
     }
 

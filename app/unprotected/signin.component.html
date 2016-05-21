@@ -1,13 +1,9 @@
-
-<div id="sign_in1">
+<div id="sign_in">
     <div class="container">
         <div class="row">
             <div class="col-md-12 header">
                 <h4>Sign in to your account</h4>
             </div>
-
-
-
             <div class="col-md-4">
                 <form [ngFormModel]="signinForm" (ngSubmit)="onSignin()" class="form-inline">
                     <div class="input-group">
@@ -18,26 +14,34 @@
                         <label for="password">Password</label>
                         <input [ngFormControl]="signinForm.find('password')" type="password" id="password" placeholder="Password" class="form-control">
                     </div>
-              
+
+                    <div class="input-group">&nbsp;</div>
+
                     <button type="submit" [disabled]="!signinForm.valid">Sign In</button>
                 </form>
             </div>
-
-            <div class="col-md-12">
-                <div class="col-md-6 remember">
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="remember">
                     <label class="checkbox">
                             <input type="checkbox"> Remember me
                         </label>
                     <a href="reset.html">Forgot password?</a>
                 </div>
+            </div>
+        </div>
+        
+        <div class="row">&nbsp;</div>
 
-                <div class="col-md-6">
-                    <div class="dosnt">
-                        <span>Don’t have an account?</span>
-                          <a href="" [routerLink]="['Signup']">Sign Up</a>
-                    </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="dosnt">
+                    <span>Don’t have an account?</span>
+                    <a href="" [routerLink]="['Signup']">Sign Up</a>
                 </div>
             </div>
         </div>
     </div>
+
 </div>

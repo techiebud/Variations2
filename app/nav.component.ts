@@ -2,6 +2,8 @@ import {Component, OnInit} from "angular2/core";
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from "angular2/router";
 import {AuthService} from "./shared/auth.service";
 
+declare var toastr: any;
+
 
 
 @Component({
@@ -21,6 +23,7 @@ export class NavComponent implements OnInit {
     }
 
     logout() {
+       console.log("nav: logout");
         this._authService.logout();
     }
 

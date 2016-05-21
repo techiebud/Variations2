@@ -58,8 +58,10 @@
                         <li><a href="http://www.pdkairport.org/" target="_blank">DeKalb Peachtree Airport (PDK)</a></li>
                     </ul>
                 </li>
-                <li *ngIf="!isAuth()"><a href="" [routerLink]="['Signin']">SIGN IN</a></li>
-                <li *ngIf="isAuth()"><a href="" (click)="logout()">LOG OUT</a></li>
+                <li *ngIf="!isAuth()"><a  [routerLink]="['Signin']">SIGN IN</a></li>
+                <li *ngIf="isAuth()"><a (click)="logout()">LOG OUT</a></li>
+              
+          
 
             </ul>
         </div>
