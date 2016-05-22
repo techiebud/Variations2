@@ -10,6 +10,7 @@ export class AuthService {
 
     private _userLoggedOut = new EventEmitter<any>();
     private _userLoggedIn = new EventEmitter<any>();
+  
 
     constructor() {
 
@@ -25,6 +26,7 @@ export class AuthService {
             if (user) {
                 console.log("User has signed in");
                 console.log(user);               
+                
                 this._userLoggedIn.emit(null);
             } else {
                // toastr.info("Residents, please log in to view all features.");
@@ -34,11 +36,13 @@ export class AuthService {
     }
     signupUser(user: User) {
 
+        localStorage.setItem("newUser", JSON.stringify(user));
+        
         var email: string = user.email;
         var password: string = user.password;
 
         firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
-            localStorage.setItem("signedUp", "error");
+           
             var errorMessage: string = "";
             switch (error.code) {
                 case "auth/email-already-in-us":
@@ -52,7 +56,7 @@ export class AuthService {
                     toastr.error(errorMessage);
                     break;
                 case "auth/weak-password":
-                    errorMessage = "The specified email is not a valid email.";
+                    errorMessage = "Must enter a strong password.";
                     console.log(errorMessage);
                     toastr.error(errorMessage);
                     break;

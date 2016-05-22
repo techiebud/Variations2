@@ -21,7 +21,7 @@
             </div>
               <div class="input-group">
                 <label for="Unit">Unit #</label>
-                <input [ngFormControl]="signUpForm.find('unit')" type="text" id="unit" placeholder="Unit #" class="form-control">
+                <input [ngFormControl]="signUpForm.find('unit')" type="number" id="unit" min="1901" max="2112" maxlength="4" placeholder="Unit #" class="form-control">
             </div>
             <div class="input-group">
                 <label for="password">Password</label>

@@ -17,6 +17,7 @@ import {NavComponent} from "./nav.component";
 import {FooterComponent} from "./footer.component";
 import {AuthRouterOutlet} from "./shared/auth-router-outlet.directive";
 import {AuthService} from "./shared/auth.service";
+import {User} from "./user.interface";
 declare var toastr: any;
 declare var $: any;
 declare var firebase: any;
@@ -48,23 +49,47 @@ declare var firebase: any;
 ])
 export class AppComponent implements OnInit {
 
-    constructor(private _router: Router, private _authService: AuthService) {     
+    constructor(private _router: Router, private _authService: AuthService) {
 
     }
 
     ngOnInit(): any {
         //  toastr.info("Welcome!");        
-        this._authService.getLoggedInEvent().subscribe(() => {           
+        this._authService.getLoggedInEvent().subscribe(() => {
+
+            var newUser: User = JSON.parse(localStorage.getItem("newUser"));
             console.log("user logged in");
             this._router.navigate(['Home'])
-        }
-        );
+            console.log("new User", newUser);
+            if (newUser) {
+                var fbUser = firebase.auth().currentUser;
+                localStorage.removeItem("newUser");
+                console.log("fbUser:", fbUser);
+                firebase.database().ref("users/" + fbUser.uid).set({
+                    FirstName: newUser.firstName,
+                    LastName: newUser.lastName,
+                    Unit: newUser.unit
+                })        
+            }
+            else {
+                var userId = firebase.auth().currentUser.uid;
+                firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
+                var firstName: string = snapshot.val().FirstName;
+                toastr.info("Welcome back, " + firstName);
+                  
+                  
+  // ...
+                
+            }
+        });         // firebase.database().ref("users/" + fbUser.uid + )
 
-        this._authService.getLoggedOutEvent().subscribe(() => {           
+
+        this._authService.getLoggedOutEvent().subscribe(() => {
             toastr.success("You have successfully logged out.");
             this._router.navigate(['Home']);
-        }
-        );
-
+        });
     }
+
+
+
 }
