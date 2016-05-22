@@ -1,23 +1,33 @@
 import {Component, OnInit} from "angular2/core";
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router } from "angular2/router";
-import {HomeComponent} from "./home.component";
-import {AboutComponent} from "./about.component";
-import {FeaturesComponent} from "./features.component";
-import {BoardComponent} from "./board.component";
-import {AmenitiesComponent} from "./amenities.component";
-import {ForsaleComponent} from "./forsale.component";
-import {FeesComponent} from "./fees.component";
-import {AnnouncementsComponent} from "./announcements.component";
-import {ServicesComponent} from "./services.component";
-import {ContactUsComponent} from "./contact-us.component";
-import {SignupComponent} from "./signup.component";
-import {SigninComponent} from "./signin.component";
-import {NavComponent} from "./nav.component";
-import {FooterComponent} from "./footer.component";
-import {AuthRouterOutlet} from "./shared/auth-router-outlet.directive";
-import {AuthService} from "./shared/auth.service";
-import {EventsCalendarComponent} from "./events-calendar.component";
-import {User} from "./shared//user.interface";
+
+import {
+    AboutComponent,
+    AnnouncementsComponent,
+    AmenitiesComponent,
+    BoardComponent,
+    ContactUsComponent,
+    EventsCalendarComponent,
+    FeesComponent,
+    FooterComponent,
+    FeaturesComponent,
+    ForsaleComponent,
+    HomeComponent,
+    NavComponent,
+    ServicesComponent,
+    SigninComponent,
+    SignupComponent        
+    
+} from "./index";
+
+import {
+    AuthRouterOutlet, 
+    AuthService  
+    
+} from "./shared/index";
+
+import {User} from "./shared/user.interface";
+
 declare var toastr: any;
 declare var $: any;
 declare var firebase: any;
@@ -55,12 +65,9 @@ export class AppComponent implements OnInit {
 
     ngOnInit(): any {
      //   this.createUnits();
-       firebase.database().ref('/Units').once('value').then((snapshot) =>  {    
-          debugger;
-          localStorage.setItem('allUnits', JSON.stringify(snapshot.val()))
-        
-          //  this.allUnits = snapshot.val();
-           // console.log("units: ", this.ObjectLength(snapshot.val()));
+       firebase.database().ref('/Units').once('value').then((snapshot) =>  {   
+          localStorage.setItem('allUnits', JSON.stringify(snapshot.val()))      
+          
         });
         this._authService.getLoggedInEvent().subscribe(() => {
             var newUser: User = JSON.parse(localStorage.getItem("newUser"));
