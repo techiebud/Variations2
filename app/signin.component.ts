@@ -2,11 +2,11 @@ import {Component, OnInit} from "angular2/core";
 import {FormBuilder, ControlGroup, Validators} from "angular2/common";
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router} from "angular2/router";
 
-import {AuthService} from "../shared/auth.service";
+import {AuthService} from "./shared/auth.service";
 declare var toastr: any;
 
 @Component({
-    templateUrl: "app/unprotected/signin.component.html",
+    templateUrl: "app/signin.component.html",
     directives: [ROUTER_DIRECTIVES]
 
 })
