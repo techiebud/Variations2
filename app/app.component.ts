@@ -17,7 +17,8 @@ import {NavComponent} from "./nav.component";
 import {FooterComponent} from "./footer.component";
 import {AuthRouterOutlet} from "./shared/auth-router-outlet.directive";
 import {AuthService} from "./shared/auth.service";
-import {User} from "./user.interface";
+import {EventsCalendarComponent} from "./events-calendar.component";
+import {User} from "./shared//user.interface";
 declare var toastr: any;
 declare var $: any;
 declare var firebase: any;
@@ -36,14 +37,14 @@ declare var firebase: any;
     { path: '/board', name: 'Board', component: BoardComponent },
     { path: '/features', name: 'Features', component: FeaturesComponent },
     { path: '/amenities', name: 'Amenities', component: AmenitiesComponent },
-    { path: '/forsale', name: 'Forsale', component: ForsaleComponent },
-    { path: '/events', name: 'Events', component: EventsComponent },
+    { path: '/forsale', name: 'Forsale', component: ForsaleComponent },  
     { path: '/fees', name: 'Fees', component: FeesComponent },
     { path: '/announcements', name: 'Announcements', component: AnnouncementsComponent },
     { path: '/services', name: 'Services', component: ServicesComponent },
     { path: '/contactus', name: 'ContactUs', component: ContactUsComponent },
     { path: '/signup', name: 'Signup', component: SignupComponent },
     { path: '/signin', name: 'Signin', component: SigninComponent },
+    { path: '/eventsCalendar', name: "EventsCalendar", component: EventsCalendarComponent}
 
 
 ])
