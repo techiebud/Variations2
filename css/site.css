@@ -58,15 +58,6 @@
     color: green;
     font: 700;
 }
-/*.copyright footer {
-    border-top: #FFF 1px solid;
-    background: #216839;
-    font-size: 12px;
-    color: white;
-    text-shadow: 0 1px 1px white;
-    padding: 30px 0;
-    margin-top: 94px;
-}*/
 
 .footer {
     border-top: #FFF 1px solid;
@@ -79,8 +70,7 @@
 }
 article {
     
-    margin-top: 75px;
- 
+    margin-top: 75px; 
     padding-bottom:50px; /* Height of the footer element */
     
 }
@@ -93,5 +83,9 @@ article {
     
     color: #999;
     
+}
+.error {
+    color: red;
+    font-weight: bold;;
 }
 

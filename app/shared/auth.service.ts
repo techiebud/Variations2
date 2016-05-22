@@ -35,8 +35,17 @@ export class AuthService {
 
     }
     signupUser(user: User) {
-
-        localStorage.setItem("newUser", JSON.stringify(user));
+        
+        
+     /*  firebase.database().ref('/Units/' + user.unit).once('value').then(function(snapshot) {
+           if (!snapshot)
+           {
+               toastr.error("Invalid Unit #");               
+           }            
+             console.log("snapshot:", snapshot.val() );
+       });*/
+      
+        localStorage.setItem("newUser", JSON.stringify(user)); 
         
         var email: string = user.email;
         var password: string = user.password;

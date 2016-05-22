@@ -49,7 +49,10 @@ export class SignupComponent implements OnInit {
             ])],
             firstName: ['', Validators.required],
             lastName: ['', Validators.required],
-            unit: ['', Validators.required]
+            unit: ['', Validators.compose([
+                Validators.required,
+                this.isValidUnit
+            ])] 
         });
     }
 
@@ -69,4 +72,21 @@ export class SignupComponent implements OnInit {
             return { passwordsNotMatch: true };
         }
     }
+    
+      isValidUnit(control: Control): { [s: string]: boolean } {          
+        let unit: number = parseInt(control.value);
+        const min_unit: number  = 1901; 
+        const max_unit: number = 2112;      
+        let validUnit: boolean = (!isNaN(unit)) && (unit >= min_unit && unit <= max_unit);
+        if (!validUnit)
+        {
+            return {unitIsInvalid: true};
+        }    
+       
+     
+    }
+    
+    
+   
+    
 }

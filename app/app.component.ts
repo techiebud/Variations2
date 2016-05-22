@@ -53,10 +53,8 @@ export class AppComponent implements OnInit {
 
     }
 
-    ngOnInit(): any {
-        //  toastr.info("Welcome!");        
+    ngOnInit(): any {   
         this._authService.getLoggedInEvent().subscribe(() => {
-
             var newUser: User = JSON.parse(localStorage.getItem("newUser"));
             console.log("user logged in");
             this._router.navigate(['Home'])
@@ -76,13 +74,9 @@ export class AppComponent implements OnInit {
                 firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
                 var firstName: string = snapshot.val().FirstName;
                 toastr.info("Welcome back, " + firstName);
-                  
-                  
-  // ...
-                
+                });                 
             }
-        });         // firebase.database().ref("users/" + fbUser.uid + )
-
+        });
 
         this._authService.getLoggedOutEvent().subscribe(() => {
             toastr.success("You have successfully logged out.");
