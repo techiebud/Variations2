@@ -1,1 +1,11 @@
-<h1>Units For Sale</h1>
+<div class="center">
+
+<h2>Units Currently For Sale</h2>
+
+<ul>
+    <li *ngFor="#unit of units ">
+        <a href='{{unit.URL}}' target="_blank">{{unit.UnitNumber}} {{unit.Street}}</a>        
+    </li>
+    
+</ul>
+</div>
