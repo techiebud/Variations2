@@ -36,14 +36,7 @@ export class AuthService {
     }
     signupUser(user: User) {
         
-        
-     /*  firebase.database().ref('/Units/' + user.unit).once('value').then(function(snapshot) {
-           if (!snapshot)
-           {
-               toastr.error("Invalid Unit #");               
-           }            
-             console.log("snapshot:", snapshot.val() );
-       });*/
+   
       
         localStorage.setItem("newUser", JSON.stringify(user)); 
         

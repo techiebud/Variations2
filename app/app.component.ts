@@ -16,14 +16,14 @@ import {
     NavComponent,
     ServicesComponent,
     SigninComponent,
-    SignupComponent        
-    
+    SignupComponent
+
 } from "./index";
 
 import {
-    AuthRouterOutlet, 
-    AuthService  
-    
+    AuthRouterOutlet,
+    AuthService
+
 } from "./shared/index";
 
 import {User} from "./shared/user.interface";
@@ -64,42 +64,45 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit(): any {
-     //   this.createUnits();
-       firebase.database().ref('/Units').once('value').then((snapshot) =>  {   
-          localStorage.setItem('allUnits', JSON.stringify(snapshot.val()))      
-          
-        });
+        //   this.createUnits();
+
         this._authService.getLoggedInEvent().subscribe(() => {
             var newUser: User = JSON.parse(localStorage.getItem("newUser"));
             console.log("user logged in");
-            this._router.navigate(['Home'])
-            console.log("new User", newUser);
+
             if (newUser) {
+                console.log("new User", newUser);
                 var fbUser = firebase.auth().currentUser;
                 localStorage.removeItem("newUser");
                 console.log("fbUser:", fbUser);
-                firebase.database().ref("users/" + fbUser.uid).set({
+                firebase.database().ref("Users/" + fbUser.uid).set({
                     FirstName: newUser.firstName,
                     LastName: newUser.lastName,
                     Unit: newUser.unit
                 })
+                var allUnits: any = JSON.parse(localStorage.getItem("allUnits"));
+                var updates = {};
+                updates["/Units/" + newUser.unit + "/RegisteredUsers"] = +(allUnits[newUser.unit].RegisteredUsers) + 1;
+                firebase.database().ref().update(updates);
             }
             else {
                 var userId = firebase.auth().currentUser.uid;
-                firebase.database().ref('/users/' + userId).once('value').then(function (snapshot) {
+                firebase.database().ref('/Users/' + userId).once('value').then(function (snapshot) {
                     var firstName: string = snapshot.val().FirstName;
                     toastr.info("Welcome back, " + firstName);
                 });
             }
+            this._router.navigate(['Home'])
         });
 
         this._authService.getLoggedOutEvent().subscribe(() => {
             toastr.success("You have successfully logged out.");
+            localStorage.removeItem("allUnits");
             this._router.navigate(['Home']);
         });
 
 
-       
+
     }
 
     private ObjectLength(object) {
@@ -224,6 +227,6 @@ export class AppComponent implements OnInit {
 
 
 export class AppSettings {
-    
-    public static get FIREBASE_APP() : string {return 'https://thevariations.firebaseio.com';}
+
+    public static get FIREBASE_APP(): string { return 'https://thevariations.firebaseio.com'; }
 }

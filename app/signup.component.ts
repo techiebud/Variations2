@@ -2,6 +2,7 @@ import {Component, OnInit} from "angular2/core";
 import {FormBuilder, ControlGroup, Validators, Control} from "angular2/common";
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router} from "angular2/router";
 import {AuthService} from "./shared/auth.service";
+import {User} from "./shared/user.interface";
 declare var toastr: any;
 declare var $: any;  //jquery
 declare var firebase: any;
@@ -23,17 +24,19 @@ export class SignupComponent implements OnInit {
 
         this.$pleaseWait = $("#pleaseWaitDialog");
         firebase.database().ref('/Units').once('value').then((snapshot) => {
-            debugger;
-            //   localStorage.setItem('allUnits', JSON.stringify(snapshot.val()))
             this.allUnits = JSON.parse(localStorage.getItem("allUnits"));
-            //  this.allUnits = snapshot.val();
-            // console.log("units: ", this.ObjectLength(snapshot.val()));
+
         });
         //  this.showWait();      
     }
 
     onSignup() {
-
+        debugger;
+        var user: User = this.signUpForm.value;
+        if (this.allUnits[user.unit].RegisteredUsers >= 2) {
+            toastr.error("Maximum number of users have already signed up for this Unit #")
+            return;
+        }
         this._authService.signupUser(this.signUpForm.value);
 
     }
@@ -47,6 +50,11 @@ export class SignupComponent implements OnInit {
     }
 
     ngOnInit(): any {
+
+        firebase.database().ref('/Units').once('value').then((snapshot) => {
+            localStorage.setItem('allUnits', JSON.stringify(snapshot.val()))
+
+        });
         this.signUpForm = this._fb.group({
             email: ['', Validators.compose([
                 Validators.required,
@@ -87,13 +95,11 @@ export class SignupComponent implements OnInit {
 
     isValidUnit(control: Control): { [s: string]: boolean } {
         this.allUnits = JSON.parse(localStorage.getItem("allUnits"));
-        debugger;
         let unit: number = parseInt(control.value);
         const min_unit: number = 1901;
         const max_unit: number = 2112;
         let validUnit: boolean = (!isNaN(unit)) && (unit >= min_unit && unit <= max_unit);
         if (validUnit) {
-            debugger;
             validUnit = this.allUnits[unit.toString()];
 
         }
