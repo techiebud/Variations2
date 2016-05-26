@@ -3,17 +3,18 @@ import {Unit} from "./shared/unit.interface";
 
 declare var firebase: any;
 
+
 @Component({
     templateUrl: "app/forsale.component.html"
 })
 
 export class ForsaleComponent implements OnInit {
     units: Array<Unit> = new Array<Unit>();
-    constructor() { }
-
-    ngOnInit() {
-
-        firebase.database().ref("/UnitsForSale").once('value').then((snapshot) => {
+    isLoading: boolean = true;
+    constructor() {
+        this.isLoading = true;
+           firebase.database().ref("/UnitsForSale").once('value').then((snapshot) => {
+            //todo:  Need error handling here.
             let unitsForSale: {} = snapshot.val();
             console.log("ufs: ", unitsForSale);
             let unitNumbers = Object.keys(unitsForSale);
@@ -24,7 +25,8 @@ export class ForsaleComponent implements OnInit {
                     UnitNumber: unitNumber,
                     URL: unitsForSale[unitNumber].URL,
                     Owner: "",
-                    Street: unitsForSale[unitNumber].Street
+                    Street: unitsForSale[unitNumber].Street,
+                    ImageURL: unitsForSale[unitNumber].imageURL
                 }
 
                 this.units.push(listUnit);
@@ -34,8 +36,14 @@ export class ForsaleComponent implements OnInit {
 
 
             }  //for loop
-            // console.log("units: ", this.units);
+            this.isLoading = false;
         });   //snaphot units for sale
+     }
+
+    ngOnInit() {
+        this.isLoading = true;
+        
+     
 
 
 

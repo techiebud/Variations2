@@ -3,5 +3,6 @@ export interface Unit {
     Owner: string;
     Street:   string;
     URL: string;
+    ImageURL: string;
     
 }

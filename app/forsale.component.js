@@ -11,11 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var ForsaleComponent = (function () {
     function ForsaleComponent() {
-        this.units = new Array();
-    }
-    ForsaleComponent.prototype.ngOnInit = function () {
         var _this = this;
+        this.units = new Array();
+        this.isLoading = true;
+        this.isLoading = true;
         firebase.database().ref("/UnitsForSale").once('value').then(function (snapshot) {
+            //todo:  Need error handling here.
             var unitsForSale = snapshot.val();
             console.log("ufs: ", unitsForSale);
             var unitNumbers = Object.keys(unitsForSale);
@@ -25,12 +26,16 @@ var ForsaleComponent = (function () {
                     UnitNumber: unitNumber,
                     URL: unitsForSale[unitNumber].URL,
                     Owner: "",
-                    Street: unitsForSale[unitNumber].Street
+                    Street: unitsForSale[unitNumber].Street,
+                    ImageURL: unitsForSale[unitNumber].imageURL
                 };
                 _this.units.push(listUnit);
             } //for loop
-            // console.log("units: ", this.units);
+            _this.isLoading = false;
         }); //snaphot units for sale
+    }
+    ForsaleComponent.prototype.ngOnInit = function () {
+        this.isLoading = true;
     }; //ngOnItie
     ForsaleComponent = __decorate([
         core_1.Component({
