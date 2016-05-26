@@ -1,15 +1,20 @@
-<div class="center">
+<div class="center container">
 
     <h2>Units Currently For Sale</h2>
 
     <i *ngIf="isLoading" class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>
 
-    <ul>
-        <li *ngFor="#unit of units ">
-            <a href='{{unit.URL}}' target="_blank">{{unit.UnitNumber}} {{unit.Street}}  <img src="{{unit.ImageURL}}"  alt="{{unit.UnitNumber}} " style="width:150px;height:150px "> </a>
-           
-        
-    </li>
-    
-</ul>
+    <div class="row" *ngFor="#unit of units">
+
+        <div class="col-md-6">
+            <a href="{{unit.URL}}" target="_blank" >
+                <i class="fa fa-home" aria-hidden="true"></i>
+                <span class="unit-number">{{unit.UnitNumber}} {{unit.Street}}</span>      
+                <img src="{{unit.ImageURL}}" alt="{{unit.UnitNumber}}" class="img-thumbnail">          
+            </a>
+        </div>
+
+
+    </div>
+
 </div>
