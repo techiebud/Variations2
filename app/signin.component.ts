@@ -1,6 +1,7 @@
-import {Component, OnInit} from "angular2/core";
-import {FormBuilder, ControlGroup, Validators} from "angular2/common";
-import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router} from "angular2/router";
+import {Component, OnInit} from "@angular/core";
+import {FormBuilder, ControlGroup, Validators} from "@angular/common";
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
+
 
 import {AuthService} from "./shared/auth.service";
 declare var toastr: any;

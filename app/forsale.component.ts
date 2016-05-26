@@ -1,7 +1,7 @@
-declare var firebase: any;
-
-import {Component, OnInit} from "angular2/core"
+import {Component, OnInit} from "@angular/core";
 import {Unit} from "./shared/unit.interface";
+
+declare var firebase: any;
 
 @Component({
     templateUrl: "app/forsale.component.html"
@@ -16,7 +16,7 @@ export class ForsaleComponent implements OnInit {
         firebase.database().ref("/UnitsForSale").once('value').then((snapshot) => {
             let unitsForSale: {} = snapshot.val();
             console.log("ufs: ", unitsForSale);
-            let unitNumbers[] = Object.keys(unitsForSale);
+            let unitNumbers = Object.keys(unitsForSale);
             for (let i: number = 0; i < unitNumbers.length; i++) {
 
                 let unitNumber: number = +(unitNumbers[i]);

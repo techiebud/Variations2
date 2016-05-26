@@ -28,78 +28,36 @@
     <!-- IE required polyfills, in this exact order -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.34.1/es6-shim.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.20/system-polyfills.js"></script>
-    <script src="https://npmcdn.com/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
-
-    <!-- Angular polyfill required everywhere -->
-    <script src="https://code.angularjs.org/2.0.0-beta.9/angular2-polyfills.js"></script>
-
-    <script src="https://code.angularjs.org/tools/system.js"></script>
-    <script src="https://code.angularjs.org/tools/typescript.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-beta.9/Rx.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-beta.9/angular2.dev.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-beta.9/router.dev.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-beta.9/http.dev.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.0.0/firebase.js"></script>
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.js"></script>
 
 
+    <script>
+        System.import('app').catch(function(err){ console.error(err); });
+    </script>
 
-
-
-    <script src="js/theme.js"></script>
-
-
-
-    <script type="text/javascript" src="js/index-slider.js"></script>
 
 
 
     <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-     
 
-    </script>
-
-
-    <script type="text/javascript">
-    
-    
-        System.config({
-        transpiler: 'typescript', 
-        typescriptOptions: { emitDecoratorMetadata: true }, 
-        packages: {      
-          'app': {defaultExtension: 'ts'} 
-        } 
-      });
-     //debugger;
-    System.import('app/main')
-          .then(null, console.error.bind(console));
-    </script>
 
 
 </head>
 
-<span class="sr-only">Loading...</span>
 
 <body class="pull_top">
     <var-main>
         <div class="loader"><i class="fa fa-spinner fa-spin fa-3x fa-fw margin-bottom"></i>&nbsp;Loading The Variations website.....please wait</div>
     </var-main>
 
-    <div class="modal hide" id="pleaseWaitDialog" data-backdrop="static" data-keyboard="false">
-        <div class="modal-header">
-            <h1>Processing...</h1>
-        </div>
-        <div class="modal-body">
-            <div class="progress progress-striped active">
-                <div class="bar" style="width: 100%;"></div>
-            </div>
-        </div>
-    </div>
-    </div>
+
 </body>
 
 

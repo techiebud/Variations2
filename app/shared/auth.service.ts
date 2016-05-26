@@ -1,8 +1,10 @@
-import {Injectable, EventEmitter} from "angular2/core";
+import {Injectable, EventEmitter} from "@angular/core";
 import {User} from "./user.interface";
+// import {toastr} from  "./node_mddules/toastr";
 
 declare var firebase: any;
 declare var toastr: any;
+
 
 @Injectable(
 )
@@ -27,7 +29,7 @@ export class AuthService {
                 console.log("User has signed in");
                 console.log(user);               
                 
-                this._userLoggedIn.emit(null);
+                this._userLoggedIn.emit(true);
             } else {
                // toastr.info("Residents, please log in to view all features.");
             }
@@ -89,18 +91,18 @@ export class AuthService {
         console.log("auth: logout");
         firebase.auth().signOut().then(() => {
             this._userLoggedOut.emit(null);
-        }, function (error) {
+        }, function (error) {            
             toastr.error("Cannot sign user out (" + error + ")");
         });
 
     }
 
-    getLoggedInEvent(): EventEmitter {
+    getLoggedInEvent(): EventEmitter<any>  {
         return this._userLoggedIn;
 
     }
 
-    getLoggedOutEvent(): EventEmitter {
+    getLoggedOutEvent(): EventEmitter<any> {
 
         console.log(this._userLoggedOut);
         return this._userLoggedOut;

@@ -1,5 +1,6 @@
-import {Component, OnInit} from "angular2/core";
-import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router } from "angular2/router";
+import {Component, OnInit} from "@angular/core";
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS,RouterOutlet, Router } from '@angular/router-deprecated';
+
 
 import {
     AboutComponent,
@@ -20,8 +21,7 @@ import {
 
 } from "./index";
 
-import {
-    AuthRouterOutlet,
+import {   
     AuthService
 
 } from "./shared/index";
@@ -36,7 +36,7 @@ declare var firebase: any;
 @Component({
     selector: "var-main",
     templateUrl: "app/app.component.html",
-    directives: [AuthRouterOutlet, FooterComponent, NavComponent],
+    directives: [FooterComponent, NavComponent, ROUTER_DIRECTIVES],
     providers: [ROUTER_PROVIDERS, AuthService]
 })
 
