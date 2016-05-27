@@ -1,20 +1,28 @@
 <div class="center container">
 
-    <h2>Units Currently For Sale</h2>
 
-    <i *ngIf="isLoading" class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>
+    <div class="jumbotron">
+        <h1><span><i class="fa fa-home"></i></span> Units For Sale </h1>
+        <p>Below are the current units in The Variations which are available to purchase.</p>
+    </div>
 
-    <div class="row" *ngFor="#unit of units">
+    <div class="units-for-sale">
 
-        <div class="col-md-6">
-            <a href="{{unit.URL}}" target="_blank" >
-                <i class="fa fa-home" aria-hidden="true"></i>
-                <span class="unit-number">{{unit.UnitNumber}} {{unit.Street}}</span>      
-                <img src="{{unit.ImageURL}}" alt="{{unit.UnitNumber}}" class="img-thumbnail">          
-            </a>
+        <i *ngIf="isLoading" class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>
+
+        <div class="row" *ngFor="#unit of units">
+
+            <div class="col-md-6">
+                <a href="{{unit.URL}}" target="_blank">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <span class="unit-number">{{unit.UnitNumber}} {{unit.Street}}</span>
+                    <img src="{{unit.ImageURL}}" alt="{{unit.UnitNumber}}" class="img-thumbnail">
+                </a>
+            </div>
+
+
         </div>
 
 
     </div>
-
 </div>
