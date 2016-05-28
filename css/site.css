@@ -75,10 +75,6 @@ section#contents {
     
 }
 
-.copyright {  
-    padding-top: 10px;
-    margin-left: 40%;
-}
 #copyright {
     
     color: #999;
@@ -94,4 +90,6 @@ section#contents {
     width: 60%;   
     padding: 10px;
 }
-
+.copyright.container {
+    padding-top: 10px;
+}
