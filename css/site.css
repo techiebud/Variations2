@@ -93,3 +93,18 @@ section#contents {
 .copyright.container {
     padding-top: 10px;
 }
+
+p.unit-number.lead {
+    margin-bottom: 0;
+}
+
+.units-for-sale {
+    margin-bottom: 30px;
+}
+a.unit-for-sale:hover {
+    color: darkred;
+    
+}
+a.unit-for-sale:link {
+    text-decoration: none;  
+}

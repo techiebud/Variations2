@@ -1,4 +1,4 @@
-<div class="center container">
+<div class="container">
 
 
     <div class="jumbotron">
@@ -6,23 +6,21 @@
         <p>Below are the current units in The Variations which are available to purchase.</p>
     </div>
 
-    <div class="units-for-sale">
 
-        <i *ngIf="isLoading" class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>
+    <i *ngIf="isLoading" class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>
 
-        <div class="row" *ngFor="#unit of units">
+    <div class="row">
 
-            <div class="col-md-6">
-                <a href="{{unit.URL}}" target="_blank">
-                    <i class="fa fa-home" aria-hidden="true"></i>
-                    <span class="unit-number">{{unit.UnitNumber}} {{unit.Street}}</span>
-                    <img src="{{unit.ImageURL}}" alt="{{unit.UnitNumber}}" class="img-thumbnail">
-                </a>
-            </div>
-
-
+        <div class="col-md-6 units-for-sale" *ngFor="#unit of units">
+            <a href="{{unit.URL}}" target="_blank" class="unit-for-sale">
+                <p class="unit-number lead"> <i class="fa fa-home" aria-hidden="true"></i>{{unit.UnitNumber}} {{unit.Street}}</p>
+                <img src="{{unit.ImageURL}}" alt="{{unit.UnitNumber}}" class="img-thumbnail">
+            </a>
         </div>
 
 
     </div>
+
+
+
 </div>
