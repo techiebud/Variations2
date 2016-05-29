@@ -1,9 +1,10 @@
 @import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
 .loader {
     margin-top: 200px;
-    padding-left: 200px;
+    /*padding-left: 200px;*/
     font-size: xx-large;
-    color: seagreen;
+    color: darksalmon;
+    font-weight: bolder;
 }
 
 .navbar-inverse .dropdown-menu{
