@@ -103,3 +103,8 @@ a.unit-for-sale:link {
 div.board-member {
     margin-bottom: 20px;
 }
+img#var-logo {
+    
+    border: 0;
+    padding-bottom: 30px;
+}
