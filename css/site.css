@@ -27,12 +27,9 @@
     background-color: rgb(238, 238, 238);
     border-color: rgb(238, 139, 202);
 }
-
 #showcase{
-    margin-top: 52px;
-    
+    margin-top: 52px;    
 }
-
 .carousel-inner > .item > img {
     margin: 0 auto;
 }
@@ -41,7 +38,6 @@
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
 }
-
 .carousel-control.right {
   right: 0;
   left: auto;
