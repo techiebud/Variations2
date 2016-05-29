@@ -14,7 +14,6 @@ var ForsaleComponent = (function () {
         var _this = this;
         this.units = new Array();
         this.isLoading = true;
-        this.isLoading = true;
         firebase.database().ref("/UnitsForSale").once('value').then(function (snapshot) {
             //todo:  Need error handling here.
             var unitsForSale = snapshot.val();

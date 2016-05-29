@@ -108,3 +108,7 @@ a.unit-for-sale:hover {
 a.unit-for-sale:link {
     text-decoration: none;  
 }
+
+div.board-member {
+    margin-bottom: 20px;
+}

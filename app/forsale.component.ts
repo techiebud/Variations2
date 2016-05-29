@@ -12,8 +12,7 @@ export class ForsaleComponent implements OnInit {
     units: Array<Unit> = new Array<Unit>();
     isLoading: boolean = true;
     constructor() {
-        this.isLoading = true;
-           firebase.database().ref("/UnitsForSale").once('value').then((snapshot) => {
+        firebase.database().ref("/UnitsForSale").once('value').then((snapshot) => {
             //todo:  Need error handling here.
             let unitsForSale: {} = snapshot.val();
             console.log("ufs: ", unitsForSale);
@@ -38,12 +37,12 @@ export class ForsaleComponent implements OnInit {
             }  //for loop
             this.isLoading = false;
         });   //snaphot units for sale
-     }
+    }
 
     ngOnInit() {
         this.isLoading = true;
-        
-     
+
+
 
 
 

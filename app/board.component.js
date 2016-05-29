@@ -11,8 +11,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var BoardComponent = (function () {
     function BoardComponent() {
+        var _this = this;
+        this.boardMembers = new Array();
+        this.isLoading = true;
+        firebase.database().ref("/BoardMembers").once('value').then(function (snapshot) {
+            //todo:  Need error handling here.
+            var members = snapshot.val();
+            console.log("members: ", members);
+            var titles = Object.keys(members);
+            console.log("titles", titles);
+            for (var i = 0; i < titles.length; i++) {
+                var title = titles[i];
+                var boardMember = {
+                    Title: title,
+                    Name: members[title].Name,
+                    Email: members[title].Email,
+                    Address: members[title].Address,
+                    Phone: members[title].Phone,
+                    URL: members[title].URL,
+                    URLCaption: members[title].URLCaption
+                };
+                _this.boardMembers.push(boardMember);
+            } //for loop
+            _this.isLoading = false;
+        }); //snaphot units for sale 
     }
-    BoardComponent.prototype.ngOnInit = function () { };
+    BoardComponent.prototype.ngOnInit = function () {
+    };
     BoardComponent = __decorate([
         core_1.Component({
             templateUrl: "app/board.component.html"
