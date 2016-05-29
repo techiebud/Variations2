@@ -62,12 +62,20 @@ var AuthService = (function () {
     }; //signup user
     AuthService.prototype.signinUser = function (user) {
         firebase.auth().signInWithEmailAndPassword(user.email, user.password).catch(function (error) {
-            // Handle Errors here.
             console.log(error);
             var errorCode = error.code;
             var errorMessage = error.message;
             toastr.error(errorMessage);
             console.error(error);
+        });
+    };
+    AuthService.prototype.sendResetPasswordEmail = function (email) {
+        firebase.auth().sendPasswordResetEmail(email)
+            .then(function () {
+            toastr.success("Email sent to reset password");
+        })
+            .catch(function (error) {
+            toastr.error(error.message);
         });
     };
     AuthService.prototype.logout = function () {

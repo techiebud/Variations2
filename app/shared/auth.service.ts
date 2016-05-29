@@ -75,14 +75,24 @@ export class AuthService {
 
     signinUser(user: User) {
 
-        firebase.auth().signInWithEmailAndPassword(user.email, user.password).catch(function (error) {
-            // Handle Errors here.
+        firebase.auth().signInWithEmailAndPassword(user.email, user.password).catch(function (error) {           
             console.log(error);
             var errorCode = error.code;
             var errorMessage = error.message;
             toastr.error(errorMessage);
             console.error(error);
         });
+    }
+    
+    sendResetPasswordEmail(email: string)
+    {
+          firebase.auth().sendPasswordResetEmail(email)
+          .then(function() {
+           toastr.success("Email sent to reset password");})
+           .catch(function (error) {          
+           toastr.error(error.message);
+          });
+        
     }
 
 

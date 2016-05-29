@@ -8,16 +8,16 @@
                 <form [ngFormModel]="signinForm" (ngSubmit)="onSignin()" class="form-inline">
                     <div class="input-group">
                         <label for="email">E-Mail</label>
-                        <input [ngFormControl]="signinForm.find('email')" placeholder="Email" class="form-control" type="email" id="email">
+                        <input [ngFormControl]="signinForm.find('email')" placeholder="Email" class="form-control" type="email" id="email"  #email="ngForm">
                     </div>
                     <div class="input-group">
                         <label for="password">Password</label>
-                        <input [ngFormControl]="signinForm.find('password')" type="password" id="password" placeholder="Password" class="form-control">
+                        <input [ngFormControl]="signinForm.find('password')" type="password" id="password" placeholder="Password" class="form-control"  >
                     </div>
 
                     <div class="input-group">&nbsp;</div>
 
-                    <button type="submit" [disabled]="!signinForm.valid">Sign In</button>
+                    <button type="submit" class="btn btn-primary" [disabled]="!signinForm.valid">Sign In</button>
                 </form>
             </div>
         </div>
@@ -27,7 +27,7 @@
                     <label class="checkbox">
                             <input type="checkbox"> Remember me
                         </label>
-                    <a href="reset.html">Forgot password?</a>
+                    <button class="btn btn-info" (click)="onForgotPassword()">Forgot password?</button>
                 </div>
             </div>
         </div>

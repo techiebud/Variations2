@@ -25,6 +25,15 @@ var SigninComponent = (function () {
             email: ['', common_1.Validators.required],
             password: ['', common_1.Validators.required],
         });
+        debugger;
+    };
+    SigninComponent.prototype.onForgotPassword = function () {
+        console.log(this.signinForm.value);
+        if (!this.signinForm.value["email"]) {
+            toastr.error("Please specify your email address.");
+            return;
+        }
+        this._authService.sendResetPasswordEmail(this.signinForm.value["email"]);
     };
     SigninComponent = __decorate([
         core_1.Component({

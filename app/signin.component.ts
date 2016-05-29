@@ -5,6 +5,7 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/route
 
 import {AuthService} from "./shared/auth.service";
 declare var toastr: any;
+declare var firebase: any;
 
 @Component({
     templateUrl: "app/signin.component.html",
@@ -28,5 +29,19 @@ export class SigninComponent implements OnInit {
             email: ['', Validators.required],
             password: ['', Validators.required],
         });
+        debugger;
+    }
+    
+    onForgotPassword(): void {
+        console.log(this.signinForm.value);
+        if (!this.signinForm.value["email"])
+        {
+            toastr.error("Please specify your email address.");
+            return;
+        }
+        
+       this._authService.sendResetPasswordEmail(this.signinForm.value["email"]);
+        
+        
     }
 }
