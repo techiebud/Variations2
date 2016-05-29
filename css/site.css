@@ -45,10 +45,7 @@
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
 }
-.icon-next, .icon-prev{
-    color: green;
-    font: 700;
-}
+
 
 .footer {
     border-top: #FFF 1px solid;
@@ -107,4 +104,22 @@ img#var-logo {
     
     border: 0;
     padding-bottom: 30px;
+}
+
+span#var-picture-left, span#var-picture-right {
+    font-size: 70px;
+    font-stretch: wider;
+    color: darkgreen;
+    font-family: cursive;
+    font-weight: 900;
+    top: 40%;
+}
+@media screen and (min-width: 768px)
+{
+    span#var-picture-right {
+    margin-left: -78px;
+}
+span#var-picture-left {
+    margin-left: 30px;
+}
 }
