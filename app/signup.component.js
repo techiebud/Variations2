@@ -14,34 +14,27 @@ var router_deprecated_1 = require('@angular/router-deprecated');
 var auth_service_1 = require("./shared/auth.service");
 var SignupComponent = (function () {
     function SignupComponent(_fb, _authService) {
-        var _this = this;
         this._fb = _fb;
         this._authService = _authService;
-        this.$pleaseWait = $("#pleaseWaitDialog");
-        firebase.database().ref('/Units').once('value').then(function (snapshot) {
-            _this.allUnits = JSON.parse(localStorage.getItem("allUnits"));
-        });
-        //  this.showWait();      
     }
     SignupComponent.prototype.onSignup = function () {
-        debugger;
+        console.debug("onSignup");
         var user = this.signUpForm.value;
-        if (this.allUnits[user.unit].RegisteredUsers >= 2) {
+        var allUnits = JSON.parse(localStorage.getItem("allUnits"));
+        if (allUnits[user.unit].RegisteredUsers >= 2) {
             toastr.error("Maximum number of users have already signed up for this Unit #");
             return;
         }
         this._authService.signupUser(this.signUpForm.value);
     };
-    SignupComponent.prototype.showWait = function () {
-        this.$pleaseWait.modal();
-    };
-    SignupComponent.prototype.hideWait = function () {
-        this.$pleaseWait.modal('hide');
-    };
     SignupComponent.prototype.ngOnInit = function () {
+        console.debug("onInit");
+        localStorage.setItem("allUnits", "{}");
         firebase.database().ref('/Units').once('value').then(function (snapshot) {
+            console.debug("snapshot");
             localStorage.setItem('allUnits', JSON.stringify(snapshot.val()));
         });
+        console.debug("here");
         this.signUpForm = this._fb.group({
             email: ['', common_1.Validators.compose([
                     common_1.Validators.required,
@@ -74,13 +67,13 @@ var SignupComponent = (function () {
         }
     };
     SignupComponent.prototype.isValidUnit = function (control) {
-        this.allUnits = JSON.parse(localStorage.getItem("allUnits"));
+        var allUnits = JSON.parse(localStorage.getItem("allUnits"));
         var unit = parseInt(control.value);
         var min_unit = 1901;
         var max_unit = 2112;
         var validUnit = (!isNaN(unit)) && (unit >= min_unit && unit <= max_unit);
         if (validUnit) {
-            validUnit = this.allUnits[unit.toString()];
+            validUnit = allUnits[unit.toString()];
         }
         if (!validUnit) {
             return { unitIsInvalid: true };

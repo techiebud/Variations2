@@ -16,24 +16,19 @@ declare var firebase: any;
 export class SignupComponent implements OnInit {
     signUpForm: ControlGroup;
 
-    private allUnits: any;
 
-    private $pleaseWait: any;
 
     constructor(private _fb: FormBuilder, private _authService: AuthService) {
 
-        this.$pleaseWait = $("#pleaseWaitDialog");
-        firebase.database().ref('/Units').once('value').then((snapshot) => {
-            this.allUnits = JSON.parse(localStorage.getItem("allUnits"));
 
-        });
-        //  this.showWait();      
+
     }
 
     onSignup() {
-        debugger;
+        console.debug("onSignup");
         var user: User = this.signUpForm.value;
-        if (this.allUnits[user.unit].RegisteredUsers >= 2) {
+        let allUnits = JSON.parse(localStorage.getItem("allUnits"));
+        if (allUnits[user.unit].RegisteredUsers >= 2) {
             toastr.error("Maximum number of users have already signed up for this Unit #")
             return;
         }
@@ -41,20 +36,17 @@ export class SignupComponent implements OnInit {
 
     }
 
-    showWait(): any {
-        this.$pleaseWait.modal();
 
-    }
-    hideWait(): any {
-        this.$pleaseWait.modal('hide');
-    }
 
     ngOnInit(): any {
-
+        console.debug("onInit");
+        localStorage.setItem("allUnits", "{}");
         firebase.database().ref('/Units').once('value').then((snapshot) => {
-            localStorage.setItem('allUnits', JSON.stringify(snapshot.val()))
+            console.debug("snapshot");
+            localStorage.setItem('allUnits', JSON.stringify(snapshot.val()));       
 
         });
+        console.debug("here");
         this.signUpForm = this._fb.group({
             email: ['', Validators.compose([
                 Validators.required,
@@ -94,13 +86,13 @@ export class SignupComponent implements OnInit {
     }
 
     isValidUnit(control: Control): { [s: string]: boolean } {
-        this.allUnits = JSON.parse(localStorage.getItem("allUnits"));
+        let allUnits = JSON.parse(localStorage.getItem("allUnits"));
         let unit: number = parseInt(control.value);
         const min_unit: number = 1901;
         const max_unit: number = 2112;
         let validUnit: boolean = (!isNaN(unit)) && (unit >= min_unit && unit <= max_unit);
         if (validUnit) {
-            validUnit = this.allUnits[unit.toString()];
+            validUnit = allUnits[unit.toString()];
 
         }
 
