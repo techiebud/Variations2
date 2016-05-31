@@ -1,9 +1,10 @@
 @import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
+@import url("//fonts.googleapis.com/css?family=Almendra+SC");
 .loader {
     margin-top: 200px;
     /*padding-left: 200px;*/
     font-size: xx-large;
-    color: darksalmon;
+    color: green;
     font-weight: bolder;
 }
 
@@ -11,8 +12,9 @@
     background-color: #c5c1c1;
  }
 #var-brand {    
-    color: darksalmon;
+    color: cornsilk;
     font-family: 'Lobster',cursive;
+    font-family: 'Almendra SC', serif;
     font-size: 38px;   
 }
 .navbar-nav>li>a {
