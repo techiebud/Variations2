@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>The Variations Condominium Association, Inc.</title>
+    <title>The Variations Condominiums</title>
     <!--  <script>
         document.write('<base href="' + document.location + '" />');
     </script>-->
@@ -9,19 +10,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Styles and CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- Styles -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="css/compiled/bootstrap-overrides.css" type="text/css" />-->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" type="text/css" />
+
+    <!--<link rel="stylesheet" type="text/css" href="css/compiled/theme.css" />-->
+
     <link rel="stylesheet" type="text/css" href="css/site.css" />
-    <!-- our customized CSS -->
 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet'
         type='text/css' />
+
     <!--<link rel="stylesheet" href="css/compiled/index.css" type="text/css" media="screen" />-->
+    <link rel="stylesheet" type="text/css" href="css/lib/animate.css" media="screen, projection" />
     <!-- IE required polyfills, in this exact order -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!-- Polyfill(s) for older browsers -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
     <script src="node_modules/zone.js/dist/zone.js"></script>
@@ -30,17 +36,31 @@
     <!-- 2. Configure SystemJS -->
     <script src="systemjs.config.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.js"></script>
+
+
+    <script>
+        System.import('app').catch(function(err){ console.error(err); });
+    </script>
+
+
+
+
     <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
 
+
+
 </head>
+
 
 <body class="pull_top">
     <var-main>
         <div class="container">
-            <div class="loader"><i class="fa fa-spinner fa-spin fa-3x fa-fw margin-bottom col-md-10 col-md-offset-2"></i>&nbsp;Loading The Variations
-                website.....please wait</div>
+        <div class="loader"><i class="fa fa-spinner fa-spin fa-3x fa-fw margin-bottom col-md-10 col-md-offset-2"></i>&nbsp;Loading The Variations website.....please wait</div>
         </div>
     </var-main>
+
+
 </body>
+
 
 </html>
