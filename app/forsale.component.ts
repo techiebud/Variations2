@@ -2,6 +2,7 @@ import {Component, OnInit} from "@angular/core";
 import {Unit} from "./shared/unit.interface";
 
 declare var firebase: any;
+declare var toastr: any;
 
 
 @Component({
@@ -12,8 +13,14 @@ export class ForsaleComponent implements OnInit {
     units: Array<Unit> = new Array<Unit>();
     isLoading: boolean = true;
     constructor() {
-        firebase.database().ref("/UnitsForSale").once('value').then((snapshot) => {
+      
+    }
+
+    ngOnInit() {
+        this.isLoading = true;
+          firebase.database().ref("/UnitsForSale").once('value').then((snapshot) => {
             //todo:  Need error handling here.
+            toastr.info("UNITS FOR SALE RETRIEVED");
             let unitsForSale: {} = snapshot.val();
             console.log("ufs: ", unitsForSale);
             let unitNumbers = Object.keys(unitsForSale);
@@ -24,7 +31,7 @@ export class ForsaleComponent implements OnInit {
                     UnitNumber: unitNumber,
                     URL: unitsForSale[unitNumber].URL,
                     Owner: "",
-                    Street: unitsForSale[unitNumber].Street,
+                    Street: unitsForSale[unitNumber].Street,    
                     ImageURL: unitsForSale[unitNumber].imageURL
                 }
 
@@ -36,11 +43,8 @@ export class ForsaleComponent implements OnInit {
 
             }  //for loop
             this.isLoading = false;
+         
         });   //snaphot units for sale
-    }
-
-    ngOnInit() {
-        this.isLoading = true;
 
 
 

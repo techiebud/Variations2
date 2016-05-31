@@ -11,11 +11,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var ForsaleComponent = (function () {
     function ForsaleComponent() {
-        var _this = this;
         this.units = new Array();
+        this.isLoading = true;
+    }
+    ForsaleComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.isLoading = true;
         firebase.database().ref("/UnitsForSale").once('value').then(function (snapshot) {
             //todo:  Need error handling here.
+            toastr.info("UNITS FOR SALE RETRIEVED");
             var unitsForSale = snapshot.val();
             console.log("ufs: ", unitsForSale);
             var unitNumbers = Object.keys(unitsForSale);
@@ -32,9 +36,6 @@ var ForsaleComponent = (function () {
             } //for loop
             _this.isLoading = false;
         }); //snaphot units for sale
-    }
-    ForsaleComponent.prototype.ngOnInit = function () {
-        this.isLoading = true;
     }; //ngOnItie
     ForsaleComponent = __decorate([
         core_1.Component({
