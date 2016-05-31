@@ -6,6 +6,8 @@
 	</div>
 
 
+    <i *ngIf="isLoading" class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>
+
 	<div class="row">
 		<div class="col-md-6 board-member" *ngFor="let member of boardMembers">
 			<div class="row col-md-12">
