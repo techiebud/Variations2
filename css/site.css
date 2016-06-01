@@ -127,3 +127,9 @@ span#var-picture-left {
     margin-left: 30px;
 }
 }
+
+.var-street-sign {
+    
+    height: 350%;
+    width: 35%;
+}

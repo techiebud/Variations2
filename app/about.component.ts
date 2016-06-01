@@ -1,4 +1,5 @@
 import {Component, OnInit} from "@angular/core"
+import {AppSettings}  from "./app.component";
 
 @Component({
     selector: "var-about",
@@ -6,8 +7,11 @@ import {Component, OnInit} from "@angular/core"
 })
 
 export class AboutComponent implements OnInit {
-
-    constructor() { }
+    aboutUsName: string;
+    constructor() { 
+        
+        this.aboutUsName = AppSettings.VARIATIONS_NAME;
+    }
 
     ngOnInit() { }
 }

@@ -229,4 +229,6 @@ export class AppComponent implements OnInit {
 export class AppSettings {
 
     public static get FIREBASE_APP(): string { return 'https://thevariations.firebaseio.com'; }
+    public static get VARIATIONS_NAME(): string { return ' The Variations Condominium Association, Inc'; }
+    
 }
