@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS,RouterOutlet, Router } from '@angular/router-deprecated';
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, RouterOutlet, Router } from '@angular/router-deprecated';
 
 
 import {
@@ -21,7 +21,7 @@ import {
 
 } from "./index";
 
-import {   
+import {
     AuthService
 
 } from "./shared/index";
@@ -61,6 +61,24 @@ export class AppComponent implements OnInit {
 
     constructor(private _router: Router, private _authService: AuthService) {
 
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": true,
+            "progressBar": false,
+            "positionClass": "toast-top-center",
+            "preventDuplicates": true,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+
     }
 
     ngOnInit(): any {
@@ -84,6 +102,7 @@ export class AppComponent implements OnInit {
                 var updates = {};
                 updates["/Units/" + newUser.unit + "/RegisteredUsers"] = +(allUnits[newUser.unit].RegisteredUsers) + 1;
                 firebase.database().ref().update(updates);
+                this._router.navigate(['Home'])
             }
             else {
                 var userId = firebase.auth().currentUser.uid;
@@ -91,8 +110,9 @@ export class AppComponent implements OnInit {
                     var firstName: string = snapshot.val().FirstName;
                     toastr.info("Welcome back, " + firstName);
                 });
+                this._router.navigate(['Announcements'])
             }
-            this._router.navigate(['Home'])
+
         });
 
         this._authService.getLoggedOutEvent().subscribe(() => {
@@ -230,5 +250,5 @@ export class AppSettings {
 
     public static get FIREBASE_APP(): string { return 'https://thevariations.firebaseio.com'; }
     public static get VARIATIONS_NAME(): string { return ' The Variations Condominium Association, Inc'; }
-    
+
 }
