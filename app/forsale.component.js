@@ -19,7 +19,7 @@ var ForsaleComponent = (function () {
         this.isLoading = true;
         firebase.database().ref("/UnitsForSale").once('value').then(function (snapshot) {
             //todo:  Need error handling here.
-            toastr.info("UNITS FOR SALE RETRIEVED");
+            // toastr.info("UNITS FOR SALE RETRIEVED");
             var unitsForSale = snapshot.val();
             console.log("ufs: ", unitsForSale);
             var unitNumbers = Object.keys(unitsForSale);

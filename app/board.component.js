@@ -11,11 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var BoardComponent = (function () {
     function BoardComponent() {
-        var _this = this;
         this.boardMembers = new Array();
         this.isLoading = true;
+    }
+    BoardComponent.prototype.ngOnInit = function () {
+        var _this = this;
         firebase.database().ref("/BoardMembers").once('value').then(function (snapshot) {
             //todo:  Need error handling here.
+            //   toastr.info("Board Members retreived!");
             var members = snapshot.val();
             console.log("members: ", members);
             var titles = Object.keys(members);
@@ -31,12 +34,11 @@ var BoardComponent = (function () {
                     URL: members[title].URL,
                     URLCaption: members[title].URLCaption
                 };
+                console.log("Loaded: " + boardMember.Name);
                 _this.boardMembers.push(boardMember);
             } //for loop
             _this.isLoading = false;
         }); //snaphot units for sale 
-    }
-    BoardComponent.prototype.ngOnInit = function () {
     };
     BoardComponent = __decorate([
         core_1.Component({

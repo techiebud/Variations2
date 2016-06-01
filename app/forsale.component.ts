@@ -20,7 +20,7 @@ export class ForsaleComponent implements OnInit {
         this.isLoading = true;
           firebase.database().ref("/UnitsForSale").once('value').then((snapshot) => {
             //todo:  Need error handling here.
-            toastr.info("UNITS FOR SALE RETRIEVED");
+           // toastr.info("UNITS FOR SALE RETRIEVED");
             let unitsForSale: {} = snapshot.val();
             console.log("ufs: ", unitsForSale);
             let unitNumbers = Object.keys(unitsForSale);
