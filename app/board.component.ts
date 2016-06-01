@@ -3,6 +3,7 @@ import {BoardMember} from "./shared/board-member.interface";
 
 
 declare var firebase: any;
+declare var toastr: any;
 
 
 @Component({
@@ -15,36 +16,38 @@ export class BoardComponent implements OnInit {
 
     constructor() {       
         
+        
+     
+     }
+
+    ngOnInit() { 
           firebase.database().ref("/BoardMembers").once('value').then((snapshot) => {
             //todo:  Need error handling here.
+         //   toastr.info("Board Members retreived!");
             let members: {} = snapshot.val();
             console.log("members: ", members);
             let titles = Object.keys(members);
             
-          console.log("titles", titles);
+            console.log("titles", titles);
             for (let i: number = 0; i < titles.length; i++) {
                 let title: string = titles[i];         
-                var boardMember: BoardMember = {
+                let boardMember: BoardMember = {
                     Title: title,
                     Name:  members[title].Name,
                     Email: members[title].Email,
                     Address: members[title].Address,
                     Phone: members[title].Phone,
                     URL: members[title].URL, 
-                    URLCaption: members[title].URLCaption             
+                    URLCaption: members[title].URLCaption           
                     
                 }
+                console.log("Loaded: " + boardMember.Name);
                 this.boardMembers.push(boardMember);
 
             }  //for loop
             this.isLoading = false;
         });   //snaphot units for sale 
-     
-     }
-
-    ngOnInit() { 
-        
-        
+       
         
         
         
