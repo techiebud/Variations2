@@ -1,6 +1,6 @@
 <div class="container">
 
-    <h3>Please sign up to use all features</h3>
+    <h3 class="lead">Please sign up to use all features</h3>
 
 
 
@@ -36,11 +36,11 @@
                 <span class="error" *ngIf="!confirmPassword.pristine && confirmPassword.errors != null && confirmPassword.errors['passwordsNotMatch']">Passwords do not match</span>
             </div>
               <div class="row">&nbsp;</div>
-            <button type="submit" [disabled]="!signUpForm.valid">Sign Up</button>
+            <button class="btn btn-primary" type="submit" [disabled]="!signUpForm.valid">Sign Up</button>
             <div class="row">&nbsp;</div>
             <div class="forgot">
-                <span>Already have an account?</span>
-                <a href="" [routerLink]="['Signin']">Sign In</a>
+                <span class="lead">Already have an account?</span>
+                <a href="#" class="btn btn-info" [routerLink]="['Signin']">Sign In</a>
             </div>
 
         </form>

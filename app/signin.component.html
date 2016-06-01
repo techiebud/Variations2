@@ -2,45 +2,54 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 header">
-                <h4>Sign in to your account</h4>
+                <h4 class="lead">Sign in to your account</h4>
             </div>
             <div class="col-md-4">
                 <form [ngFormModel]="signinForm" (ngSubmit)="onSignin()" class="form-inline">
-                    <div class="input-group">
-                        <label for="email">E-Mail</label>
-                        <input [ngFormControl]="signinForm.find('email')" placeholder="Email" class="form-control" type="email" id="email"  #email="ngForm">
-                    </div>
-                    <div class="input-group">
-                        <label for="password">Password</label>
-                        <input [ngFormControl]="signinForm.find('password')" type="password" id="password" placeholder="Password" class="form-control"  >
-                    </div>
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="email">E-Mail</label>
+                            <input [ngFormControl]="signinForm.find('email')" placeholder="Email" class="form-control" type="email" id="email" #email="ngForm">
+                        </div>
+                        <div class="input-group">
+                            <label for="password">Password</label>
+                            <input [ngFormControl]="signinForm.find('password')" type="password" id="password" placeholder="Password" class="form-control">
+                        </div>
 
-                    <div class="input-group">&nbsp;</div>
+                        <br>
+                        <br>
 
-                    <button type="submit" class="btn btn-primary" [disabled]="!signinForm.valid">Sign In</button>
+
+                        <button type="submit" class="btn btn-primary" [disabled]="!signinForm.valid">Sign In</button>
+                    </div>
                 </form>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="remember">
                     <label class="checkbox">
-                            <input type="checkbox"> Remember me
+                           &nbsp;&nbsp;<input type="checkbox">     Remember me
                         </label>
-                    <button class="btn btn-info" (click)="onForgotPassword()">Forgot password?</button>
+
                 </div>
             </div>
         </div>
-        
+
+        <div class="row">
+            <button class="btn btn-info" (click)="onForgotPassword()">Forgot password?</button>
+
+        </div>
+
         <div class="row">&nbsp;</div>
 
         <div class="row">
-            <div class="col-md-6">
-                <div class="dosnt">
-                    <span>Don’t have an account?</span>
-                    <a href="" [routerLink]="['Signup']">Sign Up</a>
-                </div>
-            </div>
+
+
+            <span class="lead">Don’t have an account?</span>
+            <a href="" class="btn btn-primary" [routerLink]="['Signup']">Sign Up</a>
+
+
         </div>
     </div>
 
