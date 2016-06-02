@@ -1,5 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {Unit} from "./shared/unit.interface";
+import {AppHelpers} from "./app.component";
 
 declare var firebase: any;
 declare var toastr: any;
@@ -10,7 +11,8 @@ declare var toastr: any;
 })
 
 export class ForsaleComponent implements OnInit {
-    units: Array<Unit> = new Array<Unit>();
+    unitsForSale: Array<Unit> = new Array<Unit>();
+    unitsSold: Array<Unit> = new Array<Unit>();
     isLoading: boolean = true;
     constructor() {
 
@@ -46,17 +48,34 @@ export class ForsaleComponent implements OnInit {
         for (let i: number = 0; i < unitNumbers.length; i++) {
 
             let unitNumber: number = +(unitNumbers[i]);
+            let saleDate = AppHelpers.parseDate(unitsForSale[unitNumber].SaleDate);
             var listUnit: Unit = {
                 UnitNumber: unitNumber,
                 URL: unitsForSale[unitNumber].URL,
                 Owner: "",
                 Street: unitsForSale[unitNumber].Street,
-                ImageURL: unitsForSale[unitNumber].imageURL
+                ImageURL: unitsForSale[unitNumber].imageURL,
+                Status: unitsForSale[unitNumber].Status,
+                SaleDate: saleDate,
+                SalePrice: +(unitsForSale[unitNumber].SalePrice)
+
+            }
+            if (listUnit.Status !== "Sold") {
+                this.unitsForSale.push(listUnit);
+            }
+            else {
+
+                this.unitsSold.push(listUnit);
             }
 
-            this.units.push(listUnit);
 
         }  //for loop
+        if (this.unitsSold.length > 1)
+        {
+        this.unitsSold.sort((a, b) => {
+            return b.SaleDate > a.SaleDate ? 1 : 0;
+        })
+        }
 
 
     }

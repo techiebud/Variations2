@@ -106,7 +106,7 @@ export class AppComponent implements OnInit {
                 this._router.navigate(['Home'])
             }
             else {
-                var userId = firebase.auth().currentUser.uid;       
+                var userId = firebase.auth().currentUser.uid;
                 firebase.database().ref('/Users/' + userId).once('value').then(function (snapshot) {
                     var firstName: string = snapshot.val().FirstName;
                     toastr.info("Welcome back, " + firstName);
@@ -120,22 +120,22 @@ export class AppComponent implements OnInit {
             toastr.success("You have successfully logged out.");
             this.deleteCachedData();
             this._router.navigate(['Home']);
-            
+
         });
 
 
 
     }
-    
-   deleteCachedData() : void {
-       localStorage.removeItem("announcements");
-       localStorage.removeItem("unitsForSale");
-       localStorage.removeItem("boardMembers");
-       localStorage.removeItem("pictures");
-       localStorage.removeItem("allUnits");
-       
-       
-   }
+
+    deleteCachedData(): void {
+        localStorage.removeItem("announcements");
+        localStorage.removeItem("unitsForSale");
+        localStorage.removeItem("boardMembers");
+        localStorage.removeItem("pictures");
+        localStorage.removeItem("allUnits");
+
+
+    }
 
     private ObjectLength(object) {
         var length = 0;
@@ -262,5 +262,30 @@ export class AppSettings {
 
     public static get FIREBASE_APP(): string { return 'https://thevariations.firebaseio.com'; }
     public static get VARIATIONS_NAME(): string { return ' The Variations Condominium Association, Inc'; }
+
+}
+
+
+export class AppHelpers {
+
+    public static parseDate(inputDate: string): Date {
+        //Must be in yyyymmdd format.
+        if (!inputDate)
+        {
+            return null;
+        }
+        
+        try {
+            var y: number = +(inputDate.toString().substr(0, 4)),
+                m: number = +(inputDate.toString().substr(4, 2)) - 1,
+                d: number = +(inputDate.toString().substr(6, 2));
+            return new Date(y, m, d);
+        }
+        catch (err) {
+            console.error(err);
+            return null;
+        }
+
+    }
 
 }

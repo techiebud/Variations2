@@ -4,5 +4,8 @@ export interface Unit {
     Street:   string;
     URL: string;
     ImageURL: string;
+    Status: string;
+    SaleDate: Date;
+    SalePrice: number;
     
 }

@@ -13,7 +13,7 @@
 
     <div class="row">
 
-        <div class="col-md-6 units-for-sale" *ngFor="let unit of units">
+        <div class="col-md-6 units-for-sale" *ngFor="let unit of unitsForSale">
             <a href="{{unit.URL}}" target="_blank" class="unit-for-sale">
                 <p class="unit-number lead"> <i class="fa fa-home" aria-hidden="true"></i>{{unit.UnitNumber}} {{unit.Street}}</p>
                 <img src="{{unit.ImageURL}}" alt="{{unit.UnitNumber}}" class="img-thumbnail">
