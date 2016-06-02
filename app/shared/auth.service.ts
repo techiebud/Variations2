@@ -12,6 +12,7 @@ export class AuthService {
 
     private _userLoggedOut = new EventEmitter<any>();
     private _userLoggedIn = new EventEmitter<any>();
+    userIsAuthenticated: boolean;
   
 
     constructor() {

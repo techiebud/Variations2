@@ -29,7 +29,7 @@ export class SigninComponent implements OnInit {
             email: ['', Validators.required],
             password: ['', Validators.required],
         });
-        debugger;
+      
     }
     
     onForgotPassword(): void {

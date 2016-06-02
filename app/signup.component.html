@@ -9,7 +9,7 @@
             <div class="input-group">
                 <label for="email">E-Mail</label>
                 <input [ngFormControl]="signUpForm.find('email')" type="email" id="email" #email="ngForm" placeholder="Email" class="form-control">
-                <span *ngIf="!email.pristine && email.errors != null && email.errors['noEmail']" class="error">Invalid e-mail address</span>
+                <span *ngIf="!email.pristine && email.errors != null && email.errors['noEmail']" class="error"> Invalid e-mail address</span>
             </div>
             <div class="input-group">
                 <label for="firstNMme">First Name</label>
@@ -23,7 +23,7 @@
                 <label for="Unit">Unit #</label>
                 <input [ngFormControl]="signUpForm.find('unit')" type="number" id="unit" #unit="ngForm" min="1901" max="2112" maxlength="4"
                     placeholder="Unit #" class="form-control">
-                <span *ngIf="!unit.pristine && unit.errors != null && unit.errors['unitIsInvalid']" class="error">Invalid Unit #</span>
+                <span *ngIf="!unit.pristine && unit.errors != null && unit.errors['unitIsInvalid']" class="error"> Invalid Unit #</span>
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
@@ -33,7 +33,7 @@
                 <label for="confirm-password">Confirm Password</label>
                 <input [ngFormControl]="signUpForm.find('confirmPassword')" type="password" id="confirm-password" #confirmPassword="ngForm"
                     placeholder="Confirm Password" class="form-control">
-                <span class="error" *ngIf="!confirmPassword.pristine && confirmPassword.errors != null && confirmPassword.errors['passwordsNotMatch']">Passwords do not match</span>
+                <span class="error" *ngIf="!confirmPassword.pristine && confirmPassword.errors != null && confirmPassword.errors['passwordsNotMatch']"> Passwords do not match</span>
             </div>
               <div class="row">&nbsp;</div>
             <button class="btn btn-primary" type="submit" [disabled]="!signUpForm.valid">Sign Up</button>

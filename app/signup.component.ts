@@ -24,8 +24,7 @@ export class SignupComponent implements OnInit {
 
     }
 
-    onSignup() {
-        console.debug("onSignup");
+    onSignup() {        
         var user: User = this.signUpForm.value;
         let allUnits = JSON.parse(localStorage.getItem("allUnits"));
         if (allUnits[user.unit].RegisteredUsers >= 2) {
@@ -39,11 +38,10 @@ export class SignupComponent implements OnInit {
 
 
     ngOnInit(): any {
-        console.debug("onInit");
+     
         localStorage.setItem("allUnits", "{}");
         firebase.database().ref('/Units').once('value').then((snapshot) => {
-            console.debug("snapshot");
-            localStorage.setItem('allUnits', JSON.stringify(snapshot.val()));       
+            localStorage.setItem('allUnits', JSON.stringify(snapshot.val()));      
 
         });
         console.debug("here");

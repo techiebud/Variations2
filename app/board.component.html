@@ -6,7 +6,10 @@
 	</div>
 
 
-    <i *ngIf="isLoading" class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>
+    
+    <div *ngIf="isLoading">
+    <i class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>Loading board members......
+	</div>
 
 	<div class="row">
 		<div class="col-md-6 board-member" *ngFor="let member of boardMembers">

@@ -11,45 +11,61 @@ declare var toastr: any;
 })
 
 export class BoardComponent implements OnInit {
-       boardMembers: Array<BoardMember> = new Array<BoardMember>();
-       isLoading: boolean = true;
+    boardMembers: Array<BoardMember> = new Array<BoardMember>();
+    isLoading: boolean = true;
 
-    constructor() {       
-        
-        
-     
-     }
+    constructor() {
 
-    ngOnInit() { 
-          firebase.database().ref("/BoardMembers").once('value').then((snapshot) => {
-            //todo:  Need error handling here.
-         //   toastr.info("Board Members retreived!");
-            let members: {} = snapshot.val();
-            console.log("members: ", members);
-            let titles = Object.keys(members);
-            
-            console.log("titles", titles);
-            for (let i: number = 0; i < titles.length; i++) {
-                let title: string = titles[i];         
-                let boardMember: BoardMember = {
-                    Title: title,
-                    Name:  members[title].Name,
-                    Email: members[title].Email,
-                    Address: members[title].Address,
-                    Phone: members[title].Phone,
-                    URL: members[title].URL, 
-                    URLCaption: members[title].URLCaption           
-                    
-                }
-                console.log("Loaded: " + boardMember.Name);
-                this.boardMembers.push(boardMember);
 
-            }  //for loop
+
+    }
+
+    ngOnInit() {
+
+        let cachedData: any = localStorage.getItem("boardMembers");
+        if (cachedData) {
+            this.parseData(JSON.parse(cachedData));
             this.isLoading = false;
-        });   //snaphot units for sale 
-       
-        
-        
-        
+        }
+        else {
+            firebase.database().ref("/BoardMembers").once('value').then((snapshot) => {
+                //todo:  Need error handling here.
+
+                let returnedData = snapshot.val();
+                localStorage.setItem("boardMembers", JSON.stringify(returnedData));
+                this.parseData(returnedData);
+                this.isLoading = false;
+            });   //snaphot units for sale
+        }
+
+
+
+    }
+
+    parseData(data: any): void {
+
+        let members: {} = data;
+        console.log("members: ", members);
+        let titles = Object.keys(members);
+
+        console.log("titles", titles);
+        for (let i: number = 0; i < titles.length; i++) {
+            let title: string = titles[i];
+            let boardMember: BoardMember = {
+                Title: title,
+                Name: members[title].Name,
+                Email: members[title].Email,
+                Address: members[title].Address,
+                Phone: members[title].Phone,
+                URL: members[title].URL,
+                URLCaption: members[title].URLCaption
+
+            }
+            console.log("Loaded: " + boardMember.Name);
+            this.boardMembers.push(boardMember);
+
+        }  //for loop
+
+
     }
 }

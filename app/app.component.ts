@@ -78,6 +78,7 @@ export class AppComponent implements OnInit {
             "showMethod": "fadeIn",
             "hideMethod": "fadeOut"
         }
+        this.deleteCachedData();
 
     }
 
@@ -105,7 +106,7 @@ export class AppComponent implements OnInit {
                 this._router.navigate(['Home'])
             }
             else {
-                var userId = firebase.auth().currentUser.uid;
+                var userId = firebase.auth().currentUser.uid;       
                 firebase.database().ref('/Users/' + userId).once('value').then(function (snapshot) {
                     var firstName: string = snapshot.val().FirstName;
                     toastr.info("Welcome back, " + firstName);
@@ -117,13 +118,24 @@ export class AppComponent implements OnInit {
 
         this._authService.getLoggedOutEvent().subscribe(() => {
             toastr.success("You have successfully logged out.");
-            localStorage.removeItem("allUnits");
+            this.deleteCachedData();
             this._router.navigate(['Home']);
+            
         });
 
 
 
     }
+    
+   deleteCachedData() : void {
+       localStorage.removeItem("announcements");
+       localStorage.removeItem("unitsForSale");
+       localStorage.removeItem("boardMembers");
+       localStorage.removeItem("pictures");
+       localStorage.removeItem("allUnits");
+       
+       
+   }
 
     private ObjectLength(object) {
         var length = 0;
