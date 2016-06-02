@@ -11,7 +11,7 @@
         <i class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>Loading units for sale......
     </div>
 
-    <div class="row panel panel-default">
+    <div *ngIf="!isLoading" class="row panel panel-default">
         <div class=" panel-body ">
             <div class="col-md-6 units-for-sale " *ngFor="let unit of unitsForSale ">
                 <a href="{{unit.URL}} " target="_blank " class="unit-for-sale ">
@@ -20,11 +20,9 @@
                 </a>
             </div>
         </div>
-
-
     </div>
 
-    <div class="row panel panel-success ">
+    <div *ngIf="!isLoading" class="row panel panel-success ">
         <h1 class="panel-heading">Units Recently Sold</h1>
         <div class="panel-body">
             <div class="col-md-6 units-for-sale " *ngFor="let unit of unitsSold ">
@@ -37,7 +35,7 @@
         </div>
     </div>
     
-     <div class="row panel panel-warning">
+     <div *ngIf="!isLoading" class="row panel panel-warning">
         <h1 class="panel-heading">Units Pending Sale</h1>
         <div class="panel-body">
             <div class="col-md-6 units-for-sale " *ngFor="let unit of unitsPending ">

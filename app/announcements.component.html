@@ -15,27 +15,20 @@
 		<i class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>Loading announcements......
 	</div>
 
-	<div class="row panel panel-default">
+	<div *ngIf="!isLoading" class="row panel panel-default">
 		<div class="panel-heading">All Other Announcements</div>
 	
 
-		<table class="table" *ngIf="!isLoading">
+		<table class="table table-striped" *ngIf="!isLoading">
 			<thead>
 				<th>Date</th>
 				<th>Announcement (click to read more)</th>
-
-
 			</thead>
 			<tbody>
 				<tr *ngFor="let announcement of announcements">
 					<td>{{announcement.Date | date:'shortDate'}}</td>
-
 					<td><a href="{{announcement.URL}}" target="_blank">{{announcement.Title}}</a></td>
-
-
-
 				</tr>
-
 			</tbody>
 
 
