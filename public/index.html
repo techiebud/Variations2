@@ -15,6 +15,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" type="text/css" />
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="css/site.css" />    <!-- our customized CSS -->
 
     <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet'
@@ -27,6 +28,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.2/toastr.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.js"></script>
 
     <script src="app.bundle.js"></script>
 </head>
@@ -38,6 +40,15 @@
                 2.0 website.....please wait</div>
         </div>
     </var-main>
+    
+     <script type="text/javascript">
+        $(document).ready(function ($) {
+            $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {            
+            event.preventDefault();
+            $(this).ekkoLightbox();
+            }); 
+        });
+</script>
 </body>
 
 </html>

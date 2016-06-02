@@ -4,33 +4,43 @@
 		<h1><span><i class="fa fa-bullhorn" aria-hidden="true"></i></span> Announcements </h1>
 		<p>Here are all the latest news and happenings going on in and around the community .</p>
 	</div>
-
-
-    <div *ngIf="isLoading">
-    <i class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>Loading announcements......
+	<div *ngIf="!isLoading" class="row">
+		<h3>Special Announcement</h3>
+		<a href="img/OneCommunityCountDown.png" data-toggle="lightbox" data-title="Loan Payoff Coundown!" data-footer="The Variations Condominium Association, Inc">
+			<h4>Click here to view the latest figures for our loan payoff countdown</h4>		
+		</a>
 	</div>
 
+	<div *ngIf="isLoading">
+		<i class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>Loading announcements......
+	</div>
 
-	<table class="table" *ngIf="!isLoading">
-		<thead>
-			<th>Date</th>
-			<th>Announcement (click to read more)</th>	
+	<div class="row panel panel-default">
+		<div class="panel-heading">All Other Announcements</div>
+	
 
-
-		</thead>
-		<tbody>
-			<tr *ngFor="let announcement of announcements">
-				<td>{{announcement.Date | date:'shortDate'}}</td>
-				
-				<td><a href="{{announcement.URL}}" target="_blank">{{announcement.Title}}</a></td>		
-			
-				
-				
-			</tr>
-			
-		</tbody>
+		<table class="table" *ngIf="!isLoading">
+			<thead>
+				<th>Date</th>
+				<th>Announcement (click to read more)</th>
 
 
+			</thead>
+			<tbody>
+				<tr *ngFor="let announcement of announcements">
+					<td>{{announcement.Date | date:'shortDate'}}</td>
+
+					<td><a href="{{announcement.URL}}" target="_blank">{{announcement.Title}}</a></td>
 
 
-	</table>
+
+				</tr>
+
+			</tbody>
+
+
+
+
+		</table>
+	</div>
+</div>
