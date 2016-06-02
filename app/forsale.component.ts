@@ -16,8 +16,8 @@ export class ForsaleComponent implements OnInit {
     unitsSold: Array<Unit> = new Array<Unit>();
     unitsPending: Array<Unit> = new Array<Unit>();
     isLoading: boolean = true;
-    
-    constructor(private _authService: AuthService) {}
+
+    constructor(private _authService: AuthService) { }
 
     isAuth() {
         return this._authService.isAuthenticated();
@@ -61,7 +61,7 @@ export class ForsaleComponent implements OnInit {
                 SalePrice: +(unitsForSale[unitNumber].SalePrice)
 
             }
-            
+
             switch (listUnit.Status) {
                 case "For Sale":
                     this.unitsForSale.push(listUnit);
@@ -73,14 +73,14 @@ export class ForsaleComponent implements OnInit {
                     this.unitsPending.push(listUnit);
                     break;
                 default:
-                this.unitsForSale.push(listUnit);
+                    this.unitsForSale.push(listUnit);
                     break;
-            }        
-      
+            }
 
 
-     
 
+
+        }
 
     }
 
