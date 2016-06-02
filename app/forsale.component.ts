@@ -1,6 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {Unit} from "./shared/unit.interface";
 import {AppHelpers} from "./app.component";
+import {AuthService} from "./shared/auth.service";
 
 declare var firebase: any;
 declare var toastr: any;
@@ -13,9 +14,13 @@ declare var toastr: any;
 export class ForsaleComponent implements OnInit {
     unitsForSale: Array<Unit> = new Array<Unit>();
     unitsSold: Array<Unit> = new Array<Unit>();
+    unitsPending: Array<Unit> = new Array<Unit>();
     isLoading: boolean = true;
-    constructor() {
+    
+    constructor(private _authService: AuthService) {}
 
+    isAuth() {
+        return this._authService.isAuthenticated();
     }
 
     ngOnInit() {
@@ -24,18 +29,14 @@ export class ForsaleComponent implements OnInit {
         if (cachedData) {
             this.parseData(JSON.parse(cachedData));
             this.isLoading = false;
-
         }
         else {
             firebase.database().ref("/UnitsForSale").once('value').then((snapshot) => {
                 //todo:  Need error handling here.
-
                 let returnedData = snapshot.val();
                 localStorage.setItem("unitsForSale", JSON.stringify(returnedData));
                 this.parseData(returnedData);
-
                 this.isLoading = false;
-
             });   //snaphot units for sale
         }
 
@@ -60,22 +61,25 @@ export class ForsaleComponent implements OnInit {
                 SalePrice: +(unitsForSale[unitNumber].SalePrice)
 
             }
-            if (listUnit.Status !== "Sold") {
+            
+            switch (listUnit.Status) {
+                case "For Sale":
+                    this.unitsForSale.push(listUnit);
+                    break;
+                case "Sold":
+                    this.unitsSold.push(listUnit);
+                    break;
+                case "Pending":
+                    this.unitsPending.push(listUnit);
+                    break;
+                default:
                 this.unitsForSale.push(listUnit);
-            }
-            else {
-
-                this.unitsSold.push(listUnit);
-            }
+                    break;
+            }        
+      
 
 
-        }  //for loop
-        if (this.unitsSold.length > 1)
-        {
-        this.unitsSold.sort((a, b) => {
-            return b.SaleDate > a.SaleDate ? 1 : 0;
-        })
-        }
+     
 
 
     }
