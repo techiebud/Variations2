@@ -1,10 +1,10 @@
 import {Component, OnInit} from "@angular/core";
 import {Unit} from "./shared/unit.interface";
 import {AppHelpers} from "./app.component";
-import {AuthService} from "./shared/auth.service";
 
 declare var firebase: any;
 declare var toastr: any;
+const DATA_TABLE: string = "UnitsForSale";
 
 
 @Component({
@@ -17,33 +17,53 @@ export class ForsaleComponent implements OnInit {
     unitsPending: Array<Unit> = new Array<Unit>();
     isLoading: boolean = true;
 
-    constructor(private _authService: AuthService) { }
+    constructor() {
 
-    isAuth() {
-        return this._authService.isAuthenticated();
+        if (!this.checkDataReady()) {
+            var refreshId = setInterval(() => {
+                if (this.checkDataReady()) {
+                    clearInterval(refreshId);
+                    this.isLoading = false;
+                }
+            }, 500);
+        }
+        else {
+            this.isLoading = false;
+        }
+
     }
+
+
 
     ngOnInit() {
 
-        let cachedData: any = localStorage.getItem("unitsForSale");
-        if (cachedData) {
-            this.parseData(JSON.parse(cachedData));
-            this.isLoading = false;
-        }
-        else {
-            firebase.database().ref("/UnitsForSale").once('value').then((snapshot) => {
+        if (!localStorage.getItem(DATA_TABLE)) {
+            let fbTable = "/" + DATA_TABLE;
+            firebase.database().ref(fbTable).once('value').then((snapshot) => {
                 //todo:  Need error handling here.
                 let returnedData = snapshot.val();
-                localStorage.setItem("unitsForSale", JSON.stringify(returnedData));
-                this.parseData(returnedData);
-                this.isLoading = false;
+                localStorage.setItem(DATA_TABLE, JSON.stringify(returnedData));
             });   //snaphot units for sale
         }
 
-    }   //ngOnInit
+    }   //oninit
+
+    checkDataReady(): boolean {
+
+        let cachedData: any = localStorage.getItem(DATA_TABLE);
+        if (cachedData) {
+            this.parseData(JSON.parse(cachedData));
+            return true;
+        }
+        return false;
+    }
 
     parseData(data: any): void {
 
+
+        this.unitsForSale = [];
+        this.unitsPending = [];
+        this.unitsSold = [];
         let unitsForSale: {} = data;
         let unitNumbers = Object.keys(unitsForSale);
         for (let i: number = 0; i < unitNumbers.length; i++) {
@@ -76,10 +96,6 @@ export class ForsaleComponent implements OnInit {
                     this.unitsForSale.push(listUnit);
                     break;
             }
-
-
-
-
         }
 
     }
