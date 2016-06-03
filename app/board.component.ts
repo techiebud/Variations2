@@ -4,6 +4,8 @@ import {BoardMember} from "./shared/board-member.interface";
 
 declare var firebase: any;
 declare var toastr: any;
+const DATA_TABLE: string = "BoardMembers";
+
 
 
 @Component({
@@ -14,41 +16,53 @@ export class BoardComponent implements OnInit {
     boardMembers: Array<BoardMember> = new Array<BoardMember>();
     isLoading: boolean = true;
 
+
     constructor() {
 
-
+        if (!this.checkDataReady()) {
+            var refreshId = setInterval(() => {
+                if (this.checkDataReady()) {
+                    clearInterval(refreshId);
+                    this.isLoading = false;
+                }
+            }, 500);
+        }
+        else
+        {
+           this.isLoading = false;
+        }
 
     }
 
     ngOnInit() {
 
-        let cachedData: any = localStorage.getItem("boardMembers");
-        if (cachedData) {
-            this.parseData(JSON.parse(cachedData));
-            this.isLoading = false;
-        }
-        else {
-            firebase.database().ref("/BoardMembers").once('value').then((snapshot) => {
+        if (!localStorage.getItem(DATA_TABLE)) {
+            let fbTable = "/" + DATA_TABLE;
+            firebase.database().ref(fbTable).once('value').then((snapshot) => {
                 //todo:  Need error handling here.
-
                 let returnedData = snapshot.val();
-                localStorage.setItem("boardMembers", JSON.stringify(returnedData));
-                this.parseData(returnedData);
-                this.isLoading = false;
+                localStorage.setItem(DATA_TABLE, JSON.stringify(returnedData));
             });   //snaphot units for sale
         }
 
+    }
 
+    checkDataReady(): boolean {
 
+        let cachedData: any = localStorage.getItem(DATA_TABLE);
+        if (cachedData) {
+            this.parseData(JSON.parse(cachedData));          
+            return true;
+        }
+        return false;
     }
 
     parseData(data: any): void {
 
+        this.boardMembers = []; //initialize
         let members: {} = data;
-        console.log("members: ", members);
         let titles = Object.keys(members);
 
-        console.log("titles", titles);
         for (let i: number = 0; i < titles.length; i++) {
             let title: string = titles[i];
             let boardMember: BoardMember = {
@@ -61,9 +75,7 @@ export class BoardComponent implements OnInit {
                 URLCaption: members[title].URLCaption
 
             }
-            console.log("Loaded: " + boardMember.Name);
             this.boardMembers.push(boardMember);
-
         }  //for loop
 
 
