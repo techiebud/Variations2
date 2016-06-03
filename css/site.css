@@ -144,3 +144,9 @@ span#var-picture-left {
     padding-top: 25px;
     font-size: xx-large;
 }
+.panel-primary>.panel-heading {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
+    margin-top: auto;
+}
