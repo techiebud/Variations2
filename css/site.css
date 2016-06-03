@@ -133,3 +133,14 @@ span#var-picture-left {
     height: 350%;
     width: 35%;
 }
+
+#loan-countdown {
+    width:  50%;
+    background-color: yellow;
+} 
+
+.countdown-row {
+    /* margin-top: 20px; */
+    padding-top: 25px;
+    font-size: xx-large;
+}

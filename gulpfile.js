@@ -9,7 +9,7 @@ gulp.task("img", function() {
 	.pipe(gulp.dest("public/img"))	
 });
 gulp.task("css", function() {
-	return gulp.src("css/*.css")
+	return gulp.src("css/**/*.css")
 	.pipe(gulp.dest("public/css"))	
 });
 gulp.task("fonts", function() {
