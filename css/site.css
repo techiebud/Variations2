@@ -136,11 +136,11 @@ span#var-picture-left {
 
 #loan-countdown {
     width:  50%;
-    background-color: yellow;
+    background-color: FCF4F6;
 } 
 
 .countdown-row {
-    /* margin-top: 20px; */
+    /*margin-top: 25px;*/
     padding-top: 25px;
     font-size: xx-large;
 }
