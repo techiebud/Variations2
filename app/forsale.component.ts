@@ -96,8 +96,15 @@ export class ForsaleComponent implements OnInit {
                     this.unitsForSale.push(listUnit);
                     break;
             }
+        }  //for loop
+        if (this.unitsSold.length > 1)
+        {
+            this.unitsSold.sort((a : Unit, b: Unit) : number => {
+                return (a.SaleDate > b.SaleDate ? 0 : 1);
+                
+            })
         }
 
-    }
+    }  //parseData
 
 }    //ForSaleComponent  
