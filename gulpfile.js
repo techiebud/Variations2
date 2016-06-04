@@ -20,6 +20,11 @@ gulp.task("documents", function() {
 	return gulp.src("documents/*.*")
 	.pipe(gulp.dest("public/documents"))	
 });
+gulp.task("favicon", function() {
+	return gulp.src("favicon.ico")
+	.pipe(gulp.dest("public"))	
+});
+
 
 
 gulp.task("public", ["html", "img", "css", "fonts", "documents"]);
