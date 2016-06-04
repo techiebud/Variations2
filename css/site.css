@@ -97,9 +97,10 @@ a.unit-for-sale:hover {
     color: darkred;
     
 }
-a.unit-for-sale:link {
-    text-decoration: none;  
-}
+/*a {
+    text-decoration: none !important;
+    color: darkgreen;
+}*/
 
 div.board-member {
     margin-bottom: 20px;
@@ -150,3 +151,4 @@ span#var-picture-left {
     border-color: #337ab7;
     margin-top: auto;
 }
+

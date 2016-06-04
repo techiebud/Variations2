@@ -25,9 +25,15 @@
                 <li class="dropdown" *ngIf="isAuth()">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">DOCUMENTS</a>
                     <ul class="dropdown-menu">
-                        <li><a href="documents\Directory.pdf" target="_blank">Directory</a></li>
-                        <li><a href="documents\CertificateOfInsurance.pdf" target="_blank">Certificate of Liability Insurance</a></li>
                         <li><a href="documents\2016Budget.pdf" target="_blank">2016 Budget</a></li>
+                        <li><a href="documents\Directory.pdf" target="_blank">2016 Directory</a></li>
+                        <li><a href="documents\ByLaws.pdf" target="_blank">Association Bylaws</a></li>
+                        <li><a href="documents\CertificateOfInsurance.pdf" target="_blank">Certificate of Liability Insurance</a></li>
+                        <li><a href="documents\CodeOfEthicsAndConflictDisclosure.pdf" target="_blank">Director/Officer Code of Ethics</a></li>
+                        <li><a href="documents\PropertyModificationRequest.pdf" target="_blank">Property Modification Request</a></li>
+                        <li><a href="documents\Resolutions.pdf" target="_blank">Resolutions</a></li>
+
+
                     </ul>
                 </li>
                 <li *ngIf="isAuth()"><a href="" [routerLink]="['Board']">THE BOARD</a></li>
@@ -59,10 +65,10 @@
                         <li><a href="http://www.pdkairport.org/" target="_blank">DeKalb Peachtree Airport (PDK)</a></li>
                     </ul>
                 </li>
-                <li *ngIf="!isAuth()"><a  [routerLink]="['Signin']">SIGN IN</a></li>
+                <li *ngIf="!isAuth()"><a [routerLink]="['Signin']">SIGN IN</a></li>
                 <li *ngIf="isAuth()"><a href="#" (click)="logout()">LOG OUT</a></li>
-              
-          
+
+
 
             </ul>
         </div>
