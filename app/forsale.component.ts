@@ -16,6 +16,7 @@ export class ForsaleComponent implements OnInit {
     unitsSold: Array<Unit> = new Array<Unit>();
     unitsPending: Array<Unit> = new Array<Unit>();
     isLoading: boolean = true;
+    isError: boolean= false;
 
     constructor() {
 
@@ -45,6 +46,7 @@ export class ForsaleComponent implements OnInit {
                   localStorage.setItem(DATA_TABLE, JSON.stringify(returnedData));
                },
              (err) => {
+                 this.isError = true;
                   console.error(err);                  
                   toastr.error("Permission Denied!");                
               

@@ -15,6 +15,7 @@ const DATA_TABLE: string = "BoardMembers";
 export class BoardComponent implements OnInit {
     boardMembers: Array<BoardMember> = new Array<BoardMember>();
     isLoading: boolean = true;
+    isError: boolean = false;
 
 
     constructor() {
@@ -38,11 +39,16 @@ export class BoardComponent implements OnInit {
 
         if (!localStorage.getItem(DATA_TABLE)) {
             let fbTable = "/" + DATA_TABLE;
-            firebase.database().ref(fbTable).once('value').then((snapshot) => {
-                //todo:  Need error handling here.
-                let returnedData = snapshot.val();
-                localStorage.setItem(DATA_TABLE, JSON.stringify(returnedData));
-            });   //snaphot units for sale
+            firebase.database().ref(fbTable).once('value',
+              (snapshot) => {                    
+                  let returnedData = snapshot.val();
+                  localStorage.setItem(DATA_TABLE, JSON.stringify(returnedData));
+               },
+             (err) => {
+                  this.isError = true;
+                  console.error(err);                  
+                  toastr.error("Permission Denied!");           
+             });
         }
 
     }

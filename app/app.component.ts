@@ -90,6 +90,7 @@ export class AppComponent implements OnInit {
             console.log("user logged in");
 
             if (newUser) {
+                toastr.success("Congratulations " + newUser.firstName + "!  You have successfully signed up." );
                 console.log("new User", newUser);
                 var fbUser = firebase.auth().currentUser;
                 localStorage.removeItem("newUser");
@@ -102,14 +103,14 @@ export class AppComponent implements OnInit {
                 var allUnits: any = JSON.parse(localStorage.getItem("allUnits"));
                 var updates = {};
                 updates["/Units/" + newUser.unit + "/RegisteredUsers"] = +(allUnits[newUser.unit].RegisteredUsers) + 1;
-                firebase.database().ref().update(updates);
+                firebase.database().ref().update(updates);                
                 this._router.navigate(['Home'])
             }
             else {
                 var userId = firebase.auth().currentUser.uid;
                 firebase.database().ref('/Users/' + userId).once('value').then(function (snapshot) {
                     var firstName: string = snapshot.val().FirstName;
-                    toastr.info("Welcome back, " + firstName);
+                    toastr.info("Welcome back, " + firstName + "!");
                 });
                 this._router.navigate(['Announcements'])
             }

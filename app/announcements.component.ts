@@ -16,6 +16,7 @@ const DATA_TABLE : string = "Announcements";
 export class AnnouncementsComponent implements OnInit {
     announcements: Array<Announcement> = new Array<Announcement>();
     isLoading: boolean = true;
+    isError: boolean = false;
 
     constructor() {
           if (!this.checkDataReady()) {
@@ -36,12 +37,16 @@ export class AnnouncementsComponent implements OnInit {
        if (!localStorage.getItem(DATA_TABLE)) {
             let fbTable = "/" + DATA_TABLE;
             let sortedAnnouncementsRef = firebase.database().ref(fbTable).orderByKey();
-            sortedAnnouncementsRef.once('value').then((snapshot) => {
-                //todo:  Need error handling here.               
-                var jsonAnnouncements = JSON.stringify(snapshot.val());
-                //cache the data here.
-                localStorage.setItem(DATA_TABLE, jsonAnnouncements);
-            });   //snaphot units for sale   
+               sortedAnnouncementsRef.once('value',
+              (snapshot) => {                    
+                  let returnedData = snapshot.val();
+                  localStorage.setItem(DATA_TABLE, JSON.stringify(returnedData));
+               },
+             (err) => {
+                  console.error(err);          
+                  this.isError = true;        
+                  toastr.error("Permission Denied!");           
+             });         
         }
     }
     
