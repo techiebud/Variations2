@@ -1,5 +1,4 @@
-@import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
-@import url("//fonts.googleapis.com/css?family=Almendra+SC");
+@import url("//fonts.googleapis.com/css?family=Playfair+Display+SC:900");
 
 .loader {
     margin-top: 200px;  
@@ -12,10 +11,9 @@
     background-color: #c5c1c1;
  }
 #var-brand {    
-    color: cornsilk;
-    font-family: 'Lobster',cursive;
-    font-family: 'Almendra SC', serif;
-    font-size: 38px;   
+  color: cornsilk; 
+  font-family: 'Playfair Display SC', serif;
+  font-size: 38px;   
 }
 .navbar-nav>li>a {
     color: white;
