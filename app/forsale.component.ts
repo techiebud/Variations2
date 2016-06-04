@@ -39,12 +39,18 @@ export class ForsaleComponent implements OnInit {
 
         if (!localStorage.getItem(DATA_TABLE)) {
             let fbTable = "/" + DATA_TABLE;
-            firebase.database().ref(fbTable).once('value').then((snapshot) => {
-                //todo:  Need error handling here.
-                let returnedData = snapshot.val();
-                localStorage.setItem(DATA_TABLE, JSON.stringify(returnedData));
-            });   //snaphot units for sale
-        }
+            firebase.database().ref(fbTable).once('value',
+              (snapshot) => {                    
+                  let returnedData = snapshot.val();
+                  localStorage.setItem(DATA_TABLE, JSON.stringify(returnedData));
+               },
+             (err) => {
+                  console.error(err);                  
+                  toastr.error("Permission Denied!");                
+              
+            });
+               //snaphot units for sale
+        }   //no cache data found
 
     }   //oninit
 
