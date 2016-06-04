@@ -2,8 +2,7 @@
 @import url("//fonts.googleapis.com/css?family=Almendra+SC");
 
 .loader {
-    margin-top: 200px;
-    /*padding-left: 200px;*/
+    margin-top: 200px;  
     font-size: xx-large;
     color:  #216839;
     font-weight: bolder;
@@ -49,7 +48,12 @@
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
 }
-
+#techiebud > a {
+    color:#999;
+    font: smaller
+   
+    
+}
 
 .footer {
     border-top: #FFF 1px solid;
@@ -67,7 +71,7 @@ section#contents {
     
 }
 
-#copyright {
+#copyright, #techiebud {
     
     color: #999;
     
@@ -83,7 +87,7 @@ section#contents {
     padding: 10px;
 }
 .copyright.container {
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 p.unit-number.lead {
@@ -95,6 +99,7 @@ p.unit-number.lead {
 }
 a.unit-for-sale:hover {
     color: darkred;
+    text-decoration: none !important;
     
 }
 /*a {
@@ -123,6 +128,7 @@ span#var-picture-left, span#var-picture-right {
 {
     span#var-picture-right {
     margin-left: -78px;
+    margin-right: 48px;
 }
 span#var-picture-left {
     margin-left: 30px;
