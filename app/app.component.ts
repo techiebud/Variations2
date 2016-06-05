@@ -15,6 +15,7 @@ import {
     ForsaleComponent,
     HomeComponent,
     NavComponent,
+    PicturesComponent,
     ServicesComponent,
     SigninComponent,
     SignupComponent
@@ -49,6 +50,7 @@ declare var firebase: any;
     { path: '/forsale', name: 'Forsale', component: ForsaleComponent },
     { path: '/fees', name: 'Fees', component: FeesComponent },
     { path: '/announcements', name: 'Announcements', component: AnnouncementsComponent },
+    { path: '/pictures', name: 'Pictures', component: PicturesComponent },
     { path: '/services', name: 'Services', component: ServicesComponent },
     { path: '/contactus', name: 'ContactUs', component: ContactUsComponent },
     { path: '/signup', name: 'Signup', component: SignupComponent },

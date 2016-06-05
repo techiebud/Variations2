@@ -1,0 +1,30 @@
+<div class="container">
+
+	<div class="jumbotron">
+		<h1><span><i class="fa fa-camera" aria-hidden="true"></i></span> Pictures </h1>
+		<p>Here are all the latest Picture Albums.</p>
+	</div>
+
+	<div *ngIf="isLoading && !isError">
+		<i class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>Loading picture album links......
+	</div>
+
+	<div *ngIf="!isLoading" class="row panel panel-default">
+		<div class="panel-heading">Picture Albums</div>
+	
+
+		<table class="table table-striped" *ngIf="!isLoading">
+			<thead>
+				<th>Date</th>
+				<th>Album (click to view)</th>
+			</thead>
+			<tbody>
+				<tr *ngFor="let picture of pictures">
+					<td>{{picture.Date | date:'shortDate'}}</td>
+					<td><a href="{{picture.URL}}" target="_blank">{{picture.Title}}</a></td>
+				</tr>
+			</tbody>
+
+		</table>
+	</div>
+</div>
