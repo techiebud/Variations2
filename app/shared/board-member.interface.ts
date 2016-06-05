@@ -6,4 +6,5 @@ export interface BoardMember {
     Phone: string;
     URL: string;  
     URLCaption: string;  
+    DisplayOrder: number;
 }

@@ -38,10 +38,13 @@ export class BoardComponent implements OnInit {
     ngOnInit() {
 
         if (!localStorage.getItem(DATA_TABLE)) {
-            let fbTable = "/" + DATA_TABLE;
-            firebase.database().ref(fbTable).once('value',
-              (snapshot) => {                    
+            let fbTable = "" + DATA_TABLE;
+            var boardDataRef = firebase.database().ref(fbTable).orderByChild('Email');
+            boardDataRef.once('value',
+              (snapshot) => {     
+                             
                   let returnedData = snapshot.val();
+                  console.debug(returnedData);
                   localStorage.setItem(DATA_TABLE, JSON.stringify(returnedData));
                },
              (err) => {
@@ -78,11 +81,17 @@ export class BoardComponent implements OnInit {
                 Address: members[title].Address,
                 Phone: members[title].Phone,
                 URL: members[title].URL,
-                URLCaption: members[title].URLCaption
+                URLCaption: members[title].URLCaption,
+                DisplayOrder: +(members[title].DisplayOrder)
 
             }
             this.boardMembers.push(boardMember);
         }  //for loop
+        //FYI: I"m sorting the data here because I cannot get the data to come back sorted from Firebase;
+        this.boardMembers.sort((a: BoardMember, b: BoardMember) : number => {
+             return (a.DisplayOrder > b.DisplayOrder) ? 1 : (a.DisplayOrder < b.DisplayOrder) ? -1 : 0;
+            
+        })
 
 
     }
