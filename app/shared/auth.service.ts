@@ -24,11 +24,22 @@ export class AuthService {
             storageBucket: "project-4248197981206346819.appspot.com",
         };
         firebase.initializeApp(config);
+        // if (localStorage.getItem("token")) {
+        //     let token = localStorage.getItem("token");
+        //     firebase.auth().signInWithCustomToken(token).then(() => {
+        //         toastr.success("Welcome back returning user");                
+        //     })
+        //     .catch((err) => {
+        //         console.log(err);
+        //         toastr.error(err);                
+        //     });            
+        // }
 
         firebase.auth().onAuthStateChanged((user) => {
             if (user) {
                 console.log("User has signed in");
-                console.log(user);               
+                console.log(user);              
+                localStorage.setItem("token", user.refreshToken);
                 
                 this._userLoggedIn.emit(true);
             } else {
