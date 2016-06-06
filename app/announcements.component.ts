@@ -6,7 +6,9 @@ import {AppHelpers} from "./app.component";
 
 declare var firebase: any;
 declare var toastr: any;
-const DATA_TABLE : string = "Announcements";
+declare var $: any;
+declare var twttr: any;
+const DATA_TABLE: string = "Announcements";
 
 
 @Component({
@@ -19,42 +21,51 @@ export class AnnouncementsComponent implements OnInit {
     isError: boolean = false;
 
     constructor() {
-          if (!this.checkDataReady()) {
+      
+        if (!this.checkDataReady()) {
             var refreshId = setInterval(() => {
                 if (this.checkDataReady()) {
                     clearInterval(refreshId);
-                    this.isLoading = false;
+                    this.isLoading = false;                       
                 }
             }, 500);
         }
-        else
-           {
-           this.isLoading = false;
+        else {
+            this.isLoading = false;
+         
+        }
+        
+        setTimeout(function() {
+             twttr.widgets.load()    
+            
+        }, 1000);
+
+        
+
+    }
+
+    ngOnInit() {
+        if (!localStorage.getItem(DATA_TABLE)) {
+            let fbTable = "/" + DATA_TABLE;
+            let sortedAnnouncementsRef = firebase.database().ref(fbTable).orderByKey();
+            sortedAnnouncementsRef.once('value',
+                (snapshot) => {
+                    let returnedData = snapshot.val();
+                    localStorage.setItem(DATA_TABLE, JSON.stringify(returnedData));
+                },
+                (err) => {
+                    console.error(err);
+                    this.isError = true;
+                    toastr.error("You must sign in to view this information!");
+                });
         }
     }
 
-    ngOnInit() {      
-       if (!localStorage.getItem(DATA_TABLE)) {
-            let fbTable = "/" + DATA_TABLE;
-            let sortedAnnouncementsRef = firebase.database().ref(fbTable).orderByKey();
-               sortedAnnouncementsRef.once('value',
-              (snapshot) => {                    
-                  let returnedData = snapshot.val();
-                  localStorage.setItem(DATA_TABLE, JSON.stringify(returnedData));
-               },
-             (err) => {
-                  console.error(err);          
-                  this.isError = true;        
-                  toastr.error("Permission Denied!");           
-             });         
-        }
-    }
-    
-      checkDataReady(): boolean {
+    checkDataReady(): boolean {
 
         let cachedData: any = localStorage.getItem(DATA_TABLE);
         if (cachedData) {
-            this.parseData(JSON.parse(cachedData));          
+            this.parseData(JSON.parse(cachedData));
             return true;
         }
         return false;
@@ -76,4 +87,18 @@ export class AnnouncementsComponent implements OnInit {
         }  //for loop
 
     }
+
+
+    tweetCode(d, s, id): void {
+        var js,
+            fjs = d.getElementsByTagName(s)[0],
+            p = /^http:/.test(d.location) ? 'http' : 'https';
+
+        if (!d.getElementById(id)) {
+            js = d.createElement(s); js.id = id;
+            js.src = p + "://platform.twitter.com/widgets.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }
+    }
+
 }
