@@ -21,7 +21,7 @@ export class AnnouncementsComponent implements OnInit {
     isError: boolean = false;
 
     constructor() {
-      
+     //   toastr.info("constructor");
         if (!this.checkDataReady()) {
             var refreshId = setInterval(() => {
                 if (this.checkDataReady()) {
@@ -38,13 +38,14 @@ export class AnnouncementsComponent implements OnInit {
         setTimeout(function() {
              twttr.widgets.load()    
             
-        }, 1000);
+        }, 1500);
 
         
 
     }
 
     ngOnInit() {
+       // toastr.info("ngOnInit");
         if (!localStorage.getItem(DATA_TABLE)) {
             let fbTable = "/" + DATA_TABLE;
             let sortedAnnouncementsRef = firebase.database().ref(fbTable).orderByKey();
