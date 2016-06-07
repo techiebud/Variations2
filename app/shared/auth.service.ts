@@ -4,6 +4,7 @@ import {User} from "./user.interface";
 
 declare var firebase: any;
 declare var toastr: any;
+declare var  md5: any;
 
 
 @Injectable(
@@ -13,6 +14,7 @@ export class AuthService {
     private _userLoggedOut = new EventEmitter<any>();
     private _userLoggedIn = new EventEmitter<any>();
     userIsAuthenticated: boolean;
+    userGravatarURL: string = "";
   
 
     constructor() {
@@ -39,8 +41,11 @@ export class AuthService {
             if (user) {
                 console.log("User has signed in");
                 console.log(user);              
-                localStorage.setItem("token", user.refreshToken);
-                
+                localStorage.setItem("token", user.refreshToken);   
+                this.userGravatarURL = "https://gravatar.com/avatar/" 
+                + md5(user.email.trim().toLowerCase()) + "?d=mm"    
+                console.debug("gravatar", this.userGravatarURL);    
+                              
                 this._userLoggedIn.emit(true);
             } else {
                // toastr.info("Residents, please log in to view all features.");
@@ -133,7 +138,12 @@ export class AuthService {
     isAuthenticated(): boolean {
         var user = firebase.auth().currentUser;
         return user ? true : false;
-
     }
+    getUserGravatarURL(): string {
+        
+        return this.userGravatarURL;
+    }
+    
+    
 
 }

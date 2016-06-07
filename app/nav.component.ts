@@ -26,6 +26,11 @@ export class NavComponent implements OnInit {
        console.log("nav: logout");
         this._authService.logout();
     }
+    
+    userGravatarURL() : string {
+      // return "n/a";
+       return this._authService.getUserGravatarURL();
+    }
 
     ngOnInit() { }
 }

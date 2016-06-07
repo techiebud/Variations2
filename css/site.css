@@ -9,11 +9,12 @@
 
 .navbar-inverse .dropdown-menu{
     background-color: #c5c1c1;
+    background-color:  cornsilk;
  }
 #var-brand {    
   color: cornsilk; 
   font-family: 'Playfair Display SC', serif;
-  font-size: 38px;   
+  font-size: 30px;   
 }
 .navbar-nav>li>a {
     color: white;
@@ -197,3 +198,12 @@ a.twitter-timeline:focus {
 .box > .icon > .info > .more a { font-family: "Roboto",sans-serif !important; font-size: 12px; color: #222; line-height: 12px; text-transform: uppercase; text-decoration: none; }
 .box > .icon:hover > .info > .more > a { color: #fff; padding: 6px 8px; background-color: #63B76C; }
 .box .space { height: 30px; }
+
+.gravatar {
+        height: 20px;
+        width: 20px;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+    color: #fff;
+    background-color: inherit;
+}

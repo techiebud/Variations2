@@ -1,4 +1,4 @@
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="navbar navbar-inverse navbar-fixed-top" id="var-navbar" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-expanded="false">
@@ -67,9 +67,17 @@
                     </ul>
                 </li>
                 <li *ngIf="!isAuth()"><a [routerLink]="['Signin']">SIGN IN</a></li>
-                <li *ngIf="isAuth()"><a href="#" (click)="logout()">LOG OUT</a></li>
+                
+                <!--<li *nfIf="isAuth()"><img  src={{userGravatarURL}} ></li>-->
+                <!--<li *ngIf="isAuth()"><a href="#" (click)="logout()"><img class="gravatar" src="{{userGravatarURL()}}" >LOG OUT</a></li>-->
 
-
+                 <li *ngIf="isAuth()" class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="gravatar" src="{{userGravatarURL()}}" ><i class="fa fa-caret-down fa-1" aria-hidden="true"></i></a>
+                    <ul class="dropdown-menu">                      
+                        <li><a href="" [routerLink]="['Services']">Account Profile</a></li>
+                        <li><a href="#" (click)="logout()">Sign Out</a></li>
+                    </ul>
+                </li>
 
             </ul>
         </div>

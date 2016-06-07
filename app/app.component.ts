@@ -109,6 +109,7 @@ export class AppComponent implements OnInit {
                 this._router.navigate(['Home'])
             }
             else {
+                debugger;
                 var userId = firebase.auth().currentUser.uid;
                 firebase.database().ref('/Users/' + userId).once('value').then(function (snapshot) {
                     var firstName: string = snapshot.val().FirstName;
