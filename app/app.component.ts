@@ -1,6 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, RouterOutlet, Router } from '@angular/router-deprecated';
-
+import {AuthRouterOutlet} from "./shared/auth-router-outlet.directive";
 
 import {
     AboutComponent,
@@ -37,7 +37,7 @@ declare var firebase: any;
 @Component({
     selector: "var-main",
     templateUrl: "app/app.component.html",
-    directives: [FooterComponent, NavComponent, ROUTER_DIRECTIVES],
+    directives: [FooterComponent, NavComponent, ROUTER_DIRECTIVES, AuthRouterOutlet],
     providers: [ROUTER_PROVIDERS, AuthService],
 })
 
