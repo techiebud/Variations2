@@ -1,6 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {FormBuilder, ControlGroup, Validators} from "@angular/common";
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
+import {ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router';
 
 
 import {AuthService} from "./shared/auth.service";

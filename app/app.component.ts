@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, RouterOutlet, Router } from '@angular/router-deprecated';
+import { Routes, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, RouterOutletMap, Router } from '@angular/router';
 
 
 import {
@@ -41,21 +41,21 @@ declare var firebase: any;
     providers: [ROUTER_PROVIDERS, AuthService]
 })
 
-@RouteConfig([
-    { path: '/', name: 'Home', component: HomeComponent, useAsDefault: true },
-    { path: '/about', name: 'About', component: AboutComponent },
-    { path: '/board', name: 'Board', component: BoardComponent },
-    { path: '/features', name: 'Features', component: FeaturesComponent },
-    { path: '/amenities', name: 'Amenities', component: AmenitiesComponent },
-    { path: '/forsale', name: 'Forsale', component: ForsaleComponent },
-    { path: '/fees', name: 'Fees', component: FeesComponent },
-    { path: '/announcements', name: 'Announcements', component: AnnouncementsComponent },
-    { path: '/pictures', name: 'Pictures', component: PicturesComponent },
-    { path: '/services', name: 'Services', component: ServicesComponent },
-    { path: '/contactus', name: 'ContactUs', component: ContactUsComponent },
-    { path: '/signup', name: 'Signup', component: SignupComponent },
-    { path: '/signin', name: 'Signin', component: SigninComponent },
-    { path: '/eventsCalendar', name: "EventsCalendar", component: EventsCalendarComponent }
+@Routes([
+    { path: '/',  component: HomeComponent },
+    { path: '/about',  component: AboutComponent },
+    { path: '/board',  component: BoardComponent },
+    { path: '/features',  component: FeaturesComponent },
+    { path: '/amenities',  component: AmenitiesComponent },
+    { path: '/forsale', component: ForsaleComponent },
+    { path: '/fees',  component: FeesComponent },
+    { path: '/announcements',  component: AnnouncementsComponent },
+    { path: '/pictures', component: PicturesComponent },
+    { path: '/services',  component: ServicesComponent },
+    { path: '/contactus', component: ContactUsComponent },
+    { path: '/signup',  component: SignupComponent },
+    { path: '/signin',  component: SigninComponent },
+    { path: '/eventsCalendar',  component: EventsCalendarComponent }
 
 
 ])
@@ -106,7 +106,7 @@ export class AppComponent implements OnInit {
                 var updates = {};
                 updates["/Units/" + newUser.unit + "/RegisteredUsers"] = +(allUnits[newUser.unit].RegisteredUsers) + 1;
                 firebase.database().ref().update(updates);                
-                this._router.navigate(['Home'])
+                this._router.navigate(['home'])
             }
             else {
                 debugger;
@@ -115,7 +115,7 @@ export class AppComponent implements OnInit {
                     var firstName: string = snapshot.val().FirstName;
                     toastr.info("Welcome back, " + firstName + "!");
                 });
-                this._router.navigate(['Announcements'])
+                this._router.navigate(['announcements'])
             }
 
         });
@@ -123,7 +123,7 @@ export class AppComponent implements OnInit {
         this._authService.getLoggedOutEvent().subscribe(() => {
             toastr.success("You have successfully logged out.");
             this.deleteCachedData();
-            this._router.navigate(['Home']);
+            this._router.navigate(['home']);
 
         });
 
