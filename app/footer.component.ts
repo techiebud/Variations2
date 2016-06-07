@@ -8,11 +8,14 @@ import {AppSettings}  from "./app.component";
 
 export class FooterComponent implements OnInit {
     copyRight: string = "";
+    designBy: string = "Techiebud, LLC"
+    designByURL: string = "http://techiebud.com"
+    
     constructor() {
         
          var now = new Date();
           var thisYear = now.getFullYear().toString();          
-          this.copyRight = "Copyright \u00A9 " + thisYear + "  " + AppSettings.VARIATIONS_NAME;
+          this.copyRight = "\u00A9 " + thisYear + "  " + AppSettings.VARIATIONS_NAME;
 
      }
      
