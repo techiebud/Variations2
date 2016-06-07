@@ -43,6 +43,7 @@ declare var firebase: any;
 
 @Routes([
     { path: '/',  component: HomeComponent },
+     { path: '/home',  component: HomeComponent },
     { path: '/about',  component: AboutComponent },
     { path: '/board',  component: BoardComponent },
     { path: '/features',  component: FeaturesComponent },
