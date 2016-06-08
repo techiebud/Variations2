@@ -60,6 +60,9 @@ body {
    
     
 }
+form input {
+  width: 20px;
+}
 
 #main {
    min-height:100%;
@@ -455,4 +458,8 @@ hr {
 .social-icons .fa-youtube-play,
 .social-icons .fa-youtube-square {
   background-color: #C52F30;
+}
+
+input#unit {
+    width: 80px;
 }

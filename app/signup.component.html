@@ -1,50 +1,64 @@
 <div class="container">
 
-    <h3 class="lead">Please sign up to use all features</h3>
+    <h3 class="lead">Please sign up to access addtional features and information</h3>
 
 
-
-    <div class="form">
-        <form [ngFormModel]="signUpForm" (ngSubmit)="onSignup()" novalidate>
-            <div class="input-group">
+    <form [ngFormModel]="signUpForm" (ngSubmit)="onSignup()" novalidate>
+        <div class="form-group row">
+            <div class="col-md-3">
                 <label for="email">E-Mail</label>
-                <input [ngFormControl]="signUpForm.find('email')" type="email" id="email" #email="ngForm" placeholder="Email" class="form-control">
+                <input [ngFormControl]="signUpForm.find('email')" type="email" id="email" #email="ngForm" placeholder="Email" class="form-control ">
                 <span *ngIf="!email.pristine && email.errors != null && email.errors['noEmail']" class="error"> Invalid e-mail address</span>
             </div>
-            <div class="input-group">
+        </div>
+        <div class="form-group row">
+            <div class="col-md-3">
                 <label for="firstNMme">First Name</label>
                 <input [ngFormControl]="signUpForm.find('firstName')" type="text" id="firstName" placeholder="First Name" class="form-control">
             </div>
-            <div class="input-group">
+        </div>
+        <div class="form-group row">
+            <div class="col-md-3">
                 <label for="lastName">Last Name</label>
                 <input [ngFormControl]="signUpForm.find('lastName')" type="text" id="lastName" placeholder="Last Name" class="form-control">
             </div>
-            <div class="input-group">
+        </div>
+        <div class="form-group row">
+            <div class="col-md-1">
                 <label for="Unit">Unit #</label>
                 <input [ngFormControl]="signUpForm.find('unit')" type="number" id="unit" #unit="ngForm" min="1901" max="2112" maxlength="4"
                     placeholder="Unit #" class="form-control">
-                <span *ngIf="!unit.pristine && unit.errors != null && unit.errors['unitIsInvalid']" class="error"> Invalid Unit #</span>
+                <span *ngIf="!unit.pristine && unit.errors != null && unit.errors['unitIsInvalid']" class="error">Invalid Unit #</span>
             </div>
-            <div class="input-group">
+        </div>
+        <div class="form-group row">
+            <div class="col-md-2">
                 <label for="password">Password</label>
                 <input [ngFormControl]="signUpForm.find('password')" type="password" id="password" placeholder="Password" class="form-control">
             </div>
-            <div class="input-group">
+        </div>
+        <div class="form-group row">
+            <div class="col-md-2">
                 <label for="confirm-password">Confirm Password</label>
                 <input [ngFormControl]="signUpForm.find('confirmPassword')" type="password" id="confirm-password" #confirmPassword="ngForm"
                     placeholder="Confirm Password" class="form-control">
                 <span class="error" *ngIf="!confirmPassword.pristine && confirmPassword.errors != null && confirmPassword.errors['passwordsNotMatch']"> Passwords do not match</span>
             </div>
-              <div class="row">&nbsp;</div>
-            <button class="btn btn-primary" type="submit" [disabled]="!signUpForm.valid">Sign Up</button>
-            <div class="row">&nbsp;</div>
-            <div class="forgot">
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-12">
+                <button class="btn btn-primary" type="submit" [disabled]="!signUpForm.valid">Sign Up</button>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-12">
                 <span class="lead">Already have an account?</span>
                 <a href="#" class="btn btn-info" [routerLink]="['Signin']">Sign In</a>
             </div>
-
-        </form>
-    </div>
+        </div>
 
 
+    </form>
 </div>
