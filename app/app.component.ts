@@ -18,7 +18,8 @@ import {
     PicturesComponent,
     ServicesComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent, 
+    UnderConstructionComponent
 
 } from "./index";
 
@@ -57,6 +58,8 @@ declare var firebase: any;
     { path: '/signup', name: 'Signup', component: SignupComponent },
     { path: '/signin', name: 'Signin', component: SigninComponent },
     { path: '/eventsCalendar', name: "EventsCalendar", component: EventsCalendarComponent }
+    { path: '/underConstruction', name: "UnderConstruction", component: UnderConstructionComponent }
+    
 
 
 ])

@@ -14,3 +14,4 @@ export * from "./nav.component";
 export * from "./footer.component";
 export * from "./events-calendar.component";
 export * from "./pictures.component";
+export * from "./under-construction.component";
