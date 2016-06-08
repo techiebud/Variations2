@@ -57,7 +57,7 @@ declare var firebase: any;
     { path: '/contactus', name: 'Contactus', component: ContactUsComponent },
     { path: '/signup', name: 'Signup', component: SignupComponent },
     { path: '/signin', name: 'Signin', component: SigninComponent },
-    { path: '/eventsCalendar', name: "EventsCalendar", component: EventsCalendarComponent }
+    { path: '/eventsCalendar', name: "EventsCalendar", component: EventsCalendarComponent },
     { path: '/underConstruction', name: "UnderConstruction", component: UnderConstructionComponent }
     
 
