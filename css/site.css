@@ -249,7 +249,9 @@ hr {
   border-top: 2px solid #1C1E26;
   border-bottom: 2px solid #38404D;
 }
-
+div#events-calendar {
+    padding-top: 40px;
+}
 
 
 /*Change icons size here*/
