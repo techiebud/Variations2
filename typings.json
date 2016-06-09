@@ -1,7 +1,11 @@
 {
-  "ambientDependencies": {
-    "core-js": "registry:dt/core-js#0.0.0+20160317120654",
-    "jasmine": "registry:dt/jasmine#2.2.0+20160412134438",
-    "node": "registry:dt/node#4.0.0+20160509154515"
+  "name": "variations2",
+  "dependencies": {
+    "debug": "registry:npm/debug#2.0.0+20160511151334",
+    "lodash": "registry:npm/lodash#4.0.0+20160416211519"
+  },
+  "globalDependencies": {
+    "jquery": "registry:dt/jquery#1.10.0+20160417213236",
+    "toastr": "registry:dt/toastr#2.1.1+20160510010435"
   }
 }

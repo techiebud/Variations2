@@ -2,13 +2,10 @@ import {Component, OnInit} from "@angular/core";
 import {FormBuilder, ControlGroup, Validators} from "@angular/common";
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 import {AuthService} from "./shared/auth.service";
-declare var toastr: any;
-declare var firebase: any;
 
 @Component({
     templateUrl: "app/signin.component.html",
     directives: [ROUTER_DIRECTIVES]
-
 })
 export class SigninComponent implements OnInit {
     signinForm: ControlGroup;

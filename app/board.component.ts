@@ -1,12 +1,8 @@
 import {Component, OnInit} from "@angular/core";
 import {BoardMember} from "./shared/board-member.interface";
 
-
 declare var firebase: any;
-declare var toastr: any;
 const DATA_TABLE: string = "BoardMembers";
-
-
 
 @Component({
     templateUrl: "app/board.component.html"
@@ -50,7 +46,7 @@ export class BoardComponent implements OnInit {
              (err) => {
                   this.isError = true;
                   console.error(err);                  
-                  toastr.error("Permission Denied!");           
+                  toastr.error("You must sign in to view this information!");           
              });
         }
 

@@ -5,7 +5,7 @@ import {AppHelpers} from "./app.component";
 
 
 declare var firebase: any;
-declare var toastr: any;
+
 const DATA_TABLE : string = "Pictures";
 
 
@@ -45,7 +45,7 @@ export class PicturesComponent implements OnInit {
              (err) => {
                   console.error(err);          
                   this.isError = true;        
-                  toastr.error("Permission Denied!");           
+                  toastr.error("You must sign in to view this information!");           
              });         
         }
     }

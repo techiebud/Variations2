@@ -2,8 +2,6 @@ import {RouterOutlet,  Router, ComponentInstruction} from "@angular/router-depre
 import {Directive, ViewContainerRef, ElementRef, DynamicComponentLoader, Attribute} from "@angular/core";
 import {AuthService} from "./auth.service";
 
-declare var toastr: any;
-
 @Directive({
     selector: 'auth-router-outlet'
 })

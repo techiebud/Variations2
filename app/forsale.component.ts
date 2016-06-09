@@ -3,7 +3,6 @@ import {Unit} from "./shared/unit.interface";
 import {AppHelpers} from "./app.component";
 
 declare var firebase: any;
-declare var toastr: any;
 const DATA_TABLE: string = "UnitsForSale";
 
 
@@ -34,8 +33,6 @@ export class ForsaleComponent implements OnInit {
 
     }
 
-
-
     ngOnInit() {
 
         if (!localStorage.getItem(DATA_TABLE)) {
@@ -47,8 +44,8 @@ export class ForsaleComponent implements OnInit {
                },
              (err) => {
                  this.isError = true;
-                  console.error(err);                  
-                  toastr.error("Permission Denied!");                
+                 console.error(err);
+                 toastr.error(err);              
               
             });
                //snaphot units for sale

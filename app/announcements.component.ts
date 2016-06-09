@@ -3,9 +3,8 @@ import {Announcement} from "./shared/announcement.interface";
 import {AuthService} from "./shared/auth.service";
 import {AppHelpers} from "./app.component";
 
-
 declare var firebase: any;
-declare var toastr: any;
+
 declare var $: any;
 declare var twttr: any;
 const DATA_TABLE: string = "Announcements";
@@ -53,9 +52,9 @@ export class AnnouncementsComponent implements OnInit {
                     let returnedData = snapshot.val();
                     localStorage.setItem(DATA_TABLE, JSON.stringify(returnedData));
                 },
-                (err) => {
+                (err) => {                
                     console.error(err);
-                    this.isError = true;
+                    this.isError = true;            
                     toastr.error("You must sign in to view this information!");
                 });
         }

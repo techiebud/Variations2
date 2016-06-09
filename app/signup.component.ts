@@ -4,7 +4,8 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/route
 import {AuthService} from "./shared/auth.service";
 import {User} from "./shared/user.interface";
 import  {AppHelpers} from "./app.component";
-declare var toastr: any;
+
+
 declare var $: any;  //jquery
 declare var firebase: any;
 
@@ -17,11 +18,7 @@ declare var firebase: any;
 export class SignupComponent implements OnInit {
     signUpForm: ControlGroup;
 
-
-
     constructor(private _fb: FormBuilder, private _authService: AuthService) {
-
-
 
     }
 
@@ -29,20 +26,16 @@ export class SignupComponent implements OnInit {
         var user: User = this.signUpForm.value;
         let allUnits = JSON.parse(localStorage.getItem("allUnits"));
         if (allUnits[user.unit].RegisteredUsers >= 2) {
-            toastr.error("Maximum number of users have already signed up for this Unit #")
+            toastr.error("The maximum number of users have already signed up for this Unit #.")
             return;
         }
         this._authService.signupUser(this.signUpForm.value);
-
     }
-
-
-
     ngOnInit(): any {
      
         localStorage.setItem("allUnits", "{}");
         firebase.database().ref('/Units').once('value').then((snapshot) => {
-            localStorage.setItem('allUnits', JSON.stringify(snapshot.val()));      
+            localStorage.setItem('allUnits', JSON.stringify(snapshot.val()));    
 
         });
         this.signUpForm = this._fb.group({
@@ -62,8 +55,6 @@ export class SignupComponent implements OnInit {
                 this.isValidUnit
             ])]
         });
-
-
     }
 
     isEmail(control: Control): { [s: string]: boolean } {

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, ControlGroup, Validators} from "@angular/common";
 import {AuthService} from "./shared/auth.service";
 
-declare var toastr: any;
+
 
 @Component({
     templateUrl: 'app/forgot-password.component.html'

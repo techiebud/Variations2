@@ -3,8 +3,6 @@ import {RouteParams} from  "@angular/router-deprecated";
 import {FormBuilder, ControlGroup, Validators, Control} from "@angular/common";
 import {AuthService} from "./shared/auth.service";
 
-declare var toastr: any;
-
 @Component({
     templateUrl: 'app/reset-password.component.html'
 })

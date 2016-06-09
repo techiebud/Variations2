@@ -1,6 +1,11 @@
 import {Component, OnInit} from "@angular/core";
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, RouterOutlet, Router } from '@angular/router-deprecated';
+import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, RouterOutlet, Router } from '@angular/router-deprecated';
 import {AuthRouterOutlet} from "./shared/auth-router-outlet.directive";
+import {AuthService} from "./shared/index";
+
+import {User} from "./shared/user.interface";
+
+
 
 import {
     AboutComponent,
@@ -25,17 +30,8 @@ import {
 
 } from "./index";
 
-import {
-    AuthService
-
-} from "./shared/index";
-
-import {User} from "./shared/user.interface";
-
-declare var toastr: any;
 declare var $: any;
 declare var firebase: any;
-
 
 @Component({
     selector: "var-main",
@@ -62,32 +58,32 @@ declare var firebase: any;
     { path: '/eventsCalendar', name: "EventsCalendar", component: EventsCalendarComponent },
     { path: '/underConstruction', name: "UnderConstruction", component: UnderConstructionComponent },
     { path: '/resetPassword', name: "ResetPassword", component: ResetPasswordComponent },
-    { path: '/forgotPassword', name: "ForgotPassword", component: ForgotPasswordComponent }
-    
-
-
+    { path: '/forgotPassword', name: "ForgotPassword", component: ForgotPasswordComponent }   
 ])
 export class AppComponent implements OnInit {
 
     constructor(private _router: Router, private _authService: AuthService) {
 
-        toastr.options = {
-            "closeButton": false,
-            "debug": false,
-            "newestOnTop": true,
-            "progressBar": false,
-            "positionClass": "toast-top-center",
-            "preventDuplicates": true,
-            "onclick": null,
-            "showDuration": "300",
-            "hideDuration": "1000",
-            "timeOut": "5000",
-            "extendedTimeOut": "1000",
-            "showEasing": "swing",
-            "hideEasing": "linear",
-            "showMethod": "fadeIn",
-            "hideMethod": "fadeOut"
-        }
+        var toastrOptions:ToastrOptions = {
+            closeButton : false,
+            debug: false,
+            newestOnTop: true, 
+            progressBar: false,
+            positionClass: "toast-top-center",
+            preventDuplicates: true,
+            onclick: null,
+            showDuration: 300,
+            hideDuration: 1000,
+            timeOut: 5000,
+            extendedTimeOut: 1000, 
+            showEasing: "swing", 
+            hideEasing: "linear",
+            showMethod: "fadeIn",
+            hideMethod: "fadeOut"   
+         }
+      
+        toastr.options = toastrOptions;
+      
         this.deleteCachedData();
 
     }
@@ -98,7 +94,6 @@ export class AppComponent implements OnInit {
         this._authService.getLoggedInEvent().subscribe(() => {
             var newUser: User = JSON.parse(localStorage.getItem("newUser"));
             console.log("user logged in");
-
             if (newUser) {
                 toastr.success("Congratulations " + newUser.firstName + "!  You have successfully signed up.");
                 console.log("new User", newUser);

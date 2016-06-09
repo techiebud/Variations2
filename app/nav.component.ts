@@ -2,8 +2,6 @@ import {Component, OnInit} from "@angular/core";
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 import {AuthService} from "./shared/auth.service";
 
-declare var toastr: any;
-
 
 
 @Component({
