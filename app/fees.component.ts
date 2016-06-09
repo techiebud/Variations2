@@ -1,4 +1,5 @@
 import {Component, OnInit} from "@angular/core";
+import {AuthService} from "./shared/auth.service";
 
 declare var $: any;
 const LOAN_PAYOFF_HEADER: string = "Loan Payoff Countdown!";
@@ -9,19 +10,22 @@ const LOAN_PAYOFF_HEADER: string = "Loan Payoff Countdown!";
 
 export class FeesComponent implements OnInit {
 
-    constructor() {
-
+    constructor(private _authService: AuthService) { }
+    isAuth() {
+        return this._authService.isAuthenticated();
     }
 
     ngOnInit() {
-        this.countDownTimerInit();
-    }  
+        if (this.isAuth()){
+            this.countDownTimerInit();
+        }
+    }
 
-    countDownTimerInit() : void {
+    countDownTimerInit(): void {
         var payOffDate: Date = new Date(2017, 0, 1);
         $('#loan-countdown').countdown({
             until: payOffDate,
-            description:  LOAN_PAYOFF_HEADER
+            description: LOAN_PAYOFF_HEADER
         });
     }
 }
