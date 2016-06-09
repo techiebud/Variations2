@@ -19,7 +19,8 @@ import {
     ServicesComponent,
     SigninComponent,
     SignupComponent, 
-    UnderConstructionComponent
+    UnderConstructionComponent, 
+    ResetPasswordComponent
 
 } from "./index";
 
@@ -58,7 +59,8 @@ declare var firebase: any;
     { path: '/signup', name: 'Signup', component: SignupComponent },
     { path: '/signin', name: 'Signin', component: SigninComponent },
     { path: '/eventsCalendar', name: "EventsCalendar", component: EventsCalendarComponent },
-    { path: '/underConstruction', name: "UnderConstruction", component: UnderConstructionComponent }
+    { path: '/underConstruction', name: "UnderConstruction", component: UnderConstructionComponent },
+    { path: '/resetPassword', name: "ResetPassword", component: ResetPasswordComponent }
     
 
 
@@ -122,15 +124,20 @@ export class AppComponent implements OnInit {
             }
 
         });
-
         this._authService.getLoggedOutEvent().subscribe(() => {
-            toastr.success("You have successfully logged out.");
-            this.deleteCachedData();
-            this._router.navigate(['Home']);
+            toastr.success("You have been successfully logged out.");         
+            setTimeout(() => {                
+                  this._router.navigate(['Home']);
+            }, 2000);
+          
         });
-
-
-
+        this._authService.getPasswordResetEvent().subscribe(() => {  
+            toastr.success("Your password has been successfully reset.");    
+            setTimeout(() => {
+               this._router.navigate(['Signin']);
+            }, 2000);     
+            
+        });
     }
 
     deleteCachedData(): void {

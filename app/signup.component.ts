@@ -44,7 +44,6 @@ export class SignupComponent implements OnInit {
             localStorage.setItem('allUnits', JSON.stringify(snapshot.val()));      
 
         });
-        console.debug("here");
         this.signUpForm = this._fb.group({
             email: ['', Validators.compose([
                 Validators.required,

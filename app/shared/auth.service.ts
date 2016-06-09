@@ -13,6 +13,7 @@ export class AuthService {
 
     private _userLoggedOut = new EventEmitter<any>();
     private _userLoggedIn = new EventEmitter<any>();
+    private _passwordReset = new EventEmitter<any>();
     userIsAuthenticated: boolean;
     userGravatarURL: string = "";
   
@@ -44,8 +45,7 @@ export class AuthService {
                 localStorage.setItem("token", user.refreshToken);   
                 this.userGravatarURL = "https://gravatar.com/avatar/" 
                 + md5(user.email.trim().toLowerCase()) + "?d=mm"    
-                console.debug("gravatar", this.userGravatarURL);    
-                              
+                console.debug("gravatar", this.userGravatarURL);                                  
                 this._userLoggedIn.emit(true);
             } else {
                // toastr.info("Residents, please log in to view all features.");
@@ -53,8 +53,7 @@ export class AuthService {
         });
 
     }
-    signupUser(user: User) {
-        
+    signupUser(user: User) {       
    
       
         localStorage.setItem("newUser", JSON.stringify(user)); 
@@ -105,35 +104,41 @@ export class AuthService {
     {
           firebase.auth().sendPasswordResetEmail(email)
           .then(function() {
-           toastr.success("Email sent to reset password");})
+           toastr.success("Email sent with instructions to reset password");})
            .catch(function (error) {          
            toastr.error(error.message);
-          });
-        
+          });        
     }
-
-
-
+    
+    resetPassword(code: string, newPassword: string)
+    {
+         firebase.auth().confirmPasswordReset(code, newPassword)
+          .then(() => {         
+             this._passwordReset.emit(true);})
+          .catch(function (error) {          
+           toastr.error(error.message);
+          });      
+     }
+     
     logout() {     
         console.log("auth: logout");
         firebase.auth().signOut().then(() => {
-            this._userLoggedOut.emit(null);
+            this._userLoggedOut.emit(true);
         }, function (error) {            
             toastr.error("Cannot sign user out (" + error + ")");
         });
-
     }
 
     getLoggedInEvent(): EventEmitter<any>  {
         return this._userLoggedIn;
-
     }
 
     getLoggedOutEvent(): EventEmitter<any> {
-
-        console.log(this._userLoggedOut);
         return this._userLoggedOut;
     }
+    getPasswordResetEvent(): EventEmitter<any> {
+        return this._passwordReset;
+    }    
 
     isAuthenticated(): boolean {
         var user = firebase.auth().currentUser;

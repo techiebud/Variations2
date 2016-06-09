@@ -18,7 +18,7 @@ export class SigninComponent implements OnInit {
 
     constructor(private _fb: FormBuilder, private _authService: AuthService) { }
 
-    onSignin() {
+    onSignin(): any {
 
         this._authService.signinUser(this.signinForm.value);
 
@@ -32,7 +32,7 @@ export class SigninComponent implements OnInit {
       
     }
     
-    onForgotPassword(): void {
+    onForgotPassword(): any {
         console.log(this.signinForm.value);
         if (!this.signinForm.value["email"])
         {
@@ -41,6 +41,7 @@ export class SigninComponent implements OnInit {
         }
         
        this._authService.sendResetPasswordEmail(this.signinForm.value["email"]);
+       return false;
         
         
     }
