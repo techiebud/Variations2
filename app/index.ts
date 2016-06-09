@@ -16,3 +16,4 @@ export * from "./events-calendar.component";
 export * from "./pictures.component";
 export * from "./under-construction.component";
 export * from "./reset-password.component";
+export * from "./forgot-password.component";

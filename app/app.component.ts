@@ -20,7 +20,8 @@ import {
     SigninComponent,
     SignupComponent, 
     UnderConstructionComponent, 
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    ForgotPasswordComponent
 
 } from "./index";
 
@@ -60,7 +61,8 @@ declare var firebase: any;
     { path: '/signin', name: 'Signin', component: SigninComponent },
     { path: '/eventsCalendar', name: "EventsCalendar", component: EventsCalendarComponent },
     { path: '/underConstruction', name: "UnderConstruction", component: UnderConstructionComponent },
-    { path: '/resetPassword', name: "ResetPassword", component: ResetPasswordComponent }
+    { path: '/resetPassword', name: "ResetPassword", component: ResetPasswordComponent },
+    { path: '/forgotPassword', name: "ForgotPassword", component: ForgotPasswordComponent }
     
 
 
@@ -130,6 +132,14 @@ export class AppComponent implements OnInit {
                   this._router.navigate(['Home']);
             }, 2000);
           
+        });
+
+        this._authService.getForgotPasswordEmailSentEvent().subscribe(() => {  
+            toastr.success("Email sent with instructions to reset your password");   
+            setTimeout(() => {
+               this._router.navigate(['Home']);
+            }, 2000);     
+            
         });
         this._authService.getPasswordResetEvent().subscribe(() => {  
             toastr.success("Your password has been successfully reset.");    

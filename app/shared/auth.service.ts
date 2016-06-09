@@ -15,6 +15,7 @@ export class AuthService {
     private _userLoggedOut = new EventEmitter<any>();
     private _userLoggedIn = new EventEmitter<any>();
     private _passwordReset = new EventEmitter<any>();
+    private _forgotPasswordEmailSent = new EventEmitter<any>();
     userIsAuthenticated: boolean;
     userGravatarURL: string = "";
 
@@ -107,11 +108,12 @@ export class AuthService {
     }
 
     sendResetPasswordEmail(email: string) {
+
         AppHelpers.BlockUI();       
         firebase.auth().sendPasswordResetEmail(email)
             .then(() => {
-                AppHelpers.UnblockUI();
-                toastr.success("Email sent with instructions to reset password");              
+                AppHelpers.UnblockUI();               
+                this._forgotPasswordEmailSent.emit(true);                       
             })
             .catch((error) => {
                 AppHelpers.UnblockUI();
@@ -148,6 +150,10 @@ export class AuthService {
 
     getLoggedOutEvent(): EventEmitter<any> {
         return this._userLoggedOut;
+    }
+
+    getForgotPasswordEmailSentEvent(): EventEmitter<any> {
+        return this._forgotPasswordEmailSent;
     }
     getPasswordResetEvent(): EventEmitter<any> {
         return this._passwordReset;

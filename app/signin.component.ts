@@ -1,8 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {FormBuilder, ControlGroup, Validators} from "@angular/common";
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
-
-
 import {AuthService} from "./shared/auth.service";
 declare var toastr: any;
 declare var firebase: any;
@@ -32,18 +30,5 @@ export class SigninComponent implements OnInit {
       
     }
     
-    onForgotPassword(): any {
-        console.log(this.signinForm.value);
-        if (!this.signinForm.value["email"])
-        {
-            toastr.error("Please specify your email address.");
-            return;
-        }
-   
-      this._authService.sendResetPasswordEmail(this.signinForm.value["email"]);   
-   
-    
-        
-        
-    }
+  
 }
