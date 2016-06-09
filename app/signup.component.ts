@@ -3,6 +3,7 @@ import {FormBuilder, ControlGroup, Validators, Control} from "@angular/common";
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 import {AuthService} from "./shared/auth.service";
 import {User} from "./shared/user.interface";
+import  {AppHelpers} from "./app.component";
 declare var toastr: any;
 declare var $: any;  //jquery
 declare var firebase: any;

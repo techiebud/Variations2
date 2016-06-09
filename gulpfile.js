@@ -24,9 +24,13 @@ gulp.task("favicon", function() {
 	return gulp.src("favicon.ico")
 	.pipe(gulp.dest("public"))	
 });
+gulp.task("vendor", function() {
+	return gulp.src("js/vendor/*.*")
+	.pipe(gulp.dest("public/js/vendor"))	
+});
 
 
 
-gulp.task("public", ["html", "img", "css", "fonts", "documents"]);
+gulp.task("public", ["html", "img", "css", "fonts", "documents", "vendor"]);
 
 

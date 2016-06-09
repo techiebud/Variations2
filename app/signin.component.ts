@@ -39,9 +39,10 @@ export class SigninComponent implements OnInit {
             toastr.error("Please specify your email address.");
             return;
         }
-        
-       this._authService.sendResetPasswordEmail(this.signinForm.value["email"]);
-       return false;
+   
+      this._authService.sendResetPasswordEmail(this.signinForm.value["email"]);   
+   
+    
         
         
     }

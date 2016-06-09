@@ -190,5 +190,16 @@ export class AppHelpers {
         }
 
     }
+    
+    
+       public static BlockUI(message: string = "Processing.....please wait."): void {          
+            var blockMessage: string = '<h3><img src="img/busy.gif" /> ' + message + '</h3>';
+            $.blockUI({ message: blockMessage });
+        };
+
+        public static UnblockUI() {
+                $.unblockUI();
+         
+        };
 
 }

@@ -20,8 +20,7 @@ export class AnnouncementsComponent implements OnInit {
     isLoading: boolean = true;
     isError: boolean = false;
 
-    constructor() {
-     //   toastr.info("constructor");
+    constructor() {     
         if (!this.checkDataReady()) {
             var refreshId = setInterval(() => {
                 if (this.checkDataReady()) {
@@ -35,9 +34,9 @@ export class AnnouncementsComponent implements OnInit {
          
         }
         
-        setTimeout(function() {
+        setTimeout(() => {
              twttr.widgets.load()    
-            
+             this.checkDataReady();            
         }, 1500);
 
         

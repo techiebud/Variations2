@@ -1,10 +1,11 @@
 import {Injectable, EventEmitter} from "@angular/core";
 import {User} from "./user.interface";
+import {AppHelpers} from "../app.component";
 // import {toastr} from  "./node_mddules/toastr";
 
 declare var firebase: any;
 declare var toastr: any;
-declare var  md5: any;
+declare var md5: any;
 
 
 @Injectable(
@@ -16,7 +17,7 @@ export class AuthService {
     private _passwordReset = new EventEmitter<any>();
     userIsAuthenticated: boolean;
     userGravatarURL: string = "";
-  
+
 
     constructor() {
 
@@ -41,28 +42,28 @@ export class AuthService {
         firebase.auth().onAuthStateChanged((user) => {
             if (user) {
                 console.log("User has signed in");
-                console.log(user);              
-                localStorage.setItem("token", user.refreshToken);   
-                this.userGravatarURL = "https://gravatar.com/avatar/" 
-                + md5(user.email.trim().toLowerCase()) + "?d=mm"    
-                console.debug("gravatar", this.userGravatarURL);                                  
+                console.log(user);
+                localStorage.setItem("token", user.refreshToken);
+                this.userGravatarURL = "https://gravatar.com/avatar/"
+                    + md5(user.email.trim().toLowerCase()) + "?d=mm"
+                console.debug("gravatar", this.userGravatarURL);
                 this._userLoggedIn.emit(true);
             } else {
-               // toastr.info("Residents, please log in to view all features.");
+                // toastr.info("Residents, please log in to view all features.");
             }
         });
 
     }
-    signupUser(user: User) {       
-   
-      
-        localStorage.setItem("newUser", JSON.stringify(user)); 
-        
+    signupUser(user: User) {
+
+
+        localStorage.setItem("newUser", JSON.stringify(user));
+
         var email: string = user.email;
         var password: string = user.password;
 
         firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
-           
+
             var errorMessage: string = "";
             switch (error.code) {
                 case "auth/email-already-in-us":
@@ -90,8 +91,13 @@ export class AuthService {
     }  //signup user
 
     signinUser(user: User) {
-
-        firebase.auth().signInWithEmailAndPassword(user.email, user.password).catch(function (error) {           
+        AppHelpers.BlockUI("Signing into web site......please wait.");
+        firebase.auth().signInWithEmailAndPassword(user.email, user.password)
+        .then(() => {
+            AppHelpers.UnblockUI();
+        })        
+        .catch((error) => {
+            AppHelpers.UnblockUI();
             console.log(error);
             var errorCode = error.code;
             var errorMessage = error.message;
@@ -99,37 +105,44 @@ export class AuthService {
             console.error(error);
         });
     }
-    
-    sendResetPasswordEmail(email: string)
-    {
-          firebase.auth().sendPasswordResetEmail(email)
-          .then(function() {
-           toastr.success("Email sent with instructions to reset password");})
-           .catch(function (error) {          
-           toastr.error(error.message);
-          });        
+
+    sendResetPasswordEmail(email: string) {
+        AppHelpers.BlockUI();       
+        firebase.auth().sendPasswordResetEmail(email)
+            .then(() => {
+                AppHelpers.UnblockUI();
+                toastr.success("Email sent with instructions to reset password");              
+            })
+            .catch((error) => {
+                AppHelpers.UnblockUI();
+                toastr.error(error.message);              
+            });
+      
     }
-    
-    resetPassword(code: string, newPassword: string)
-    {
-         firebase.auth().confirmPasswordReset(code, newPassword)
-          .then(() => {         
-             this._passwordReset.emit(true);})
-          .catch(function (error) {          
-           toastr.error(error.message);
-          });      
-     }
-     
-    logout() {     
+
+    resetPassword(code: string, newPassword: string) {
+        AppHelpers.BlockUI();
+        firebase.auth().confirmPasswordReset(code, newPassword)
+            .then(() => {
+                AppHelpers.UnblockUI();
+                this._passwordReset.emit(true);            
+            })
+            .catch(function (error) {
+                AppHelpers.UnblockUI();
+                toastr.error(error.message);              
+            });
+    }
+
+    logout() {
         console.log("auth: logout");
         firebase.auth().signOut().then(() => {
             this._userLoggedOut.emit(true);
-        }, function (error) {            
+        }, function (error) {
             toastr.error("Cannot sign user out (" + error + ")");
         });
     }
 
-    getLoggedInEvent(): EventEmitter<any>  {
+    getLoggedInEvent(): EventEmitter<any> {
         return this._userLoggedIn;
     }
 
@@ -138,17 +151,17 @@ export class AuthService {
     }
     getPasswordResetEvent(): EventEmitter<any> {
         return this._passwordReset;
-    }    
+    }
 
     isAuthenticated(): boolean {
         var user = firebase.auth().currentUser;
         return user ? true : false;
     }
     getUserGravatarURL(): string {
-        
+
         return this.userGravatarURL;
     }
-    
-    
+
+
 
 }
