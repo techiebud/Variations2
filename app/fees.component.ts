@@ -16,8 +16,11 @@ export class FeesComponent implements OnInit {
     }
 
     ngOnInit() {
-        if (this.isAuth()){
-            this.countDownTimerInit();
+        if (this.isAuth()) {
+            setTimeout(() => {
+                this.countDownTimerInit();
+            }, 500);
+
         }
     }
 
