@@ -13,61 +13,50 @@ export class BoardComponent implements OnInit {
     isLoading: boolean = true;
     isError: boolean = false;
 
-
-    constructor() {
-
-        if (!this.checkDataReady()) {
-            var refreshId = setInterval(() => {
-                if (this.checkDataReady()) {
-                    clearInterval(refreshId);
-                    this.isLoading = false;
-                }
-            }, 500);
-        }
-        else
-        {
-           this.isLoading = false;
-        }
-
-    }
+    constructor() {}
 
     ngOnInit() {
-
-        if (!localStorage.getItem(DATA_TABLE)) {
+        if (!this.isDataReady())
+        {          
             let fbTable = "" + DATA_TABLE;
             var boardDataRef = firebase.database().ref(fbTable).orderByChild('Email');
             boardDataRef.once('value',
-              (snapshot) => {     
-                             
-                  let returnedData = snapshot.val();
-                  console.debug(returnedData);
-                  localStorage.setItem(DATA_TABLE, JSON.stringify(returnedData));
-               },
-             (err) => {
-                  this.isError = true;
-                  console.error(err);                  
-                  toastr.error("You must sign in to view this information!");           
-             });
+            (snapshot) => {                                
+                let returnedData = snapshot.val();
+                console.debug(returnedData);
+                localStorage.setItem(DATA_TABLE, JSON.stringify(returnedData));
+            },
+            (err) => {
+                this.isError = true;
+                console.error(err);                  
+                toastr.error(err);           
+            });  
+            //now watch the last firebase call to get when the data is ready.
+            var refreshId = setInterval(() => {
+                if (this.isDataReady() || this.isError) {
+                    clearInterval(refreshId);
+                    this.isLoading = false;                }
+            }, 500);  //check for data every 1/2 second
         }
+        else 
+        {
+            this.isLoading = false;
+        }
+    }  //ngOnInit
 
-    }
-
-    checkDataReady(): boolean {
-
+    isDataReady(): boolean {
         let cachedData: any = localStorage.getItem(DATA_TABLE);
         if (cachedData) {
-            this.parseData(JSON.parse(cachedData));          
+            this.prepData(JSON.parse(cachedData));          
             return true;
         }
         return false;
-    }
+    }  //isDataReady
 
-    parseData(data: any): void {
-
+    prepData(data: any): void {
         this.boardMembers = []; //initialize
         let members: {} = data;
         let titles = Object.keys(members);
-
         for (let i: number = 0; i < titles.length; i++) {
             let title: string = titles[i];
             let boardMember: BoardMember = {
@@ -79,16 +68,12 @@ export class BoardComponent implements OnInit {
                 URL: members[title].URL,
                 URLCaption: members[title].URLCaption,
                 DisplayOrder: +(members[title].DisplayOrder)
-
-            }
+            }  //boardMember
             this.boardMembers.push(boardMember);
         }  //for loop
         //FYI: I"m sorting the data here because I cannot get the data to come back sorted from Firebase;
         this.boardMembers.sort((a: BoardMember, b: BoardMember) : number => {
-             return (a.DisplayOrder > b.DisplayOrder) ? 1 : (a.DisplayOrder < b.DisplayOrder) ? -1 : 0;
-            
-        })
-
-
-    }
+             return (a.DisplayOrder > b.DisplayOrder) ? 1 : (a.DisplayOrder < b.DisplayOrder) ? -1 : 0;            
+        })  //sort
+    } //prepData
 }
