@@ -135,6 +135,23 @@ export class AuthService {
             });
     }
 
+    updateUserProfile(user: User) {
+        AppHelpers.BlockUI();
+        firebase.database().ref("Users/" + firebase.auth().currentUser.uid).set({
+                FirstName: user.firstName,
+                LastName: user.lastName,
+                Unit: user.unit
+            })
+            .then(() => {
+                 AppHelpers.UnblockUI();
+                 toastr.success("Profile updated");
+            })
+            .catch((error) => {
+                 AppHelpers.UnblockUI();
+                 toastr.error(error);                
+            })
+    }
+
     logout() {
         console.log("auth: logout");
         firebase.auth().signOut().then(() => {

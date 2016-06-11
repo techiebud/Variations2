@@ -26,7 +26,8 @@ import {
     SignupComponent, 
     UnderConstructionComponent, 
     ResetPasswordComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent, 
+    AccountProfileComponent
 
 } from "./index";
 
@@ -58,7 +59,8 @@ declare var firebase: any;
     { path: '/eventsCalendar', name: "EventsCalendar", component: EventsCalendarComponent },
     { path: '/underConstruction', name: "UnderConstruction", component: UnderConstructionComponent },
     { path: '/resetPassword', name: "ResetPassword", component: ResetPasswordComponent },
-    { path: '/forgotPassword', name: "ForgotPassword", component: ForgotPasswordComponent }   
+    { path: '/forgotPassword', name: "ForgotPassword", component: ForgotPasswordComponent } , 
+    { path: '/accountProfile', name: "AccountProfile", component: AccountProfileComponent }   
 ])
 export class AppComponent implements OnInit {
 
@@ -114,7 +116,9 @@ export class AppComponent implements OnInit {
             else {
                 var userId = firebase.auth().currentUser.uid;
                 firebase.database().ref('/Users/' + userId).once('value').then(function (snapshot) {
+                    var user: User = <User>snapshot.val();
                     var firstName: string = snapshot.val().FirstName;
+                    localStorage.setItem("userProfile", JSON.stringify(user));
                     toastr.info("Welcome back, " + firstName + "!");
                 });
                 this._router.navigate(['Announcements'])
