@@ -19,9 +19,7 @@ export class AuthService {
     userIsAuthenticated: boolean;
     userGravatarURL: string = "";
 
-
     constructor() {
-
         var config = {
             apiKey: "AIzaSyBzLfPOqnW2ccBGIwprbfAQtat4aWiFakM",
             authDomain: "thevariations.firebaseapp.com",
@@ -52,115 +50,114 @@ export class AuthService {
             } else {
                 // toastr.info("Residents, please log in to view all features.");
             }
-        });
-
-    }
+        });  //onAuthStateChanged 
+    }  //constructor
     signupUser(user: User) {
-
-
         localStorage.setItem("newUser", JSON.stringify(user));
-
         var email: string = user.email;
         var password: string = user.password;
-
-        firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
-
-            var errorMessage: string = "";
-            switch (error.code) {
-                case "auth/email-already-in-us":
-                    errorMessage = "The new user account cannot be created because the email is already in use.";
-                    console.log(errorMessage);
-                    toastr.error(errorMessage);
-                    break;
-                case "auth/email-already-in-us":
-                    errorMessage = "The specified email is not a valid email.";
-                    console.log(errorMessage);
-                    toastr.error(errorMessage);
-                    break;
-                case "auth/weak-password":
-                    errorMessage = "Must enter a strong password.";
-                    console.log(errorMessage);
-                    toastr.error(errorMessage);
-                    break;
-                default:
-                    errorMessage = "Error creating user (" + error + ")";
-                    console.log(errorMessage);
-                    toastr.error(errorMessage);
-
-            }   //end switch statement      
-        });
+        AppHelpers.BlockUI("Processing sign up information......please wait.");
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+            .then(() => {
+                AppHelpers.UnblockUI();
+            })
+            .catch((error) => {
+                var errorMessage: string = "";
+                AppHelpers.UnblockUI();
+                switch (error.code) {
+                    case "auth/email-already-in-us":
+                        errorMessage = "The new user account cannot be created because the email is already in use.";
+                        console.log(errorMessage);
+                        toastr.error(errorMessage);
+                        break;
+                    case "auth/email-already-in-us":
+                        errorMessage = "The specified email is already in use.";
+                        console.log(errorMessage);
+                        toastr.error(errorMessage);
+                        break;
+                    case "auth/weak-password":
+                        errorMessage = "Must enter a strong password.";
+                        console.log(errorMessage);
+                        toastr.error(errorMessage);
+                        break;
+                    default:
+                        errorMessage = "Error creating user (" + error + ")";
+                        console.log(errorMessage);
+                        toastr.error(errorMessage);
+                }   //end switch statement      
+            });      //catch
     }  //signup user
 
     signinUser(user: User) {
         AppHelpers.BlockUI("Signing into web site......please wait.");
         firebase.auth().signInWithEmailAndPassword(user.email, user.password)
-        .then(() => {
-            AppHelpers.UnblockUI();
-        })        
-        .catch((error) => {
-            AppHelpers.UnblockUI();
-            console.log(error);
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            toastr.error(errorMessage);
-            console.error(error);
-        });
-    }
-
-    sendResetPasswordEmail(email: string) {
-
-        AppHelpers.BlockUI();       
-        firebase.auth().sendPasswordResetEmail(email)
             .then(() => {
-                AppHelpers.UnblockUI();               
-                this._forgotPasswordEmailSent.emit(true);                       
+                AppHelpers.UnblockUI();
             })
             .catch((error) => {
                 AppHelpers.UnblockUI();
-                toastr.error(error.message);              
+                console.log(error);
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                toastr.error(errorMessage);
+                console.error(error);
             });
-      
-    }
+    } //signinUser
+
+    sendResetPasswordEmail(email: string) {
+        AppHelpers.BlockUI();
+        firebase.auth().sendPasswordResetEmail(email)
+            .then(() => {
+                AppHelpers.UnblockUI();
+                this._forgotPasswordEmailSent.emit(true);
+            })
+            .catch((error) => {
+                AppHelpers.UnblockUI();
+                toastr.error(error.message);
+            });
+    }  //sendResetPasswordEmail
 
     resetPassword(code: string, newPassword: string) {
         AppHelpers.BlockUI();
         firebase.auth().confirmPasswordReset(code, newPassword)
             .then(() => {
                 AppHelpers.UnblockUI();
-                this._passwordReset.emit(true);            
+                this._passwordReset.emit(true);
             })
             .catch(function (error) {
                 AppHelpers.UnblockUI();
-                toastr.error(error.message);              
+                toastr.error(error.message);
             });
-    }
+    }  //resetPassword
 
     updateUserProfile(user: User) {
         AppHelpers.BlockUI();
         firebase.database().ref("Users/" + firebase.auth().currentUser.uid).set({
-                FirstName: user.firstName,
-                LastName: user.lastName,
-                Unit: user.unit
-            })
+            FirstName: user.firstName,
+            LastName: user.lastName,
+            Unit: user.unit
+        })
             .then(() => {
-                 AppHelpers.UnblockUI();
-                 localStorage.setItem("userProfile", JSON.stringify(user));
-                 toastr.success("Profile updated");
+                AppHelpers.UnblockUI();
+                localStorage.setItem("userProfile", JSON.stringify(user));
+                toastr.success("Profile updated");
             })
             .catch((error) => {
-                 AppHelpers.UnblockUI();
-                 toastr.error(error);                
+                AppHelpers.UnblockUI();
+                toastr.error(error);
             })
-    }
+    }  //updateUserProfile
 
     logout() {
         console.log("auth: logout");
-        firebase.auth().signOut().then(() => {
-            this._userLoggedOut.emit(true);
-        }, function (error) {
-            toastr.error("Cannot sign user out (" + error + ")");
-        });
-    }
+        firebase.auth().signOut()
+            .then(() => {
+                this._userLoggedOut.emit(true);
+            })
+            .catch((error) => {
+                toastr.error(error);
+            })
+    }  //logout
 
     getLoggedInEvent(): EventEmitter<any> {
         return this._userLoggedIn;
@@ -182,7 +179,6 @@ export class AuthService {
         return user ? true : false;
     }
     getUserGravatarURL(): string {
-
         return this.userGravatarURL;
     }
 

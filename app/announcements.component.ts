@@ -19,32 +19,20 @@ export class AnnouncementsComponent implements OnInit {
     isLoading: boolean = true;
     isError: boolean = false;
 
-    constructor() {     
-        if (!this.checkDataReady()) {
-            var refreshId = setInterval(() => {
-                if (this.checkDataReady()) {
-                    clearInterval(refreshId);
-                    this.isLoading = false;                       
-                }
-            }, 500);
-        }
-        else {
-            this.isLoading = false;
-         
-        }
-        
+    constructor() {
+        //show Twitter message feeds
+        //Due to some timing issues
+        //wait about 1 and 1/2 seconds before showing.
         setTimeout(() => {
-             twttr.widgets.load()    
-             this.checkDataReady();            
+            twttr.widgets.load()
+            this.isDataReady();
         }, 1500);
-
-        
 
     }
 
     ngOnInit() {
-       // toastr.info("ngOnInit");
-        if (!localStorage.getItem(DATA_TABLE)) {
+
+        if (!this.isDataReady()) {
             let fbTable = "/" + DATA_TABLE;
             let sortedAnnouncementsRef = firebase.database().ref(fbTable).orderByKey();
             sortedAnnouncementsRef.once('value',
@@ -52,25 +40,34 @@ export class AnnouncementsComponent implements OnInit {
                     let returnedData = snapshot.val();
                     localStorage.setItem(DATA_TABLE, JSON.stringify(returnedData));
                 },
-                (err) => {                
-                    console.error(err);
-                    this.isError = true;            
-                    toastr.error("You must sign in to view this information!");
+                (error) => {
+                    console.error(error);
+                    this.isError = true;
+                    toastr.error(error);
                 });
+            var refreshId = setInterval(() => {
+                if (this.isDataReady()) {
+                    clearInterval(refreshId);
+                    this.isLoading = false;
+                }
+            }, 500);
+        }  //isDateReady
+        else{
+            this.isLoading = false;
         }
     }
 
-    checkDataReady(): boolean {
+    isDataReady(): boolean {
 
         let cachedData: any = localStorage.getItem(DATA_TABLE);
         if (cachedData) {
-            this.parseData(JSON.parse(cachedData));
+            this.prepData(JSON.parse(cachedData));
             return true;
         }
         return false;
     }
 
-    parseData(data: any): void {
+    prepData(data: any): void {
         this.announcements = [];
         let announcements: {} = data;
         let announcementDates = Object.keys(announcements);
@@ -85,7 +82,7 @@ export class AnnouncementsComponent implements OnInit {
             this.announcements.push(announcementRecord);
         }  //for loop
 
-    }
+    }  //prepData
 
-  
-}
+
+}  //Announcements Component.
