@@ -76,7 +76,7 @@ export class AppComponent implements OnInit {
             onclick: null,
             showDuration: 300,
             hideDuration: 1000,
-            timeOut: 5000,
+            timeOut: 3500,
             extendedTimeOut: 1000, 
             showEasing: "swing", 
             hideEasing: "linear",
