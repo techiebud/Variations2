@@ -144,6 +144,7 @@ export class AuthService {
             })
             .then(() => {
                  AppHelpers.UnblockUI();
+                 localStorage.setItem("userProfile", JSON.stringify(user));
                  toastr.success("Profile updated");
             })
             .catch((error) => {

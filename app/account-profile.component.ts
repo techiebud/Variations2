@@ -35,10 +35,13 @@ export class AccountProfileComponent implements OnInit {
          }
         this._authService.updateUserProfile(this.accountProfileForm.value);
     }
-    ngOnInit(): any {
-        debugger;
+    ngOnInit(): any {      
         this.user = JSON.parse(localStorage.getItem("userProfile"), this.reviver);
-        localStorage.setItem("allUnits", "{}");
+        if (!this.user.firstName)
+        {
+             this.user = JSON.parse(localStorage.getItem("userProfile"));
+        }
+        localStorage.removeItem("allUnits");
         firebase.database().ref('/Units').once('value').then((snapshot) => {
             localStorage.setItem('allUnits', JSON.stringify(snapshot.val()));
         });
@@ -49,14 +52,18 @@ export class AccountProfileComponent implements OnInit {
                 Validators.required,
                 this.isValidUnit
             ])]
-        });
+        });     
         //  this.accountProfileForm.value = this.user;
     }
 
 
 
-    isValidUnit(control: Control): { [s: string]: boolean } {
+    isValidUnit(control: Control): { [s: string]: boolean } {  
         let allUnits = JSON.parse(localStorage.getItem("allUnits"));
+        if (!allUnits)       //data has not loaded yet?
+        {
+            return;
+        }
         let unit: number = parseInt(control.value);
         const min_unit: number = 1901;
         const max_unit: number = 2112;

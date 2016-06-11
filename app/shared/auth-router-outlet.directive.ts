@@ -8,7 +8,8 @@ import {AuthService} from "./auth.service";
 export class AuthRouterOutlet extends RouterOutlet {
     private _protectedRoutes = {    
         'board': true,
-        'announcements': true
+        'announcements': true,
+        'accountProfile': true
     };
 
     constructor(_viewContainerRef:ViewContainerRef, _loader:DynamicComponentLoader, private _router:Router, @Attribute('name') _nameAttr:string,
