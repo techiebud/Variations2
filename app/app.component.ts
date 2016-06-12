@@ -2,13 +2,9 @@ import {Component, OnInit} from "@angular/core";
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, RouterOutlet, Router } from '@angular/router-deprecated';
 import {AuthRouterOutlet} from "./shared/auth-router-outlet.directive";
 import {FirebaseService} from "./shared/firebase.service";
-import {AuthService, DataService} from "./shared/index";
-
-
-
+import {AuthService} from "./shared/auth.service";
+import {DataService} from "./shared/data.service";
 import {User} from "./shared/user.interface";
-
-
 
 import {
     AboutComponent,
@@ -31,7 +27,8 @@ import {
     ResetPasswordComponent,
     ForgotPasswordComponent,
     AccountProfileComponent,
-    ChangeEmailComponent
+    ChangeEmailComponent,
+    ChangePasswordComponent
 } from "./index";
 
 declare var $: any;
@@ -64,7 +61,8 @@ declare var firebase: any;
     { path: '/resetPassword', name: "ResetPassword", component: ResetPasswordComponent },
     { path: '/forgotPassword', name: "ForgotPassword", component: ForgotPasswordComponent },
     { path: '/accountProfile', name: "AccountProfile", component: AccountProfileComponent },
-    { path: '/changeEmail', name: "ChangeEmail", component: ChangeEmailComponent }
+    { path: '/changeEmail', name: "ChangeEmail", component: ChangeEmailComponent },
+    { path: '/changePassword', name: "ChangePassword", component: ChangePasswordComponent }
 ])
 export class AppComponent implements OnInit {
 
@@ -134,24 +132,24 @@ export class AppComponent implements OnInit {
             }, 2000);
 
         });
-
         this._authService.getForgotPasswordEmailSentEvent().subscribe(() => {
             toastr.success("Email sent with instructions to reset your password");
             setTimeout(() => {
                 this._router.navigate(['Home']);
             }, 2000);
-
         });
         this._authService.getPasswordResetEvent().subscribe(() => {
             toastr.success("Your password has been successfully reset.");
             setTimeout(() => {
                 this._router.navigate(['Signin']);
             }, 2000);
-
         });
         this._authService.getEmailUpdated().subscribe(() => {
-            toastr.success("Your email has been changed. ");
+            toastr.success("Your email address has successfully been updated. ");
         });
+        this._authService.getPasswordChanged().subscribe(() => {
+            toastr.success("Your password has succesfully been changed. ");
+        });        
         this._dataService.getUserProfileUpdated().subscribe(() => {
             toastr.success("Your account profile has been updated");
         });

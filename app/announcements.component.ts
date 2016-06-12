@@ -2,13 +2,10 @@ import {Component, OnInit} from "@angular/core";
 import {Announcement} from "./shared/announcement.interface";
 import {AuthService} from "./shared/auth.service";
 import {AppHelpers} from "./app.component";
+import {DataService} from "./shared/data.service";
 
-declare var firebase: any;
-
-declare var $: any;
 declare var twttr: any;
 const DATA_TABLE: string = "Announcements";
-
 
 @Component({
     templateUrl: "app/announcements.component.html"
@@ -19,7 +16,7 @@ export class AnnouncementsComponent implements OnInit {
     isLoading: boolean = true;
     isError: boolean = false;
 
-    constructor() {
+   constructor(private _dataService: DataService)  {
         //show Twitter message feeds
         //Due to some timing issues
         //wait about 1 and 1/2 seconds before showing.
@@ -32,30 +29,21 @@ export class AnnouncementsComponent implements OnInit {
 
     ngOnInit() {
 
-        if (!this.isDataReady()) {
-            let fbTable = "/" + DATA_TABLE;
-            let sortedAnnouncementsRef = firebase.database().ref(fbTable).orderByKey();
-            sortedAnnouncementsRef.once('value',
-                (snapshot) => {
-                    let returnedData = snapshot.val();
-                    localStorage.setItem(DATA_TABLE, JSON.stringify(returnedData));
-                },
-                (error) => {
-                    console.error(error);
-                    this.isError = true;
-                    toastr.error(error);
-                });
+    if (!this.isDataReady())
+        {          
+            this._dataService.getAnnouncements();
+            //now watch the last firebase call to get when the data is ready.
             var refreshId = setInterval(() => {
-                if (this.isDataReady()) {
+                if (this.isDataReady() || this.isError) {
                     clearInterval(refreshId);
-                    this.isLoading = false;
-                }
-            }, 500);
-        }  //isDateReady
-        else{
+                    this.isLoading = false;                }
+            }, 500);  //check for data every 1/2 second
+        }
+        else 
+        {
             this.isLoading = false;
         }
-    }
+    }  //ngOnInit
 
     isDataReady(): boolean {
 

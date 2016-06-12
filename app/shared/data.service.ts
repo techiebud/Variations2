@@ -13,18 +13,30 @@ export class DataService {
 
     constructor(private _firebaseService: FirebaseService) { }
 
-    getBoardMembers(): void {
-        AppHelpers.BlockUI();
-        let fbTable = "BoardMembers";
-        let databaseRef = firebase.database().ref(fbTable);
+    getAnnouncements(): void {
+        let fbTable = "Announcements";
+        let databaseRef = firebase.database().ref(fbTable).orderByKey();
         databaseRef.once('value',
-            (snapshot) => {
-                AppHelpers.UnblockUI();
+            (snapshot) => {              
                 let returnedData = snapshot.val();             
                 localStorage.setItem(fbTable, JSON.stringify(returnedData));
             },
-            (error) => {
-                AppHelpers.UnblockUI();
+            (error) => {              
+                localStorage.setItem(fbTable, "error");
+                console.error(error);
+                toastr.error(error.message);
+            });
+    }    
+
+    getBoardMembers(): void {       
+        let fbTable = "BoardMembers";
+        let databaseRef = firebase.database().ref(fbTable);
+        databaseRef.once('value',
+            (snapshot) => {              
+                let returnedData = snapshot.val();             
+                localStorage.setItem(fbTable, JSON.stringify(returnedData));
+            },
+            (error) => {              
                 localStorage.setItem(fbTable, "error");
                 console.error(error);
                 toastr.error(error.message);
@@ -36,18 +48,14 @@ export class DataService {
         let databaseRef = firebase.database().ref(fbTable);
         databaseRef.once('value',
             (snapshot) => {
-                AppHelpers.UnblockUI();
                 let returnedData = snapshot.val();               
                 localStorage.setItem(fbTable, JSON.stringify(returnedData));
             },
-            (error) => {
-                AppHelpers.UnblockUI();
+            (error) => {               
                 localStorage.setItem(fbTable, "error");
                 console.error(error);
                 toastr.error(error.message);
             });
-
-
     }
 
     updateUserProfile(updatedUser: User, originalUser: User) {

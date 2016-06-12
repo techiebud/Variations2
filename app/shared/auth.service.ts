@@ -15,6 +15,7 @@ export class AuthService {
     private _userLoggedIn = new EventEmitter<any>();
     private _passwordReset = new EventEmitter<any>();
     private _emailUpdated = new EventEmitter<any>();
+    private _passwordChanged = new EventEmitter<any>();
     private _forgotPasswordEmailSent = new EventEmitter<any>();
     userIsAuthenticated: boolean;
     userGravatarURL: string = "";
@@ -100,6 +101,21 @@ export class AuthService {
             });
     }  //sendResetPasswordEmail
 
+     changePassword(newPassword: string)
+    {
+       AppHelpers.BlockUI();
+       var user = firebase.auth().currentUser;
+       user.updatePassword(newPassword)  
+            .then(() => {
+               AppHelpers.UnblockUI();  
+                this._passwordChanged.emit(true);        
+            })
+            .catch((error) => {
+                AppHelpers.UnblockUI();
+                toastr.error(error.message);
+            })
+    }
+
     updateEmail(newEmail: string)
     {
        AppHelpers.BlockUI();
@@ -158,7 +174,9 @@ export class AuthService {
      getEmailUpdated(): EventEmitter<any> {
         return this._emailUpdated;
     }
-
+     getPasswordChanged(): EventEmitter<any> {
+        return this._passwordChanged;
+     }
 
     isAuthenticated(): boolean {
         var user = firebase.auth().currentUser;

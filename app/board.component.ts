@@ -2,7 +2,6 @@ import {Component, OnInit} from "@angular/core";
 import {BoardMember} from "./shared/board-member.interface";
 import {DataService} from "./shared/data.service";
 
-declare var firebase : any;
 const DATA_TABLE: string = "BoardMembers";
 
 @Component({
