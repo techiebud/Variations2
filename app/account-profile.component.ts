@@ -1,49 +1,42 @@
 import {Component, OnInit} from "@angular/core";
 import {FormBuilder, ControlGroup, Validators, Control} from "@angular/common";
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
-import {AuthService} from "./shared/auth.service";
+import {DataService} from "./shared/data.service";
 import {User} from "./shared/user.interface";
 import {AppHelpers} from "./app.component";
 
 
-declare var firebase: any;
 
 
 @Component({
     templateUrl: "app/account-profile.component.html",
     directives: [ROUTER_DIRECTIVES],
-
 })
 export class AccountProfileComponent implements OnInit {
     accountProfileForm: ControlGroup;
     user: User;
 
-    constructor(private _fb: FormBuilder, private _authService: AuthService) {
+    constructor(private _fb: FormBuilder, private _dataService: DataService) {
 
     }
-
     onUpdateProfile() {
         var userUpdate: User = this.accountProfileForm.value;
-        if (userUpdate.unit != this.user.unit)
-        {
-            let allUnits = JSON.parse(localStorage.getItem("allUnits"));
-            if (allUnits[userUpdate.unit].RegisteredUsers >= 2) {
+       if (userUpdate.unit != this.user.unit) {
+            if (this._dataService.hasUnitMaximumNumberOfUsers(userUpdate.unit)) {
                 toastr.error("The maximum number of users have already signed up for this Unit #.")
                 return;
-            }       
-         }
-        this._authService.updateUserProfile(this.accountProfileForm.value, this.user);
-    }
-    ngOnInit(): any {      
-        this.user = JSON.parse(localStorage.getItem("userProfile"), this.reviver);
-        if (!this.user.firstName)
-        {
-             this.user = JSON.parse(localStorage.getItem("userProfile"));
+            }
         }
-        localStorage.removeItem("allUnits");
-        firebase.database().ref('/Units').once('value').then((snapshot) => {
-            localStorage.setItem('allUnits', JSON.stringify(snapshot.val()));
-        });
+        this._dataService.updateUserProfile(this.accountProfileForm.value, this.user);
+    }
+    ngOnInit(): any {
+        this.user = JSON.parse(localStorage.getItem("userProfile"), this.reviver);
+        if (!this.user.firstName)  //sometimes the reviver function returns just an object
+                                    //i found out if I call it without the reviver (which is setting the correct camel casing)
+        {                           //it comes back fine.
+            this.user = JSON.parse(localStorage.getItem("userProfile"));
+        }
+        this._dataService.cacheAllUnits();
         this.accountProfileForm = this._fb.group({
             firstName: [this.user.firstName, Validators.required],
             lastName: [this.user.lastName, Validators.required],
@@ -51,13 +44,10 @@ export class AccountProfileComponent implements OnInit {
                 Validators.required,
                 this.isValidUnit
             ])]
-        });     
+        });
         //  this.accountProfileForm.value = this.user;
     }
-
-
-
-    isValidUnit(control: Control): { [s: string]: boolean } {  
+    isValidUnit(control: Control): { [s: string]: boolean } {
         let allUnits = JSON.parse(localStorage.getItem("allUnits"));
         if (!allUnits)       //data has not loaded yet?
         {
@@ -70,12 +60,9 @@ export class AccountProfileComponent implements OnInit {
         if (validUnit) {
             validUnit = allUnits[unit.toString()];
         }
-
         if (!validUnit) {
             return { unitIsInvalid: true };
         }
-
-
     }
 
     reviver(key, val): any {

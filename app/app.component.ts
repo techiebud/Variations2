@@ -1,7 +1,10 @@
 import {Component, OnInit} from "@angular/core";
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, RouterOutlet, Router } from '@angular/router-deprecated';
 import {AuthRouterOutlet} from "./shared/auth-router-outlet.directive";
-import {AuthService} from "./shared/index";
+import {FirebaseService} from "./shared/firebase.service";
+import {AuthService, DataService} from "./shared/index";
+
+
 
 import {User} from "./shared/user.interface";
 
@@ -23,13 +26,12 @@ import {
     PicturesComponent,
     ServicesComponent,
     SigninComponent,
-    SignupComponent, 
-    UnderConstructionComponent, 
+    SignupComponent,
+    UnderConstructionComponent,
     ResetPasswordComponent,
-    ForgotPasswordComponent, 
+    ForgotPasswordComponent,
     AccountProfileComponent,
     ChangeEmailComponent
-
 } from "./index";
 
 declare var $: any;
@@ -39,7 +41,7 @@ declare var firebase: any;
     selector: "var-main",
     templateUrl: "app/app.component.html",
     directives: [FooterComponent, NavComponent, ROUTER_DIRECTIVES, AuthRouterOutlet],
-    providers: [ROUTER_PROVIDERS, AuthService],
+    providers: [ROUTER_PROVIDERS, FirebaseService, AuthService, DataService],
 })
 
 @RouteConfig([
@@ -60,18 +62,18 @@ declare var firebase: any;
     { path: '/eventsCalendar', name: "EventsCalendar", component: EventsCalendarComponent },
     { path: '/underConstruction', name: "UnderConstruction", component: UnderConstructionComponent },
     { path: '/resetPassword', name: "ResetPassword", component: ResetPasswordComponent },
-    { path: '/forgotPassword', name: "ForgotPassword", component: ForgotPasswordComponent } , 
-    { path: '/accountProfile', name: "AccountProfile", component: AccountProfileComponent },   
-    { path: '/changeEmail', name: "ChangeEmail", component: ChangeEmailComponent }   
+    { path: '/forgotPassword', name: "ForgotPassword", component: ForgotPasswordComponent },
+    { path: '/accountProfile', name: "AccountProfile", component: AccountProfileComponent },
+    { path: '/changeEmail', name: "ChangeEmail", component: ChangeEmailComponent }
 ])
 export class AppComponent implements OnInit {
 
-    constructor(private _router: Router, private _authService: AuthService) {
+    constructor(private _router: Router, private _authService: AuthService, private _dataService: DataService) {
 
-        var toastrOptions:ToastrOptions = {
-            closeButton : false,
+        var toastrOptions: ToastrOptions = {
+            closeButton: false,
             debug: false,
-            newestOnTop: true, 
+            newestOnTop: true,
             progressBar: false,
             positionClass: "toast-top-center",
             preventDuplicates: true,
@@ -79,22 +81,20 @@ export class AppComponent implements OnInit {
             showDuration: 300,
             hideDuration: 1000,
             timeOut: 3500,
-            extendedTimeOut: 1000, 
-            showEasing: "swing", 
+            extendedTimeOut: 1000,
+            showEasing: "swing",
             hideEasing: "linear",
             showMethod: "fadeIn",
-            hideMethod: "fadeOut"   
-         }
-      
+            hideMethod: "fadeOut"
+        }
+
         toastr.options = toastrOptions;
-      
+
         this.deleteCachedData();
 
     }
 
     ngOnInit(): any {
-        //   this.createUnits();
-
         this._authService.getLoggedInEvent().subscribe(() => {
             var newUser: User = JSON.parse(localStorage.getItem("newUser"));
             console.log("user logged in");
@@ -128,34 +128,34 @@ export class AppComponent implements OnInit {
 
         });
         this._authService.getLoggedOutEvent().subscribe(() => {
-            toastr.success("You have been successfully logged out.");         
-            setTimeout(() => {                
-                  this._router.navigate(['Home']);
+            toastr.success("You have been successfully logged out.");
+            setTimeout(() => {
+                this._router.navigate(['Home']);
             }, 2000);
-          
+
         });
 
-        this._authService.getForgotPasswordEmailSentEvent().subscribe(() => {  
-            toastr.success("Email sent with instructions to reset your password");   
+        this._authService.getForgotPasswordEmailSentEvent().subscribe(() => {
+            toastr.success("Email sent with instructions to reset your password");
             setTimeout(() => {
-               this._router.navigate(['Home']);
-            }, 2000);     
-            
+                this._router.navigate(['Home']);
+            }, 2000);
+
         });
-        this._authService.getPasswordResetEvent().subscribe(() => {  
-            toastr.success("Your password has been successfully reset.");    
+        this._authService.getPasswordResetEvent().subscribe(() => {
+            toastr.success("Your password has been successfully reset.");
             setTimeout(() => {
-               this._router.navigate(['Signin']);
-            }, 2000);     
-            
+                this._router.navigate(['Signin']);
+            }, 2000);
+
         });
-           this._authService.getEmailUpdated().subscribe(() => {  
-            toastr.success("Your email has been changed. ");    
-            // setTimeout(() => {
-            //    this._router.navigate(['Signin']);
-            // }, 2000);     
-            
+        this._authService.getEmailUpdated().subscribe(() => {
+            toastr.success("Your email has been changed. ");
         });
+        this._dataService.getUserProfileUpdated().subscribe(() => {
+            toastr.success("Your account profile has been updated");
+        });
+
     }
 
     deleteCachedData(): void {
@@ -181,12 +181,10 @@ export class AppComponent implements OnInit {
 
 
 export class AppSettings {
-
     public static get FIREBASE_APP(): string { return 'https://thevariations.firebaseio.com'; }
     public static get VARIATIONS_NAME(): string { return ' The Variations Condominium Association, Inc'; }
-
+    public static get MAXIMUM_USERS_PER_UNIT(): number { return 2; }
 }
-
 
 export class AppHelpers {
 
@@ -195,7 +193,6 @@ export class AppHelpers {
         if (!inputDate) {
             return null;
         }
-
         try {
             var y: number = +(inputDate.toString().substr(0, 4)),
                 m: number = +(inputDate.toString().substr(4, 2)) - 1,
@@ -208,16 +205,16 @@ export class AppHelpers {
         }
 
     }
-    
-    
-       public static BlockUI(message: string = "Processing.....please wait."): void {          
-            var blockMessage: string = '<h3><img src="img/busy.gif" /> ' + message + '</h3>';
-            $.blockUI({ message: blockMessage });
-        };
 
-        public static UnblockUI() {
-                $.unblockUI();
-         
-        };
+
+    public static BlockUI(message: string = "Processing.....please wait."): void {
+        var blockMessage: string = '<h3><img src="img/busy.gif" /> ' + message + '</h3>';
+        $.blockUI({ message: blockMessage });
+    };
+
+    public static UnblockUI() {
+        $.unblockUI();
+
+    };
 
 }

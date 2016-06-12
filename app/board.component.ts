@@ -1,7 +1,8 @@
 import {Component, OnInit} from "@angular/core";
 import {BoardMember} from "./shared/board-member.interface";
+import {DataService} from "./shared/data.service";
 
-declare var firebase: any;
+declare var firebase : any;
 const DATA_TABLE: string = "BoardMembers";
 
 @Component({
@@ -13,24 +14,12 @@ export class BoardComponent implements OnInit {
     isLoading: boolean = true;
     isError: boolean = false;
 
-    constructor() {}
+    constructor(private _dataService: DataService) {} 
 
     ngOnInit() {
         if (!this.isDataReady())
         {          
-            let fbTable = "" + DATA_TABLE;
-            var boardDataRef = firebase.database().ref(fbTable).orderByChild('Email');
-            boardDataRef.once('value',
-            (snapshot) => {                                
-                let returnedData = snapshot.val();
-                console.debug(returnedData);
-                localStorage.setItem(DATA_TABLE, JSON.stringify(returnedData));
-            },
-            (err) => {
-                this.isError = true;
-                console.error(err);                  
-                toastr.error(err);           
-            });  
+            this._dataService.getBoardMembers();
             //now watch the last firebase call to get when the data is ready.
             var refreshId = setInterval(() => {
                 if (this.isDataReady() || this.isError) {
@@ -44,9 +33,14 @@ export class BoardComponent implements OnInit {
         }
     }  //ngOnInit
 
-    isDataReady(): boolean {
-        let cachedData: any = localStorage.getItem(DATA_TABLE);
+    isDataReady(): boolean {    
+        let cachedData: any = localStorage.getItem(DATA_TABLE);        
         if (cachedData) {
+            if (cachedData === "error") 
+            {
+                this.isError = true;
+                return;
+            }
             this.prepData(JSON.parse(cachedData));          
             return true;
         }

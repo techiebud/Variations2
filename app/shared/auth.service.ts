@@ -1,10 +1,9 @@
 import {Injectable, EventEmitter} from "@angular/core";
 import {User} from "./user.interface";
 import {AppHelpers} from "../app.component";
-// import {toastr} from  "./node_mddules/toastr";
+import {FirebaseService} from "./firebase.service";
 
 declare var firebase: any;
-declare var toastr: any;
 declare var md5: any;
 
 
@@ -20,24 +19,7 @@ export class AuthService {
     userIsAuthenticated: boolean;
     userGravatarURL: string = "";
 
-    constructor() {
-        var config = {
-            apiKey: "AIzaSyBzLfPOqnW2ccBGIwprbfAQtat4aWiFakM",
-            authDomain: "thevariations.firebaseapp.com",
-            databaseURL: "https://thevariations.firebaseio.com",
-            storageBucket: "project-4248197981206346819.appspot.com",
-        };
-        firebase.initializeApp(config);
-        // if (localStorage.getItem("token")) {
-        //     let token = localStorage.getItem("token");
-        //     firebase.auth().signInWithCustomToken(token).then(() => {
-        //         toastr.success("Welcome back returning user");                
-        //     })
-        //     .catch((err) => {
-        //         console.log(err);
-        //         toastr.error(err);                
-        //     });            
-        // }
+    constructor(private _firebaseService : FirebaseService) {  
 
         firebase.auth().onAuthStateChanged((user) => {
             if (user) {
@@ -146,32 +128,7 @@ export class AuthService {
             });
     }  //resetPassword
 
-    updateUserProfile(updatedUser: User, originalUser: User) {
-        AppHelpers.BlockUI();
-        firebase.database().ref("Users/" + firebase.auth().currentUser.uid).set({
-            FirstName: updatedUser.firstName,
-            LastName: updatedUser.lastName,
-            Unit: updatedUser.unit
-        })
-            .then(() => {
-                AppHelpers.UnblockUI();
-                localStorage.setItem("userProfile", JSON.stringify(updatedUser));
-                if (updatedUser.unit != originalUser.unit)
-                {
-                   var allUnits: any = JSON.parse(localStorage.getItem("allUnits"));
-                    var updates = {};
-                    updates["/Units/" + updatedUser.unit + "/RegisteredUsers"] = +(allUnits[updatedUser.unit].RegisteredUsers) + 1;
-                    updates["/Units/" + originalUser.unit + "/RegisteredUsers"] = +(allUnits[originalUser.unit].RegisteredUsers) - 1;
-                    firebase.database().ref().update(updates);
-                }
-                toastr.success("Profile updated");
-            })
-            .catch((error) => {
-                AppHelpers.UnblockUI();
-                toastr.error(error);
-            })
-    }  //updateUserProfile
-
+   
     logout() {
         console.log("auth: logout");
         firebase.auth().signOut()
