@@ -16,12 +16,11 @@ export class DataService {
     getBoardMembers(): void {
         AppHelpers.BlockUI();
         let fbTable = "BoardMembers";
-        var boardDataRef = firebase.database().ref(fbTable);
-        boardDataRef.once('value',
+        let databaseRef = firebase.database().ref(fbTable);
+        databaseRef.once('value',
             (snapshot) => {
                 AppHelpers.UnblockUI();
-                let returnedData = snapshot.val();
-                console.debug(returnedData);
+                let returnedData = snapshot.val();             
                 localStorage.setItem(fbTable, JSON.stringify(returnedData));
             },
             (error) => {
@@ -30,6 +29,25 @@ export class DataService {
                 console.error(error);
                 toastr.error(error.message);
             });
+    }
+
+    getUnitsForSale(): void {
+        let fbTable = "UnitsForSale";
+        let databaseRef = firebase.database().ref(fbTable);
+        databaseRef.once('value',
+            (snapshot) => {
+                AppHelpers.UnblockUI();
+                let returnedData = snapshot.val();               
+                localStorage.setItem(fbTable, JSON.stringify(returnedData));
+            },
+            (error) => {
+                AppHelpers.UnblockUI();
+                localStorage.setItem(fbTable, "error");
+                console.error(error);
+                toastr.error(error.message);
+            });
+
+
     }
 
     updateUserProfile(updatedUser: User, originalUser: User) {

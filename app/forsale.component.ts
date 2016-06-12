@@ -1,8 +1,9 @@
 import {Component, OnInit} from "@angular/core";
 import {Unit} from "./shared/unit.interface";
 import {AppHelpers} from "./app.component";
+import {DataService} from "./shared/data.service";
 
-declare var firebase: any;
+
 const DATA_TABLE: string = "UnitsForSale";
 
 
@@ -15,55 +16,42 @@ export class ForsaleComponent implements OnInit {
     unitsSold: Array<Unit> = new Array<Unit>();
     unitsPending: Array<Unit> = new Array<Unit>();
     isLoading: boolean = true;
-    isError: boolean= false;
+    isError: boolean = false;
 
-    constructor() {
+    constructor(private _dataService: DataService) { }
 
-        if (!this.checkDataReady()) {
+    ngOnInit() {
+        if (!this.isDataReady()) {
+            this._dataService.getUnitsForSale();
+            //now watch the last firebase call to get when the data is ready.
             var refreshId = setInterval(() => {
-                if (this.checkDataReady()) {
+                if (this.isDataReady() || this.isError) {
                     clearInterval(refreshId);
                     this.isLoading = false;
                 }
-            }, 500);
+            }, 500);  //check for data every 1/2 second
         }
         else {
             this.isLoading = false;
         }
+    }  //ngOnInit
 
-    }
 
-    ngOnInit() {
-
-        if (!localStorage.getItem(DATA_TABLE)) {
-            let fbTable = "/" + DATA_TABLE;
-            firebase.database().ref(fbTable).once('value',
-              (snapshot) => {                    
-                  let returnedData = snapshot.val();
-                  localStorage.setItem(DATA_TABLE, JSON.stringify(returnedData));
-               },
-             (err) => {
-                 this.isError = true;
-                 console.error(err);
-                 toastr.error(err);              
-              
-            });
-               //snaphot units for sale
-        }   //no cache data found
-
-    }   //oninit
-
-    checkDataReady(): boolean {
-
+    isDataReady(): boolean {
         let cachedData: any = localStorage.getItem(DATA_TABLE);
         if (cachedData) {
-            this.parseData(JSON.parse(cachedData));
+            if (cachedData === "error") {
+                this.isError = true;
+                return;
+            }
+            this.prepData(JSON.parse(cachedData));
             return true;
         }
         return false;
-    }
+    }  //isDataReady
 
-    parseData(data: any): void {
+
+    prepData(data: any): void {
 
 
         this.unitsForSale = [];
@@ -84,7 +72,6 @@ export class ForsaleComponent implements OnInit {
                 Status: unitsForSale[unitNumber].Status,
                 SaleDate: saleDate,
                 SalePrice: +(unitsForSale[unitNumber].SalePrice)
-
             }
 
             switch (listUnit.Status) {
@@ -102,11 +89,10 @@ export class ForsaleComponent implements OnInit {
                     break;
             }
         }  //for loop
-        if (this.unitsSold.length > 1)
-        {
-            this.unitsSold.sort((a : Unit, b: Unit) : number => {
+        if (this.unitsSold.length > 1) {
+            this.unitsSold.sort((a: Unit, b: Unit): number => {
                 return (a.SaleDate > b.SaleDate ? 0 : 1);
-                
+
             })
         }
 
