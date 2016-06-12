@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1><span><i class="fa fa-envelope" aria-hidden="true"></i></span> Change Email</h1>
+        <h3>Enter your new email address below:</h3>
+    </div>
+
+    <form [ngFormModel]="changeEmailForm" (ngSubmit)="onSubmit()">
+      <div class="form-group row">
+            <div class="col-md-3">
+                <label for="email">E-Mail</label>
+                <input [ngFormControl]="changeEmailForm.find('email')" type="email" id="email" #email="ngForm" placeholder="Email" class="form-control ">
+                <span *ngIf="!email.pristine && email.errors != null && email.errors['noEmail']" class="error"> Invalid e-mail address</span>
+            </div>
+        </div>          
+
+        <div class="form-group row">
+            <div class="col-md-12">
+                <button class="btn btn-primary" type="submit" [disabled]="!changeEmailForm.valid">Change Email</button>
+            </div>
+        </div>
+
+    </form>
+  
+</div>

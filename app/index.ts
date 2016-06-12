@@ -18,3 +18,4 @@ export * from "./under-construction.component";
 export * from "./reset-password.component";
 export * from "./forgot-password.component";
 export * from "./account-profile.component";
+export * from "./change-email.component";

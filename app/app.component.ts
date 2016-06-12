@@ -27,7 +27,8 @@ import {
     UnderConstructionComponent, 
     ResetPasswordComponent,
     ForgotPasswordComponent, 
-    AccountProfileComponent
+    AccountProfileComponent,
+    ChangeEmailComponent
 
 } from "./index";
 
@@ -60,7 +61,8 @@ declare var firebase: any;
     { path: '/underConstruction', name: "UnderConstruction", component: UnderConstructionComponent },
     { path: '/resetPassword', name: "ResetPassword", component: ResetPasswordComponent },
     { path: '/forgotPassword', name: "ForgotPassword", component: ForgotPasswordComponent } , 
-    { path: '/accountProfile', name: "AccountProfile", component: AccountProfileComponent }   
+    { path: '/accountProfile', name: "AccountProfile", component: AccountProfileComponent },   
+    { path: '/changeEmail', name: "ChangeEmail", component: ChangeEmailComponent }   
 ])
 export class AppComponent implements OnInit {
 
@@ -145,6 +147,13 @@ export class AppComponent implements OnInit {
             setTimeout(() => {
                this._router.navigate(['Signin']);
             }, 2000);     
+            
+        });
+           this._authService.getEmailUpdated().subscribe(() => {  
+            toastr.success("Your email has been changed. ");    
+            // setTimeout(() => {
+            //    this._router.navigate(['Signin']);
+            // }, 2000);     
             
         });
     }
