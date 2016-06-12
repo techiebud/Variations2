@@ -28,12 +28,12 @@ export class AccountProfileComponent implements OnInit {
         if (userUpdate.unit != this.user.unit)
         {
             let allUnits = JSON.parse(localStorage.getItem("allUnits"));
-            if (allUnits[this.user.unit].RegisteredUsers >= 2) {
+            if (allUnits[userUpdate.unit].RegisteredUsers >= 2) {
                 toastr.error("The maximum number of users have already signed up for this Unit #.")
                 return;
             }       
          }
-        this._authService.updateUserProfile(this.accountProfileForm.value);
+        this._authService.updateUserProfile(this.accountProfileForm.value, this.user);
     }
     ngOnInit(): any {      
         this.user = JSON.parse(localStorage.getItem("userProfile"), this.reviver);

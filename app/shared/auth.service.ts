@@ -130,16 +130,24 @@ export class AuthService {
             });
     }  //resetPassword
 
-    updateUserProfile(user: User) {
+    updateUserProfile(updatedUser: User, originalUser: User) {
         AppHelpers.BlockUI();
         firebase.database().ref("Users/" + firebase.auth().currentUser.uid).set({
-            FirstName: user.firstName,
-            LastName: user.lastName,
-            Unit: user.unit
+            FirstName: updatedUser.firstName,
+            LastName: updatedUser.lastName,
+            Unit: updatedUser.unit
         })
             .then(() => {
                 AppHelpers.UnblockUI();
-                localStorage.setItem("userProfile", JSON.stringify(user));
+                localStorage.setItem("userProfile", JSON.stringify(updatedUser));
+                if (updatedUser.unit != originalUser.unit)
+                {
+                   var allUnits: any = JSON.parse(localStorage.getItem("allUnits"));
+                    var updates = {};
+                    updates["/Units/" + updatedUser.unit + "/RegisteredUsers"] = +(allUnits[updatedUser.unit].RegisteredUsers) + 1;
+                    updates["/Units/" + originalUser.unit + "/RegisteredUsers"] = +(allUnits[originalUser.unit].RegisteredUsers) - 1;
+                    firebase.database().ref().update(updates);
+                }
                 toastr.success("Profile updated");
             })
             .catch((error) => {
