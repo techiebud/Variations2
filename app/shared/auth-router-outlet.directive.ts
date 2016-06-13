@@ -9,7 +9,10 @@ export class AuthRouterOutlet extends RouterOutlet {
     private _protectedRoutes = {    
         'board': true,
         'announcements': true,
-        'accountProfile': true
+        'accountProfile': true, 
+        'pictures': true,
+        "changePassword": true,
+        "changeEmail": true
     };
 
     constructor(_viewContainerRef:ViewContainerRef, _loader:DynamicComponentLoader, private _router:Router, @Attribute('name') _nameAttr:string,
