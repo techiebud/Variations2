@@ -38,7 +38,7 @@ declare var firebase: any;
     selector: "var-main",
     templateUrl: "app/app.component.html",
     directives: [FooterComponent, NavComponent, ROUTER_DIRECTIVES, AuthRouterOutlet],
-    providers: [ROUTER_PROVIDERS, FirebaseService, AuthService, DataService],
+    providers: [ROUTER_PROVIDERS]
 })
 
 @RouteConfig([
