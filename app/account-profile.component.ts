@@ -36,7 +36,7 @@ export class AccountProfileComponent implements OnInit {
         {                           //it comes back fine.
             this.user = JSON.parse(localStorage.getItem("userProfile"));
         }
-        this._dataService.cacheAllUnits();
+        this._dataService.getAllUnits();
         this.accountProfileForm = this._fb.group({
             firstName: [this.user.firstName, Validators.required],
             lastName: [this.user.lastName, Validators.required],

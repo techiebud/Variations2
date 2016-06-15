@@ -15,7 +15,7 @@ export class DataService {
 
     getAnnouncements(): void {
         let fbTable = "Announcements";
-        let databaseRef = firebase.database().ref(fbTable).orderByKey();
+        let databaseRef = firebase.database().ref(fbTable).orderByKey();   
         databaseRef.once('value',
             (snapshot) => {              
                 let returnedData = snapshot.val();             
@@ -83,7 +83,7 @@ export class DataService {
             })
     }  //updateUserProfile
 
-    cacheAllUnits(): void {
+    getAllUnits(): void {
         localStorage.removeItem("allUnits");
         firebase.database().ref('/Units').once('value')
             .then((snapshot) => {

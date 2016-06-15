@@ -27,7 +27,7 @@ export class SignupComponent implements OnInit {
         this._authService.signupUser(this.signUpForm.value);
     }
     ngOnInit(): any {
-        this._dataService.cacheAllUnits();
+        this._dataService.getAllUnits();
         this.signUpForm = this._fb.group({
             email: ['', Validators.compose([
                 Validators.required,
