@@ -5,7 +5,7 @@ gulp.task("html", function() {
 	.pipe(gulp.dest("public/app"))	
 });
 gulp.task("img", function() {
-	return gulp.src("img/*.*")
+	return gulp.src("img/**/*.*")
 	.pipe(gulp.dest("public/img"))	
 });
 gulp.task("css", function() {
