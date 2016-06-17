@@ -87,8 +87,8 @@ export class AuthService {
                 console.error(error);
             });
     } //signinUser
-    sendResetPasswordAuthUser() {
-        var user = firebase.auth().currentUser;
+    sendResetPasswordEmailAuthUser() {   
+        var user = firebase.auth().currentUser;       
         this.sendResetPasswordEmail(user.email);
     }
     sendResetPasswordEmail(email: string) {

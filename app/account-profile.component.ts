@@ -17,7 +17,7 @@ export class AccountProfileComponent implements OnInit {
     accountProfileForm: ControlGroup;
     user: User;
 
-    constructor(private _fb: FormBuilder, private _dataService: DataService, private _authservice: AuthService) {
+    constructor(private _fb: FormBuilder, private _dataService: DataService, private _authService: AuthService) {
 
     }
     onUpdateProfile() {
@@ -73,8 +73,7 @@ export class AccountProfileComponent implements OnInit {
             return val;
     }
     onResetPassword() {
-        this._authservice.sendResetPasswordAuthUser();
-
+        this._authService.sendResetPasswordEmailAuthUser(); 
     }
 
 
