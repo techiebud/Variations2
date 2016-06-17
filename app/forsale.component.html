@@ -22,6 +22,18 @@
         </div>
     </div>
 
+        <div *ngIf="!isLoading" class="row panel panel-warning">
+        <h1 class="panel-heading">Units Pending Sale</h1>
+        <div class="panel-body">
+            <div class="col-md-6 units-for-sale " *ngFor="let unit of unitsPending ">
+                <a href="{{unit.URL}} " target="_blank " class="unit-for-sale ">
+                    <h3 class="unit-number lead "> <i class="fa fa-home " aria-hidden="true "></i>{{unit.UnitNumber}} {{unit.Street}}               
+                    <img src="{{unit.ImageURL}} " alt="{{unit.UnitNumber}} " class="img-thumbnail "></h3>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <div *ngIf="!isLoading" class="row panel panel-success ">
         <h1 class="panel-heading">Units Recently Sold</h1>
         <div class="panel-body">
@@ -35,17 +47,7 @@
         </div>
     </div>
     
-     <div *ngIf="!isLoading" class="row panel panel-warning">
-        <h1 class="panel-heading">Units Pending Sale</h1>
-        <div class="panel-body">
-            <div class="col-md-6 units-for-sale " *ngFor="let unit of unitsPending ">
-                <a href="{{unit.URL}} " target="_blank " class="unit-for-sale ">
-                    <h3 class="unit-number lead "> <i class="fa fa-home " aria-hidden="true "></i>{{unit.UnitNumber}} {{unit.Street}}               
-                    <img src="{{unit.ImageURL}} " alt="{{unit.UnitNumber}} " class="img-thumbnail "></h3>
-                </a>
-            </div>
-        </div>
-    </div>
+ 
 
 
 

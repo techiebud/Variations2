@@ -7,10 +7,10 @@ export class FirebaseService {
 
     constructor() { 
         var config = {
-            apiKey: "AIzaSyBzLfPOqnW2ccBGIwprbfAQtat4aWiFakM",
-            authDomain: "thevariations.firebaseapp.com",
-            databaseURL: "https://thevariations.firebaseio.com",
-            storageBucket: "project-4248197981206346819.appspot.com",
+           apiKey: "AIzaSyBsMzDuo5sUtsmKxkRM4p7sKWnmAhSVTDo",
+            authDomain: "variatons2.firebaseapp.com",
+            databaseURL: "https://variatons2.firebaseio.com",
+            storageBucket: "variatons2.appspot.com",
         };
         firebase.initializeApp(config);
 
