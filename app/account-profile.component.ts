@@ -2,6 +2,7 @@ import {Component, OnInit} from "@angular/core";
 import {FormBuilder, ControlGroup, Validators, Control} from "@angular/common";
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 import {DataService} from "./shared/data.service";
+import {AuthService} from "./shared/auth.service";
 import {User} from "./shared/user.interface";
 import {AppHelpers} from "./app.component";
 
@@ -16,12 +17,12 @@ export class AccountProfileComponent implements OnInit {
     accountProfileForm: ControlGroup;
     user: User;
 
-    constructor(private _fb: FormBuilder, private _dataService: DataService) {
+    constructor(private _fb: FormBuilder, private _dataService: DataService, private _authservice: AuthService) {
 
     }
     onUpdateProfile() {
         var userUpdate: User = this.accountProfileForm.value;
-       if (userUpdate.unit != this.user.unit) {
+        if (userUpdate.unit != this.user.unit) {
             if (this._dataService.hasUnitMaximumNumberOfUsers(userUpdate.unit)) {
                 toastr.error("The maximum number of users have already signed up for this Unit #.")
                 return;
@@ -32,7 +33,7 @@ export class AccountProfileComponent implements OnInit {
     ngOnInit(): any {
         this.user = JSON.parse(localStorage.getItem("userProfile"), this.reviver);
         if (!this.user.firstName)  //sometimes the reviver function returns just an object
-                                    //i found out if I call it without the reviver (which is setting the correct camel casing)
+        //i found out if I call it without the reviver (which is setting the correct camel casing)
         {                           //it comes back fine.
             this.user = JSON.parse(localStorage.getItem("userProfile"));
         }
@@ -71,7 +72,10 @@ export class AccountProfileComponent implements OnInit {
         else
             return val;
     }
+    onResetPassword() {
+        this._authservice.sendResetPasswordAuthUser();
 
+    }
 
 
 

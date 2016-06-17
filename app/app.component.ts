@@ -132,11 +132,14 @@ export class AppComponent implements OnInit {
             }, 2000);
 
         });
-        this._authService.getForgotPasswordEmailSentEvent().subscribe(() => {
-            toastr.success("Email sent with instructions to reset your password");
-            setTimeout(() => {
-                this._router.navigate(['Home']);
-            }, 2000);
+        this._authService.getResetPasswordEmailSentEvent().subscribe(() => {
+            toastr.success("Email sent with instructions to reset your password"); 
+            debugger;
+            if (!this._authService.isAuthenticated) {
+                setTimeout(() => {
+                    this._router.navigate(['Home']);
+                }, 2000);
+            }
         });
         this._authService.getPasswordResetEvent().subscribe(() => {
             toastr.success("Your password has been successfully reset.");
@@ -149,7 +152,7 @@ export class AppComponent implements OnInit {
         });
         this._authService.getPasswordChanged().subscribe(() => {
             toastr.success("Your password has succesfully been changed. ");
-        });        
+        });
         this._dataService.getUserProfileUpdated().subscribe(() => {
             toastr.success("Your account profile has been updated");
         });
