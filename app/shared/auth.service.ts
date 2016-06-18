@@ -2,6 +2,7 @@ import {Injectable, EventEmitter} from "@angular/core";
 import {User} from "./user.interface";
 import {AppHelpers} from "../app.component";
 import {FirebaseService} from "./firebase.service";
+import {CookieService} from 'angular2-cookie/core';
 
 declare var firebase: any;
 declare var md5: any;
@@ -20,7 +21,7 @@ export class AuthService {
     userIsAuthenticated: boolean;
     userGravatarURL: string = "";
 
-    constructor(private _firebaseService: FirebaseService) {
+    constructor(private _firebaseService: FirebaseService, private _cookieService: CookieService) {
 
         firebase.auth().onAuthStateChanged((user) => {
             if (user) {
@@ -74,6 +75,8 @@ export class AuthService {
 
     signinUser(user: User) {
         AppHelpers.BlockUI("Signing into web site......please wait.");
+        // this._cookieService.putObject("email", user.email);
+        // this._cookieService.putObject("pwd", user.password);
         firebase.auth().signInWithEmailAndPassword(user.email, user.password)
             .then(() => {
                 AppHelpers.UnblockUI();
