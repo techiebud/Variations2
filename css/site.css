@@ -465,3 +465,8 @@ div#events-calendar {
 input#unit {
     width: 80px;
 }
+span#management-company {
+    font-size: large;
+    font-weight: bolder;
+    font-style: oblique;
+}
