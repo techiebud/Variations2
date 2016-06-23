@@ -470,3 +470,12 @@ span#management-company {
     font-weight: bolder;
     font-style: oblique;
 }
+
+noscript {
+
+    color: red;
+    font-size: large;
+    margin-left: 140px;
+
+ 
+}
