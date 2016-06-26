@@ -4,8 +4,10 @@
         <h1><span><i class="fa fa-usd" aria-hidden="true"></i></span> Fees </h1>
         <p>Current HOA Fee: <strong>$360 / monthly</strong></p>
         <p>Current Cash Reserves: <strong>$178,877.67</strong> (as of January 2016)</p>
-        <p>Homeowners can pay HOA Dues through <a href="https://www.bbt.com/business/cash-management/association-services/homeowner-payments-through-association-services.page" target="_blank">BB&T Association Services</a></p>
     </div>
+
+              <div *ngIf="isAuth()" class="lead">Homeowners can pay HOA Dues through <a href="https://www.bbt.com/business/cash-management/association-services/homeowner-payments-through-association-services.page"
+                        target="_blank">BB&T Association Services</a></div>
 
     <div class="row col-md-12">
 
@@ -16,16 +18,19 @@
             <h4 class="panel-body">
                 In October 2005, the community voted overwhelmingly to borrow $1,600,000 to replace the siding and roofs on all 26 buildings
                 in the complex. The note is $19,000/month, and will be paid off at the end of December 2016.
-                 <br/> <br/>                
+                <br/> <br/>
                 <a href="img/OneCommunityCountDown.png" data-toggle="lightbox" data-title="Loan Payoff Countdown!" data-footer="The Variations Condominium Association, Inc">
-			            <strong>Click here to view the latest figures for our loan payoff countdown.</strong>		
-	        	</a>
+                    <strong>Click here to view the latest figures for our loan payoff countdown.</strong>
+                </a>
                 <br/>
                 <br/>
-                
-                 <div *ngIf="isAuth()" id="loan-countdown" class="row col-md-6 col-md-offset-3 hidden-sm hidden-xs"> 
-                </div>  <!-- loan-countdown -->
-            </h4>  <!-- panel-body -->
+
+      
+                <div *ngIf="isAuth()" id="loan-countdown" class="row col-md-6 col-md-offset-3 hidden-sm hidden-xs">
+                </div>
+                <!-- loan-countdown -->
+            </h4>
+            <!-- panel-body -->
 
         </div>
         <!-- panel -->
@@ -36,4 +41,5 @@
 
 
 
-</div>  <!-- container -->
+</div>
+<!-- container -->
