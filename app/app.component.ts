@@ -103,6 +103,7 @@ export class AppComponent implements OnInit {
                 localStorage.removeItem("newUser");
                 console.log("fbUser:", fbUser);
                 firebase.database().ref("Users/" + fbUser.uid).set({
+                    Email: newUser.email,
                     FirstName: newUser.firstName,
                     LastName: newUser.lastName,
                     Unit: newUser.unit
