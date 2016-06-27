@@ -69,7 +69,6 @@ export class AboutComponent implements OnInit {
 
 
     prepData(data: any): void {
-        debugger;
         this.management = <Management>data;  //iniyisliyr
 
 

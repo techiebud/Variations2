@@ -479,3 +479,19 @@ noscript {
 
  
 }
+
+img.marta-logo {
+    width: 8%;
+
+}
+
+div.marta-info a:hover {
+   
+  text-decoration: none;
+}
+
+
+div.marta-info a{
+   
+  text-decoration: none;
+}
