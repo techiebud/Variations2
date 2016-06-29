@@ -495,3 +495,14 @@ div.marta-info a{
    
   text-decoration: none;
 }
+
+h3#special-announcement {
+    color: darkgreen;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+
+img.olympics-logo {
+    margin-right: 10px;
+}
