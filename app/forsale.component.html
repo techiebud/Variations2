@@ -12,23 +12,27 @@
     </div>
 
     <div *ngIf="!isLoading" class="row panel panel-default">
-        <div class=" panel-body ">
-            <div class="col-md-6 units-for-sale " *ngFor="let unit of unitsForSale ">
+        <div class="panel-body" *ngIf="unitsForSale.length > 0">
+            <div class="col-md-6 units-for-sale" *ngFor="let unit of unitsForSale ">
                 <a href="{{unit.URL}} " target="_blank " class="unit-for-sale ">
                     <h3 class="unit-number lead "> <i class="fa fa-home " aria-hidden="true "></i>{{unit.UnitNumber}} {{unit.Street}}
-                    <img src="{{unit.ImageURL}} " alt="{{unit.UnitNumber}} " class="img-thumbnail "></h3>
+                        <img src="{{unit.ImageURL}} " alt="{{unit.UnitNumber}} " class="img-thumbnail "></h3>
                 </a>
             </div>
         </div>
+        <!-- panel body -->
+        <div *ngIf="unitsForSale.length == 0" class="col-md-12 panel-danger">
+           <h1 class="panel-heading">No units are currently available for sale</h1>
+        </div>
     </div>
 
-        <div *ngIf="!isLoading" class="row panel panel-warning">
+    <div *ngIf="!isLoading" class="row panel panel-warning">
         <h1 class="panel-heading">Units Pending Sale</h1>
         <div class="panel-body">
             <div class="col-md-6 units-for-sale " *ngFor="let unit of unitsPending ">
                 <a href="{{unit.URL}} " target="_blank " class="unit-for-sale ">
-                    <h3 class="unit-number lead "> <i class="fa fa-home " aria-hidden="true "></i>{{unit.UnitNumber}} {{unit.Street}}               
-                    <img src="{{unit.ImageURL}} " alt="{{unit.UnitNumber}} " class="img-thumbnail "></h3>
+                    <h3 class="unit-number lead "> <i class="fa fa-home " aria-hidden="true "></i>{{unit.UnitNumber}} {{unit.Street}}
+                        <img src="{{unit.ImageURL}} " alt="{{unit.UnitNumber}} " class="img-thumbnail "></h3>
                 </a>
             </div>
         </div>
@@ -40,14 +44,14 @@
             <div class="col-md-6 units-for-sale " *ngFor="let unit of unitsSold ">
                 <a href="{{unit.URL}} " target="_blank " class="unit-for-sale ">
                     <h3 class="unit-number lead "> <i class="fa fa-home " aria-hidden="true "></i>{{unit.UnitNumber}} {{unit.Street}}
-                    <p><strong>Sale Date:</strong> <em>{{unit.SaleDate | date: 'shortDate' }}</em>   <strong>Sale Price:</strong> <em>{{unit.SalePrice | currency:'USD':true}}</em> </p>
-                    <img src="{{unit.ImageURL}} " alt="{{unit.UnitNumber}} " class="img-thumbnail "></h3>
+                        <p><strong>Sale Date:</strong> <em>{{unit.SaleDate | date: 'shortDate' }}</em> <strong>Sale Price:</strong>                            <em>{{unit.SalePrice | currency:'USD':true}}</em> </p>
+                        <img src="{{unit.ImageURL}} " alt="{{unit.UnitNumber}} " class="img-thumbnail "></h3>
                 </a>
             </div>
         </div>
     </div>
-    
- 
+
+
 
 
 
