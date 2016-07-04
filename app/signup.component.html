@@ -5,71 +5,84 @@
         <h3>Create a sign up account to access additional features and information.</h3>
     </div>
 
-    <form [ngFormModel]="signUpForm" (ngSubmit)="onSignup()" novalidate>
-        <div class="form-group row">
-            <div class="col-md-3">
-                <label for="email">E-Mail</label>
-                <input [ngFormControl]="signUpForm.find('email')" type="email" id="email" #email="ngForm" placeholder="Email" class="form-control ">
-                <span *ngIf="!email.pristine && email.errors != null && email.errors['noEmail']" class="error"> Invalid e-mail address</span>
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-md-3">
-                <label for="firstNMme">First Name</label>
-                <input [ngFormControl]="signUpForm.find('firstName')" type="text" id="firstName" placeholder="First Name" class="form-control">
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-md-3">
-                <label for="lastName">Last Name</label>
-                <input [ngFormControl]="signUpForm.find('lastName')" type="text" id="lastName" placeholder="Last Name" class="form-control">
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-md-1">
-                <label for="Unit">Unit #</label>
-                <input [ngFormControl]="signUpForm.find('unit')" type="number" id="unit" #unit="ngForm" min="1901" max="2112" maxlength="4"
-                    placeholder="Unit #" class="form-control">
-                <span *ngIf="!unit.pristine && unit.errors != null && unit.errors['unitIsInvalid']" class="error">Invalid Unit #</span>
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-md-3">
-                <label for="password">Password</label>
-                <input [ngFormControl]="signUpForm.find('password')" type="password" id="password" placeholder="Password" class="form-control">
-            </div>
-        </div>
-        <div class="form-group row">
-            <div class="col-md-3">
-                <label for="confirm-password">Confirm Password</label>
-                <input [ngFormControl]="signUpForm.find('confirmPassword')" type="password" id="confirm-password" #confirmPassword="ngForm"
-                    placeholder="Confirm Password" class="form-control">
-                <span class="error" *ngIf="!confirmPassword.pristine && confirmPassword.errors != null && confirmPassword.errors['passwordsNotMatch']"> Passwords do not match</span>
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <div class="col-md-12">
-                <button class="btn btn-primary" type="submit" [disabled]="!signUpForm.valid">Sign Up</button>
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <div class="col-md-12">
-                <span class="lead">Already have an account?</span>
-                <a href="#" class="btn btn-info" [routerLink]="['Signin']">Sign In</a>
-            </div>
-        </div>
 
 
+    <div *ngIf="isLoading && !isError">
+        <i class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>Loading system information......
+    </div>
+    <div class="sign-up-form" *ngIf="supportsLocalStorage && !isLoading">
+        <form [ngFormModel]="signUpForm" (ngSubmit)="onSignup()" novalidate>
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="email">E-Mail</label>
+                    <input [ngFormControl]="signUpForm.find('email')" type="email" id="email" #email="ngForm" placeholder="Email" class="form-control ">
+                    <span *ngIf="!email.pristine && email.errors != null && email.errors['noEmail']" class="error"> Invalid e-mail address</span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="firstNMme">First Name</label>
+                    <input [ngFormControl]="signUpForm.find('firstName')" type="text" id="firstName" placeholder="First Name" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="lastName">Last Name</label>
+                    <input [ngFormControl]="signUpForm.find('lastName')" type="text" id="lastName" placeholder="Last Name" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-1">
+                    <label for="Unit">Unit #</label>
+                    <input [ngFormControl]="signUpForm.find('unit')" type="number" id="unit" #unit="ngForm" min="1901" max="2112" maxlength="4"
+                        placeholder="Unit #" class="form-control">
+                    <span *ngIf="!unit.pristine && unit.errors != null && unit.errors['unitIsInvalid']" class="error">Invalid Unit #</span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="password">Password</label>
+                    <input [ngFormControl]="signUpForm.find('password')" type="password" id="password" placeholder="Password" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input [ngFormControl]="signUpForm.find('confirmPassword')" type="password" id="confirm-password" #confirmPassword="ngForm"
+                        placeholder="Confirm Password" class="form-control">
+                    <span class="error" *ngIf="!confirmPassword.pristine && confirmPassword.errors != null && confirmPassword.errors['passwordsNotMatch']"> Passwords do not match</span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <button class="btn btn-primary" type="submit" [disabled]="!signUpForm.valid">Sign Up</button>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-12">
+                    <span class="lead">Already have an account?</span>
+                    <a href="#" class="btn btn-info" [routerLink]="['Signin']">Sign In</a>
+                </div>
+            </div>
 
 
-    </form>
+
+
+        </form>
+    </div>
+
+    <div *ngIf="!supportsLocalStorage && !isLoading" class="col-md-12 panel-danger">
+        <h1 class="panel-heading">Cannot download required system information.  It may be problems with your Internet connection or most likely your browser does not support features needed to properly use this Web Site. Please use another supported browser
+            such as the latest version of <a href="https://www.google.com/chrome/browser/" target="_blank">Chrome</a> or <a href="https://www.mozilla.org/download"
+                target="_blank">Firefox</a>.</h1>
+    </div>
 
     <div class="row">
-    
+
         <div class="col-md-12">
-           <span class="lead warning"><em>Having problems signing up?  Contact the <a href="mailto:variationscondos@gmail.com?Subject=Problems%20Signing%20Up">Webmaster</a></em></span>
+            <span class="lead warning"><em>Having problems signing up?  Contact the Webmaster <a href="mailto:variationscondos@gmail.com?Subject=Problems%20Signing%20Up">variationscondos@gmail.com</a></em></span>
         </div>
 
     </div>
