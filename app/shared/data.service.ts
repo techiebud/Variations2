@@ -103,10 +103,8 @@ export class DataService {
     }  //updateUserProfile
 
     getAllUnits(): void {
-        localStorage.setItem("allUnits", "error");  
         try {
             localStorage.removeItem("allUnits");
-
             firebase.database().ref('/Units').once('value')
                 .then((snapshot) => {                 
                     localStorage.setItem('allUnits', JSON.stringify(snapshot.val()))
