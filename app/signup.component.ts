@@ -56,7 +56,7 @@ export class SignupComponent implements OnInit {
             //now watch the last firebase call to get when the data is ready.
             var refreshId = setInterval(() => {
                 retryCount++;               
-                if (this.isDataReady() || this.isError || !this.isLoading || retryCount > 10) {
+                if (this.isDataReady() || this.isError || !this.isLoading || retryCount > 20) {
                     clearInterval(refreshId);
                     this.isLoading = false;
                 }
