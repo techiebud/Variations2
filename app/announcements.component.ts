@@ -70,6 +70,11 @@ export class AnnouncementsComponent implements OnInit {
             this.announcements.push(announcementRecord);
         }  //for loop
 
+          //FYI: I"m sorting the data here because I cannot get the data to come back sorted from Firebase;
+        this.announcements.sort((a: Announcement, b: Announcement) : number => {
+             return (b.Date > a.Date) ? 1 : 0;       
+        });
+
     }  //prepData
 
 
