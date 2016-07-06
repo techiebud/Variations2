@@ -12,7 +12,8 @@ export class AuthRouterOutlet extends RouterOutlet {
         'accountProfile': true, 
         'pictures': true,
         "changePassword": true,
-        "changeEmail": true
+        "changeEmail": true,
+        "discussion": true
     };
 
     constructor(_viewContainerRef:ViewContainerRef, _loader:DynamicComponentLoader, private _router:Router, @Attribute('name') _nameAttr:string,

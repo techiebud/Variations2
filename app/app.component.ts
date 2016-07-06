@@ -28,7 +28,8 @@ import {
     ForgotPasswordComponent,
     AccountProfileComponent,
     ChangeEmailComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    DiscussionComponent
 } from "./index";
 
 declare var $: any;
@@ -62,7 +63,8 @@ declare var firebase: any;
     { path: '/forgotPassword', name: "ForgotPassword", component: ForgotPasswordComponent },
     { path: '/accountProfile', name: "AccountProfile", component: AccountProfileComponent },
     { path: '/changeEmail', name: "ChangeEmail", component: ChangeEmailComponent },
-    { path: '/changePassword', name: "ChangePassword", component: ChangePasswordComponent }
+    { path: '/changePassword', name: "ChangePassword", component: ChangePasswordComponent },
+    { path: '/discussion', name: "Discussion", component: DiscussionComponent }
 ])
 export class AppComponent implements OnInit {
 
