@@ -15,9 +15,11 @@ export class DataService {
     private _allUnitsLoaded = new EventEmitter<any>();
 
     constructor(private _firebaseService: FirebaseService) {
-        localStorage.clear();   
+        localStorage.clear();
+        this.supportsLocalStorage = this.hasLocalStorage();   
         this.getGeneralInformation();
         this.getAllUnits();
+        
     }  
 
 
