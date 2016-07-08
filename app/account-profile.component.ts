@@ -4,7 +4,7 @@ import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router
 import {DataService} from "./shared/data.service";
 import {AuthService} from "./shared/auth.service";
 import {User} from "./shared/user.interface";
-import {AppHelpers} from "./app.component";
+import {AppHelpers} from "./shared/app.common";
 
 
 

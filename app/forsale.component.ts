@@ -1,6 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {Unit} from "./shared/unit.interface";
-import {AppHelpers} from "./app.component";
+import {AppHelpers} from "./shared/app.common";
 import {DataService} from "./shared/data.service";
 
 

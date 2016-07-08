@@ -1,8 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {Picture} from "./shared/picture.interface";
 import {AuthService} from "./shared/auth.service";
-import {AppHelpers} from "./app.component";
-
+import {AppHelpers} from "./shared/app.common";
 
 declare var firebase: any;
 

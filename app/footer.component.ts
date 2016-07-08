@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import {AppSettings}  from "./app.component";
+import {AppSettings}  from "./shared/app.common";
 
 @Component({
     selector: "var-footer",

@@ -1,8 +1,7 @@
 import {Component, OnInit} from "@angular/core"
-import {AppSettings}  from "./app.component";
+import {AppSettings}  from "./shared/app.common";
 import {Management} from "./shared/management.interface";
 
-declare var firebase: any;
 const DATA_TABLE: string = "Management";
 
 @Component({  

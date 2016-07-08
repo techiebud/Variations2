@@ -1,7 +1,9 @@
 import {Injectable, EventEmitter} from "@angular/core";
 import {User} from "./user.interface";
-import {AppHelpers, AppSettings} from "../app.component";
+import {AppHelpers} from "./app.common";
+import {AppSettings}  from "./app.common";
 import {FirebaseService} from "./firebase.service";
+import {GeneralInformation} from "./general-information.interface";
 
 declare var firebase: any;
 declare var md5: any;
@@ -9,20 +11,34 @@ declare var md5: any;
 @Injectable()
 export class DataService {
     supportsLocalStorage: boolean = false;
+    generalInformation: GeneralInformation;
+
     private _userProfileUpdated = new EventEmitter<any>();
     private _allUnitsLoaded = new EventEmitter<any>();
 
     constructor(private _firebaseService: FirebaseService) {
+        toastr.info("dataService: constructor");
         this.supportsLocalStorage = this.hasLocalStorage();
+        if (!this.supportsLocalStorage)
+        {
+            return;
+        }
+        this.getGeneralInformation();
+        this.getAllUnits();
+
+
+
+
 
     }
+    
+
 
     private hasLocalStorage(): boolean {
 
         var uid = "testingStorage";
         var result = false;
         try {
-            debugger;
             localStorage.setItem("uid", uid);
             result = localStorage.getItem("uid") == uid;
             localStorage.removeItem(uid);
@@ -53,6 +69,24 @@ export class DataService {
         databaseRef.once('value',
             (snapshot) => {
                 let returnedData = snapshot.val();
+                localStorage.setItem(fbTable, JSON.stringify(returnedData));
+            },
+            (error) => {
+                localStorage.setItem(fbTable, "error");
+                console.error(error);
+                toastr.error(error.message);
+            });
+    }
+
+    getGeneralInformation(): void {
+        let fbTable = "GeneralInformation";
+        let databaseRef = firebase.database().ref(fbTable);
+        databaseRef.once('value',
+            (snapshot) => {
+                let returnedData = snapshot.val();
+                this.generalInformation = returnedData;
+                debugger;
+                console.debug(this.generalInformation.SecurityKey);
                 localStorage.setItem(fbTable, JSON.stringify(returnedData));
             },
             (error) => {
@@ -106,7 +140,7 @@ export class DataService {
         try {
             localStorage.removeItem("allUnits");
             firebase.database().ref('/Units').once('value')
-                .then((snapshot) => {                 
+                .then((snapshot) => {
                     localStorage.setItem('allUnits', JSON.stringify(snapshot.val()))
                     this._allUnitsLoaded.emit(true);
                 })

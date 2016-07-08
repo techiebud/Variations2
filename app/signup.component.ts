@@ -4,7 +4,7 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/route
 import {AuthService} from "./shared/auth.service";
 import {DataService} from "./shared/data.service";
 import {User} from "./shared/user.interface";
-import {AppHelpers} from "./app.component";
+import {AppHelpers} from "./shared/app.common";
 
 
 @Component({
@@ -19,9 +19,6 @@ export class SignupComponent implements OnInit {
     isError: boolean = false;
 
     constructor(private _fb: FormBuilder, private _authService: AuthService, private _dataService: DataService) {
-
-
-
     }
 
     ngOnInit(): any {

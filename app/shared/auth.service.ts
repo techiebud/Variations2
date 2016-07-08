@@ -1,12 +1,8 @@
 import {Injectable, EventEmitter} from "@angular/core";
 import {User} from "./user.interface";
-import {AppHelpers} from "../app.component";
+import {AppHelpers} from "./app.common";
 import {FirebaseService} from "./firebase.service";
 import {CookieService} from 'angular2-cookie/core';
-
-declare var firebase: any;
-declare var md5: any;
-
 
 @Injectable(
 )
@@ -74,9 +70,10 @@ export class AuthService {
     }  //signup user
 
     signinUser(user: User) {
+        console.debug("signInuser");
         AppHelpers.BlockUI("Signing into web site......please wait.");
-        // this._cookieService.putObject("email", user.email);
-        // this._cookieService.putObject("pwd", user.password);
+    //    this._cookieService.put("email", user.email);
+    //    this._cookieService.put("pwd", user.password);
         firebase.auth().signInWithEmailAndPassword(user.email, user.password)
             .then(() => {
                 AppHelpers.UnblockUI();

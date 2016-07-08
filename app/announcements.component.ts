@@ -1,7 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {Announcement} from "./shared/announcement.interface";
 import {AuthService} from "./shared/auth.service";
-import {AppHelpers} from "./app.component";
+import {AppHelpers} from "./shared/app.common";
 import {DataService} from "./shared/data.service";
 
 declare var twttr: any;
