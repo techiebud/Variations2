@@ -5,8 +5,6 @@ import {AppSettings}  from "./app.common";
 import {FirebaseService} from "./firebase.service";
 import {GeneralInformation} from "./general-information.interface";
 
-declare var firebase: any;
-declare var md5: any;
 
 @Injectable()
 export class DataService {
@@ -84,8 +82,7 @@ export class DataService {
         databaseRef.once('value',
             (snapshot) => {
                 let returnedData = snapshot.val();
-                this.generalInformation = returnedData;
-                debugger;
+                this.generalInformation = returnedData;             
                 console.debug(this.generalInformation.SecurityKey);
                 localStorage.setItem(fbTable, JSON.stringify(returnedData));
             },

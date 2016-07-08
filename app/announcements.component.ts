@@ -4,7 +4,7 @@ import {AuthService} from "./shared/auth.service";
 import {AppHelpers} from "./shared/app.common";
 import {DataService} from "./shared/data.service";
 
-declare var twttr: any;
+
 const DATA_TABLE: string = "Announcements";
 
 @Component({

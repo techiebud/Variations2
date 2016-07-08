@@ -73,7 +73,7 @@ export class AuthService {
         console.debug("signInuser");
         AppHelpers.BlockUI("Signing into web site......please wait.");
     //    this._cookieService.put("email", user.email);
-    //    this._cookieService.put("pwd", user.password);
+    //      this._cookieService.put("pwd", user.password);
         firebase.auth().signInWithEmailAndPassword(user.email, user.password)
             .then(() => {
                 AppHelpers.UnblockUI();
