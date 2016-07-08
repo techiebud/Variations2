@@ -3,6 +3,9 @@ import {User} from "./user.interface";
 import {AppHelpers} from "./app.common";
 import {FirebaseService} from "./firebase.service";
 import {CookieService} from 'angular2-cookie/core';
+import { CookieOptionsArgs } from 'angular2-cookie/services';
+import {DataService}  from "./data.service";
+
 
 @Injectable(
 )
@@ -17,8 +20,8 @@ export class AuthService {
     userIsAuthenticated: boolean;
     userGravatarURL: string = "";
 
-    constructor(private _firebaseService: FirebaseService, private _cookieService: CookieService) {
-
+    constructor(private _firebaseService: FirebaseService, private _cookieService: CookieService, private _dateService: DataService) {
+    
         firebase.auth().onAuthStateChanged((user) => {
             if (user) {
                 console.log("User has signed in");
@@ -69,16 +72,32 @@ export class AuthService {
             });      //catch
     }  //signup user
 
-    signinUser(user: User) {
-        console.debug("signInuser");
+    signinUser(user: User, rememberMe: boolean, autoSignIn: boolean = false) {
         AppHelpers.BlockUI("Signing into web site......please wait.");
-    //    this._cookieService.put("email", user.email);
-    //      this._cookieService.put("pwd", user.password);
+        this._cookieService.removeAll();          
         firebase.auth().signInWithEmailAndPassword(user.email, user.password)
             .then(() => {
-                AppHelpers.UnblockUI();
+                AppHelpers.UnblockUI();   
+                let cookieExpire: Date= new Date();
+                cookieExpire.setFullYear(cookieExpire.getFullYear() + 5);
+                var cookieOptions:CookieOptionsArgs = {
+                    expires: cookieExpire
+                }
+               
+                if (rememberMe) {
+                    
+                    let email: any = CryptoJS.AES.encrypt(user.email, this._dateService.generalInformation.SecurityKey);
+                    this._cookieService.put("email", email, cookieOptions);
+                    let pwd :any = CryptoJS.AES.encrypt(user.password, this._dateService.generalInformation.SecurityKey);
+                    this._cookieService.put("pwd", pwd, cookieOptions);  
+                    this._cookieService.put("rememberMe", "1", cookieOptions);            
+                }
             })
             .catch((error) => {
+                if (autoSignIn)
+                {
+                    return;
+                }
                 AppHelpers.UnblockUI();
                 console.log(error);
                 var errorCode = error.code;
@@ -87,8 +106,8 @@ export class AuthService {
                 console.error(error);
             });
     } //signinUser
-    sendResetPasswordEmailAuthUser() {   
-        var user = firebase.auth().currentUser;       
+    sendResetPasswordEmailAuthUser() {
+        var user = firebase.auth().currentUser;
         this.sendResetPasswordEmail(user.email);
     }
     sendResetPasswordEmail(email: string) {
@@ -147,9 +166,10 @@ export class AuthService {
 
 
     logout() {
-        console.log("auth: logout");
+        //console.log("auth: logout");
         firebase.auth().signOut()
             .then(() => {
+                this._cookieService.removeAll();
                 this._userLoggedOut.emit(true);
             })
             .catch((error) => {

@@ -22,8 +22,7 @@ export class ChangeEmailComponent implements OnInit {
             ])]         
         });
     }
-    onSubmit(email: string) {
-        debugger;
+    onSubmit(email: string) {      
         var email: string = this.changeEmailForm.value["email"];
         this._authService.updateEmail(email);
     }

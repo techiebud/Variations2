@@ -9,36 +9,42 @@ import {DataService}   from './shared/data.service';
 @Component({
     templateUrl: "app/signin.component.html",
     directives: [ROUTER_DIRECTIVES],
- 
+
 })
 export class SigninComponent implements OnInit {
     signinForm: ControlGroup;
+    rememberMeInfoTitle: string;
+    rememberMe: boolean = false;
 
 
-    constructor(private _fb: FormBuilder, private _authService: AuthService, private _cookieService: CookieService, private _dataService: DataService) 
+    constructor(private _fb: FormBuilder, private _authService: AuthService, private _cookieService: CookieService, private _dataService: DataService) {
 
-    
-    { }
+        this.rememberMeInfoTitle = 'If you check the "Remember me" box, you will be automatically signed in to variationscondos.com when you visit in the future.   Do not check this box if you area on a public computer.';
+       
+    }
 
     onSignin(): any {
-        this._authService.signinUser(this.signinForm.value);
-
+        this._authService.signinUser(this.signinForm.value, this.rememberMe);
     }
 
     ngOnInit(): any {
-     
-        // var email = this._cookieService.get("email");
-        // var password = this._cookieService.get("pwd");
-        // console.log("em", email);
-        // console.log("pwd", password);
-        var email = "";
-        var password = "";
+
+   
         this.signinForm = this._fb.group({
-            email: [email, Validators.required],
-            password: [password, Validators.required],
+            email: ["", Validators.required],
+            password: ["", Validators.required],
         });
-      
+     
+
+
+
     }
-    
-  
+
+    onInfoClicked(): void {
+
+        bootbox.alert("If checked, a persistent cookie will be saved to your computer/device to remember your login information and automatically sign you in on future visits.<br /><br ><em>Do not choose this option if you are on a public computer.</em>");
+
+    }
+
+
 }

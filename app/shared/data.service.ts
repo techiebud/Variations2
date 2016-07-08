@@ -15,21 +15,10 @@ export class DataService {
     private _allUnitsLoaded = new EventEmitter<any>();
 
     constructor(private _firebaseService: FirebaseService) {
-        toastr.info("dataService: constructor");
-        this.supportsLocalStorage = this.hasLocalStorage();
-        if (!this.supportsLocalStorage)
-        {
-            return;
-        }
+        localStorage.clear();   
         this.getGeneralInformation();
         this.getAllUnits();
-
-
-
-
-
-    }
-    
+    }  
 
 
     private hasLocalStorage(): boolean {

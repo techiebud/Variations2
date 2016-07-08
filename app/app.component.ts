@@ -92,7 +92,6 @@ export class AppComponent implements OnInit {
 
         toastr.options = toastrOptions;
 
-        this.deleteCachedData();
 
     }
 
@@ -139,7 +138,6 @@ export class AppComponent implements OnInit {
         });
         this._authService.getResetPasswordEmailSentEvent().subscribe(() => {
             toastr.success("Email sent with instructions to reset your password"); 
-            debugger;
             if (!this._authService.isAuthenticated) {
                 setTimeout(() => {
                     this._router.navigate(['Home']);
@@ -164,9 +162,6 @@ export class AppComponent implements OnInit {
 
     }
 
-    deleteCachedData(): void {
-        localStorage.clear();
-    }
 
     private ObjectLength(object) {
         var length = 0;
