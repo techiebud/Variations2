@@ -38,7 +38,7 @@
         </div>
     </div>
 
-    <div *ngIf="!isLoading" class="row panel panel-success ">
+    <div *ngIf="!isLoading && isAuth()" class="row panel panel-success ">
         <h1 class="panel-heading">Units Recently Sold</h1>
         <div class="panel-body">
             <div class="col-md-6 units-for-sale " *ngFor="let unit of unitsSold ">

@@ -2,7 +2,7 @@ import {Component, OnInit} from "@angular/core";
 import {Unit} from "./shared/unit.interface";
 import {AppHelpers} from "./shared/app.common";
 import {DataService} from "./shared/data.service";
-
+import {AuthService} from "./shared/auth.service";
 
 const DATA_TABLE: string = "UnitsForSale";
 
@@ -18,7 +18,7 @@ export class ForsaleComponent implements OnInit {
     isLoading: boolean = true;
     isError: boolean = false;
 
-    constructor(private _dataService: DataService) { }
+    constructor(private _dataService: DataService, private _authService: AuthService) { }
 
     ngOnInit() {
         if (!this.isDataReady()) {
@@ -36,7 +36,9 @@ export class ForsaleComponent implements OnInit {
         }
     }  //ngOnInit
 
-
+    isAuth() {
+        return this._authService.isAuthenticated();
+    }
     isDataReady(): boolean {
         let cachedData: any = localStorage.getItem(DATA_TABLE);
         if (cachedData) {
