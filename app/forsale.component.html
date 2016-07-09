@@ -22,7 +22,7 @@
         </div>
         <!-- panel body -->
         <div *ngIf="unitsForSale.length == 0" class="col-md-12 panel-danger">
-           <h1 class="panel-heading">No units are currently available for sale</h1>
+            <h1 class="panel-heading">No units are currently available for sale</h1>
         </div>
     </div>
 
@@ -38,22 +38,21 @@
         </div>
     </div>
 
-    <div *ngIf="!isLoading && isAuth()" class="row panel panel-success ">
+    <div *ngIf="!isLoading" class="row panel panel-success ">
         <h1 class="panel-heading">Units Recently Sold</h1>
-        <div class="panel-body">
-            <div class="col-md-6 units-for-sale " *ngFor="let unit of unitsSold ">
+        <div class="panel-body" *ngIf="isAuth()">
+            <div class="col-md-6 units-for-sale" *ngFor="let unit of unitsSold ">
                 <a href="{{unit.URL}} " target="_blank " class="unit-for-sale ">
                     <h3 class="unit-number lead "> <i class="fa fa-home " aria-hidden="true "></i>{{unit.UnitNumber}} {{unit.Street}}
-                        <p><strong>Sale Date:</strong> <em>{{unit.SaleDate | date: 'shortDate' }}</em> <strong>Sale Price:</strong>                            <em>{{unit.SalePrice | currency:'USD':true}}</em> </p>
+                        <p><strong>Sale Date:</strong> <em>{{unit.SaleDate | date: 'shortDate' }}</em> <strong>Sale Price:</strong><em>{{unit.SalePrice | currency:'USD':true}}</em> </p>
                         <img src="{{unit.ImageURL}} " alt="{{unit.UnitNumber}} " class="img-thumbnail "></h3>
                 </a>
-            </div>
+            </div>           
         </div>
+         <div class="panel-body" *ngIf="!isAuth()">
+                <h3 style="color:darkred"><strong><em>This section is only viewable to signedin residents.</em></strong></h3>
+            </div>
+
     </div>
-
-
-
-
-
 
 </div>
