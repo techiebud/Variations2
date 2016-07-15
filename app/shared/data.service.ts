@@ -16,11 +16,11 @@ export class DataService {
 
     constructor(private _firebaseService: FirebaseService) {
         localStorage.clear();
-        this.supportsLocalStorage = this.hasLocalStorage();   
+        this.supportsLocalStorage = this.hasLocalStorage();
         this.getGeneralInformation();
         this.getAllUnits();
-        
-    }  
+
+    }
 
 
     private hasLocalStorage(): boolean {
@@ -73,7 +73,7 @@ export class DataService {
         databaseRef.once('value',
             (snapshot) => {
                 let returnedData = snapshot.val();
-                this.generalInformation = returnedData;             
+                this.generalInformation = returnedData;
                 console.debug(this.generalInformation.SecurityKey);
                 localStorage.setItem(fbTable, JSON.stringify(returnedData));
             },
@@ -142,9 +142,41 @@ export class DataService {
         }
     }
 
+
+    getAllUsersEmail(): void {
+
+        
+        try {
+            localStorage.removeItem("UserEmails");
+            firebase.database().ref('/Users').once('value')
+                .then((snapshot) => {
+                    debugger;
+                    let allUsers: any = snapshot.val();
+                    let allUserEmails: string = "";
+                    for (var user in allUsers) {
+                        allUserEmails += allUsers[user].Email + ";";
+                    
+                    }
+                  
+                    localStorage.setItem('UserEmails', allUserEmails);
+                  
+                })
+                .catch((error) => {
+                    console.error(error);
+                  
+                })
+        }
+        catch (ex) {
+            console.error(ex);
+        }
+
+
+
+    }
+
     hasUnitMaximumNumberOfUsers(unitNumber: string): boolean {
         let allUnits = JSON.parse(localStorage.getItem("allUnits"));
-        return (allUnits[unitNumber].RegisteredUsers >= AppSettings.MAXIMUM_USERS_PER_UNIT);
+        return (allUnits[unitNumber].RegisteredUsers >= this.generalInformation.MaximumUsersPerUnit);
     }
 
     getAllUnitsLoaded(): EventEmitter<any> {

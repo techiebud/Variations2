@@ -1,29 +1,36 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, ControlGroup, Validators} from "@angular/common";
+import {
+    FormGroup,
+    FormControl,
+    REACTIVE_FORM_DIRECTIVES,
+    Validators,
+    FormBuilder
+} from "@angular/forms";
 import {AuthService} from "./shared/auth.service";
 
 
 
 @Component({
-    templateUrl: 'app/forgot-password.component.html'
+    templateUrl: 'app/forgot-password.component.html',
+    directives: [REACTIVE_FORM_DIRECTIVES]
 })
 export class ForgotPasswordComponent implements OnInit {
 
-    forgotPasswordForm: ControlGroup;
+    forgotPasswordForm: FormGroup;
 
-    constructor(private _fb: FormBuilder, private _authService: AuthService) {
+    constructor(private _formBuiilder: FormBuilder, private _authService: AuthService) {
 
     }
 
     ngOnInit() {
 
-        this.forgotPasswordForm = this._fb.group({
+        this.forgotPasswordForm = this._formBuiilder.group({
             email: ['', Validators.required]
         });
 
     }
 
-    onForgotPassword(): any {       
+    onForgotPassword(): any {
         this._authService.sendResetPasswordEmail(this.forgotPasswordForm.value["email"]);
 
 

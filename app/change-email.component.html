@@ -4,12 +4,12 @@
         <h3>Enter your new email address below:</h3>
     </div>
 
-    <form [ngFormModel]="changeEmailForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="changeEmailForm" (ngSubmit)="onSubmit()">
       <div class="form-group row">
             <div class="col-md-3">
                 <label for="email">E-Mail</label>
-                <input [ngFormControl]="changeEmailForm.find('email')" type="email" id="email" #email="ngForm" placeholder="Email" class="form-control ">
-                <span *ngIf="!email.pristine && email.errors != null && email.errors['noEmail']" class="error"> Invalid e-mail address</span>
+               <input formControlName="email" type="email" id="email" placeholder="Email" class="form-control ">
+                    <span *ngIf="!changeEmailForm.find('email').valid && !changeEmailForm.find('email').pristine" class="error"> Invalid e-mail address</span>
             </div>
         </div>          
 

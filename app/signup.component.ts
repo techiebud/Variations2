@@ -1,6 +1,14 @@
 import {Component, OnInit} from "@angular/core";
-import {FormBuilder, ControlGroup, Validators, Control} from "@angular/common";
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
+import {
+  FormGroup,
+  FormControl,
+  Validators,
+  FormBuilder,
+   REACTIVE_FORM_DIRECTIVES,
+} from "@angular/forms";
+
+
+import {ROUTER_DIRECTIVES} from "@angular/router";
 import {AuthService} from "./shared/auth.service";
 import {DataService} from "./shared/data.service";
 import {User} from "./shared/user.interface";
@@ -9,21 +17,19 @@ import {AppHelpers} from "./shared/app.common";
 
 @Component({
     templateUrl: "app/signup.component.html",
-    directives: [ROUTER_DIRECTIVES],
+    directives: [ROUTER_DIRECTIVES, REACTIVE_FORM_DIRECTIVES],
 
 })
 export class SignupComponent implements OnInit {
-    signUpForm: ControlGroup;
+    signupForm: FormGroup;
     supportsLocalStorage: boolean = false;
     isLoading: boolean = true;
     isError: boolean = false;
 
-    constructor(private _fb: FormBuilder, private _authService: AuthService, private _dataService: DataService) {
-    }
+    constructor(private _formBuilder: FormBuilder, private _authService: AuthService, private _dataService: DataService) {
 
-    ngOnInit(): any {
-
-        this.signUpForm = this._fb.group({
+        
+        this.signupForm = _formBuilder.group({
             email: ['', Validators.compose([
                 Validators.required,
                 this.isEmail
@@ -40,6 +46,10 @@ export class SignupComponent implements OnInit {
                 this.isValidUnit
             ])]
         });
+    }
+
+    ngOnInit(): any {
+
 
         this._dataService.getAllUnitsLoaded().subscribe(() => {         
             this.isLoading = false;
@@ -80,32 +90,32 @@ export class SignupComponent implements OnInit {
     }  //isDataReady
 
     onSignup() {
-        var user: User = this.signUpForm.value;
+        var user: User = this.signupForm.value;
         if (this._dataService.hasUnitMaximumNumberOfUsers(user.unit)) {
             toastr.error("The maximum number of users have already signed up for this Unit #.")
             return;
         }
-        this._authService.signupUser(this.signUpForm.value);
+        this._authService.signupUser(this.signupForm.value);
     }
 
 
-    isEmail(control: Control): { [s: string]: boolean } {
+    isEmail(control: FormControl): { [s: string]: boolean } {
         if (!control.value.match(/^[a-z0-9_\+-]+(\.[a-z0-9_\+-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*\.([a-z]{2,4})$/)) {
             return { noEmail: true };
         }
     }
 
-    isEqualPassword(control: Control): { [s: string]: boolean } {
-        if (!this.signUpForm) {
+    isEqualPassword(control: FormControl): { [s: string]: boolean } {
+        if (!this.signupForm) {
             return { passwordsNotMatch: true };
 
         }
-        if (control.value !== this.signUpForm.controls['password'].value) {
+        if (control.value !== this.signupForm.controls['password'].value) {
             return { passwordsNotMatch: true };
         }
     }
 
-    isValidUnit(control: Control): { [s: string]: boolean } {
+    isValidUnit(control: FormControl): { [s: string]: boolean } {
         let allUnits = JSON.parse(localStorage.getItem("allUnits"));
         let unit: number = parseInt(control.value);
         const min_unit: number = 1901;

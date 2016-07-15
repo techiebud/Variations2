@@ -1,6 +1,14 @@
 import {Component, OnInit} from "@angular/core";
-import {FormBuilder, ControlGroup, Validators} from "@angular/common";
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
+import {ROUTER_DIRECTIVES} from "@angular/router";
+import {
+  FormGroup,
+  FormControl,
+  REACTIVE_FORM_DIRECTIVES,
+  Validators,
+  FormBuilder
+} from "@angular/forms";
+
+
 import {AuthService} from "./shared/auth.service";
 import {CookieService} from 'angular2-cookie/core';
 import {DataService}   from './shared/data.service';
@@ -8,32 +16,36 @@ import {DataService}   from './shared/data.service';
 
 @Component({
     templateUrl: "app/signin.component.html",
-    directives: [ROUTER_DIRECTIVES],
+    directives: [ROUTER_DIRECTIVES, REACTIVE_FORM_DIRECTIVES]
 
 })
 export class SigninComponent implements OnInit {
-    signinForm: ControlGroup;
+    signinForm: FormGroup;
     rememberMeInfoTitle: string;
     rememberMe: boolean = false;
 
 
-    constructor(private _fb: FormBuilder, private _authService: AuthService, private _cookieService: CookieService, private _dataService: DataService) {
+    constructor(private _formBuilder: FormBuilder, private _authService: AuthService, private _cookieService: CookieService, private _dataService: DataService) {
 
         this.rememberMeInfoTitle = 'If you check the "Remember me" box, you will be automatically signed in to variationscondos.com when you visit in the future.   Do not check this box if you area on a public computer.';
        
+        this.signinForm = _formBuilder.group({
+          'userSigninInfo':  _formBuilder.group({
+            'email': ["", Validators.required],
+            'password': ["", Validators.required]
+          }),
+          "rememberMe": [false]
+         
+        });
     }
 
-    onSignin(): any {
-        this._authService.signinUser(this.signinForm.value, this.rememberMe);
+    onSignin(): any { 
+        this._authService.signinUser(this.signinForm.value.userSigninInfo, this.signinForm.value.rememberMe);
     }
 
     ngOnInit(): any {
 
    
-        this.signinForm = this._fb.group({
-            email: ["", Validators.required],
-            password: ["", Validators.required],
-        });
      
 
 

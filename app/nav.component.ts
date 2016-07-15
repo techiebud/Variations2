@@ -1,5 +1,6 @@
 import {Component, OnInit} from "@angular/core";
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
+import {ROUTER_DIRECTIVES} from "@angular/router";
+
 import {AuthService} from "./shared/auth.service";
 
 
@@ -7,9 +8,7 @@ import {AuthService} from "./shared/auth.service";
 @Component({
     selector: "var-nav",
     templateUrl: "app/nav.component.html", 
-    directives: [ROUTER_DIRECTIVES],
-    
-   
+    directives: [ROUTER_DIRECTIVES]     
 })
 
 export class NavComponent implements OnInit {

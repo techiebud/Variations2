@@ -1,20 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import {RouteParams} from  "@angular/router-deprecated";
-import {FormBuilder, ControlGroup, Validators, Control} from "@angular/common";
+import {ActivatedRoute} from  "@angular/router";
+import {
+  FormGroup,
+  FormControl,
+  REACTIVE_FORM_DIRECTIVES,
+  Validators,
+  FormBuilder
+} from "@angular/forms";
 import {AuthService} from "./shared/auth.service";
 
 @Component({
-    templateUrl: 'app/reset-password.component.html'
+    templateUrl: 'app/reset-password.component.html',
+    directives: [REACTIVE_FORM_DIRECTIVES]
 })
 export class ResetPasswordComponent implements OnInit {
 
-    resetPasswordForm: ControlGroup;
-    constructor(private _fb: FormBuilder, private _params: RouteParams, private _authService: AuthService) {
+    resetPasswordForm: FormGroup;
+    constructor(private _formBuilder: FormBuilder, private _activatedRoute: ActivatedRoute, private _authService: AuthService) {
       
     }
 
     ngOnInit() {
-        this.resetPasswordForm = this._fb.group({        
+        this.resetPasswordForm = this._formBuilder.group({        
             password: ['', Validators.required],
             confirmPassword: ['', Validators.compose([
                 Validators.required,
@@ -24,14 +31,14 @@ export class ResetPasswordComponent implements OnInit {
     }
 
     onResetPassword() {        
-       var resetCode: string = this._params.get("oobCode");
+       var resetCode: string = this._activatedRoute.snapshot.params["oobCode"];
        var newPassword: string = this.resetPasswordForm.value.password;
        console.debug("resetCode", resetCode);
        console.debug("newPassword", newPassword)
        this._authService.resetPassword(resetCode, newPassword);     
     }    
     
-     isEqualPassword(control: Control): { [s: string]: boolean } {
+     isEqualPassword(control: FormControl): { [s: string]: boolean } {
         if (!this.resetPasswordForm) {
             return { passwordsNotMatch: true };
 

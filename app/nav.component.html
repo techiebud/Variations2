@@ -7,19 +7,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-            <a href="" [routerLink]="['Home']" class="navbar-brand" id="var-brand"><strong>The Variations</strong></a>
+            <a  [routerLink]="['home']" class="navbar-brand" id="var-brand"><strong>The Variations</strong></a>
         </div>
 
         <div class="collapse navbar-collapse navbar-ex1-collapse" role="navigation">
             <ul class="nav navbar-nav navbar-right">
-                <li *ngIf="!isAuth()"><a href="" [routerLink]="['About']">ABOUT US</a></li>
+                <li *ngIf="!isAuth()"><a [routerLink]="['about']">ABOUT US</a></li>
                 <li *ngIf="isAuth()" class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">COMMUNITY</a>
                     <ul class="dropdown-menu">
-                        <li><a href="" [routerLink]="['Announcements']">Announcements</a></li>
-                        <li><a href="#" [routerLink]="['EventsCalendar']">Events Calendar</a></li>
-                        <li><a href="" [routerLink]="['Pictures']">Pictures</a></li>
-                        <li><a href="" [routerLink]="['Discussion']">Discussion Board</a></li>
+                        <li><a [routerLink]="['announcements']">Announcements</a></li>
+                        <li><a [routerLink]="['eventsCalendar']">Events Calendar</a></li>
+                        <li><a [routerLink]="['pictures']">Pictures</a></li>
+                        <li><a [routerLink]="['discussion']">Discussion Board</a></li>
                         <li><a href="https://drive.google.com/open?id=0B0XxZGmv5AeFMktCVHlORm9fbTA" target="blank">Newsletters</a></li>
                         <li><a href="https://drive.google.com/open?id=0B0XxZGmv5AeFTTFxWjNpYkU4X0E" target="blank">Financials</a></li>
                         <li><a href="https://drive.google.com/open?id=0B0XxZGmv5AeFNHFqSmYwdE1hYkE" target="blank">Board Meetings</a></li>
@@ -37,18 +37,18 @@
                         <li><a href="documents\Resolutions.pdf" target="_blank">Resolutions</a></li>
                     </ul>
                 </li>
-                <li *ngIf="isAuth()"><a href="" [routerLink]="['Board']">THE BOARD</a></li>
+                <li *ngIf="isAuth()"><a [routerLink]="['board']">THE BOARD</a></li>
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">HOA DETAILS</a>
                     <ul class="dropdown-menu">
-                        <li><a href="" [routerLink]="['Fees']">Fees</a></li>
-                        <li><a href="" [routerLink]="['Services']">Services</a></li>
-                        <li><a href="" [routerLink]="['Amenities']">Amenities</a></li>
+                        <li><a [routerLink]="['fees']">Fees</a></li>
+                        <li><a [routerLink]="['services']">Services</a></li>
+                        <li><a [routerLink]="['amenities']">Amenities</a></li>
                     </ul>
                 </li>
                 
-                <li> <a href="" [routerLink]="['Forsale']">UNITS FOR SALE</a></li>
+                <li> <a [routerLink]="['forsale']">UNITS FOR SALE</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">RESOURCES</a>
                     <ul class="dropdown-menu">
@@ -62,7 +62,7 @@
                         <li><a href="http://www.pdkairport.org/" target="_blank">DeKalb Peachtree Airport (PDK)</a></li>
                     </ul>
                 </li>
-                <li *ngIf="!isAuth()"><a [routerLink]="['Signin']">SIGN IN</a></li>
+                <li *ngIf="!isAuth()"><a [routerLink]="['signin']">SIGN IN</a></li>
                 
                 <!--<li *nfIf="isAuth()"><img  src={{userGravatarURL}} ></li>-->
                 <!--<li *ngIf="isAuth()"><a href="#" (click)="logout()"><img class="gravatar" src="{{userGravatarURL()}}" >LOG OUT</a></li>-->
@@ -70,7 +70,7 @@
                  <li *ngIf="isAuth()" class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="gravatar" src="{{userGravatarURL()}}" ><i class="fa fa-caret-down fa-1" aria-hidden="true"></i></a>
                     <ul class="dropdown-menu">                      
-                        <li><a href="" [routerLink]="['AccountProfile']">Account Profile</a></li>
+                        <li><a [routerLink]="['accountProfile']">Account Profile</a></li>
                         <li><a href="#" (click)="logout()">Sign Out</a></li>
                     </ul>
                 </li>

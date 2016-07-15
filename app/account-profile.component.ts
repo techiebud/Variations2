@@ -1,23 +1,44 @@
 import {Component, OnInit} from "@angular/core";
-import {FormBuilder, ControlGroup, Validators, Control} from "@angular/common";
-import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
+import {
+  FormGroup,
+  FormControl,
+  Validators,
+  FormBuilder,
+   REACTIVE_FORM_DIRECTIVES
+} from "@angular/forms";
+
+import {ROUTER_DIRECTIVES} from "@angular/router";
 import {DataService} from "./shared/data.service";
 import {AuthService} from "./shared/auth.service";
 import {User} from "./shared/user.interface";
 import {AppHelpers} from "./shared/app.common";
 
 
-
-
 @Component({
     templateUrl: "app/account-profile.component.html",
-    directives: [ROUTER_DIRECTIVES],
+    directives: [ROUTER_DIRECTIVES, REACTIVE_FORM_DIRECTIVES],
 })
 export class AccountProfileComponent implements OnInit {
-    accountProfileForm: ControlGroup;
+    accountProfileForm: FormGroup;
     user: User;
 
-    constructor(private _fb: FormBuilder, private _dataService: DataService, private _authService: AuthService) {
+    constructor(private _formBuilder: FormBuilder, private _dataService: DataService, private _authService: AuthService) {
+
+        this.user = JSON.parse(localStorage.getItem("userProfile"), this.reviver);
+        if (!this.user.firstName)  //sometimes the reviver function returns just an object
+        //i found out if I call it without the reviver (which is setting the correct camel casing)
+        {                           //it comes back fine.
+            this.user = JSON.parse(localStorage.getItem("userProfile"));
+        }
+        this._dataService.getAllUnits();
+        this.accountProfileForm = _formBuilder.group({
+            firstName: [this.user.firstName, Validators.required],
+            lastName: [this.user.lastName, Validators.required],
+            unit: [this.user.unit, Validators.compose([
+                Validators.required,
+                this.isValidUnit
+            ])]
+        });
 
     }
     onUpdateProfile() {
@@ -31,24 +52,10 @@ export class AccountProfileComponent implements OnInit {
         this._dataService.updateUserProfile(this.accountProfileForm.value, this.user);
     }
     ngOnInit(): any {
-        this.user = JSON.parse(localStorage.getItem("userProfile"), this.reviver);
-        if (!this.user.firstName)  //sometimes the reviver function returns just an object
-        //i found out if I call it without the reviver (which is setting the correct camel casing)
-        {                           //it comes back fine.
-            this.user = JSON.parse(localStorage.getItem("userProfile"));
-        }
-        this._dataService.getAllUnits();
-        this.accountProfileForm = this._fb.group({
-            firstName: [this.user.firstName, Validators.required],
-            lastName: [this.user.lastName, Validators.required],
-            unit: [this.user.unit, Validators.compose([
-                Validators.required,
-                this.isValidUnit
-            ])]
-        });
+    
         //  this.accountProfileForm.value = this.user;
     }
-    isValidUnit(control: Control): { [s: string]: boolean } {
+    isValidUnit(control: FormControl): { [s: string]: boolean } {
         let allUnits = JSON.parse(localStorage.getItem("allUnits"));
         if (!allUnits)       //data has not loaded yet?
         {

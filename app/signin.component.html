@@ -5,28 +5,30 @@
     </div>
 
 
-    <form [ngFormModel]="signinForm" (ngSubmit)="onSignin()">
-
-        <div class="form-group row">
-            <div class="col-md-3">
-                <label for="email">E-Mail</label>
-                <input [ngFormControl]="signinForm.find('email')" placeholder="Email" class="form-control" type="email" id="email" #email="ngForm">
+    <form [formGroup]="signinForm" (ngSubmit)="onSignin()">
+        <div formGroupName="userSigninInfo">
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="email">E-Mail</label>
+                    <input formControlName="email" placeholder="Email" class="form-control" type="email" id="email">
+                </div>
             </div>
-        </div>
 
-        <div class="form-group row">
-            <div class="col-md-3">
-                <label for="password">Password</label>
-                <input [ngFormControl]="signinForm.find('password')" type="password" id="password" placeholder="Password" class="form-control">
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="password">Password</label>
+                    <input formControlName="password" type="password" id="password" placeholder="Password" class="form-control">
+                </div>
             </div>
         </div>
 
 
         <div class="form-group row">
             <div class="col-md-4">
-                <input type="checkbox" [(ngModel)]="rememberMe">Remember me on this computer&nbsp;<i (click)="onInfoClicked()" class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" [title]="rememberMeInfoTitle"></i>
+                <input type="checkbox" formControlName="rememberMe">Remember me on this computer&nbsp;<i (click)="onInfoClicked()"
+                    class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" [title]="rememberMeInfoTitle"></i>
             </div>
-        </div> 
+        </div>
 
         <div class="form-group row">
             <div class="col-md-4">
@@ -37,21 +39,18 @@
         <div class="form-group row">
             <div class="col-md-4">
                 <span class="lead">Don’t have an account?</span>
-                <a href="" class="btn btn-primary" [routerLink]="['Signup']">Sign Up</a>
+                <a class="btn btn-primary" [routerLink]="['/signup']">Sign Up</a>
             </div>
         </div>
-
-
 
     </form>
     <div class="row">
         <div class="col-md-3">
-            <a href="" class="btn btn-warning" [routerLink]="['ForgotPassword']">Forgot Password?</a>
+            <a class="btn btn-warning" [routerLink]="['/forgotPassword']">Forgot Password?</a>
         </div>
     </div>
     <br>
     <div class="row">
-
         <div class="col-md-12">
             <span class="lead warning"><em>Having problems signing in?  Contact the <a href="mailto:variationscondos@gmail.com?Subject=Problems%20Signing%20In">Webmaster</a></em></span>
         </div>

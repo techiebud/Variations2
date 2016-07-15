@@ -1,0 +1,1076 @@
+{
+  "Announcements" : {
+    "20160430" : {
+      "Title" : "Winnie Wilson Goree - Obituary",
+      "URL" : "http://thevariationsatlanta.com/documents/WinneObit.pdf"
+    },
+    "20160616" : {
+      "Title" : "Public Hearing for Dering Circle – Ashford Place",
+      "URL" : "https://drive.google.com/open?id=0B0XxZGmv5AeFdTFiVHhIWE42OEE"
+    },
+    "20160705" : {
+      "Title" : "Chamblee Notice Public Hearing - Deering Circle Development",
+      "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFWW9FVHd2VE1QRkE/view?usp=sharing"
+    },
+    "20160709" : {
+      "Title" : "Gary Cornell to Speak at Next HOA Meeting",
+      "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFdW9tM3Z3Yy1xeEU/view?usp=sharing"
+    },
+    "20160626a" : {
+      "Title" : "Chamblee / Notice of Proposed Property Tax Increase",
+      "URL" : "http://www.chambleega.com/CivicAlerts.aspx?AID=298"
+    },
+    "20160626b" : {
+      "Title" : "Chamblee Tax Increase Email Explanation",
+      "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFdVVVMi1UdmhpUjA/view?usp=sharing"
+    }
+  },
+  "BoardMembers" : {
+    "Community Manager" : {
+      "DisplayOrder" : 6,
+      "Email" : "elittle@condominiumconcepts.com",
+      "Name" : "Emily Little",
+      "Phone" : "(404) 917-0600 ext 250",
+      "URL" : "http://www.condominiumconcepts.com/",
+      "URLCaption" : "Condominium Concepts Management"
+    },
+    "Landscape and Architect Committee" : {
+      "Address" : "2054 Clairmeade Way",
+      "DisplayOrder" : 5,
+      "Email" : "gabear88@hotmail.com",
+      "Name" : "George Bahakel",
+      "Phone" : "(770) 475-1130 ext. 8333"
+    },
+    "President" : {
+      "Address" : "2060 Clairmeade Way",
+      "DisplayOrder" : 1,
+      "Email" : "variationspresident@gmail.com",
+      "Name" : "Jane Hubbard",
+      "Phone" : "(404) 200-6283"
+    },
+    "Secretary" : {
+      "Address" : "2078 Clairmeade Valley Rd",
+      "DisplayOrder" : 4,
+      "Email" : "variationssecretary@gmail.com",
+      "Name" : "Pam Sellman",
+      "Phone" : "(770) 310-3778"
+    },
+    "Treasurer" : {
+      "Address" : "1913 Variations Drive",
+      "DisplayOrder" : 3,
+      "Email" : "variationstreasurer@gmail.com",
+      "Name" : "Bobby Ballinger",
+      "Phone" : "(404) 550-5235"
+    },
+    "Vice President" : {
+      "Address" : "2099 Clairmeade Valley Rd",
+      "DisplayOrder" : 2,
+      "Email" : "dlg2099@aol.com",
+      "Name" : "Donna Gibbas",
+      "Phone" : "(404) 636-5763"
+    }
+  },
+  "GeneralInformation" : {
+    "MaximumUsersPerUnit" : 2,
+    "SecurityKey" : "va0ri0at1io7ns7co6ndos",
+    "TennisCourtAccessCode" : 2868
+  },
+  "Management" : {
+    "Company" : "Condominium Concepts Management, Inc.",
+    "CompanyURL" : "http://www.condominiumconcepts.com/",
+    "ContactEmail" : "elittle@condominiumconcepts.com",
+    "ContactName" : "Emily Little",
+    "ContactPhone" : "(404) 917-0600 ext 250"
+  },
+  "Pictures" : {
+    "20160508" : {
+      "Title" : "3 in 1 Pool Party",
+      "URL" : "https://goo.gl/photos/GknD8gZzudjjW9Qs9"
+    },
+    "20160529" : {
+      "Title" : "Volley Ball Day",
+      "URL" : "https://goo.gl/photos/tZ16jcM9kmmB2YUTA"
+    },
+    "20160609" : {
+      "Title" : "George and Brad's Planting Hard Work",
+      "URL" : "https://goo.gl/photos/7CW2mkjRNoqBWGqg7"
+    }
+  },
+  "Units" : {
+    "1901" : {
+      "Owner" : "Jasmine Maxwell",
+      "RegisteredUsers" : "0",
+      "Street" : "Variations Drive"
+    },
+    "1902" : {
+      "DirectoryEmail" : "hank.caughman@gmail.com",
+      "Owner" : "Hank Caughman",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1903" : {
+      "DirectoryEmail" : "unknown",
+      "Owner" : "Al and Lynn Cedarholm",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1904" : {
+      "Owner" : "Pamela M. Rojas Fonseca",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1905" : {
+      "DirectoryEmail" : "unknown",
+      "Owner" : "Seda Carpenter",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1906" : {
+      "Owner" : "Donna Moriah",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1907" : {
+      "DirectoryEmail" : "tbrooks204@aol.com",
+      "Owner" : "Thomas Books",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1908" : {
+      "Owner" : "Robert Schmidt",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1909" : {
+      "Owner" : "Sally Schornick",
+      "RegisteredUsers" : 1,
+      "Street" : "Variations Drive"
+    },
+    "1910" : {
+      "Owner" : "Carl Dowling",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1911" : {
+      "DirectoryEmail" : "janicemoney@comcast.net",
+      "Owner" : "Janice Clark",
+      "RegisteredUsers" : 1,
+      "Street" : "Variations Drive"
+    },
+    "1912" : {
+      "Owner" : "Janice Clark",
+      "RegisteredUsers" : 1,
+      "Street" : "Variations Drive"
+    },
+    "1913" : {
+      "DirectoryEmail" : "ballinger.robert@yahoo.com",
+      "Owner" : "Robert Ballinger",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1914" : {
+      "DirectoryEmail" : ": tomcoursey07@comcast.net;disnee4us@aol.com",
+      "Owner" : "Tom and Margeret Coursey",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1915" : {
+      "DirectoryEmail" : "deco202@yahoo.com",
+      "Owner" : "Douglas Blaho",
+      "RegisteredUsers" : 1,
+      "Street" : "Variations Drive"
+    },
+    "1916" : {
+      "Owner" : "Steve Hayter",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1917" : {
+      "Owner" : "David Tank",
+      "RegisteredUsers" : 1,
+      "Street" : "Variations Drive"
+    },
+    "1918" : {
+      "Owner" : "Glenn, John and Lois Morris",
+      "RegisteredUsers" : 1,
+      "Street" : "Variations Drive"
+    },
+    "1919" : {
+      "Owner" : "Brett Weal",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1920" : {
+      "Owner" : "Chitchawal(Mick) Sahatevasukont",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1921" : {
+      "Owner" : "Karen & Terron Starling ",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1922" : {
+      "Owner" : "Hoai Trinh",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1923" : {
+      "Owner" : "Brendal Maclin",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1924" : {
+      "Owner" : "Brannon Schenelle",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1925" : {
+      "Owner" : "Farzan and Lisa Kendrick",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1926" : {
+      "DirectoryEmail" : "burtonbrody@yahoo.com",
+      "Owner" : "Burton Brody",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1927" : {
+      "Owner" : "Siavash Parvardgari",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1928" : {
+      "Owner" : "Tom Sheehan",
+      "RegisteredUsers" : 1,
+      "Street" : "Variations Drive"
+    },
+    "1929" : {
+      "Owner" : "Beth Johnson",
+      "RegisteredUsers" : 1,
+      "Street" : "Variations Drive"
+    },
+    "1930" : {
+      "DirectoryEmail" : "rckguitjustin@aim.com",
+      "Owner" : "Justin Boykin",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1931" : {
+      "Owner" : "Russell Ogle and Gary Williams",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1932" : {
+      "Owner" : "Bobi Jewell",
+      "RegisteredUsers" : 1,
+      "Street" : "Variations Drive"
+    },
+    "1933" : {
+      "Owner" : "LaRhonda Minor",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1934" : {
+      "DirectoryEmail" : "keithcordle@hotmail.com",
+      "Owner" : "Dan Easton",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1935" : {
+      "DirectoryEmail" : "gasinger@bellsouth.net",
+      "Owner" : "Allen Burrell",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1936" : {
+      "Owner" : "Nichole and Jarvis Jackson",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1937" : {
+      "Owner" : "Rebeca Stephens",
+      "RegisteredUsers" : 1,
+      "Street" : "Variations Drive"
+    },
+    "1938" : {
+      "Owner" : "Steve Schneiderwind",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1939" : {
+      "DirectoryEmail" : "oylerc55@gmail.com",
+      "Owner" : "Connie Barnes",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1941" : {
+      "DirectoryEmail" : "brucebartnick@bellsouth.net",
+      "Owner" : "Bruce Bartnick",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1943" : {
+      "Owner" : "Joyce Warner",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1945" : {
+      "Owner" : "Bill Thomas",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1947" : {
+      "DirectoryEmail" : "alohaland@sbcglobal.net",
+      "Owner" : "Christopher Dillehay",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1949" : {
+      "Owner" : "M.C. Moore",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1958" : {
+      "Owner" : "Janice Erskine",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1960" : {
+      "Owner" : "Adora Poon",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1961" : {
+      "Owner" : "Whitney Fuchs",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1962" : {
+      "Owner" : "Chris and Pam Murphy",
+      "RegisteredUsers" : 1,
+      "Street" : "Variations Drive"
+    },
+    "1963" : {
+      "Owner" : "Simon Strauss and Edward Poole",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1964" : {
+      "Owner" : "Brett Kube and Sarah Cook",
+      "RegisteredUsers" : 1,
+      "Street" : "Variations Drive"
+    },
+    "1965" : {
+      "Owner" : "Karen Gundaker and Beamer Wiggins",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1966" : {
+      "Owner" : "Pauli and Nedd Mockler",
+      "RegisteredUsers" : 1,
+      "Street" : "Variations Drive"
+    },
+    "1967" : {
+      "Owner" : "Susie Hawkins",
+      "RegisteredUsers" : 1,
+      "Street" : "Variations Drive"
+    },
+    "1968" : {
+      "Owner" : "Kerri Spivey",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1969" : {
+      "Owner" : "Darcy Farrington-Ryan and Jillian Robertson",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1970" : {
+      "Owner" : "Greg Fisher",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1971" : {
+      "Owner" : "Scooter Lee",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1972" : {
+      "Owner" : "*NEW OWNERS *",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1973" : {
+      "Owner" : "John Holmes and Greg Howard",
+      "RegisteredUsers" : 1,
+      "Street" : "Variations Drive"
+    },
+    "1974" : {
+      "Owner" : "Andrey Morochko",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1975" : {
+      "Owner" : "James Woolley",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1976" : {
+      "Owner" : "Todd Hofer",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1977" : {
+      "DirectoryEmail" : "unknown",
+      "Owner" : "Eugene Chan",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1978" : {
+      "Owner" : "Donald Leathers",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1980" : {
+      "Owner" : "J.R. Klimach ",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1982" : {
+      "Owner" : "Kyle Hawkins and Andre Sellers",
+      "RegisteredUsers" : 1,
+      "Street" : "Variations Drive"
+    },
+    "1984" : {
+      "Owner" : "Michael Dubin",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1986" : {
+      "DirectoryEmail" : "cbryanmurals@gmail.com",
+      "Owner" : "Chad Bryan",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1988" : {
+      "Owner" : "Bill and Sheryl Golden",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1990" : {
+      "Owner" : "Chris Lyman Waldron",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1992" : {
+      "Owner" : "Jane Marrazzo",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1994" : {
+      "DirectoryEmail" : "i12bstepn@yahoo.com",
+      "Owner" : "Gregory Croushorn",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1996" : {
+      "Owner" : "John Naughton",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "1998" : {
+      "DirectoryEmail" : "jeffcoleman@comcast.net;landshark1609@gmail.com",
+      "Owner" : "Jeffrey Coleman ",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "2000" : {
+      "Owner" : "Harry Stuart",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "2001" : {
+      "Owner" : "Steve and Connie Likman",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "2002" : {
+      "Owner" : "Shelly Gerson",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "2003" : {
+      "Owner" : "Polly Turner",
+      "RegisteredUsers" : 1,
+      "Street" : "Variations Drive"
+    },
+    "2004" : {
+      "Owner" : "Brian Huestis",
+      "RegisteredUsers" : 1,
+      "Street" : "Variations Drive"
+    },
+    "2005" : {
+      "Owner" : "Vivian McCormick ",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "2006" : {
+      "Owner" : "Roniel Werman",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "2007" : {
+      "DirectoryEmail" : "cjbnatl@gmail.com",
+      "Owner" : "Jeff Bonnell",
+      "RegisteredUsers" : 1,
+      "Street" : "Variations Drive"
+    },
+    "2008" : {
+      "Owner" : "Jennifer Trent",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "2009" : {
+      "Owner" : "Page Griffin",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "2010" : {
+      "Owner" : "* NEW OWNERS *",
+      "RegisteredUsers" : 1,
+      "Street" : "Variations Drive"
+    },
+    "2011" : {
+      "Owner" : "* DECEASED *",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "2012" : {
+      "DirectoryEmail" : "unknown",
+      "Owner" : "Susan Daves",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "2013" : {
+      "Owner" : "Stephen Smiley",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "2014" : {
+      "Owner" : "Randy Whiting",
+      "RegisteredUsers" : 1,
+      "Street" : "Variations Drive"
+    },
+    "2015" : {
+      "Owner" : "Ricky and Serena Wallace",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "2016" : {
+      "Owner" : "Rob Ewes",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "2017" : {
+      "Owner" : "Marc Nicholson",
+      "RegisteredUsers" : 0,
+      "Street" : "Variations Drive"
+    },
+    "2051" : {
+      "Owner" : "Melissa McMillan",
+      "RegisteredUsers" : 2,
+      "Street" : "Clairmeade Way"
+    },
+    "2052" : {
+      "Owner" : "Dora Parramore",
+      "RegisteredUsers" : 0,
+      "Street" : "Clairmeade Way"
+    },
+    "2053" : {
+      "Owner" : "Aleksey Kravchenko",
+      "RegisteredUsers" : 0,
+      "Street" : "Clairmeade Way"
+    },
+    "2054" : {
+      "DirectoryEmail" : "gabear88@hotmail.com",
+      "Owner" : "George Bahakel",
+      "RegisteredUsers" : 0,
+      "Street" : "Clairmeade Way"
+    },
+    "2055" : {
+      "Owner" : "John and Caroline Sisk",
+      "RegisteredUsers" : 0,
+      "Street" : "Clairmeade Way"
+    },
+    "2056" : {
+      "Owner" : "Peg Pettigrew",
+      "RegisteredUsers" : 0,
+      "Street" : "Clairmeade Way"
+    },
+    "2057" : {
+      "Owner" : "Marjorie Pollack",
+      "RegisteredUsers" : 1,
+      "Street" : "Clairmeade Way"
+    },
+    "2058" : {
+      "DirectoryEmail" : "lidocutter@aol.com",
+      "Owner" : "Pete Cutter",
+      "RegisteredUsers" : 0,
+      "Street" : "Clairmeade Way"
+    },
+    "2059" : {
+      "Owner" : "Mary Woodruff",
+      "RegisteredUsers" : 1,
+      "Street" : "Clairmeade Way"
+    },
+    "2060" : {
+      "Owner" : "Jane Hubbard",
+      "RegisteredUsers" : 1,
+      "Street" : "Clairmeade Way"
+    },
+    "2070" : {
+      "DirectoryEmail" : "atlaugie@yahoo.com;jmcoe27@hotmail.com",
+      "Owner" : "Shawn and Jamie Aughenbaugh",
+      "RegisteredUsers" : 1,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2071" : {
+      "Owner" : "Ginny Robinson",
+      "RegisteredUsers" : 0,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2072" : {
+      "Owner" : "Sally Smith",
+      "RegisteredUsers" : 1,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2073" : {
+      "Owner" : "Luciana Kohatsu",
+      "RegisteredUsers" : 0,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2074" : {
+      "Owner" : "Larry Ruddell ",
+      "RegisteredUsers" : 1,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2075" : {
+      "Owner" : "Benay Krissel ",
+      "RegisteredUsers" : 0,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2076" : {
+      "Owner" : "Sam Lytle",
+      "RegisteredUsers" : 1,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2077" : {
+      "Owner" : "Jordan Lisvosky",
+      "RegisteredUsers" : 0,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2078" : {
+      "Owner" : "Pam Sellman",
+      "RegisteredUsers" : 1,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2079" : {
+      "Owner" : "Carrie Oxendine",
+      "RegisteredUsers" : 0,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2080" : {
+      "Owner" : "Charity Teamer",
+      "RegisteredUsers" : 0,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2081" : {
+      "DirectoryEmail" : "phillipdavis9@aol.com",
+      "Owner" : "Phillip Davis",
+      "RegisteredUsers" : 0,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2083" : {
+      "Owner" : "Rick Sharber",
+      "RegisteredUsers" : 0,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2085" : {
+      "Owner" : "Paul Tumlin",
+      "RegisteredUsers" : 0,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2097" : {
+      "Owner" : "Rhett Black and Michael Giovanni",
+      "RegisteredUsers" : 1,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2099" : {
+      "Owner" : "Donna Gibbas",
+      "RegisteredUsers" : 0,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2100" : {
+      "Owner" : "Deborah Reed",
+      "RegisteredUsers" : 0,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2101" : {
+      "Owner" : "Bill Farmer",
+      "RegisteredUsers" : 0,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2102" : {
+      "DirectoryEmail" : "jbrown189@student.gsu.edu",
+      "Owner" : "Jason Brown and Natalie Steele",
+      "RegisteredUsers" : 0,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2103" : {
+      "Owner" : "Jason Schmalz",
+      "RegisteredUsers" : 0,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2104" : {
+      "DirectoryEmail" : "unknown",
+      "Owner" : "Jon Blake and Dwight Condrey",
+      "RegisteredUsers" : 1,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2105" : {
+      "DirectoryEmail" : "unknown",
+      "Owner" : "Joshua DeVos",
+      "RegisteredUsers" : 0,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2106" : {
+      "Owner" : "Ellen Ogle",
+      "RegisteredUsers" : 0,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2107" : {
+      "Owner" : "Teresa Connell",
+      "RegisteredUsers" : 1,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2108" : {
+      "Owner" : "Robert Richardson",
+      "RegisteredUsers" : 1,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2109" : {
+      "Owner" : "Walter Roberts",
+      "RegisteredUsers" : 1,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2110" : {
+      "Owner" : "Ashley Burman",
+      "RegisteredUsers" : 1,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2111" : {
+      "Owner" : "Johnny Sims",
+      "RegisteredUsers" : 1,
+      "Street" : "Clairmeade Valley Road"
+    },
+    "2112" : {
+      "Owner" : "Dave & Barbara Gardner",
+      "RegisteredUsers" : 2,
+      "Street" : "Clairmeade Valley Road"
+    }
+  },
+  "UnitsForSale" : {
+    "1929" : {
+      "Status" : "Pending",
+      "Street" : "Variations Drive",
+      "URL" : "https://www.redfin.com/GA/Atlanta/1929-Variations-Dr-NE-30329/unit-1929/home/56996706",
+      "imageURL" : "https://ssl.cdn-redfin.com/photo/82/mbpaddedwide/437/genMid.5640437_1.jpg"
+    },
+    "1935" : {
+      "Status" : "Pending",
+      "Street" : "Variations Drive",
+      "URL" : "https://www.redfin.com/GA/Atlanta/1935-Variations-Dr-NE-30329/home/23725776",
+      "imageURL" : "https://2cdn.cbhomes.com/s3/mediasvc-prd/properties/7D6532bcda454f6-5693891.jpg"
+    },
+    "1972" : {
+      "SaleDate" : 20160525,
+      "SalePrice" : 165000,
+      "Status" : "Sold",
+      "Street" : "Variations Drive",
+      "URL" : "https://www.redfin.com/GA/Atlanta/1972-Variations-Dr-NE-30329/home/23869905",
+      "imageURL" : "https://ssl.cdn-redfin.com/photo/82/mbpaddedwide/677/genMid.5660677_0.jpg"
+    },
+    "2010" : {
+      "SaleDate" : 20160628,
+      "SalePrice" : 159500,
+      "Status" : "Sold",
+      "Street" : "Variations Drive",
+      "URL" : "https://www.redfin.com/GA/Atlanta/2010-Variations-Dr-NE-30329/home/23725759",
+      "imageURL" : "https://ssl.cdn-redfin.com/photo/82/mbpaddedwide/352/genMid.5662352_0.jpg"
+    },
+    "2075" : {
+      "Status" : "Pending",
+      "Street" : "Clairmeade Valley Road",
+      "URL" : "https://www.redfin.com/GA/Atlanta/2075-Clairmeade-Valley-Rd-NE-30329/home/23707336",
+      "imageURL" : "https://ssl.cdn-redfin.com/photo/82/mbpaddedwide/209/genMid.5636209_0.jpg"
+    },
+    "2106" : {
+      "Status" : "Pending",
+      "Street" : "Clairmeade Valley Road",
+      "URL" : "http://www.redfin.com/GA/Atlanta/2106-Clairmeade-Valley-Rd-NE-30329/home/23707331?utm_source=myredfin&utm_medium=email&utm_campaign=email_this_listing&utm_nooverride=1&utm_content=address",
+      "imageURL" : "https://ssl.cdn-redfin.com/photo/81/mbpaddedwide/589/genMid.8027589_0.jpg"
+    },
+    "2112" : {
+      "SaleDate" : 20160602,
+      "SalePrice" : 175000,
+      "Status" : "Sold",
+      "Street" : "Clairmeade Valley Road",
+      "URL" : "https://www.redfin.com/GA/Atlanta/2112-Clairmeade-Valley-Rd-NE-30329/home/23707335?utm_medium=email&utm_campaign=instant24_listings_update&utm_source=myredfin",
+      "imageURL" : "https://1cdn.cbhomes.com/s3/mediasvc-prd/properties/B0af26FF8c7D42b-5680487.jpg?preset=lmain"
+    }
+  },
+  "Users" : {
+    "0TwvZByLJWfd3jS0zxgo7rjVdhu2" : {
+      "Email" : "bobijewell317@aol.com",
+      "FirstName" : "Bobi",
+      "LastName" : "Jewell",
+      "Unit" : 1932
+    },
+    "0lMBi41Eo0Ns6grEIndT0lsWfGv1" : {
+      "Email" : "clruddell@yahoo.com",
+      "FirstName" : "Charlton",
+      "LastName" : "Ruddell",
+      "Unit" : 2074
+    },
+    "29IMT57qvfdMMvuGa1VTPrL2Mpy2" : {
+      "Email" : "alberteinstein@comcast.net",
+      "FirstName" : "William",
+      "LastName" : "Rich",
+      "Unit" : 2051
+    },
+    "5TAdsrgmEGfVUn04ZcWnNp0YelP2" : {
+      "Email" : "pollytrnr@yahoo.com",
+      "FirstName" : "Polly",
+      "LastName" : "Turner",
+      "Unit" : 2003
+    },
+    "7dreHgUQG4Q5Bz4tWJaWxQhDM3y1" : {
+      "Email" : "cjbnatl@gmail.com",
+      "FirstName" : "Jeff",
+      "LastName" : "Bonnell",
+      "Unit" : 2007
+    },
+    "ALtvpDO9svaZKbMcIVpcHX28lTh1" : {
+      "Email" : "tomsheehan40@comcast.net",
+      "FirstName" : "Tom",
+      "LastName" : "Sheehan",
+      "Unit" : 1928
+    },
+    "B7x7r9fmeNSQgZUTkoPS3NGM3yl1" : {
+      "Email" : "barbaralgardner@gmail.com",
+      "FirstName" : "Barbara",
+      "LastName" : "Gardner",
+      "Unit" : 2112
+    },
+    "Bs8OaR1OMSQUsEGlbppsxIB4boe2" : {
+      "Email" : "morrismedia@live.com",
+      "FirstName" : "Glenn",
+      "LastName" : "Morris",
+      "Unit" : 1918
+    },
+    "Ep20EXf7KORhrIu77eOiJJwHVj02" : {
+      "Email" : "techiebud@gmail.com",
+      "FirstName" : "Johnny",
+      "LastName" : "Sims",
+      "Unit" : 2111
+    },
+    "HlVqIi2IfDcJYPVyFKBIUTWO4dk1" : {
+      "Email" : "joncblake@hotmail.com",
+      "FirstName" : "Jon",
+      "LastName" : "Blake",
+      "Unit" : 2104
+    },
+    "KvWMKEOQLOTT0ojuEFMnpU7NxmI2" : {
+      "Email" : "jamesgang38@mac.com",
+      "FirstName" : "Dylan",
+      "LastName" : "James",
+      "Unit" : 2010
+    },
+    "LcGxwcOvk8Vfn99V7aNrM4bxtPD3" : {
+      "Email" : "jmhhubbard@comcast.net",
+      "FirstName" : "Jane",
+      "LastName" : "Hubbard",
+      "Unit" : 2060
+    },
+    "PZZIk4QtPoaUfTprhsePipXtTzf1" : {
+      "Email" : "beca.stephens@gmail.com",
+      "FirstName" : "Rebeca",
+      "LastName" : "Stephens",
+      "Unit" : 1937
+    },
+    "RUhwcM6k4FdyoWPSUIECJKEoaOe2" : {
+      "Email" : "kbethjohnson@comcast.net",
+      "FirstName" : "Beth",
+      "LastName" : "Johnson",
+      "Unit" : 1929
+    },
+    "TYytNFff2yOc6GohYAFI8V1U2e13" : {
+      "Email" : "lilkube@gmail.com",
+      "FirstName" : "Brett",
+      "LastName" : "Kube",
+      "Unit" : 1964
+    },
+    "ViFhK5nO4NNEIyvJCE6TxiJP9X63" : {
+      "Email" : "misterteacher51@yahoo.com",
+      "FirstName" : "Brian",
+      "LastName" : "Huestis",
+      "Unit" : 2004
+    },
+    "XGjxERJOcpTUXulyOLwv0c0PjvH3" : {
+      "Email" : "khawk220@gmail.com",
+      "FirstName" : "Kyle",
+      "LastName" : "Hawkins",
+      "Unit" : 1982
+    },
+    "Z94dk1GBhJRsXQx30GQr2KlcQQw1" : {
+      "Email" : "slytle8@comcast.net",
+      "FirstName" : "Samuel",
+      "LastName" : "Lytle",
+      "Unit" : 2076
+    },
+    "ZGSbgGN0gqQU1D3weBV3w8GsKMh2" : {
+      "Email" : "evadknat@gmail.com",
+      "FirstName" : "Dave",
+      "LastName" : "Tank",
+      "Unit" : 1917
+    },
+    "aH8PrGPeIib0Za6LIl9C3Y9x0132" : {
+      "Email" : "chanferg@gmail.com",
+      "FirstName" : "Chandler",
+      "LastName" : "Ferguson",
+      "Unit" : 1912
+    },
+    "cVfndJFBBSfGO7NOn6WMcSdmEPg2" : {
+      "Email" : "pamsellman@gmail.com",
+      "FirstName" : "Pam",
+      "LastName" : "Sellman",
+      "Unit" : 2078
+    },
+    "eCcPMH4UFfP1HSMH5WuUMunijqG2" : {
+      "Email" : "ashley.burman@gmail.com",
+      "FirstName" : "Ashley",
+      "LastName" : "Burman",
+      "Unit" : 2110
+    },
+    "eTa0nJ2vdofx3ldXEFQgIeTHCgl2" : {
+      "Email" : "pollackmp1@mindspring.com",
+      "FirstName" : "Marjorie",
+      "LastName" : "Pollack",
+      "Unit" : 2057
+    },
+    "g7EJsexNe7RRCIDWhEuzXpuuTxL2" : {
+      "Email" : "bobbyearl53@comcast.net",
+      "FirstName" : "Robert",
+      "LastName" : "Richardson",
+      "Unit" : 2108
+    },
+    "ieOamYxpdNZUu0klaUHzz3eyKIu2" : {
+      "Email" : "johndholmes@comcast.net",
+      "FirstName" : "John",
+      "LastName" : "Holmes",
+      "Unit" : 1973
+    },
+    "j2dR3jU3RjUAPXDrtLmPG0gtrZz2" : {
+      "Email" : "jmcoe27@hotmail.com",
+      "FirstName" : "Jamie",
+      "LastName" : "Aughenbaugh",
+      "Unit" : 2070
+    },
+    "jAG4JeoACtPJH3wLIZu9zGSzVgD3" : {
+      "Email" : "sally2smith@netzero.net",
+      "FirstName" : "Sally",
+      "LastName" : "Smith",
+      "Unit" : 2072
+    },
+    "lGVHM3AP1GYULsAcdZdMf6rAtuI2" : {
+      "Email" : "leighannpeterson@comcast.net",
+      "FirstName" : "Leigh Ann",
+      "LastName" : "Peterson",
+      "Unit" : 2107
+    },
+    "lIJ9hVRPF3gMxKVWW9XWFmCECAf1" : {
+      "Email" : "salshor@comcast.net",
+      "FirstName" : "Sally",
+      "LastName" : "Shornick",
+      "Unit" : 1909
+    },
+    "lU9McGfbYSbOVPCbYbubnxlxPQk1" : {
+      "Email" : "jasminepeters78@gmail.com",
+      "FirstName" : "Jasmine",
+      "LastName" : "Peters",
+      "Unit" : 1966
+    },
+    "mrZ0h4UNFWRLQjis6cfs3F6UG283" : {
+      "Email" : "marywoodruff777@gmail.com",
+      "FirstName" : "Mary",
+      "LastName" : "Woodruff",
+      "Unit" : 2059
+    },
+    "nnJHS8SzdDPJR1AagHLYq2jIhIR2" : {
+      "Email" : "susiehawkins@bellsouth.net",
+      "FirstName" : "Susie",
+      "LastName" : "Hawkins",
+      "Unit" : 1967
+    },
+    "olWj0VJwJjgiCs8eypYbIe96Pgw1" : {
+      "Email" : "walterlr@comcast.net",
+      "FirstName" : "Walter",
+      "LastName" : "Roberts",
+      "Unit" : 2109
+    },
+    "qFRZr5sSnmazndMVo4I5nXQMpMF2" : {
+      "Email" : "jmurphy827@aol.com",
+      "FirstName" : "Pamela",
+      "LastName" : "Shade Murphy",
+      "Unit" : 1962
+    },
+    "qJ5Lt7FmeBSLDb2he62XpVgP7Mr2" : {
+      "Email" : "deco202@yahoo.com",
+      "FirstName" : "Doug",
+      "LastName" : "Blaho",
+      "Unit" : 1915
+    },
+    "riFuFEPRIwduRMSdE4ihd910tno2" : {
+      "Email" : "volunteermetals@gmail.com",
+      "FirstName" : "David",
+      "LastName" : "Gardner",
+      "Unit" : 2112
+    },
+    "vEAHDV62b6PypOnSaFZkGbO1oXe2" : {
+      "Email" : "rwhiting17@comcast.net",
+      "FirstName" : "Randy",
+      "LastName" : "Whiting",
+      "Unit" : 2014
+    },
+    "vHBQdYumnbOYbUvJjwxIpwze1c73" : {
+      "Email" : "rhett@rhettblackltd.com",
+      "FirstName" : "Rhett",
+      "LastName" : "Black",
+      "Unit" : 2097
+    },
+    "yZuvynOrQUeaBTAOjL9vqcITaNp1" : {
+      "Email" : "melissamcmillana@gmail.com",
+      "FirstName" : "Melissa",
+      "LastName" : "McMillan",
+      "Unit" : 2051
+    },
+    "zavIH2TvYEWKz0KrWPHFCTB3yk43" : {
+      "Email" : "janicemoney@comcast.net",
+      "FirstName" : "Janice",
+      "LastName" : "Clark",
+      "Unit" : 1911
+    }
+  }
+}
