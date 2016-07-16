@@ -21,3 +21,4 @@ export * from "./account-profile.component";
 export * from "./change-email.component";
 export * from "./change-password.component";
 export * from "./discussion.component";
+export * from "./general-information.component";

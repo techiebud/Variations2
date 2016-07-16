@@ -22,7 +22,8 @@ import {
     AccountProfileComponent,
     ChangeEmailComponent,
     ChangePasswordComponent,
-    DiscussionComponent
+    DiscussionComponent,
+    GeneralInformationComponent
 } from "./index";
 
 const APP_ROUTES: RouterConfig = [
@@ -48,7 +49,8 @@ const APP_ROUTES: RouterConfig = [
     { path: 'accountProfile', component: AccountProfileComponent, canActivate: [AuthGuard] },
     { path: 'changeEmail', component: ChangeEmailComponent, canActivate: [AuthGuard] },
     { path: 'changePassword', component: ChangePasswordComponent, canActivate: [AuthGuard] },
-    { path: 'discussion',component: DiscussionComponent, canActivate: [AuthGuard] }
+    { path: 'discussion',component: DiscussionComponent, canActivate: [AuthGuard] },
+    { path: 'generalInformation',component: GeneralInformationComponent, canActivate: [AuthGuard] }
     
 ];
 

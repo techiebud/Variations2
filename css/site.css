@@ -506,3 +506,7 @@ h3#special-announcement {
 img.olympics-logo {
     margin-right: 10px;
 }
+
+img#tennis-image {
+  width: 10%;
+}
