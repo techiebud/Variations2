@@ -4,12 +4,15 @@ import {AppHelpers} from "./app.common";
 import {AppSettings}  from "./app.common";
 import {FirebaseService} from "./firebase.service";
 import {GeneralInformation} from "./general-information.interface";
+import {Management} from "./management.interface";
+
 
 
 @Injectable()
 export class DataService {
     supportsLocalStorage: boolean = false;
     generalInformation: GeneralInformation;
+    management:  Management;
 
     private _userProfileUpdated = new EventEmitter<any>();
     private _allUnitsLoaded = new EventEmitter<any>();
@@ -19,6 +22,7 @@ export class DataService {
         this.supportsLocalStorage = this.hasLocalStorage();
         this.getGeneralInformation();
         this.getAllUnits();
+        this.getManagement();
 
     }
 
@@ -74,15 +78,35 @@ export class DataService {
             (snapshot) => {
                 let returnedData = snapshot.val();
                 this.generalInformation = returnedData;
-                console.debug(this.generalInformation.SecurityKey);
-                localStorage.setItem(fbTable, JSON.stringify(returnedData));
+              //  console.debug(this.generalInformation.SecurityKey);
+               // localStorage.setItem(fbTable, JSON.stringify(returnedData));
             },
             (error) => {
-                localStorage.setItem(fbTable, "error");
+              //  localStorage.setItem(fbTable, "error");
                 console.error(error);
                 toastr.error(error.message);
             });
     }
+
+     getManagement(): void {
+        try {
+            debugger;
+            firebase.database().ref('/Management').once('value')
+                .then((snapshot) => {
+                  let returnedData = snapshot.val();
+                  this.management = returnedData;
+
+                })
+                .catch((error) => {
+                    toastr.error(error.message);
+                  
+                })
+        }
+        catch (ex) {
+            toastr.error(ex);
+        }
+    }
+
 
     getUnitsForSale(): void {
         let fbTable = "UnitsForSale";
@@ -129,7 +153,25 @@ export class DataService {
             localStorage.removeItem("allUnits");
             firebase.database().ref('/Units').once('value')
                 .then((snapshot) => {
-                    localStorage.setItem('allUnits', JSON.stringify(snapshot.val()))
+                
+                    let allUnits: any = snapshot.val();
+                   // debugger;
+                    // let allUnregisteredUnits: string = "";
+                    // let unregisteredUnits = 0;
+                    // let registeredUnits = 0;
+                    // for (var _unit in allUnits) {
+                    //     var thisUnit = allUnits[_unit];
+                    //     if (thisUnit.RegisteredUsers == 0)
+                    //     {
+                    //         unregisteredUnits++;
+                    //         allUnregisteredUnits += _unit + "," + thisUnit.Owner + "~cr";
+
+                    //     }   
+                    //     else {
+                    //         registeredUnits++;
+                    //     }                 
+                    // }
+                    localStorage.setItem('allUnits', JSON.stringify(allUnits));
                     this._allUnitsLoaded.emit(true);
                 })
                 .catch((error) => {
@@ -141,6 +183,8 @@ export class DataService {
             this._allUnitsLoaded.emit(true);
         }
     }
+
+     
 
 
     getAllUsersEmail(): void {
