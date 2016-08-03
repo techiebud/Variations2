@@ -16,7 +16,7 @@ export class AnnouncementsComponent implements OnInit {
     isLoading: boolean = true;
     isError: boolean = false;
 
-   constructor(private _dataService: DataService)  {
+    constructor(private _dataService: DataService) {
         //show Twitter message feeds
         //Due to some timing issues
         //wait about 1 and 1/2 seconds before showing.
@@ -29,18 +29,17 @@ export class AnnouncementsComponent implements OnInit {
 
     ngOnInit() {
 
-    if (!this.isDataReady())
-        {          
+        if (!this.isDataReady()) {
             this._dataService.getAnnouncements();
             //now watch the last firebase call to get when the data is ready.
             var refreshId = setInterval(() => {
                 if (this.isDataReady() || this.isError) {
                     clearInterval(refreshId);
-                    this.isLoading = false;                }
+                    this.isLoading = false;
+                }
             }, 500);  //check for data every 1/2 second
         }
-        else 
-        {
+        else {
             this.isLoading = false;
         }
     }  //ngOnInit
@@ -69,11 +68,13 @@ export class AnnouncementsComponent implements OnInit {
             }
             this.announcements.push(announcementRecord);
         }  //for loop
+        //FYI: I"m sorting the data here because I cannot get the data to come back sorted from Firebase;     
+        this.announcements.sort((a: Announcement, b: Announcement): number => {        
 
-          //FYI: I"m sorting the data here because I cannot get the data to come back sorted from Firebase;
-        this.announcements.sort((a: Announcement, b: Announcement) : number => {
-             return (b.Date > a.Date) ? 1 : 0;       
+            return (Date.parse(b.Date.toString()) - Date.parse(a.Date.toString()));
         });
+
+       
 
     }  //prepData
 

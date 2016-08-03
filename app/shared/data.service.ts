@@ -90,7 +90,7 @@ export class DataService {
 
      getManagement(): void {
         try {
-            debugger;
+     
             firebase.database().ref('/Management').once('value')
                 .then((snapshot) => {
                   let returnedData = snapshot.val();
@@ -194,7 +194,7 @@ export class DataService {
             localStorage.removeItem("UserEmails");
             firebase.database().ref('/Users').once('value')
                 .then((snapshot) => {
-                    debugger;
+               
                     let allUsers: any = snapshot.val();
                     let allUserEmails: string = "";
                     for (var user in allUsers) {
