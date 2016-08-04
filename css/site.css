@@ -514,3 +514,62 @@ img#tennis-image {
 img#chamblee-logo {
     width: 5%;
 }
+.jumbotron {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 400px) {
+
+  #var-brand {
+    font-size: 95%;  
+  
+  }
+
+
+}
+
+@media (max-width: 1200px) {
+  #var-picture-left {
+    display: none;
+  }
+
+   #var-picture-right {
+    display: none;
+  }
+
+}
+
+#var-navigation-menu { 
+  overflow: hidden;
+}
+
+
+@media (max-width: 768px) {
+
+  footer.footer {
+    font-size: smaller;
+  }
+
+  div#contents {
+    font-size: smaller !important;
+  }
+
+    
+  .loader {
+      margin-top: 200px;  
+      font-size: medium;
+      color:  #216839;
+      font-weight: bolder;
+  }
+  img.marta-logo {
+
+    width: 25%;
+  }
+
+.loader i {
+  display: block;
+}
+
+
+}

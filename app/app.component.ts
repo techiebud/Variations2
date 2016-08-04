@@ -3,6 +3,7 @@ import {ROUTER_DIRECTIVES, Router} from "@angular/router";
 import {FirebaseService} from "./shared/firebase.service";
 import {AuthService} from "./shared/auth.service";
 import {DataService} from "./shared/data.service";
+import {AppHelpers} from "./shared/app.common";
 import {User} from "./shared/user.interface";
 
 
@@ -81,6 +82,7 @@ export class AppComponent implements OnInit {
                     var firstName: string = snapshot.val().FirstName;
                     localStorage.setItem("userProfile", JSON.stringify(user));
                     toastr.info("Welcome back, " + firstName + "!");
+                    AppHelpers.prepMenuElements();
                 });
                 this._router.navigate(['announcements'])
             }
@@ -130,6 +132,7 @@ export class AppComponent implements OnInit {
         return length;
     }
 
+   
 
 
 

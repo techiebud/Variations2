@@ -14,6 +14,7 @@ export class AboutComponent implements OnInit {
     management: Management;
    
     constructor(private _dataService: DataService) {
+        //debugger;
         this.aboutUsName = AppSettings.VARIATIONS_NAME;
         this.management = _dataService.management;
     }

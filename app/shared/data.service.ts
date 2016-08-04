@@ -92,7 +92,7 @@ export class DataService {
         try {
      
             firebase.database().ref('/Management').once('value')
-                .then((snapshot) => {
+                .then((snapshot) => {            
                   let returnedData = snapshot.val();
                   this.management = returnedData;
 

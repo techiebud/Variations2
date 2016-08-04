@@ -1,8 +1,8 @@
-declare var $ : any;
-export class AppSettings  { 
+declare var $: any;
+export class AppSettings {
     public static get FIREBASE_APP(): string { return 'https://thevariations.firebaseio.com'; }
     public static get VARIATIONS_NAME(): string { return ' The Variations Condominium Association, Inc'; }
-    public static get MAXIMUM_USERS_PER_UNIT(): number { return 2; }     
+    public static get MAXIMUM_USERS_PER_UNIT(): number { return 2; }
 
 }
 
@@ -35,5 +35,23 @@ export class AppHelpers {
         $.unblockUI();
 
     };
+
+    public static prepMenuElements(): void {
+
+        var intFrameWidth = window.innerWidth;        
+        //     $("div.for-regular-screens > ul").clone(false).appendTo("div.for-small-screens");
+        var $liTags = $("div#var-navigation-menu li").has("a");
+        if (intFrameWidth < 768) {
+            $liTags.attr("data-toggle", "collapse");
+            $liTags.attr("data-target", "#var-navigation-menu");
+        }
+        else {
+            $liTags.removeAttr("data-toggle");
+            $liTags.removeAttr("data-target");
+        }
+
+
+    }
+
 
 }
