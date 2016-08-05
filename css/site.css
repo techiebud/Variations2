@@ -570,6 +570,17 @@ img#chamblee-logo {
 .loader i {
   display: block;
 }
-
-
 }
+
+
+@media (max-width: 980px) {
+
+  
+  #var-brand {
+    font-size: 20px;
+ 
+  }
+}
+
+
+
