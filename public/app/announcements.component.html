@@ -1,0 +1,50 @@
+<div class="container">
+
+	<div class="jumbotron">
+		<h1><span><i class="fa fa-bullhorn" aria-hidden="true"></i></span> Announcements </h1>
+		<p>Here are all the latest news and happenings going on in and around the community.</p>
+		<h3 id="special-announcement">Special Announcement</h3>
+		<div class="h4 olympic-info">
+			<img src="img/ATLOlympics-logo.png" class="olympics-logo img-thumbnail pull-left"><br /><span class="lead special-announcement">In recognition of the upcoming 20th anniversary of the 1996
+			Summer Olympic Games held in Atlanta, see this must-watch <a href="http://espn.go.com/video/clip?id=10365079" target="_blank">ESPN 30 for 30 Shorts: Judging Jewell</a> documentary featuring
+			The Variations own Bobi Jewell.</span>
+		</div>
+		<!--<div class="row">
+
+		</div>-->
+
+	</div>
+
+
+	<div *ngIf="isLoading && !isError">
+		<i class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>Loading announcements......
+	</div>
+
+	<div class="row contents">
+
+		<div *ngIf="!isLoading" class="row panel panel-info col-md-8">
+			<h3 class="panel-heading">Community Announcements</h3>
+
+
+			<table class="table table-striped" *ngIf="!isLoading">
+				<thead>
+					<th>Date</th>
+					<th>Announcement (click to read more)</th>
+				</thead>
+				<tbody>
+					<tr *ngFor="let announcement of announcements">
+						<td>{{announcement.Date | date:'shortDate'}}</td>
+						<td><a href="{{announcement.URL}}" target="_blank">{{announcement.Title}}</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-4">
+			<a class="twitter-timeline" href="https://twitter.com/variationscondo" data-widget-id="739549714450919425" data-chrome="nofooter">Tweets by @variationscondo</a>
+		</div>
+	</div>
+
+
+
+
+</div>

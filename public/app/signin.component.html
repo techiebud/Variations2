@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1><span><i class="fa fa-sign-in" aria-hidden="true"></i></span> Sign In</h1>
+        <h3>Enter your sign in credentials below:</h3>
+    </div>
+
+
+    <form [formGroup]="signinForm" (ngSubmit)="onSignin()">
+        <div formGroupName="userSigninInfo">
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="email" class="hidden-xs">E-Mail</label>
+                    <input formControlName="email" placeholder="Email" class="form-control" type="email" id="email">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="password" class="hidden-xs">Password</label>
+                    <input formControlName="password" type="password" id="password" placeholder="Password" class="form-control">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <div class="col-md-4">
+                <input type="checkbox" formControlName="rememberMe">Remember me on this computer&nbsp;<i (click)="onInfoClicked()"
+                    class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" [title]="rememberMeInfoTitle"></i>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-primary" [disabled]="!signinForm.valid">Sign In</button>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-4">
+                <span class="lead">Don’t have an account?</span>
+                <a class="btn btn-primary" [routerLink]="['/signup']">Sign Up</a>
+            </div>
+        </div>
+
+    </form>
+    <div class="row">
+        <div class="col-md-3">
+            <a class="btn btn-warning" [routerLink]="['/forgotPassword']">Forgot Password?</a>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <span class="lead warning"><em>Having problems signing in?  Contact the <a href="mailto:variationscondos@gmail.com?Subject=Problems%20Signing%20In">Webmaster</a></em></span>
+        </div>
+
+    </div>
+
+</div>

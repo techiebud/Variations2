@@ -1,0 +1,53 @@
+<div class="container">
+
+	<div class="jumbotron">
+		<h1><span><i class="fa fa-users"></i></span> Board Members </h1>
+		<p>Current board members with contact information are listed below.</p>
+	</div>
+
+	<div *ngIf="isLoading && !isError">
+		<i class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>Loading board members......
+	</div>
+
+	<div class="row">
+		<div class="col-md-6 board-member" *ngFor="let member of boardMembers">
+			<div class="row col-md-12">
+				<em>{{member.Title}}</em>
+			</div>
+			<div class="row col-md-12">
+				<strong>{{member.Name}}</strong>
+			</div>
+			<div class="row col-md-12" *ngIf="member.Address">
+				Address: {{member.Address}}
+			</div>
+			<div class="row col-md-12">
+				Email: <a href="mailto:{{member.Email}}">{{member.Email}}</a>
+			</div>
+			<div class="row col-md-12">
+				Phone: {{member.Phone}}
+			</div>
+			<div class="row col-md-12" *ngIf="member.URL">
+				<a href="{{member.URL}}" target="_blank">{{member.URLCaption}}</a>
+			</div>
+		</div>
+	</div>
+	
+   <div class="row col-md-12" *ngIf="!isLoading">
+
+        <div class="panel panel-primary">
+
+            <h4 class="panel-heading">Code of Ethics</h4>
+
+            <h5 class="panel-body">
+                <strong><em>Note: </em></strong>Each board member is asked to voluntarily sign this <a href="documents/CodeOfEthicsAndConflictDisclosure.pdf" target="_blank">Director/Officer Code of Ethics</a> document.
+            
+            </h5>  <!-- panel-body -->
+
+        </div>
+        <!-- panel -->
+
+
+    </div>
+    <!-- row -->
+
+</div>
