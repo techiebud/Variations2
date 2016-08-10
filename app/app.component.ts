@@ -16,6 +16,7 @@ import {
 
 declare var $: any;
 declare var firebase: any;
+declare var WOW : any;
 
 @Component({
     //moduleId: module.id,
@@ -47,6 +48,7 @@ export class AppComponent implements OnInit {
         }
 
         toastr.options = toastrOptions;
+        new WOW().init(); //for animations.
 
 
     }
