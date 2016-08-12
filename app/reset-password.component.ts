@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from  "@angular/router";
+import {ActivatedRoute, Router} from  "@angular/router";
 import {
   FormGroup,
   FormControl,
@@ -16,8 +16,9 @@ import {AuthService} from "./shared/auth.service";
 export class ResetPasswordComponent implements OnInit {
 
     resetPasswordForm: FormGroup;
-    constructor(private _formBuilder: FormBuilder, private _activatedRoute: ActivatedRoute, private _authService: AuthService) {
-      
+    resetCode: string;
+    constructor(private _formBuilder: FormBuilder, private _activatedRoute: ActivatedRoute, private _router: Router, private _authService: AuthService) {
+        
     }
 
     ngOnInit() {
@@ -28,22 +29,25 @@ export class ResetPasswordComponent implements OnInit {
                 this.isEqualPassword.bind(this)
             ])]
         });
+      this._router.routerState.queryParams.subscribe(data =>  this.resetCode = data['oobCode']);
+     
     }
 
-    onResetPassword() {        
-       var resetCode: string = this._activatedRoute.snapshot.params["oobCode"];
-       var newPassword: string = this.resetPasswordForm.value.password;
-       console.debug("resetCode", resetCode);
-       console.debug("newPassword", newPassword)
-       this._authService.resetPassword(resetCode, newPassword);     
+    onResetPassword() {       
+       var newPassword: string = this.resetPasswordForm.value.password;           
+       this._authService.resetPassword(this.resetCode, newPassword);     
     }    
     
      isEqualPassword(control: FormControl): { [s: string]: boolean } {
-        if (!this.resetPasswordForm) {
-            return { passwordsNotMatch: true };
-
+     /*    if (this.resetPasswordForm.controls['password'].pristine)     
+         {
+             return;
+         } */
+       
+         if (!this.resetPasswordForm) {
+            return { passwordsNotMatch: false };
         }
-        if (control.value !== this.resetPasswordForm.controls['password'].value) {
+        if (control.value !== this.resetPasswordForm.controls['password'].value && this.resetPasswordForm.controls['password'] .value != "") {
             return { passwordsNotMatch: true };
         }
     }

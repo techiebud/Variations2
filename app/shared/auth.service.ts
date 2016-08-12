@@ -29,7 +29,7 @@ export class AuthService {
                 localStorage.setItem("token", user.refreshToken);
                 this.userGravatarURL = "https://gravatar.com/avatar/"
                     + md5(user.email.trim().toLowerCase()) + "?d=mm"
-                console.debug("gravatar", this.userGravatarURL);
+              //  console.debug("gravatar", this.userGravatarURL);
                 this._userLoggedIn.emit(true);
             } else {
                 // toastr.info("Residents, please log in to view all features.");
@@ -152,9 +152,11 @@ export class AuthService {
     }
 
     resetPassword(code: string, newPassword: string) {
+        console.debug("reset password");
         AppHelpers.BlockUI();
         firebase.auth().confirmPasswordReset(code, newPassword)
             .then(() => {
+                console.debug("confirmPasswordreset");
                 AppHelpers.UnblockUI();
                 this._passwordReset.emit(true);
             })
@@ -163,7 +165,6 @@ export class AuthService {
                 toastr.error(error.message);
             });
     }  //resetPassword
-
 
     logout() {
         //console.log("auth: logout");

@@ -99,13 +99,13 @@ export class AppComponent implements OnInit {
         });
         this._authService.getResetPasswordEmailSentEvent().subscribe(() => {
             toastr.success("Email sent with instructions to reset your password"); 
-            if (!this._authService.isAuthenticated) {
+            if (!this._authService.isAuthenticated()) {
                 setTimeout(() => {
                     this._router.navigate(['home']);
                 }, 2000);
             }
         });
-        this._authService.getPasswordResetEvent().subscribe(() => {
+        this._authService.getPasswordResetEvent().subscribe(() => {          
             toastr.success("Your password has been successfully reset.");
             setTimeout(() => {
                 this._router.navigate(['signin']);

@@ -63,8 +63,8 @@ export class HomeComponent implements OnInit {
                 email: email.toString(CryptoJS.enc.Utf8),
                 password: password.toString(CryptoJS.enc.Utf8)          
         }     
-        console.debug("email: " + thisUser.email);
-        console.debug("pwd:" + thisUser.password);
+      //  console.debug("email: " + thisUser.email);
+      //  console.debug("pwd:" + thisUser.password);
         this._authService.signinUser(thisUser, true, true);
     }
 }
