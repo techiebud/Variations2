@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from  "@angular/router";
 import {
   FormGroup,
-  FormControl,
-  REACTIVE_FORM_DIRECTIVES,
+  FormControl, 
   Validators,
   FormBuilder
 } from "@angular/forms";
@@ -11,7 +10,7 @@ import {AuthService} from "./shared/auth.service";
 
 @Component({
     templateUrl: 'app/reset-password.component.html',
-    directives: [REACTIVE_FORM_DIRECTIVES]
+  
 })
 export class ResetPasswordComponent implements OnInit {
 

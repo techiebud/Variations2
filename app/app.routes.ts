@@ -1,4 +1,4 @@
-import { provideRouter, RouterConfig } from "@angular/router";
+import {  Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from "./shared/auth.guard";
 
 import {
@@ -26,7 +26,7 @@ import {
     GeneralInformationComponent
 } from "./index";
 
-const APP_ROUTES: RouterConfig = [
+const APP_ROUTES: Routes = [
  
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home',  component: HomeComponent },
@@ -50,11 +50,13 @@ const APP_ROUTES: RouterConfig = [
     { path: 'changeEmail', component: ChangeEmailComponent, canActivate: [AuthGuard] },
     { path: 'changePassword', component: ChangePasswordComponent, canActivate: [AuthGuard] },
     { path: 'discussion',component: DiscussionComponent, canActivate: [AuthGuard] },
-    { path: 'generalInformation',component: GeneralInformationComponent, canActivate: [AuthGuard] }
-    
+    { path: 'generalInformation',component: GeneralInformationComponent, canActivate: [AuthGuard] }    
 ];
 
+export const routing = RouterModule.forRoot(APP_ROUTES);
 
-export const APP_ROUTES_PROVIDER = [
-  provideRouter(APP_ROUTES)
-];
+export const routedComponents = [AboutComponent, AnnouncementsComponent, AmenitiesComponent, BoardComponent, ContactUsComponent, EventsCalendarComponent, FeesComponent,
+                                 FeaturesComponent,ForsaleComponent, HomeComponent, PicturesComponent, ServicesComponent, SigninComponent, SignupComponent, UnderConstructionComponent,
+                                 ResetPasswordComponent, ForgotPasswordComponent, AccountProfileComponent, ChangeEmailComponent, ChangePasswordComponent, DiscussionComponent, 
+                                 GeneralInformationComponent];
+

@@ -5,7 +5,7 @@ import {DataService} from "./shared/data.service";
 const DATA_TABLE: string = "BoardMembers";
 
 @Component({
-    templateUrl: "app/board.component.html"
+    templateUrl: "app/board.component.html",
 })
 
 export class BoardComponent implements OnInit {

@@ -1,15 +1,11 @@
 import {Component, OnInit, AfterViewInit} from "@angular/core";
-import {ROUTER_DIRECTIVES} from "@angular/router";
 
 import {AuthService} from "./shared/auth.service";
 import {AppHelpers} from "./shared/app.common";
 
-
-
 @Component({
     selector: "var-nav",
-    templateUrl: "app/nav.component.html",
-    directives: [ROUTER_DIRECTIVES]
+    templateUrl: "app/nav.component.html"  
 })
 
 export class NavComponent implements OnInit, AfterViewInit {

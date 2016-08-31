@@ -1,13 +1,9 @@
 import {Component, OnInit} from "@angular/core";
-import {ROUTER_DIRECTIVES} from "@angular/router";
 import {
-  FormGroup,
-  FormControl,
-  REACTIVE_FORM_DIRECTIVES,
+  FormGroup, 
   Validators,
   FormBuilder
 } from "@angular/forms";
-
 
 import {AuthService} from "./shared/auth.service";
 import {CookieService} from 'angular2-cookie/core';
@@ -15,8 +11,7 @@ import {DataService}   from './shared/data.service';
 
 
 @Component({
-    templateUrl: "app/signin.component.html",
-    directives: [ROUTER_DIRECTIVES, REACTIVE_FORM_DIRECTIVES]
+    templateUrl: "app/signin.component.html"  
 
 })
 export class SigninComponent implements OnInit {

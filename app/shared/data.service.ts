@@ -23,10 +23,7 @@ export class DataService {
         this.getGeneralInformation();
         this.getAllUnits();
         this.getManagement();
-
     }
-
-
     private hasLocalStorage(): boolean {
 
         var uid = "testingStorage";
@@ -38,7 +35,6 @@ export class DataService {
             return result;
             //  return (result && <any>localStorage);
         } catch (exception) { }
-
     }
 
     getAnnouncements(): void {

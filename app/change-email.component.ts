@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {
     FormGroup,
     FormControl,
-    REACTIVE_FORM_DIRECTIVES,
     Validators,
     FormBuilder
 } from "@angular/forms";
@@ -10,7 +9,6 @@ import {AuthService} from "./shared/auth.service";
 
 @Component({
     templateUrl: "app/change-email.component.html",
-    directives: [REACTIVE_FORM_DIRECTIVES]
 })
 export class ChangeEmailComponent implements OnInit {
     changeEmailForm: FormGroup;

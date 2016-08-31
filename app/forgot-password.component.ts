@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {
     FormGroup,
-    FormControl,
-    REACTIVE_FORM_DIRECTIVES,
+    FormControl,    
     Validators,
     FormBuilder
 } from "@angular/forms";
@@ -11,8 +10,7 @@ import {AuthService} from "./shared/auth.service";
 
 
 @Component({
-    templateUrl: 'app/forgot-password.component.html',
-    directives: [REACTIVE_FORM_DIRECTIVES]
+    templateUrl: 'app/forgot-password.component.html'
 })
 export class ForgotPasswordComponent implements OnInit {
 

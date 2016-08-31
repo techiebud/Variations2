@@ -1,13 +1,12 @@
 import {Component, OnInit} from "@angular/core";
+
 import {
   FormGroup,
   FormControl,
   Validators,
-  FormBuilder,
-   REACTIVE_FORM_DIRECTIVES
+  FormBuilder
 } from "@angular/forms";
 
-import {ROUTER_DIRECTIVES} from "@angular/router";
 import {DataService} from "./shared/data.service";
 import {AuthService} from "./shared/auth.service";
 import {User} from "./shared/user.interface";
@@ -16,7 +15,7 @@ import {AppHelpers} from "./shared/app.common";
 
 @Component({
     templateUrl: "app/account-profile.component.html",
-    directives: [ROUTER_DIRECTIVES, REACTIVE_FORM_DIRECTIVES],
+ //   directives: [ROUTER_DIRECTIVES, REACTIVE_FORM_DIRECTIVES],
 })
 export class AccountProfileComponent implements OnInit {
     accountProfileForm: FormGroup;

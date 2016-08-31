@@ -1,18 +1,11 @@
 import {Component, OnInit} from "@angular/core";
-import {ROUTER_DIRECTIVES, Router} from "@angular/router";
-import {FirebaseService} from "./shared/firebase.service";
+import {Router} from "@angular/router";
 import {AuthService} from "./shared/auth.service";
 import {DataService} from "./shared/data.service";
 import {AppHelpers} from "./shared/app.common";
 import {User} from "./shared/user.interface";
 
 
-import {
-   
-    FooterComponent,  
-    NavComponent
-   
-} from "./index";
 
 declare var $: any;
 declare var firebase: any;
@@ -22,7 +15,6 @@ declare var WOW : any;
     //moduleId: module.id,
     selector: "var-main",
     templateUrl: 'app/app.component.html',
-    directives: [FooterComponent, NavComponent, ROUTER_DIRECTIVES]
 })
 
 export class AppComponent implements OnInit {
