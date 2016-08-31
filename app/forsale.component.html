@@ -44,7 +44,7 @@
             <div class="col-md-6 units-for-sale" *ngFor="let unit of unitsSold ">
                 <a href="{{unit.URL}} " target="_blank " class="unit-for-sale ">
                     <h3 class="unit-number lead "> <i class="fa fa-home " aria-hidden="true "></i>{{unit.UnitNumber}} {{unit.Street}}
-                        <p><strong>Sale Date:</strong> <em>{{unit.SaleDate | date: 'shortDate' }}</em> <strong>Sale Price:</strong><em>{{unit.SalePrice | currency:'USD':true}}</em> </p>
+                        <p><strong>Sale Date:</strong> <em>{{unit.SaleDate | date: 'shortDate' }}</em> <strong>Sale Price:</strong><em>{{unit.SalePrice | currency:'USD':true:'1.0-0'}}</em> </p>
                         <img src="{{unit.ImageURL}} " alt="{{unit.UnitNumber}} " class="img-thumbnail "></h3>
                 </a>
             </div>           
