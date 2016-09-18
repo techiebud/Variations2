@@ -28,7 +28,7 @@ export class ResetPasswordComponent implements OnInit {
                 this.isEqualPassword.bind(this)
             ])]
         });
-      this._router.routerState.queryParams.subscribe(data =>  this.resetCode = data['oobCode']);
+      this._router.routerState.root.queryParams.subscribe(data =>  this.resetCode = data['oobCode']);
      
     }
 

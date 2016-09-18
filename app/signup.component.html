@@ -16,7 +16,7 @@
                 <div class="col-md-3">
                     <label for="email" class="hidden-xs">E-Mail</label>
                     <input formControlName="email" type="email" id="email" placeholder="Email" class="form-control ">
-                    <span *ngIf="!signupForm.find('email').valid && !signupForm.find('email').pristine" class="error"> Invalid e-mail address</span>
+                    <span *ngIf="!signupForm.controls['email'].valid && !signupForm.controls['email'].pristine" class="error"> Invalid e-mail address</span>
                 </div>
             </div>
             <div class="form-group row">
@@ -36,7 +36,7 @@
                     <label for="Unit" class="hidden-xs">Unit #</label>
                     <input formControlName="unit" type="number" id="unit" min="1901" max="2112" maxlength="4"
                         placeholder="Unit #" class="form-control">
-                    <span *ngIf="!signupForm.find('unit').valid && !signupForm.find('unit').pristine" class="error"> Invalid Unit #</span>
+                    <span *ngIf="!signupForm.controls['unit'].valid && !signupForm.controls['unit'].pristine" class="error"> Invalid Unit #</span>
                 </div>
             </div>
             <div class="form-group row">
@@ -50,7 +50,7 @@
                     <label for="confirm-password" class="hidden-xs">Confirm Password</label>
                     <input formControlName="confirmPassword" type="password" id="confirm-password" 
                         placeholder="Confirm Password" class="form-control">
-                    <span class="error" *ngIf="!signupForm.find('confirmPassword').valid && !signupForm.find('confirmPassword').pristine"> Passwords do not match</span>
+                    <span class="error" *ngIf="!signupForm.controls['confirmPassword'].valid && !signupForm.controls['confirmPassword'].pristine"> Passwords do not match</span>
                 </div>
             </div>
 

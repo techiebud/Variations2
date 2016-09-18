@@ -9,7 +9,7 @@
             <div class="col-md-3">
                 <label for="email">E-Mail</label>
                <input formControlName="email" type="email" id="email" placeholder="Email" class="form-control ">
-                    <span *ngIf="!changeEmailForm.find('email').valid && !changeEmailForm.find('email').pristine" class="error"> Invalid e-mail address</span>
+                    <span *ngIf="!changeEmailForm.controls['email'].valid && !changeEmailForm.controls['email'].pristine" class="error"> Invalid e-mail address</span>
             </div>
         </div>          
 

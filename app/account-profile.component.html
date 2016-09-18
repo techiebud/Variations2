@@ -23,7 +23,7 @@
             <div class="col-md-1">
                 <label for="Unit">Unit #</label>
                 <input formControlName="unit" type="number" id="unit" min="1901" max="2112" maxlength="4" placeholder="Unit #" class="form-control">
-                <span *ngIf="!accountProfileForm.find('unit').valid && !accountProfileForm.find('unit').pristine" class="error"> Invalid Unit #</span>
+                <span *ngIf="!accountProfileForm.controls['unit'].valid && !accountProfileForm.controls['unit'].pristine" class="error"> Invalid Unit #</span>
             </div>
         </div>
 

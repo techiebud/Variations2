@@ -2,15 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import {
   FormGroup,
   FormControl,
-  REACTIVE_FORM_DIRECTIVES,
   Validators,
   FormBuilder
 } from "@angular/forms";
 import {AuthService} from "./shared/auth.service";
 
 @Component({
-    templateUrl: 'app/change-password.component.html',
-    directives: [REACTIVE_FORM_DIRECTIVES]
+    templateUrl: 'app/change-password.component.html'    
 })
 export class ChangePasswordComponent implements OnInit {
     changePasswordForm: FormGroup;

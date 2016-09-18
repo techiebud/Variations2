@@ -4,11 +4,10 @@ import {
   FormControl,
   Validators,
   FormBuilder,
-   REACTIVE_FORM_DIRECTIVES,
+   
 } from "@angular/forms";
 
 
-import {ROUTER_DIRECTIVES} from "@angular/router";
 import {AuthService} from "./shared/auth.service";
 import {DataService} from "./shared/data.service";
 import {User} from "./shared/user.interface";
@@ -16,10 +15,8 @@ import {AppHelpers} from "./shared/app.common";
 
 
 @Component({
-    templateUrl: "app/signup.component.html",
-    directives: [ROUTER_DIRECTIVES, REACTIVE_FORM_DIRECTIVES],
-
-})
+    templateUrl: "app/signup.component.html"
+  })
 export class SignupComponent implements OnInit {
     signupForm: FormGroup;
     supportsLocalStorage: boolean = false;
@@ -29,7 +26,12 @@ export class SignupComponent implements OnInit {
     constructor(private _formBuilder: FormBuilder, private _authService: AuthService, private _dataService: DataService) {
 
         
-        this.signupForm = _formBuilder.group({
+            this.buildForm();
+    }
+
+
+    buildForm(): void {
+       this.signupForm = this._formBuilder.group({
             email: ['', Validators.compose([
                 Validators.required,
                 this.isEmail
@@ -46,6 +48,12 @@ export class SignupComponent implements OnInit {
                 this.isValidUnit
             ])]
         });
+
+        this.signupForm.statusChanges.subscribe(
+            (data: any) => console.log(data)
+        );
+
+
     }
 
     ngOnInit(): any {

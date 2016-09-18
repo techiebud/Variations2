@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { FormBuilder, ReactiveFormsModule} from "@angular/forms";
 
@@ -17,8 +16,7 @@ import { routing, routedComponents } from './app.routes';
                      
 @NgModule({
   imports: [
-    BrowserModule,
-    FormsModule,  
+    BrowserModule, 
     ReactiveFormsModule,
     HttpModule, 
     routing
