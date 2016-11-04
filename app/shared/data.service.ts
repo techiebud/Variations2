@@ -146,6 +146,7 @@ export class DataService {
 
     getAllUnits(): void {
         try {
+            this.getAllUsersEmail();
             localStorage.removeItem("allUnits");
             firebase.database().ref('/Units').once('value')
                 .then((snapshot) => {
@@ -167,6 +168,7 @@ export class DataService {
                     //         registeredUnits++;
                     //     }                 
                     // }
+                    
                     localStorage.setItem('allUnits', JSON.stringify(allUnits));
                     this._allUnitsLoaded.emit(true);
                 })
