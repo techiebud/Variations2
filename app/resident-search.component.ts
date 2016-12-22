@@ -30,7 +30,9 @@ export class ResidentSearchComponent implements OnInit {
                 { data: "Street", title: "Street", searchable: false },
                 { data: "Phone1", title: "Phone", searchable: false, orderable: false, className: "phone" },
                 { data: "Phone2", title: "Phone 2", searchable: false, orderable: false, className: "phone" },
-                { data: "Email", title: "Email" }
+                { data: "Email", title: "Email", render:  function ( data, type, full, meta ) {
+                    return '<a href="mailto:'+data+'">' + data + '</a>'; }
+                },
             ],
             drawCallback: function (settings, json) {
                 $(".phone").text(function (i, text) {
