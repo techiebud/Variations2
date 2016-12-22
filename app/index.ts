@@ -22,3 +22,4 @@ export * from "./change-email.component";
 export * from "./change-password.component";
 export * from "./discussion.component";
 export * from "./general-information.component";
+export * from "./resident-search.component";

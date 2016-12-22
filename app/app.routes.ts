@@ -23,7 +23,8 @@ import {
     ChangeEmailComponent,
     ChangePasswordComponent,
     DiscussionComponent,
-    GeneralInformationComponent
+    GeneralInformationComponent,
+    ResidentSearchComponent
 } from "./index";
 
 const APP_ROUTES: Routes = [
@@ -50,6 +51,7 @@ const APP_ROUTES: Routes = [
     { path: 'changeEmail', component: ChangeEmailComponent, canActivate: [AuthGuard] },
     { path: 'changePassword', component: ChangePasswordComponent, canActivate: [AuthGuard] },
     { path: 'discussion',component: DiscussionComponent, canActivate: [AuthGuard] },
+    { path: 'residentSearch',component: ResidentSearchComponent, canActivate: [AuthGuard] },
     { path: 'generalInformation',component: GeneralInformationComponent, canActivate: [AuthGuard] }    
 ];
 
@@ -58,5 +60,5 @@ export const routing = RouterModule.forRoot(APP_ROUTES);
 export const routedComponents = [AboutComponent, AnnouncementsComponent, AmenitiesComponent, BoardComponent, ContactUsComponent, EventsCalendarComponent, FeesComponent,
                                  FeaturesComponent,ForsaleComponent, HomeComponent, PicturesComponent, ServicesComponent, SigninComponent, SignupComponent, UnderConstructionComponent,
                                  ResetPasswordComponent, ForgotPasswordComponent, AccountProfileComponent, ChangeEmailComponent, ChangePasswordComponent, DiscussionComponent, 
-                                 GeneralInformationComponent];
+                                 GeneralInformationComponent, ResidentSearchComponent];
 

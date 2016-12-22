@@ -5,6 +5,7 @@ import {AppSettings}  from "./app.common";
 import {FirebaseService} from "./firebase.service";
 import {GeneralInformation} from "./general-information.interface";
 import {Management} from "./management.interface";
+import {Resident} from  "./resident.interface";
 
 
 
@@ -13,6 +14,8 @@ export class DataService {
     supportsLocalStorage: boolean = false;
     generalInformation: GeneralInformation;
     management:  Management;
+    residents: Resident;
+
 
     private _userProfileUpdated = new EventEmitter<any>();
     private _allUnitsLoaded = new EventEmitter<any>();
@@ -23,6 +26,12 @@ export class DataService {
         this.getGeneralInformation();
         this.getAllUnits();
         this.getManagement();
+        this.getResidents();
+        localStorage.removeItem("UserEmails");
+        localStorage.removeItem("UserEmails2");
+      /*  this.getAllUsersEmail();
+        this.getAllUsersEmail2();*/
+       // this.get();
     }
     private hasLocalStorage(): boolean {
 
@@ -62,6 +71,21 @@ export class DataService {
             },
             (error) => {
                 localStorage.setItem(fbTable, "error");
+                console.error(error);
+                toastr.error(error.message);
+            });
+    }
+
+      getResidents(): void {
+        let fbTable = "Residents";
+        let databaseRef = firebase.database().ref(fbTable);
+        databaseRef.once('value',
+            (snapshot) => {
+                let returnedData = snapshot.val();
+                this.residents = returnedData;            
+            },
+            (error) => {
+                
                 console.error(error);
                 toastr.error(error.message);
             });
@@ -146,7 +170,7 @@ export class DataService {
 
     getAllUnits(): void {
         try {
-            this.getAllUsersEmail();
+            // this.getAllUsersEmail();
             localStorage.removeItem("allUnits");
             firebase.database().ref('/Units').once('value')
                 .then((snapshot) => {
@@ -211,9 +235,34 @@ export class DataService {
         catch (ex) {
             console.error(ex);
         }
+    }
 
+     getAllUsersEmail2(): void {
 
-
+        
+        try {
+            localStorage.removeItem("UserEmails2");
+            firebase.database().ref('/Residents').once('value')
+                .then((snapshot) => {
+               
+                    let allUsers: any = snapshot.val();
+                    let allUserEmails: string = "";
+                    for (var user in allUsers) {
+                        allUserEmails += allUsers[user].Email + ";";
+                    
+                    }
+                  
+                    localStorage.setItem('UserEmails2', allUserEmails);
+                  
+                })
+                .catch((error) => {
+                    console.error(error);
+                  
+                })
+        }
+        catch (ex) {
+            console.error(ex);
+        }
     }
 
     hasUnitMaximumNumberOfUsers(unitNumber: string): boolean {

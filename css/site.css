@@ -589,6 +589,12 @@ img#chamblee-logo {
 ul.list-group.hilites-2017 {
     line-height: 1.5em;
 }
-
+.dataTables_wrapper .dataTables_length {
+float: right;
+}
+.dataTables_wrapper .dataTables_filter {
+float: left;
+text-align: left;
+}
 
 
