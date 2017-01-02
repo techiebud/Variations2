@@ -16,19 +16,8 @@ export class FeesComponent implements OnInit {
     }
 
     ngOnInit() {
-        if (this.isAuth()) {
-            setTimeout(() => {
-                this.countDownTimerInit();
-            }, 500);
-
-        }
+       
     }
 
-    countDownTimerInit(): void {
-        var payOffDate: Date = new Date(2017, 0, 1);
-        $('#loan-countdown').countdown({
-            until: payOffDate,
-            description: LOAN_PAYOFF_HEADER
-        });
-    }
+   
 }

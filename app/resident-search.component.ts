@@ -28,17 +28,26 @@ export class ResidentSearchComponent implements OnInit {
                 { data: "FirstName", title: "First Name" },
                 { data: "Unit", title: "Unit", searchable: true },
                 { data: "Street", title: "Street", searchable: false },
-                { data: "Phone1", title: "Phone", searchable: false, orderable: false, className: "phone" },
-                { data: "Phone2", title: "Phone 2", searchable: false, orderable: false, className: "phone" },
+                { data: "Phone1", title: "Phone", searchable: false, orderable: false, className: "phone phone1" },
+                { data: "Phone2", title: "Phone 2", searchable: false, orderable: false, className: "phone phone2" },
                 { data: "Email", title: "Email", render:  function ( data, type, full, meta ) {
                     return '<a href="mailto:'+data+'">' + data + '</a>'; }
                 },
             ],
             drawCallback: function (settings, json) {
-                $(".phone").text(function (i, text) {
-                    text = text.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3");
+                $(".phone").text(function (i, text) {               
+                    var phoneNumberRegularPattern: RegExp = /(\d{3})(\d{3})(\d{4})/;
+                    var phoneNumberWithExtensionPattern: RegExp =  /(\d{3})(\d{3})(\d{4})(x\d{4})/
+                    if (phoneNumberWithExtensionPattern.test(text))
+                    {
+                       text = text.replace(phoneNumberWithExtensionPattern, "$1-$2-$3 $4");
+                    }
+                    else {
+                          text = text.replace(phoneNumberRegularPattern, "$1-$2-$3");
+                    }               
                     return text;
                 });
+                $(".phone1").css("width", "110px");
             }, 
             initComplete: function(settings, json) {
                 $("input[type='search']").focus();
