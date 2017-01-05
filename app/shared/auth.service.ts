@@ -23,6 +23,7 @@ export class AuthService {
     constructor(private _firebaseService: FirebaseService, private _cookieService: CookieService, private _dateService: DataService) {
     
         firebase.auth().onAuthStateChanged((user) => {
+            localStorage.removeItem("token");
             if (user) {
                 console.log("User has signed in");
                 console.log(user);
@@ -91,7 +92,7 @@ export class AuthService {
                     let pwd :any = CryptoJS.AES.encrypt(user.password, this._dateService.generalInformation.SecurityKey);
                     this._cookieService.put("pwd", pwd, cookieOptions);  
                     this._cookieService.put("rememberMe", "1", cookieOptions);            
-                }
+                }              
             })
             .catch((error) => {
                 if (autoSignIn)
@@ -167,7 +168,7 @@ export class AuthService {
     }  //resetPassword
 
     logout() {
-        //console.log("auth: logout");
+      
         firebase.auth().signOut()
             .then(() => {
                 this._cookieService.removeAll();
