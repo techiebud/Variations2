@@ -93,8 +93,9 @@ export class ForsaleComponent implements OnInit {
         }  //for loop
         if (this.unitsSold.length > 1) {
             this.unitsSold.sort((a: Unit, b: Unit): number => {
-                return (a.SaleDate > b.SaleDate ? 0 : 1);
-
+                 
+                return (Date.parse(b.SaleDate.toString()) - Date.parse(a.SaleDate.toString()));
+               
             })
         }
 
