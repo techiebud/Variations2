@@ -10,6 +10,7 @@ export * from "./services.component";
 export * from "./contact-us.component";
 export * from "./signup.component";
 export * from "./signin.component";
+export * from "./signout.component";
 export * from "./nav.component";
 export * from "./footer.component";
 export * from "./events-calendar.component";

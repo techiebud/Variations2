@@ -28,11 +28,8 @@ gulp.task("vendor", function() {
 	return gulp.src("js/vendor/*.*")
 	.pipe(gulp.dest("public/js/vendor"))	
 });
-gulp.task("forum", function() {
-	return gulp.src("forum.html")
-	.pipe(gulp.dest("public"))	
-});
 
-gulp.task("public", ["html", "img", "css", "fonts", "documents", "vendor", "forum"]);
+
+gulp.task("public", ["html", "img", "css", "fonts", "documents", "vendor"]);
 
 

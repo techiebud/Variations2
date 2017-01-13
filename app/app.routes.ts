@@ -15,6 +15,7 @@ import {
     PicturesComponent,
     ServicesComponent,
     SigninComponent,
+    SignoutComponent,
     SignupComponent,
     UnderConstructionComponent,
     ResetPasswordComponent,
@@ -43,6 +44,7 @@ const APP_ROUTES: Routes = [
     { path: 'contactus', component: ContactUsComponent },
     { path: 'signup', component: SignupComponent },
     { path: 'signin',  component: SigninComponent },
+    { path: 'signout',  component: SignoutComponent },
     { path: 'eventsCalendar',  component: EventsCalendarComponent, canActivate: [AuthGuard] },
     { path: 'underConstruction', component: UnderConstructionComponent },
     { path: 'resetPassword', component: ResetPasswordComponent },
@@ -58,7 +60,7 @@ const APP_ROUTES: Routes = [
 export const routing = RouterModule.forRoot(APP_ROUTES);
 
 export const routedComponents = [AboutComponent, AnnouncementsComponent, AmenitiesComponent, BoardComponent, ContactUsComponent, EventsCalendarComponent, FeesComponent,
-                                 FeaturesComponent,ForsaleComponent, HomeComponent, PicturesComponent, ServicesComponent, SigninComponent, SignupComponent, UnderConstructionComponent,
+                                 FeaturesComponent,ForsaleComponent, HomeComponent, PicturesComponent, ServicesComponent, SigninComponent, SignoutComponent, SignupComponent, UnderConstructionComponent,
                                  ResetPasswordComponent, ForgotPasswordComponent, AccountProfileComponent, ChangeEmailComponent, ChangePasswordComponent, DiscussionComponent, 
                                  GeneralInformationComponent, ResidentSearchComponent];
 

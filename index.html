@@ -58,9 +58,9 @@
     <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.js"></script>
-    
 
     <script src="https://platform.twitter.com/widgets.js "></script>
+    <script src="js/app/app.js"></script>
 
 </head>
 
@@ -78,8 +78,8 @@
     <!-- 
         The script below is used for showing the pop-up of the loan payoff.
         -->
-    <script type="text/javascript">
-        $(document).ready(function ($) {
+         <script>
+     $(document).ready(function ($) {
 
             $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {            
                 event.preventDefault();
@@ -91,11 +91,17 @@
                 $('.imagepreview').attr('src', $(this).find('img').attr('src'));
                 $('#imagemodal').modal('show');
                 return false;
-           });
+           });   
+             $(document).delegate("a#discussion-board", "click", function(event) {         
+                event.preventDefault();
+                toastr.warning("Under Development");
+                return false;
+           });             
         
         });
+        </script>
 
-    </script>  
+   
 
     <noscript>For full functionality of this page it is necessary to enable JavaScript. Here are the <a href="http://www.enable-javascript.com"
             target="_blank"> instructions how to enable JavaScript in your web browser</a></noscript>

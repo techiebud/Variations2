@@ -19,6 +19,7 @@ export class AuthService {
     private _resetPasswordEmailSent = new EventEmitter<any>();
     userIsAuthenticated: boolean;
     userGravatarURL: string = "";
+    userForumToken: string = "";
 
     constructor(private _firebaseService: FirebaseService, private _cookieService: CookieService, private _dateService: DataService) {
     
@@ -41,9 +42,10 @@ export class AuthService {
         localStorage.setItem("newUser", JSON.stringify(user));
         var email: string = user.email;
         var password: string = user.password;
+        var authToken: string = '';
         AppHelpers.BlockUI("Processing sign up information......please wait.");
         firebase.auth().createUserWithEmailAndPassword(email, password)
-            .then(() => {
+            .then(() => {              
                 AppHelpers.UnblockUI();
             })
             .catch((error) => {
@@ -79,20 +81,20 @@ export class AuthService {
         firebase.auth().signInWithEmailAndPassword(user.email, user.password)
             .then(() => {
                 AppHelpers.UnblockUI();   
+                  localStorage.setItem("existingUser", JSON.stringify(user));
                 let cookieExpire: Date= new Date();
                 cookieExpire.setFullYear(cookieExpire.getFullYear() + 5);
                 var cookieOptions:CookieOptionsArgs = {
                     expires: cookieExpire
-                }
-               
-                if (rememberMe) {
-                    
-                    let email: any = CryptoJS.AES.encrypt(user.email, this._dateService.generalInformation.SecurityKey);
-                    this._cookieService.put("email", email, cookieOptions);
-                    let pwd :any = CryptoJS.AES.encrypt(user.password, this._dateService.generalInformation.SecurityKey);
-                    this._cookieService.put("pwd", pwd, cookieOptions);  
-                    this._cookieService.put("rememberMe", "1", cookieOptions);            
                 }              
+                if (rememberMe) {                   
+                    let emailSecure: any = CryptoJS.AES.encrypt(user.email, this._dateService.generalInformation.SecurityKey);
+                    let pwdSecure :any = CryptoJS.AES.encrypt(user.password, this._dateService.generalInformation.SecurityKey);
+                    this._cookieService.put("email", emailSecure, cookieOptions);                   
+                    this._cookieService.put("pwd", pwdSecure, cookieOptions);  
+                    this._cookieService.put("rememberMe", "1", cookieOptions);            
+                } 
+   
             })
             .catch((error) => {
                 if (autoSignIn)
@@ -207,6 +209,11 @@ export class AuthService {
     }
     getUserGravatarURL(): string {
         return this.userGravatarURL;
+    }
+
+    getUserForumToken(): string {
+
+        return this.userForumToken;
     }
 
 

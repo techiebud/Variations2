@@ -1,15 +1,15 @@
-import {Component, OnInit} from "@angular/core";
-import {Router} from "@angular/router";
-import {AuthService} from "./shared/auth.service";
-import {DataService} from "./shared/data.service";
-import {AppHelpers} from "./shared/app.common";
-import {User} from "./shared/user.interface";
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { AuthService } from "./shared/auth.service";
+import { DataService } from "./shared/data.service";
+import { AppHelpers } from "./shared/app.common";
+import { User } from "./shared/user.interface";
 
 
 
 declare var $: any;
 declare var firebase: any;
-declare var WOW : any;
+declare var WOW: any;
 
 @Component({
     //moduleId: module.id,
@@ -46,8 +46,9 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit(): any {
-      //  this._dataService.getAllUsersEmail();
+        //  this._dataService.getAllUsersEmail();
         this._authService.getLoggedInEvent().subscribe(() => {
+            var self = this;
             var newUser: User = JSON.parse(localStorage.getItem("newUser"));
             console.log("user logged in");
             if (newUser) {
@@ -67,18 +68,28 @@ export class AppComponent implements OnInit {
                 var updates = {};
                 updates["/Units/" + newUser.unit + "/RegisteredUsers"] = +(allUnits[newUser.unit].RegisteredUsers) + 1;
                 firebase.database().ref().update(updates);
-                this._router.navigate(['Announcements'])
+                self._authService.userForumToken = AppHelpers.logIntoForum(newUser, self._dataService.generalInformation.ForumAPIUrl, self._dataService.generalInformation.ForumAPIKey);
+                self._router.navigate(['Announcements'])
             }
             else {
                 var userId = firebase.auth().currentUser.uid;
+                var user: User;
+                var userSigninInfo: User = JSON.parse(localStorage.getItem("existingUser"));             
+                localStorage.removeItem("existingUser");
                 firebase.database().ref('/Users/' + userId).once('value').then(function (snapshot) {
-                    var user: User = <User>snapshot.val();
+                    user = <User>snapshot.val();                  
                     var firstName: string = snapshot.val().FirstName;
-                    localStorage.setItem("userProfile", JSON.stringify(user));
+                    var lastName: string = snapshot.val().LastName;
+                    localStorage.setItem("userProfile", JSON.stringify(user));                  
                     toastr.info("Welcome back, " + firstName + "!");
-                    AppHelpers.prepMenuElements();
+                    user.email = userSigninInfo.email;
+                    user.password = userSigninInfo.password;
+                    user.firstName = firstName;
+                    user.lastName = lastName;
+                    self._authService.userForumToken = AppHelpers.logIntoForum(user, self._dataService.generalInformation.ForumAPIUrl, self._dataService.generalInformation.ForumAPIKey);                 
                 });
-                this._router.navigate(['announcements'])
+                AppHelpers.prepMenuElements();
+                self._router.navigate(['announcements'])
             }
 
         });
@@ -90,14 +101,14 @@ export class AppComponent implements OnInit {
 
         });
         this._authService.getResetPasswordEmailSentEvent().subscribe(() => {
-            toastr.success("Email sent with instructions to reset your password"); 
+            toastr.success("Email sent with instructions to reset your password");
             if (!this._authService.isAuthenticated()) {
                 setTimeout(() => {
                     this._router.navigate(['home']);
                 }, 2000);
             }
         });
-        this._authService.getPasswordResetEvent().subscribe(() => {          
+        this._authService.getPasswordResetEvent().subscribe(() => {
             toastr.success("Your password has been successfully reset.");
             setTimeout(() => {
                 this._router.navigate(['signin']);
@@ -116,6 +127,7 @@ export class AppComponent implements OnInit {
     }
 
 
+
     private ObjectLength(object) {
         var length = 0;
         for (var key in object) {
@@ -126,7 +138,7 @@ export class AppComponent implements OnInit {
         return length;
     }
 
-   
+
 
 
 

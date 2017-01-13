@@ -15,6 +15,7 @@ export class DataService {
     generalInformation: GeneralInformation;
     management:  Management;
     residents: Resident;
+   
 
 
     private _userProfileUpdated = new EventEmitter<any>();

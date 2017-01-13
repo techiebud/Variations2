@@ -25,8 +25,9 @@
                                     <li><a [routerLink]="['eventsCalendar']">Events Calendar</a></li>
                                     <li><a [routerLink]="['pictures']">Pictures</a></li>
                                     <li><a [routerLink]="['generalInformation']">General Information</a></li>
-                                    <li><a href="http://thevariationsatlanta.com/forum/forum.html" target="_blank">Discussion Board</a></li>
-                                    
+                                    <li [hidden]="!false"><a id="discussion-board" #discussionBoard href="//forum.variationscondos.com?authtoken={{userForumToken()}}" target="_blank">Discussion Board</a></li>
+                                    <li><a (click)="showDiscussionBoard()" href="#">Discussion Board</a></li>
+
                                     <li class="nav-divider"></li>
                                     <li><a href="https://drive.google.com/open?id=0B0XxZGmv5AeFMktCVHlORm9fbTA" target="_blank">Newsletters</a></li>
                                     <li><a href="https://drive.google.com/open?id=0B0XxZGmv5AeFTTFxWjNpYkU4X0E" target="_blank">Financials</a></li>

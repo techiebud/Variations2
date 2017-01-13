@@ -1,4 +1,6 @@
 declare var $: any;
+import { User } from "./user.interface";
+
 export class AppSettings {
     public static get FIREBASE_APP(): string { return 'https://thevariations.firebaseio.com'; }
     public static get VARIATIONS_NAME(): string { return ' The Variations Condominium Association, Inc'; }
@@ -7,6 +9,7 @@ export class AppSettings {
 }
 
 export class AppHelpers {
+
     public static parseDate(inputDate: string): Date {
         //Must be in yyyymmdd format.
         if (!inputDate) {
@@ -38,7 +41,7 @@ export class AppHelpers {
 
     public static prepMenuElements(): void {
 
-        var intFrameWidth = window.innerWidth;        
+        var intFrameWidth = window.innerWidth;
         //     $("div.for-regular-screens > ul").clone(false).appendTo("div.for-small-screens");
         var $liTags = $("div#var-navigation-menu li").has("a");
         if (intFrameWidth < 768) {
@@ -51,6 +54,44 @@ export class AppHelpers {
         }
 
 
+    }
+
+    public static logIntoForum(user: User, forumAPIUrl: string, forumAPIKey: string): string {
+        console.log("logIntoForum");
+        console.log("user: " + user);
+        var authToken: string = "";
+
+        if (user.email != "techiebud@gmail.com")
+        {
+            return authToken;
+        }
+        toastr.warning("testing forum");
+        var thisUser = user.firstName + " " + user.lastName;      
+        var url = `${forumAPIUrl}?apiKey=${forumAPIKey}&user=${thisUser}&email=${user.email}&pw=${user.password}`;
+   //   toastr.info("url: " + url);
+
+        
+        $.ajax({
+            url: url,
+            type: 'GET',
+            async: false,
+            dataType: "json",
+            success: function (data) {                
+                var authData = JSON.parse(data);
+                console.log("authToken=" + authData.authtoken);
+                authToken = authData.authtoken;         
+                
+            },
+
+            error: function (xhr, ajaxOptions, thrownError) {
+                toastr.error(thrownError);
+                console.log(xhr.status);
+                console.log(thrownError);
+               
+            },
+
+        });
+        return authToken;
     }
 
 
