@@ -1,28 +1,8 @@
 {
   "Announcements" : {
-    "20160801" : {
-      "Title" : "AJC Article - Jewell's name missing among heroes",
-      "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFbWZ6ZU5NWDR6TDA/view?usp=sharing"
-    },
     "20160814" : {
       "Title" : "Welcome Newest Homeowners and Tenants",
       "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFbnpza3FwdWZJNGc/view?usp=sharing"
-    },
-    "20160901" : {
-      "Title" : "Chamblee Signal Newsletter Latest Issue",
-      "URL" : "http://www.chambleega.com/ArchiveCenter/ViewFile/Item/110"
-    },
-    "20160911" : {
-      "Title" : "Garage Sales in The Variations",
-      "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFQ0Jla0wtVjEyeDQ/view?usp=sharing"
-    },
-    "20160926" : {
-      "Title" : "Fescue Seed Watering Instructions",
-      "URL" : "https://drive.google.com/open?id=0B0XxZGmv5AeFWEJZN3BzUFlFTEE"
-    },
-    "20161020" : {
-      "Title" : "Script for Bylaw Change - Capital Fund/Initiation Fee",
-      "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFcjhqS1JiLTQwMlE/view?usp=sharing"
     },
     "20161208" : {
       "Title" : "Chamblee Police Weekly Report 12/8/16",
@@ -52,6 +32,18 @@
       "Title" : "Chamblee Police Weekly Report - 1/5/17",
       "URL" : "https://app.robly.com/archive?id=339fe9028e382ce9660365385c962d23"
     },
+    "20170109" : {
+      "Title" : "Chamblee Parks & Recreations - Winter Program Guide",
+      "URL" : "https://app.robly.com/archive?id=6898d6388e43b157d56982a936b23ffc"
+    },
+    "20170112" : {
+      "Title" : "January Board Meeting Agenda - 1/16",
+      "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFOGljNU14OU5RLUk/view?usp=sharing"
+    },
+    "20170113" : {
+      "Title" : "Chamblee Police Weekly Report - 1/12/17",
+      "URL" : "https://app.robly.com/archive?id=288a9c6a8b9092e13e0f6f8fad2d8f89"
+    },
     "20160810a" : {
       "Title" : "Smart911 Discussed By Chamblee Police Last Week",
       "URL" : "https://www.smart911.com/"
@@ -67,6 +59,18 @@
     "20161211a" : {
       "Title" : "Email Vote for 2017 Budget",
       "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFZXRQSzlnSHBqNDA/view?usp=sharing"
+    },
+    "20170105a" : {
+      "Title" : "Be Ready! Winter Weather",
+      "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFQm1QaWFCY0l6SGM/view?usp=sharing"
+    },
+    "20170105b" : {
+      "Title" : "Winter Storms! Extreme Cold - Fact & Info Sheet",
+      "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFOEh5MmplekFjems/view?usp=sharing"
+    },
+    "20170105c" : {
+      "Title" : "Chamblee Signal Latest Newsletter",
+      "URL" : "http://www.chambleega.com/ArchiveCenter/ViewFile/Item/113"
     }
   },
   "BoardMembers" : {
@@ -115,8 +119,10 @@
     }
   },
   "GeneralInformation" : {
+    "ForumAPIKey" : "vBry7QpM9DM9kQliepqhS7reIuqBDGTF28OXlLvQ",
+    "ForumAPIUrl" : "https://thevariations.azurewebsites.net/api/Forum/key",
     "MaximumUsersPerUnit" : 2,
-    "SecurityKey" : "va0ri0at1io7ns7co6ndos",
+    "SecurityKey" : "va0ri0ati1o1n1sx",
     "TennisCourtAccessCode" : 2868
   },
   "Management" : {
@@ -1497,6 +1503,401 @@
     "Street" : "Clairmeade Valley Rd",
     "Unit" : 2112
   } ],
+  "UnitKeys" : {
+    "1901" : {
+      "Key" : "f595590e-5e24-47ab-b563-d06e583a3f44"
+    },
+    "1902" : {
+      "Key" : "ccac9fe7-a49e-40ed-b65e-502b27cf6742"
+    },
+    "1903" : {
+      "Key" : "f2925419-e2cc-4f69-b028-bc7249a40179"
+    },
+    "1904" : {
+      "Key" : "ee03886e-21b8-4d2b-ab56-c5e062817871"
+    },
+    "1905" : {
+      "Key" : "66dc8d4f-0dba-46be-9b8a-351029490c65"
+    },
+    "1906" : {
+      "Key" : "2a4672b7-2407-4d94-90c1-facc4cc1e168"
+    },
+    "1907" : {
+      "Key" : "d774e225-eabf-4664-93c9-9cc8f30ea359"
+    },
+    "1908" : {
+      "Key" : "104c4671-472d-48f3-98cd-efd96e3cb95e"
+    },
+    "1909" : {
+      "Key" : "44043f97-7a70-4d2a-925b-248c9a39bdf2"
+    },
+    "1910" : {
+      "Key" : "171097a4-2cb8-4382-a2d4-c03902cec0cf"
+    },
+    "1911" : {
+      "Key" : "0b493b35-c30f-4488-9957-2cd10765ed02"
+    },
+    "1912" : {
+      "Key" : "3c86f5df-9000-4569-8d2b-6a5987c74a74"
+    },
+    "1913" : {
+      "Key" : "cc423050-893f-4f55-87f4-3d3acf6b9db8"
+    },
+    "1914" : {
+      "Key" : "2ba1aff4-b65b-406e-b1a1-41917f2ffedd"
+    },
+    "1915" : {
+      "Key" : "e788dc42-a1d3-47f5-b078-8b1a68b449c6"
+    },
+    "1916" : {
+      "Key" : "3f08fd66-d6eb-4cc4-9c02-f0a7e6ced86e"
+    },
+    "1917" : {
+      "Key" : "161c76ef-1bf8-44ed-b23e-c8f3924a2273"
+    },
+    "1918" : {
+      "Key" : "931b74f1-6947-4314-b78c-35f085b31e17"
+    },
+    "1919" : {
+      "Key" : "56a03362-d32b-43cb-8582-0b1c29a56511"
+    },
+    "1920" : {
+      "Key" : "376a9e5c-e850-43b8-bded-70d0597d2c56"
+    },
+    "1921" : {
+      "Key" : "73d8991b-d700-48e3-aa0a-2be8d7608713"
+    },
+    "1922" : {
+      "Key" : "0475854d-919d-4121-81d2-19b54329e8c7"
+    },
+    "1923" : {
+      "Key" : "c476f14a-8eea-4afa-9c42-a8adc9aaa953"
+    },
+    "1924" : {
+      "Key" : "7ef92dd9-b45a-4098-998f-2c013371b769"
+    },
+    "1925" : {
+      "Key" : "92a7f82a-3acd-4e5a-a9d6-6a13f69c6911"
+    },
+    "1926" : {
+      "Key" : "0a038a48-a3ac-40ad-8b21-ba719ca62af5"
+    },
+    "1927" : {
+      "Key" : "edd5775f-4422-4d60-95eb-c8bda1dcbf9c"
+    },
+    "1928" : {
+      "Key" : "4bec9f49-c9bb-4891-9d72-529fe299c0e7"
+    },
+    "1929" : {
+      "Key" : "d2bc71ba-dd88-4c48-980e-333a798a9bb7"
+    },
+    "1930" : {
+      "Key" : "7bee4717-39d9-433b-b8f5-3059ee4aab4f"
+    },
+    "1931" : {
+      "Key" : "de4bb569-c9c5-406b-8a24-4c8d81ef3b8f"
+    },
+    "1932" : {
+      "Key" : "27636fc8-a573-4369-8e1c-9cb87888946e"
+    },
+    "1933" : {
+      "Key" : "06bd7b2e-2b2b-4dc6-9588-002b2f156467"
+    },
+    "1934" : {
+      "Key" : "e7176c70-6f76-4210-b879-229abf87931d"
+    },
+    "1935" : {
+      "Key" : "e0b7706f-56b5-46b2-b546-b2fd9a312394"
+    },
+    "1936" : {
+      "Key" : "128a37ae-fb68-4c6a-842b-a8dc9157893c"
+    },
+    "1937" : {
+      "Key" : "5e337d8e-d928-4fef-8b82-52865082e9cc"
+    },
+    "1938" : {
+      "Key" : "0fd3ab19-267a-4da4-ad5c-154483c3d6ae"
+    },
+    "1939" : {
+      "Key" : "0ffa4297-89bc-4078-9241-98c27fd00619"
+    },
+    "1941" : {
+      "Key" : "878a5d24-b27f-453e-b258-9381d4384e8c"
+    },
+    "1943" : {
+      "Key" : "7500babc-d6ad-47b5-ab0e-bd322bffcec3"
+    },
+    "1945" : {
+      "Key" : "aa0bb8b9-2226-43ac-8fc9-d57e433437bf"
+    },
+    "1947" : {
+      "Key" : "a30972cf-5e3b-450b-9311-b36e61a49316"
+    },
+    "1949" : {
+      "Key" : "6aafe492-2112-46ad-9a8b-a156ff88daac"
+    },
+    "1958" : {
+      "Key" : "ef38286c-cbef-408c-b031-58eeb6a15117"
+    },
+    "1960" : {
+      "Key" : "843f3d89-a71d-464c-a3b6-f1a25c7fca70"
+    },
+    "1961" : {
+      "Key" : "4383c39a-0730-401a-b83c-00710c451412"
+    },
+    "1962" : {
+      "Key" : "1608a572-26b5-444e-8a88-2832295b86ee"
+    },
+    "1963" : {
+      "Key" : "bd9cabbb-e694-4dc1-bba6-961549fa1e67"
+    },
+    "1964" : {
+      "Key" : "2d3c51e1-6206-40b5-893d-53e46bffa5f0"
+    },
+    "1965" : {
+      "Key" : "38df8562-837e-4201-ba21-e75329f4204e"
+    },
+    "1966" : {
+      "Key" : "49703f00-16f6-48ac-bd26-9e74722196cc"
+    },
+    "1967" : {
+      "Key" : "dde53da5-d1e4-4a5b-964b-14e3bbd978b0"
+    },
+    "1968" : {
+      "Key" : "cba78bc7-2062-489d-a553-4d50f4858032"
+    },
+    "1969" : {
+      "Key" : "1ac1af42-3628-4da4-9cc2-a967fa88e41e"
+    },
+    "1970" : {
+      "Key" : "c3f8dbfa-2b81-4261-9606-de0de515cc31"
+    },
+    "1971" : {
+      "Key" : "7bfb051f-53eb-49c2-8f5b-f2f2706da1fd"
+    },
+    "1972" : {
+      "Key" : "fafeb515-1203-44d0-bf10-5cf2671149ec"
+    },
+    "1973" : {
+      "Key" : "10ead2b1-5b7a-4a66-8d0a-b2017c2f38c2"
+    },
+    "1974" : {
+      "Key" : "f8621a12-214b-48b8-a5ac-74045fc1b39c"
+    },
+    "1975" : {
+      "Key" : "513c40c0-afd5-4535-9224-9e8612c51cc5"
+    },
+    "1976" : {
+      "Key" : "ca61a406-44b7-4ef9-bfb6-64905e72795c"
+    },
+    "1977" : {
+      "Key" : "56780f49-58e5-43d3-a759-0e048d073b69"
+    },
+    "1978" : {
+      "Key" : "495b959c-2c6a-4f67-b7e8-8d4a76a09b6d"
+    },
+    "1980" : {
+      "Key" : "174c063c-4246-44f3-a044-470287cba001"
+    },
+    "1982" : {
+      "Key" : "47adcae1-1122-42d2-9fb5-c6efb7eae13b"
+    },
+    "1984" : {
+      "Key" : "0ec3cfe2-f808-4291-92fb-25e0cb21052c"
+    },
+    "1986" : {
+      "Key" : "8a3179e5-bfd7-4c14-88ec-cc9000d4d185"
+    },
+    "1988" : {
+      "Key" : "9ec33163-dbc8-49a5-a941-4055a0c828ae"
+    },
+    "1990" : {
+      "Key" : "dace8676-5d52-41b2-a96c-bf3b7041e80b"
+    },
+    "1992" : {
+      "Key" : "4df2df0f-10ad-49d6-9e88-0892a4154a34"
+    },
+    "1994" : {
+      "Key" : "7d2ade62-f5ab-438e-aedc-8d78be019353"
+    },
+    "1996" : {
+      "Key" : "c50eac20-6699-494f-a692-57276c3c0058"
+    },
+    "1998" : {
+      "Key" : "f6b1e22f-6559-4a23-be0f-c09793ee3c7f"
+    },
+    "2000" : {
+      "Key" : "7f9eba13-be79-40cc-a359-9a9ea3dd357b"
+    },
+    "2001" : {
+      "Key" : "e538b222-263e-4d97-b14c-4aa0ebc09d8e"
+    },
+    "2002" : {
+      "Key" : "f06447c6-5619-4be9-8686-9d00fa436562"
+    },
+    "2003" : {
+      "Key" : "1752c022-ed2d-45b1-85ca-e05419d05d0f"
+    },
+    "2004" : {
+      "Key" : "bd1ae42d-6e47-4c5d-af72-e4527b6907bf"
+    },
+    "2005" : {
+      "Key" : "baebffec-a5ed-418b-91a1-f2c822c687d6"
+    },
+    "2006" : {
+      "Key" : "b71faee0-b531-420c-84fd-bbb20469f8c3"
+    },
+    "2007" : {
+      "Key" : "934c2071-84dc-4695-9288-1b72b19e6f7e"
+    },
+    "2008" : {
+      "Key" : "dd958c49-7d02-4a58-95f0-68e05126c2d7"
+    },
+    "2009" : {
+      "Key" : "91fbcf09-6f9e-467d-b662-16ce1b4f4b0e"
+    },
+    "2010" : {
+      "Key" : "a8e01d97-2a31-45b0-8efb-136ed6e94531"
+    },
+    "2011" : {
+      "Key" : "79367fc7-660a-44c5-bd42-ffae95d62a21"
+    },
+    "2012" : {
+      "Key" : "b19e9999-6446-474e-85d7-0625c3211647"
+    },
+    "2013" : {
+      "Key" : "032d15bf-925b-42ff-a0e3-0b5d4c484f11"
+    },
+    "2014" : {
+      "Key" : "44ad31e7-c53c-4664-bd48-e233b675b0da"
+    },
+    "2015" : {
+      "Key" : "470ebd6f-4b01-416f-9b16-1c409f56b40b"
+    },
+    "2016" : {
+      "Key" : "0b19b776-bd82-4611-b852-fb888e3811c8"
+    },
+    "2017" : {
+      "Key" : "a53caa2f-fbad-4655-9466-4e8419d82e54"
+    },
+    "2051" : {
+      "Key" : "ca12cd1c-7ea0-4986-8804-00e56d338516"
+    },
+    "2052" : {
+      "Key" : "6449c168-a219-4518-ae6b-634c43a21f1c"
+    },
+    "2053" : {
+      "Key" : "606507eb-7263-49b2-916e-6fce293287f5"
+    },
+    "2054" : {
+      "Key" : "2cb67e73-8bbb-4035-bdb0-441a50e1ccbb"
+    },
+    "2055" : {
+      "Key" : "c2c0b2bb-cbc2-4800-926a-6afe8db651ed"
+    },
+    "2056" : {
+      "Key" : "ac78cbee-89ff-4cf1-8208-844b36b4a6a3"
+    },
+    "2057" : {
+      "Key" : "6df5358e-6eab-48fe-adc9-b380ac9116ac"
+    },
+    "2058" : {
+      "Key" : "fd637e3e-a1b7-47bb-89fe-c0736f72e272"
+    },
+    "2059" : {
+      "Key" : "60203670-31f0-4b1e-9e14-8838da66aee5"
+    },
+    "2060" : {
+      "Key" : "c6a1a341-6f89-495c-9d31-3f420fd1daa5"
+    },
+    "2070" : {
+      "Key" : "8a1e3d2e-6045-4d84-9b79-4542a48d066b"
+    },
+    "2071" : {
+      "Key" : "c4580b52-2431-45fc-85d1-717281df96c5"
+    },
+    "2072" : {
+      "Key" : "fc17a7f8-a859-411f-8d6c-dd145e5a7df0"
+    },
+    "2073" : {
+      "Key" : "483c0cd5-cae9-49a2-8f25-86d04bb3eeba"
+    },
+    "2074" : {
+      "Key" : "67fe8964-9641-4259-b5e8-bdd2e815a71f"
+    },
+    "2075" : {
+      "Key" : "434535c4-b365-4dd4-bf54-edadd96bb973"
+    },
+    "2076" : {
+      "Key" : "995f94db-ceff-4c86-b1fc-6b4bf958dd96"
+    },
+    "2077" : {
+      "Key" : "94c4e407-8e82-4341-9ddd-4fa516f0aacd"
+    },
+    "2078" : {
+      "Key" : "38df8968-969e-4e7f-9ed2-860d3defad9c"
+    },
+    "2079" : {
+      "Key" : "3ea0242b-1a57-4629-8dfd-0187731d020b"
+    },
+    "2080" : {
+      "Key" : "8fd25a82-ca6e-4716-8598-0795342c102e"
+    },
+    "2081" : {
+      "Key" : "e3ae10a5-71f3-47d6-b001-52f57a13bd68"
+    },
+    "2083" : {
+      "Key" : "7d090964-a5b3-4838-80aa-27afee17850d"
+    },
+    "2085" : {
+      "Key" : "34775c70-5ddb-4405-b192-06fa5b27f229"
+    },
+    "2097" : {
+      "Key" : "1335647d-c81b-41e5-a2ba-d9468465fc63"
+    },
+    "2099" : {
+      "Key" : "f1fd3a23-db34-4cdf-a23d-530622c16559"
+    },
+    "2100" : {
+      "Key" : "a4b752b4-2345-4bb9-b6dd-f71321fec270"
+    },
+    "2101" : {
+      "Key" : "e7596183-2db1-4db5-91d4-d3df00b4dd14"
+    },
+    "2102" : {
+      "Key" : "dde6e10d-a1c7-44e1-8ef9-e8668f8ca388"
+    },
+    "2103" : {
+      "Key" : "52aba8a1-c103-4933-a1e6-3a89c72f1674"
+    },
+    "2104" : {
+      "Key" : "62b204d7-a899-45c3-842f-21ad589147b4"
+    },
+    "2105" : {
+      "Key" : "5a51cf65-734e-410a-9d55-55e4cef2a0ea"
+    },
+    "2106" : {
+      "Key" : "26a3e338-4951-483d-a089-ebe7b8d44c84"
+    },
+    "2107" : {
+      "Key" : "997628d5-0d49-447e-8674-ef09a047178b"
+    },
+    "2108" : {
+      "Key" : "c83bf250-1054-4dd4-bff6-52b56ef86a3a"
+    },
+    "2109" : {
+      "Key" : "92940c35-7051-4ab3-9861-81f116d8ca45"
+    },
+    "2110" : {
+      "Key" : "3f33ae15-7d79-4493-a572-56dd48cd6147"
+    },
+    "2111" : {
+      "Key" : "c5a2b7c6-c954-4510-be69-a809a0efb233"
+    },
+    "2112" : {
+      "Key" : "f3c8e96a-2479-450c-bf9b-c56a72255892"
+    }
+  },
   "Units" : {
     "1901" : {
       "DirectoryEmail" : "unknown",
@@ -1797,7 +2198,7 @@
     },
     "1948" : {
       "Owner" : "Clubhouse",
-      "RegisteredUsers" : 2,
+      "RegisteredUsers" : 3,
       "Street" : "Variations Drive"
     },
     "1949" : {
@@ -2248,12 +2649,12 @@
     },
     "2078" : {
       "Owner" : "Pam Sellman",
-      "RegisteredUsers" : 1,
+      "RegisteredUsers" : 2,
       "Street" : "Clairmeade Valley Road"
     },
     "2079" : {
       "Owner" : "Carrie Oxendine",
-      "RegisteredUsers" : 1,
+      "RegisteredUsers" : 2,
       "Street" : "Clairmeade Valley Road"
     },
     "2080" : {
@@ -2436,7 +2837,9 @@
       "imageURL" : "https://ssl.cdn-redfin.com/photo/82/mbpaddedwide/352/genMid.5662352_0.jpg"
     },
     "2011" : {
-      "Status" : "Pending",
+      "SaleDate" : 20170106,
+      "SalePrice" : 150000,
+      "Status" : "Sold",
       "Street" : "Variations Drive",
       "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFX0plN2VMMHI3X1U/view?usp=sharing",
       "imageURL" : "https://s3.amazonaws.com/photoplan-cache.planomatic.com/tourFiles/29241/photocache/1006971-830w553h.jpg"
@@ -2613,6 +3016,12 @@
       "LastName" : "Marrazzo",
       "Unit" : 1992
     },
+    "C01ZhNxkFbQtFE77P19aw5N3zq93" : {
+      "Email" : "pamsellman@bellsouth.net",
+      "FirstName" : "Pam",
+      "LastName" : "Sellman",
+      "Unit" : 2078
+    },
     "C1TbyB2CjmNLhOT06o3mc8fX4253" : {
       "FirstName" : "Emily",
       "LastName" : "Little",
@@ -2634,6 +3043,12 @@
       "FirstName" : "Sarah ",
       "LastName" : "Carpenter",
       "Unit" : 1905
+    },
+    "GDzdPFOCIoT0fEKBoEGiyoPH9No2" : {
+      "Email" : "variationscondos@gmail.com",
+      "FirstName" : "Variations",
+      "LastName" : "Condos",
+      "Unit" : 1948
     },
     "GPe9jk6FdkdAV69qExLUUvtTO413" : {
       "Email" : "saroya_atlanta@yahoo.com",
@@ -2953,6 +3368,12 @@
       "LastName" : "Richardson",
       "Unit" : 2108
     },
+    "gzUmWvQM5wV9BZIPbsvjwHwHlc93" : {
+      "Email" : "carreox@aol.com",
+      "FirstName" : "Carrie",
+      "LastName" : "Oxendine",
+      "Unit" : 2079
+    },
     "iQIURP4RZvOn0mkCi2LiCrqKlvN2" : {
       "Email" : "manchesterman8@yahoo.com",
       "FirstName" : "Harry",
@@ -3080,7 +3501,6 @@
       "Unit" : 1915
     },
     "qbyJIub4OZT96sdklHpNCKmiYDm2" : {
-      "Email" : "jwsims00@comcast.net",
       "FirstName" : "Janie",
       "LastName" : "Sims",
       "Unit" : 2111
