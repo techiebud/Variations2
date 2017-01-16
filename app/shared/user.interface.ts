@@ -6,4 +6,5 @@ export interface User {
     lastName: string;
     unit: string;
     userId: string;
+    isBetaTester: boolean;
 }

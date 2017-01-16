@@ -80,13 +80,15 @@ export class AppComponent implements OnInit {
                     user = <User>snapshot.val();                  
                     var firstName: string = snapshot.val().FirstName;
                     var lastName: string = snapshot.val().LastName;
+                    var isBetaTester: boolean = snapshot.val().isBetaTester;
                     localStorage.setItem("userProfile", JSON.stringify(user));                  
                     toastr.info("Welcome back, " + firstName + "!");
                     user.email = userSigninInfo.email;
                     user.password = userSigninInfo.password;
                     user.firstName = firstName;
                     user.lastName = lastName;
-                    self._authService.userForumToken = AppHelpers.logIntoForum(user, self._dataService.generalInformation.ForumAPIUrl, self._dataService.generalInformation.ForumAPIKey);                 
+                    user.isBetaTester = isBetaTester;
+                    self._authService.userForumToken = AppHelpers.logIntoForum(user, self._dataService.generalInformation.ForumAPIUrl, self._dataService.generalInformation.ForumAPIKey, self._dataService.generalInformation.SecurityKey);                 
                 });
                 AppHelpers.prepMenuElements();
                 self._router.navigate(['announcements'])

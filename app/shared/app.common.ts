@@ -56,38 +56,49 @@ export class AppHelpers {
 
     }
 
-    public static logIntoForum(user: User, forumAPIUrl: string, forumAPIKey: string): string {
+    public static logIntoForum(user: User, forumAPIUrl: string, forumAPIKey: string, securityKey: string = ""): string {
         console.log("logIntoForum");
         console.log("user: " + user);
         var authToken: string = "";
 
-        if (user.email != "techiebud@gmail.com")
-        {
-            return authToken;
+      
+        if (user.isBetaTester) {
+            toastr.warning("testing forum");
         }
-        toastr.warning("testing forum");
-        var thisUser = user.firstName + " " + user.lastName;      
-        var url = `${forumAPIUrl}?apiKey=${forumAPIKey}&user=${thisUser}&email=${user.email}&pw=${user.password}`;
-   //   toastr.info("url: " + url);
 
-        
+        var thisUser = user.firstName + " " + user.lastName;     
+       // let pwdSecure: any = CryptoJS.AES.encrypt(user.password, securityKey);      
+        var key = CryptoJS.enc.Utf8.parse(securityKey);
+        var iv = CryptoJS.enc.Utf8.parse('8080808080808080');
+
+        let pwdSecure = CryptoJS.AES.encrypt(CryptoJS.enc.Utf8.parse(user.password), key,
+            {
+                keySize: 128 / 8,
+                iv: iv,
+                mode: CryptoJS.mode.CBC,
+                padding: CryptoJS.pad.Pkcs7
+            });
+       // forumAPIUrl = "http://localhost:2111/api/Forum/key";  //TODO:  Comment out.
+        var url = `${forumAPIUrl}?apiKey=${forumAPIKey}&user=${thisUser}&email=${user.email}&pw=${pwdSecure}&remember=0`;
+        //   toastr.info("url: " + url);
+
         $.ajax({
             url: url,
             type: 'GET',
             async: false,
             dataType: "json",
-            success: function (data) {                
+            success: function (data) {
                 var authData = JSON.parse(data);
                 console.log("authToken=" + authData.authtoken);
-                authToken = authData.authtoken;         
-                
+                authToken = authData.authtoken;
+
             },
 
             error: function (xhr, ajaxOptions, thrownError) {
                 toastr.error(thrownError);
                 console.log(xhr.status);
                 console.log(thrownError);
-               
+
             },
 
         });
