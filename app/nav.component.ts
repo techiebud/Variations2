@@ -16,9 +16,8 @@ export class NavComponent implements OnInit, AfterViewInit {
 
     }
 
-    showDiscussionBoard() : boolean {
-        toastr.info("showDiscussiongBoard");
-         let event = new MouseEvent('click', {bubbles: false});
+    showDiscussionBoard() : boolean {   
+        let event = new MouseEvent('click', {bubbles: false});
         this._renderer.invokeElementMethod(
         this.discussionBoard.nativeElement, 'dispatchEvent', [event]);
         return false;
