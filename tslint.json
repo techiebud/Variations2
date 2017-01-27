@@ -2,8 +2,7 @@
   "rules": {
     "align": [
       true,
-      "parameters",
-      "arguments",
+      "parameters",    
       "statements"
     ],
     "ban": false,
@@ -28,7 +27,7 @@
       true,
       140
     ],
-    "member-access": true,
+    "member-access": false,
     "member-no-default-access": false,
     "member-ordering": [
       true,
@@ -73,8 +72,7 @@
     "object-literal-sort-keys": true,
     "one-line": [
       true,
-      "check-open-brace",
-      "check-catch",
+      "check-open-brace",     
       "check-else",
       "check-finally",
       "check-whitespace"

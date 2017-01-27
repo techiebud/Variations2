@@ -1,22 +1,19 @@
-import {Injectable, EventEmitter} from "@angular/core";
-import {User} from "./user.interface";
-import {AppHelpers} from "./app.common";
-import {AppSettings}  from "./app.common";
-import {FirebaseService} from "./firebase.service";
-import {GeneralInformation} from "./general-information.interface";
-import {Management} from "./management.interface";
-import {Resident} from  "./resident.interface";
+import { Injectable, EventEmitter } from "@angular/core";
+import { User } from "./user.interface";
+import { AppHelpers } from "./app.common";
+import { FirebaseService } from "./firebase.service";
+import { GeneralInformation } from "./general-information.interface";
+import { Management } from "./management.interface";
+import { Resident } from "./resident.interface";
 
 
 
 @Injectable()
 export class DataService {
-    supportsLocalStorage: boolean = false;
-    generalInformation: GeneralInformation;
-    management:  Management;
-    residents: Resident;
-   
-
+    public supportsLocalStorage: boolean = false;
+    public generalInformation: GeneralInformation;
+    public management: Management;
+    public residents: Resident;
 
     private _userProfileUpdated = new EventEmitter<any>();
     private _allUnitsLoaded = new EventEmitter<any>();
@@ -30,9 +27,9 @@ export class DataService {
         this.getResidents();
         localStorage.removeItem("UserEmails");
         localStorage.removeItem("UserEmails2");
-      /*  this.getAllUsersEmail();
-        this.getAllUsersEmail2();*/
-       // this.get();
+        /*  this.getAllUsersEmail();
+         this.getAllUsersEmail2();*/
+        // this.get();
     }
     private hasLocalStorage(): boolean {
 
@@ -40,17 +37,19 @@ export class DataService {
         var result = false;
         try {
             localStorage.setItem("uid", uid);
-            result = localStorage.getItem("uid") == uid;
+            result = localStorage.getItem("uid") === uid;
             localStorage.removeItem(uid);
             return result;
             //  return (result && <any>localStorage);
         } catch (exception) { }
     }
 
-    getAnnouncements(): void {
+    // tslint:disable-next-line:member-access
+    // tslint:disable-next-line:member-ordering
+    public getAnnouncements(): void {
         let fbTable = "Announcements";
         let databaseRef = firebase.database().ref(fbTable).orderByKey();
-        databaseRef.once('value',
+        databaseRef.once("value",
             (snapshot) => {
                 let returnedData = snapshot.val();
                 localStorage.setItem(fbTable, JSON.stringify(returnedData));
@@ -62,14 +61,16 @@ export class DataService {
             });
     }
 
+    // tslint:disable-next-line:member-access
     getBoardMembers(): void {
         let fbTable = "BoardMembers";
         let databaseRef = firebase.database().ref(fbTable);
-        databaseRef.once('value',
+        databaseRef.once("value",
             (snapshot) => {
                 let returnedData = snapshot.val();
                 localStorage.setItem(fbTable, JSON.stringify(returnedData));
             },
+            // tslint:disable-next-line:typedef
             (error) => {
                 localStorage.setItem(fbTable, "error");
                 console.error(error);
@@ -77,16 +78,15 @@ export class DataService {
             });
     }
 
-      getResidents(): void {
+    getResidents(): void {
         let fbTable = "Residents";
         let databaseRef = firebase.database().ref(fbTable);
-        databaseRef.once('value',
+        databaseRef.once("value",
             (snapshot) => {
                 let returnedData = snapshot.val();
-                this.residents = returnedData;            
+                this.residents = returnedData;
             },
             (error) => {
-                
                 console.error(error);
                 toastr.error(error.message);
             });
@@ -95,33 +95,30 @@ export class DataService {
     getGeneralInformation(): void {
         let fbTable = "GeneralInformation";
         let databaseRef = firebase.database().ref(fbTable);
-        databaseRef.once('value',
+        databaseRef.once("value",
             (snapshot) => {
                 let returnedData = snapshot.val();
                 this.generalInformation = returnedData;
-              //  console.debug(this.generalInformation.SecurityKey);
-               // localStorage.setItem(fbTable, JSON.stringify(returnedData));
+                //  console.debug(this.generalInformation.SecurityKey);
+                // localStorage.setItem(fbTable, JSON.stringify(returnedData));
             },
             (error) => {
-              //  localStorage.setItem(fbTable, "error");
+                //  localStorage.setItem(fbTable, "error");
                 console.error(error);
                 toastr.error(error.message);
             });
     }
 
-     getManagement(): void {
+    getManagement(): void {
         try {
-     
-            firebase.database().ref('/Management').once('value')
-                .then((snapshot) => {            
-                  let returnedData = snapshot.val();
-                  this.management = returnedData;
-
+            firebase.database().ref("/Management").once("value")
+                .then((snapshot) => {
+                    let returnedData = snapshot.val();
+                    this.management = returnedData;
                 })
                 .catch((error) => {
                     toastr.error(error.message);
-                  
-                })
+                });
         }
         catch (ex) {
             toastr.error(ex);
@@ -130,11 +127,11 @@ export class DataService {
 
 
     getUnitsForSale(): void {
-        let fbTable = "UnitsForSale";
-        let databaseRef = firebase.database().ref(fbTable);
-        databaseRef.once('value',
+        let fbTable: string = "UnitsForSale";
+        let databaseRef: any = firebase.database().ref(fbTable);
+        databaseRef.once("value",
             (snapshot) => {
-                let returnedData = snapshot.val();
+                let returnedData: any = snapshot.val();
                 localStorage.setItem(fbTable, JSON.stringify(returnedData));
             },
             (error) => {
@@ -144,17 +141,18 @@ export class DataService {
             });
     }
 
+    // tslint:disable-next-line:member-access
     updateUserProfile(updatedUser: User, originalUser: User) {
         AppHelpers.BlockUI();
         firebase.database().ref("Users/" + firebase.auth().currentUser.uid).set({
             FirstName: updatedUser.firstName,
             LastName: updatedUser.lastName,
-            Unit: updatedUser.unit
+            Unit: updatedUser.unit,
         })
             .then(() => {
                 AppHelpers.UnblockUI();
                 localStorage.setItem("userProfile", JSON.stringify(updatedUser));
-                if (updatedUser.unit != originalUser.unit) {
+                if (updatedUser.unit !== originalUser.unit) {
                     var allUnits: any = JSON.parse(localStorage.getItem("allUnits"));
                     var updates = {};
                     updates["/Units/" + updatedUser.unit + "/RegisteredUsers"] = +(allUnits[updatedUser.unit].RegisteredUsers) + 1;
@@ -163,103 +161,112 @@ export class DataService {
                 }
                 this._userProfileUpdated.emit(true);
             })
-            .catch((error) => {
+            .catch((error:any) => {
                 AppHelpers.UnblockUI();
                 toastr.error(error);
             })
-    }  //updateUserProfile
+    }  // updateUserProfile
 
+    // tslint:disable-next-line:member-access
     getAllUnits(): void {
         try {
             // this.getAllUsersEmail();
             localStorage.removeItem("allUnits");
-            firebase.database().ref('/Units').once('value')
+            firebase.database().ref("/Units").once("value")
                 .then((snapshot) => {
-                
-                    let allUnits: any = snapshot.val();
-                   // debugger;
-                    // let allUnregisteredUnits: string = "";
-                    // let unregisteredUnits = 0;
-                    // let registeredUnits = 0;
-                    // for (var _unit in allUnits) {
-                    //     var thisUnit = allUnits[_unit];
-                    //     if (thisUnit.RegisteredUsers == 0)
-                    //     {
-                    //         unregisteredUnits++;
-                    //         allUnregisteredUnits += _unit + "," + thisUnit.Owner + "~cr";
 
-                    //     }   
-                    //     else {
-                    //         registeredUnits++;
-                    //     }                 
-                    // }
-                    
-                    localStorage.setItem('allUnits', JSON.stringify(allUnits));
+                    let allUnits: any = snapshot.val();
+                    debugger;
+                    let allUnregisteredUnits: string = "";
+                    let unregisteredUnits = 0;
+                    let registeredUnits = 0;
+                    for (var _unit in allUnits) {
+                        var thisUnit = allUnits[_unit];
+                        if (thisUnit.RegisteredUsers == 0)
+                        {
+                            unregisteredUnits++;
+                            allUnregisteredUnits += _unit + "," + thisUnit.Owner + "~cr";
+
+                        }
+                        else {
+                            registeredUnits++;
+                        }
+                    }
+
+                    localStorage.setItem("allUnits", JSON.stringify(allUnits));
                     this._allUnitsLoaded.emit(true);
                 })
-                .catch((error) => {
+                .catch((error: any) => {
                     toastr.error(error.message);
                     this._allUnitsLoaded.emit(true);
                 })
         }
+        // tslint:disable-next-line:one-line
         catch (ex) {
             this._allUnitsLoaded.emit(true);
         }
     }
 
-     
 
 
+
+    // tslint:disable-next-line:member-access
     getAllUsersEmail(): void {
 
-        
+
         try {
             localStorage.removeItem("UserEmails");
-            firebase.database().ref('/Users').once('value')
+            firebase.database().ref("/Users").once("value")
                 .then((snapshot) => {
-               
+
                     let allUsers: any = snapshot.val();
                     let allUserEmails: string = "";
-                    for (var user in allUsers) {
+                    // tslint:disable-next-line:forin
+                    for (let user in allUsers) {
                         allUserEmails += allUsers[user].Email + ";";
-                    
+
                     }
-                  
-                    localStorage.setItem('UserEmails', allUserEmails);
-                  
+
+                    localStorage.setItem("UserEmails", allUserEmails);
+                    console.log("registered users");
+                    console.log(allUserEmails);
+
                 })
                 .catch((error) => {
                     console.error(error);
-                  
+
                 })
         }
+        // tslint:disable-next-line:one-line
         catch (ex) {
             console.error(ex);
         }
     }
 
-     getAllUsersEmail2(): void {
+    // tslint:disable-next-line:member-access
+    getAllUsersEmail2(): void {
 
-        
+
         try {
             localStorage.removeItem("UserEmails2");
-            firebase.database().ref('/Residents').once('value')
+            firebase.database().ref("/Residents").once("value")
                 .then((snapshot) => {
-               
+
                     let allUsers: any = snapshot.val();
                     let allUserEmails: string = "";
-                    for (var user in allUsers) {
+                    // tslint:disable-next-line:forin
+                    for (let user in allUsers) {
                         allUserEmails += allUsers[user].Email + ";";
-                    
                     }
-                  
-                    localStorage.setItem('UserEmails2', allUserEmails);
-                  
+                    localStorage.setItem("UserEmails2", allUserEmails);
+                    console.log("directory users");
+                    console.log(allUserEmails);
+
                 })
                 .catch((error) => {
                     console.error(error);
-                  
-                })
+
+                });
         }
         catch (ex) {
             console.error(ex);
