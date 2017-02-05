@@ -33,14 +33,15 @@ export class DataService {
     }
     private hasLocalStorage(): boolean {
 
-        var uid = "testingStorage";
-        var result = false;
+        let uid = "testingStorage";
+        let result = false;
         try {
             localStorage.setItem("uid", uid);
             result = localStorage.getItem("uid") === uid;
             localStorage.removeItem(uid);
             return result;
             //  return (result && <any>localStorage);
+        // tslint:disable-next-line:no-empty
         } catch (exception) { }
     }
 
@@ -153,15 +154,15 @@ export class DataService {
                 AppHelpers.UnblockUI();
                 localStorage.setItem("userProfile", JSON.stringify(updatedUser));
                 if (updatedUser.unit !== originalUser.unit) {
-                    var allUnits: any = JSON.parse(localStorage.getItem("allUnits"));
-                    var updates = {};
+                    let allUnits: any = JSON.parse(localStorage.getItem("allUnits"));
+                    let updates = {};
                     updates["/Units/" + updatedUser.unit + "/RegisteredUsers"] = +(allUnits[updatedUser.unit].RegisteredUsers) + 1;
                     updates["/Units/" + originalUser.unit + "/RegisteredUsers"] = +(allUnits[originalUser.unit].RegisteredUsers) - 1;
                     firebase.database().ref().update(updates);
                 }
                 this._userProfileUpdated.emit(true);
             })
-            .catch((error:any) => {
+            .catch((error: any) => {
                 AppHelpers.UnblockUI();
                 toastr.error(error);
             })
@@ -180,14 +181,17 @@ export class DataService {
                     let allUnregisteredUnits: string = "";
                     let unregisteredUnits = 0;
                     let registeredUnits = 0;
-                    for (var _unit in allUnits) {
-                        var thisUnit = allUnits[_unit];
-                        if (thisUnit.RegisteredUsers == 0)
+                    // tslint:disable-next-line:forin
+                    for (let _unit in allUnits) {
+                        let thisUnit = allUnits[_unit];
+                        if (thisUnit.RegisteredUsers === 0)
+                        // tslint:disable-next-line:one-line
                         {
                             unregisteredUnits++;
                             allUnregisteredUnits += _unit + "," + thisUnit.Owner + "~cr";
 
                         }
+                        // tslint:disable-next-line:one-line
                         else {
                             registeredUnits++;
                         }
@@ -206,9 +210,6 @@ export class DataService {
             this._allUnitsLoaded.emit(true);
         }
     }
-
-
-
 
     // tslint:disable-next-line:member-access
     getAllUsersEmail(): void {
