@@ -1,1 +1,24 @@
-1904,Pamela M. Rojas Fonseca~cr1907,Thomas Brooks~cr1910,Carl Dowling~cr1916,Steve Hayter~cr1922,Hoai Trinh~cr1923,Brendal Maclin~cr1924,Brannon Schenelle~cr1930,Justin Boykin~cr1933,LaRhonda Minor~cr1936,Nichole and Jarvis Jackson~cr1949,M.C. Moore~cr1958,Janice Erskine~cr1963,Simon Strauss and Edward Poole~cr1971,Scooter Lee~cr1975,James Woolley~cr1976,Todd Hofer~cr1977,Eugene Chan~cr1978,Donald Leathers~cr1996,John Naughton~cr2009,Page Griffin~cr2012,Susan Daves~cr2013,Stephen Smiley~cr2077,Jordan Lisvosky~cr2080,Charity Teamer~cr2100,Deborah Reed~cr2101,Bill Farmer~cr"
+1904,Pamela M. Rojas Fonseca
+1910,Carl Dowling
+1916,Steve Hayter
+1922,Hoai Trinh
+1923,Brendal Maclin
+1924,Brannon Schenelle
+1930,Justin Boykin
+1933,LaRhonda Minor
+1936,Nichole and Jarvis Jackson
+1949,M.C. Moore
+1958,Janice Erskine
+1963,Simon Strauss and Edward Poole
+1971,Scooter Lee
+1975,James Woolley
+1976,Todd Hofer
+1977,Eugene Chan
+1978,Donald Leathers
+1996,John Naughton
+2009,Page Griffin
+2012,Susan Daves
+2013,Stephen Smiley
+2077,Jordan Lisvosky
+2080,Charity Teamer
+2100,Deborah Reed
