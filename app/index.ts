@@ -24,3 +24,4 @@ export * from "./change-password.component";
 export * from "./discussion.component";
 export * from "./general-information.component";
 export * from "./resident-search.component";
+export * from "./pdf-viewer.component";

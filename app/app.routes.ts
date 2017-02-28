@@ -15,6 +15,7 @@ import {
     ForsaleComponent,
     GeneralInformationComponent,
     HomeComponent,
+    PdfViewerComponent,
     PicturesComponent,
     ResetPasswordComponent,
     ResidentSearchComponent,
@@ -54,7 +55,8 @@ const APP_ROUTES: Routes = [
     { path: "changePassword", component: ChangePasswordComponent, canActivate: [AuthGuard] },
     { path: "discussion",component: DiscussionComponent, canActivate: [AuthGuard] },
     { path: "residentSearch",component: ResidentSearchComponent, canActivate: [AuthGuard] },
-    { path: "generalInformation",component: GeneralInformationComponent, canActivate: [AuthGuard] }
+    { path: "generalInformation",component: GeneralInformationComponent, canActivate: [AuthGuard] },
+    { path: "pdfViewer/:id",component: PdfViewerComponent, canActivate: [AuthGuard] }
 ];
 
 export const routing = RouterModule.forRoot(APP_ROUTES);
@@ -64,5 +66,5 @@ export const routedComponents = [AboutComponent, AnnouncementsComponent, Ameniti
                                  FeaturesComponent,ForsaleComponent, HomeComponent, PicturesComponent, ServicesComponent, SigninComponent, SignoutComponent, SignupComponent, UnderConstructionComponent,
                                  // tslint:disable-next-line:max-line-length
                                  ResetPasswordComponent, ForgotPasswordComponent, AccountProfileComponent, ChangeEmailComponent, ChangePasswordComponent, DiscussionComponent,
-                                 GeneralInformationComponent, ResidentSearchComponent];
+                                 GeneralInformationComponent, ResidentSearchComponent, PdfViewerComponent];
 

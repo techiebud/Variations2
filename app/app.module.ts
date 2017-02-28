@@ -1,19 +1,18 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
-import { FormBuilder, ReactiveFormsModule} from "@angular/forms";
-
+import {FooterComponent, NavComponent} from "./index";
+import { FormBuilder, ReactiveFormsModule } from "@angular/forms";
+import { routedComponents, routing } from "./app.routes";
 
 import {AppComponent} from "./app.component";
-import {FooterComponent,NavComponent} from "./index";
-import {AuthService} from "./shared/auth.service";
 import {AuthGuard} from "./shared/auth.guard";
+import {AuthService} from "./shared/auth.service";
+import { BrowserModule } from "@angular/platform-browser";
+import {CookieService} from "angular2-cookie/core";
 import {DataService} from "./shared/data.service";
-import {FirebaseService} from "./shared/firebase.service";  
-import {CookieService} from 'angular2-cookie/core';
-import { routing, routedComponents } from './app.routes';
-                                                              
-                     
+import {FirebaseService} from "./shared/firebase.service";
+import { HttpModule } from "@angular/http";
+import { NgModule } from "@angular/core";
+import { PdfViewerComponent } from "ng2-pdf-viewer";
+
 @NgModule({
   imports: [
     BrowserModule, 
@@ -21,11 +20,13 @@ import { routing, routedComponents } from './app.routes';
     HttpModule, 
     routing
   ],
+  // tslint:disable-next-line:object-literal-sort-keys
   declarations: [
-    AppComponent, 
-     FooterComponent, 
+     AppComponent,
+     FooterComponent,
      NavComponent,
-     routedComponents      
+     routedComponents,
+     PdfViewerComponent,
    ],
   providers: [FirebaseService, AuthService, DataService, CookieService, AuthGuard, FormBuilder  ],
   bootstrap: [AppComponent]

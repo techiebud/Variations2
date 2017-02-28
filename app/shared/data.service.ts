@@ -1,12 +1,11 @@
-import { Injectable, EventEmitter } from "@angular/core";
-import { User } from "./user.interface";
+import { EventEmitter, Injectable } from "@angular/core";
+
 import { AppHelpers } from "./app.common";
 import { FirebaseService } from "./firebase.service";
 import { GeneralInformation } from "./general-information.interface";
 import { Management } from "./management.interface";
 import { Resident } from "./resident.interface";
-
-
+import { User } from "./user.interface";
 
 @Injectable()
 export class DataService {
@@ -177,7 +176,7 @@ export class DataService {
                 .then((snapshot) => {
 
                     let allUnits: any = snapshot.val();
-                    debugger;
+                 //   debugger;
                     let allUnregisteredUnits: string = "";
                     let unregisteredUnits = 0;
                     let registeredUnits = 0;

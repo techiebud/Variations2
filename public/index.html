@@ -17,36 +17,38 @@
     <!-- Styles and CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" type="text/css" />
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" type="text/css" href="css/vendor/jquery.countdown.css" />
-    <link rel="stylesheet" type="text/css" href="css/site.css" />
-    <!-- our customized CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" type="text/css" />
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.css" type="text/css"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" type="text/css" href="css/vendor/jquery.countdown.css" />
+        <link rel="stylesheet" type="text/css" href="css/site.css" />
+        <!-- our customized CSS -->
 
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet'
-        type='text/css' />
-    <!--<link rel="stylesheet" href="css/compiled/index.css" type="text/css" media="screen" />-->
-    <!-- IE required polyfills, in this exact order -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>     
-  <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script> 
+        <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet'
+            type='text/css' />
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.2/toastr.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.js"></script>
-    <script src="https://platform.twitter.com/widgets.js "></script>
-    <script src="js/vendor/jquery.blockUI.js"></script>
-    <script src="js/vendor/md5.js"></script>
-    <script src="js/vendor/aes.js"></script>
-    <script src="js/vendor/wow.min.js"></script>
-     
 
-    <script src="app.bundle.js"></script>
+        <!-- non node_modules scripts not packaged for Production -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.2/toastr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.js"></script>
+        <script src="https://platform.twitter.com/widgets.js "></script>
+        <script src="js/vendor/jquery.blockUI.js"></script>
+        <script src="js/vendor/md5.js"></script>
+        <script src="js/vendor/aes.js"></script>
+        <script src="js/vendor/wow.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.5/mobile-detect.min.js"></script>
+        <!-- main app script - includes dependency node modules -->
+
+            <script src="app.bundle.js"></script>
 </head>
 
 <body class="pull_top">
@@ -62,31 +64,35 @@
     </var-main>
 
     <script>
-     $(document).ready(function ($) {
+        $(document).ready(function ($) {
 
-            $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {            
+            $(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) {
                 event.preventDefault();
                 $(this).ekkoLightbox();
-            }); 
-           
-           $(document).delegate("a.pop", "click", function(event) {         
+            });
+
+            $(document).delegate("a.pop", "click", function (event) {
                 event.preventDefault();
                 $('.imagepreview').attr('src', $(this).find('img').attr('src'));
                 $('#imagemodal').modal('show');
                 return false;
-           });        
-        
-        });
-        </script>
+            });
 
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new
-    Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-79830812-1', 'auto'); ga('send', 'pageview');
+        });
     </script>
 
-    <noscript>For full functionality of this page it is necessary to enable JavaScript. Here are the <a href="http://www.enable-javascript.com"
-            target="_blank"> instructions how to enable JavaScript in your web browser</a></noscript>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new
+            Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-79830812-1', 'auto'); ga('send', 'pageview');
+    </script>
+
+    <noscript>For full functionality of this page it is necessary to enable JavaScript. Here are the
+        <a href="http://www.enable-javascript.com"
+            target="_blank"> instructions how to enable JavaScript in your web browser</a>
+    </noscript>
 </body>
 
 </html>
