@@ -1,8 +1,9 @@
 import {Component, OnInit} from "@angular/core";
-import {Unit} from "./shared/unit.interface";
+
 import {AppHelpers} from "./shared/app.common";
-import {DataService} from "./shared/data.service";
 import {AuthService} from "./shared/auth.service";
+import {DataService} from "./shared/data.service";
+import {Unit} from "./shared/unit.interface";
 
 const DATA_TABLE: string = "UnitsForSale";
 
@@ -93,9 +94,9 @@ export class ForsaleComponent implements OnInit {
         }  //for loop
         if (this.unitsSold.length > 1) {
             this.unitsSold.sort((a: Unit, b: Unit): number => {
-                 
+
                 return (Date.parse(b.SaleDate.toString()) - Date.parse(a.SaleDate.toString()));
-               
+
             })
         }
 
