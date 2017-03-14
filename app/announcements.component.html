@@ -3,60 +3,59 @@
 	<div class="jumbotron">
 		<h1><span><i class="fa fa-bullhorn wow shake" aria-hidden="true"></i></span><span> Announcements</span></h1>
 		<p>Here are all the latest news and happenings going on in and around the community.</p>
-		<!--<h3 id="special-announcement">Special Announcement</h3>
-		<div class="h4 olympic-info">
-			<span class="lead special-announcement">Voting Results from the December 12<sup>th</sup>, 2016 Annual HOA Meeting:</span>
-		       <br>
-			   <br>
-			<div class="announcement-list-items">
+		<h3 id="special-announcement">Special Announcement</h3>
+		<div class="h4 board-meeting-changes">
+			<span class="lead special-announcement bg-warning">Board Meeting Changes</span>
+						<div class="announcement-list-items" style="font-size: smaller">
 
 					<ul class="list-group hilites-2017">
-						<li>The <a href="https://drive.google.com/file/d/0B0XxZGmv5AeFVy15b19GY1lwajA/view?usp=sharing" target="_blank">2017 Budget</a> was accepted.
-						<li>Three new board members were elected for two year terms - Bobby Ballinger, Susie Hawkins and Brett Kube.					
-					    <li>The HOA Amendment did not pass because of less than 2/3 of homeowners voting. 60 votes were cast: 48 yes and 12 no. The Amendment will be considered again by the 2017 HOA Board.</li>
+						<li><strong><em>New Starting Time: </em></strong><div>The monthly Variations Board Meeting will now begin at 6:30PM starting with this month's meeting on Monday, March 20<sup>th</sup>, 2017 held at the Clubhouse.</div>					
+						<li><strong><em>New Format:</em></strong>
+							<ul>
+								<li>6:30PM to 6:45PM - Homeowners will have 3 minutes each to share constructive information and concerns with the Board. 
+					    		<li>6:45PM to 8:00PM - The Board will conduct the monthly meeting. 
+									<div><em>Note: </em>There will be no comments allowed during this time of the meeting or at the close of the meeting. Please be on time and prepared to speak. The first five will have 3 minutes each. </div>
+									<li>8:00PM - Executive Session
+									</ul>										  
 					</ul>
+					<span class="well">If more than 5 people wish to speak, please make an appointment with a Board member or use the new <a href="https://forum.variationscondos.com" target="_blank">Discussion Board</a></span>
 					</div>
+					<br>
 			
-	
+			
 
-		<div class="special-thanks well"> 
-				Many, many thanks and appreciation to <strong>George Bahakel</strong> and <strong>Donna Gibbas</strong> for valiant work, long service and many hours of volunteerism for our community!
-				</div>
-
-					</div>-->
-
-	</div>
-
-
-	<div *ngIf="isLoading && !isError">
-		<i class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>Loading announcements......
-	</div>
-
-	<div class="row contents">
-
-		<div *ngIf="!isLoading" class="row panel panel-info col-md-8">
-			<h3 id="CommunityAnnouncements" class="panel-heading">Community Announcements</h3>
-
-
-			<table class="table table-striped" *ngIf="!isLoading">
-				<thead>
-					<th>Date</th>
-					<th>Announcement (click to read more)</th>
-				</thead>
-				<tbody>
-					<tr *ngFor="let announcement of announcements">
-						<td>{{announcement.Date | date:'shortDate'}}</td>
-						<td><a href="{{announcement.URL}}" target="_blank">{{announcement.Title}}</a></td>
-					</tr>
-				</tbody>
-			</table>
 		</div>
-		<div class="col-md-4">
-			<a class="twitter-timeline" href="https://twitter.com/variationscondo" data-widget-id="739549714450919425" data-chrome="nofooter">Tweets by @variationscondo</a>
+
+
+		<div *ngIf="isLoading && !isError">
+			<i class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>Loading announcements......
 		</div>
+
+		<div class="row contents">
+
+			<div *ngIf="!isLoading" class="row panel panel-info col-md-8">
+				<h3 id="CommunityAnnouncements" class="panel-heading">Community Announcements</h3>
+
+
+				<table class="table table-striped" *ngIf="!isLoading">
+					<thead>
+						<th>Date</th>
+						<th>Announcement (click to read more)</th>
+					</thead>
+					<tbody>
+						<tr *ngFor="let announcement of announcements">
+							<td>{{announcement.Date | date:'shortDate'}}</td>
+							<td><a href="{{announcement.URL}}" target="_blank">{{announcement.Title}}</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-4">
+				<a class="twitter-timeline" href="https://twitter.com/variationscondo" data-widget-id="739549714450919425" data-chrome="nofooter">Tweets by @variationscondo</a>
+			</div>
+		</div>
+
+
+
+
 	</div>
-
-
-
-
-</div>
