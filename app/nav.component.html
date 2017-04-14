@@ -34,7 +34,8 @@
                                     <li><a href="https://drive.google.com/open?id=0B0XxZGmv5AeFTTFxWjNpYkU4X0E" target="_blank">Financials</a></li>
                                     <li><a href="https://drive.google.com/open?id=0B0XxZGmv5AeFNHFqSmYwdE1hYkE" target="_blank">Board Meetings</a></li>
                                     <li class="nav-divider"></li> 
-                                    <li><a href="https://techiebud.me/monthlycrimereport" target="_blank">Monthly Crime Map</a></li>
+                                    <li [hidden]="!false"><a id="monthly-crime-map" #monthlyCrimeMap href="{{crimeMapURL()}}" target="_blank">Monthly Crime Map</a></li>
+                                    <li><a (click)="showMonthlyCrimeMap()" href="#">Monthly Crime Map</a></li>
                                 </ul>
                             </li>
 

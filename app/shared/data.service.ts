@@ -99,7 +99,7 @@ export class DataService {
             (snapshot) => {
                 let returnedData = snapshot.val();
                 this.generalInformation = returnedData;
-                //  console.debug(this.generalInformation.SecurityKey);
+                 console.debug(this.generalInformation);
                 // localStorage.setItem(fbTable, JSON.stringify(returnedData));
             },
             (error) => {

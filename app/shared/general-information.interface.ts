@@ -4,4 +4,5 @@ export interface GeneralInformation {
     TennisCourtAccessCode: string; 
     ForumAPIKey: string;
     ForumAPIUrl: string;
+    CrimeMapURL: string;
 }
