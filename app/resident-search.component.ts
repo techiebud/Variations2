@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { Resident } from "./shared/resident.interface";
+
 import { DataService } from "./shared/data.service";
+import { Resident } from "./shared/resident.interface";
+
 declare var $: any;
 
 @Component({
@@ -20,9 +22,10 @@ export class ResidentSearchComponent implements OnInit {
 
     ngOnInit() {
         var residentData = this.residents;
-        $('#residentSearchTable').DataTable({
+        var residentSearchTable = $('#residentSearchTable').DataTable({         
             data: residentData,
-            lengthMenu: [ [10,25, 50, -1], [10, 25, 50, "All"] ],       
+            lengthMenu: [ [10,25, 50, -1], [10, 25, 50, "All"] ],
+            rowId: 'Email',
             columns: [
                 { data: "LastName", title: "Last Name" },
                 { data: "FirstName", title: "First Name" },
@@ -53,6 +56,10 @@ export class ResidentSearchComponent implements OnInit {
                 $("input[type='search']").focus();
 
             }
+        });
+
+        residentSearchTable.on("xhr.dt", (e, settings, json) => {
+            console.info(json);
         });
 
 

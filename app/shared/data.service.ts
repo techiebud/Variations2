@@ -85,6 +85,7 @@ export class DataService {
             (snapshot) => {
                 let returnedData = snapshot.val();
                 this.residents = returnedData;
+                console.log(this.residents);
             },
             (error) => {
                 console.error(error);
@@ -99,7 +100,7 @@ export class DataService {
             (snapshot) => {
                 let returnedData = snapshot.val();
                 this.generalInformation = returnedData;
-                 console.debug(this.generalInformation);
+             //    console.debug(this.generalInformation);
                 // localStorage.setItem(fbTable, JSON.stringify(returnedData));
             },
             (error) => {
