@@ -5,4 +5,6 @@ export interface GeneralInformation {
     ForumAPIKey: string;
     ForumAPIUrl: string;
     CrimeMapURL: string;
+    ReserveBalance: number;
+    ReserveBalanceAsOf: string;
 }

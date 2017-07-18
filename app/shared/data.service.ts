@@ -93,14 +93,15 @@ export class DataService {
             });
     }
 
-    getGeneralInformation(): void {
+    getGeneralInformation(): void {     
         let fbTable = "GeneralInformation";
         let databaseRef = firebase.database().ref(fbTable);
         databaseRef.once("value",
             (snapshot) => {
                 let returnedData = snapshot.val();
                 this.generalInformation = returnedData;
-             //    console.debug(this.generalInformation);
+                // tslint:disable-next-line:no-console
+                //console.debug(this.generalInformation);
                 // localStorage.setItem(fbTable, JSON.stringify(returnedData));
             },
             (error) => {
