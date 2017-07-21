@@ -26,8 +26,8 @@ export class DataService {
         this.getResidents();
         localStorage.removeItem("UserEmails");
         localStorage.removeItem("UserEmails2");
-        /*  this.getAllUsersEmail();
-         this.getAllUsersEmail2();*/
+        //this.getAllUsersEmail(); 
+        // this.getAllUsersEmail2();  
         // this.get();
     }
     private hasLocalStorage(): boolean {
@@ -225,7 +225,7 @@ export class DataService {
                     let allUserEmails: string = "";
                     // tslint:disable-next-line:forin
                     for (let user in allUsers) {
-                        allUserEmails += allUsers[user].Email + ";";
+                        allUserEmails += allUsers[user].Unit + "," + allUsers[user].Email + ";"; 
 
                     }
 
@@ -258,7 +258,7 @@ export class DataService {
                     let allUserEmails: string = "";
                     // tslint:disable-next-line:forin
                     for (let user in allUsers) {
-                        allUserEmails += allUsers[user].Email + ";";
+                        allUserEmails += allUsers[user].Unit + "," + allUsers[user].Email + ";";
                     }
                     localStorage.setItem("UserEmails2", allUserEmails);
                     console.log("directory users");
