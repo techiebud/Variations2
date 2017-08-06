@@ -1,0 +1,45 @@
+{
+  "Architect Chairman" : {
+    "Address" : "2078 Clairmeade Valley Rd",
+    "DisplayOrder" : 5,
+    "Email" : "variationsarchitectural@gmail.com",
+    "Name" : "Pam Sellman",
+    "Phone" : "(770) 310-3778"
+  },
+  "Community Manager" : {
+    "DisplayOrder" : 6,
+    "Email" : "elittle@condominiumconcepts.com",
+    "Name" : "Emily Little",
+    "Phone" : "(404) 917-0600 ext 250",
+    "URL" : "http://www.condominiumconcepts.com/",
+    "URLCaption" : "Condominium Concepts Management"
+  },
+  "President" : {
+    "Address" : "2060 Clairmeade Way",
+    "DisplayOrder" : 1,
+    "Email" : "variationspresident@gmail.com",
+    "Name" : "Jane Hubbard",
+    "Phone" : "(404) 200-6283"
+  },
+  "Secretary" : {
+    "Address" : "1967 Variations Drive",
+    "DisplayOrder" : 4,
+    "Email" : "variationssecretary@gmail.com",
+    "Name" : "Susie Hawkins",
+    "Phone" : "(404) 401-9519"
+  },
+  "Treasurer" : {
+    "Address" : "1913 Variations Drive",
+    "DisplayOrder" : 3,
+    "Email" : "variationstreasurer@gmail.com",
+    "Name" : "Bobby Ballinger",
+    "Phone" : "(404) 550-5235"
+  },
+  "Vice President" : {
+    "Address" : "2011 Variations Drive",
+    "DisplayOrder" : 2,
+    "Email" : "variationsvp@gmail.com",
+    "Name" : "Rich Foster",
+    "Phone" : "(407) 408-6796"
+  }
+}

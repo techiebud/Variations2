@@ -311,7 +311,14 @@
   "Street" : "Variations Dr",
   "Unit" : 1933
 }, {
-  
+  "Email" : "atdelk@icloud.com",
+  "FirstName" : "Austin",
+  "LastName" : "Delk",
+  "Phone1" : 3369537449,
+  "Phone2" : "",
+  "Street" : "Variations Dr",
+  "Unit" : 1934
+}, {
   "Email" : "johnmalahy@aol.com",
   "FirstName" : "John",
   "LastName" : "Malahy",
@@ -415,7 +422,7 @@
   "Phone2" : "",
   "Street" : "Variations Dr",
   "Unit" : 1960
-}, { 
+}, {
   "Email" : "philmitchell34@gmail.com",
   "FirstName" : "Mitchell",
   "LastName" : "Philip",
@@ -735,7 +742,7 @@
   "Phone2" : "",
   "Street" : "Variations Dr",
   "Unit" : 1998
-}, {  
+}, {
   "Email" : "manchesterman8@yahoo.com",
   "FirstName" : "Harry",
   "LastName" : "Stuart",
@@ -840,7 +847,7 @@
   "Street" : "Variations Dr",
   "Unit" : 2010
 }, {
-  "Email" : "rich0701@gmail.com",
+  "Email" : "richf0701@gmail.com",
   "FirstName" : "Rich",
   "LastName" : "Foster",
   "Phone1" : "4074086796",

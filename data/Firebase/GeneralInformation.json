@@ -1,0 +1,10 @@
+{
+  "CrimeMapURL" : "https://www.crimereports.com/home/#!/dashboard?lat=33.857405&lng=-84.30954&zoom=16&incident_types=Assault%252CAssault%2520with%2520Deadly%2520Weapon%252CBreaking%2520%2526%2520Entering%252CDisorder%252CDrugs%252CHomicide%252CKidnapping%252CLiquor%252COther%2520Sexual%2520Offense%252CProperty%2520Crime%252CProperty%2520Crime%2520Commercial%252CProperty%2520Crime%2520Residential%252CQuality%2520of%2520Life%252CRobbery%252CSexual%2520Assault%252CSexual%2520Offense%252CTheft%252CTheft%2520from%2520Vehicle%252CTheft%2520of%2520Vehicle&start_date={startDate}&end_date={endDate}&days=sunday%252Cmonday%252Ctuesday%252Cwednesday%252Cthursday%252Cfriday%252Csaturday&start_time=0&end_time=23&include_sex_offenders=true&current_tab=list&shapeIds=&shape_id=false",
+  "ForumAPIKey" : "vBry7QpM9DM9kQliepqhS7reIuqBDGTF28OXlLvQ",
+  "ForumAPIUrl" : "https://thevariations.us/api/Forum/key",
+  "MaximumUsersPerUnit" : 3,
+  "ReserveBalance" : 22147803,
+  "ReserveBalanceAsOf" : "July, 2017",
+  "SecurityKey" : "va0ri0ati1o1n1sx",
+  "TennisCourtAccessCode" : 2868
+}
