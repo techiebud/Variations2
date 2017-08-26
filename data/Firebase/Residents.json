@@ -454,23 +454,7 @@
   "Phone2" : 4048051569,
   "Street" : "Variations Dr",
   "Unit" : 1963
-}, {
-  "Email" : "lilkube@gmail.com",
-  "FirstName" : "Brett",
-  "LastName" : "Kube",
-  "Phone1" : 4042790470,
-  "Phone2" : "",
-  "Street" : "Variations Dr",
-  "Unit" : 1964
-}, {
-  "Email" : "11skc23@gmail.com",
-  "FirstName" : "Sarah",
-  "LastName" : "Cook",
-  "Phone1" : 3364024097,
-  "Phone2" : "",
-  "Street" : "Variations Dr",
-  "Unit" : 1964
-}, {
+}, {  
   "Email" : "kgundaker@gmail.com",
   "FirstName" : "Karen",
   "LastName" : "Gundaker",
