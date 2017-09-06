@@ -686,23 +686,7 @@
   "Phone2" : "",
   "Street" : "Variations Dr",
   "Unit" : 1988
-}, {
-  "Email" : "",
-  "FirstName" : "Leah",
-  "LastName" : "Lyman Waldron",
-  "Phone1" : "",
-  "Phone2" : "",
-  "Street" : "Variations Dr",
-  "Unit" : 1990
-}, {
-  "Email" : "treehuggerguy@gmail.com",
-  "FirstName" : "Chris",
-  "LastName" : "Lyman Waldron",
-  "Phone1" : 6785610921,
-  "Phone2" : 6303364509,
-  "Street" : "Variations Dr",
-  "Unit" : 1990
-}, {
+}, { 
   "Email" : "jane.d.marrazzo@gmail.com",
   "FirstName" : "Jane",
   "LastName" : "Marrazzo",
