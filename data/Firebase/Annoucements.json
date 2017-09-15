@@ -50,11 +50,7 @@
   "20170802" : {
     "Title" : "Pictures from National Night Out",
     "URL" : "http://techiebud.me/nno20170801"
-  },
-  "20170803" : {
-    "Title" : "Chamblee Police Weekly Report - 8/3/17",
-    "URL" : "https://app.robly.com/archive?id=faa29f690e2a2414bea037a514545530&v=true"
-  },
+  },  
   "20170806" : {
     "Title" : "International Food Night - 8/12/17",
     "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFbF9IeUNFMVI1VHM/view?usp=sharing"
@@ -118,11 +114,13 @@
   "20170913" : {
     "Title" : "September Board Meeting Agenda",
     "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFNVoyV29FMFRFak0/view?usp=sharing"
+  },
+  "20170914" : {
+    "Title" : "Chamblee Police Weekly Report - 9/14/17",
+    "URL" : "https://app.robly.com/archive?id=afa50f691f1e0855ab6c36d5d736ff00&v=true"
+  },
+  "20170914a" : {
+    "Title" : "August Financials",
+    "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFcjlpSFgzZUZOYkE/view?usp=sharing"
   }
-
-
- 
-  
-
-
 }
