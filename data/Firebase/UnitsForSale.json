@@ -40,7 +40,9 @@
     "imageURL" : "https://2cdn.cbhomes.com/s3/mediasvc-prd/properties/7D6532bcda454f6-5693891.jpg"
   },
   "1936" : { 
-    "Status": "Pending",
+    "SaleDate" : 20170908,
+    "SalePrice" : 150000,
+    "Status": "Sold",
     "Street" : "Variations Drive",
     "URL" : "https://www.redfin.com/GA/Atlanta/1936-Variations-Dr-NE-30329/home/23810444",
     "imageURL" : "https://ssl.cdn-redfin.com/photo/81/mbpaddedwide/138/genMid.8248138_0.jpg"

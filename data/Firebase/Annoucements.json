@@ -1,8 +1,5 @@
 {   
-  "20170425" : {
-    "Title" : "Rules for Airbnb",
-    "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFX3diYTJBWXdpME0/view?usp=sharing"
-  },
+  
   "20170514" : {
     "Title" : "Variations Strategic Plan 2017-20 – Updated May 8th, 2017",
     "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFTjFDMDhqeDNoU0E/view?usp=sharing"
@@ -126,5 +123,9 @@
   "20170919" : {
     "Title" : "Chamblee Signal Newsletter - September/October 2017",
     "URL" : "http://www.chambleega.com/DocumentCenter/View/1816"
+  },
+  "20170923" : {
+    "Title" : "Chamblee's New Geographic Information System",
+    "URL": "http://chambleega.gov/299/GIS-Mapping"    
   }
 }
