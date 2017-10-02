@@ -335,11 +335,11 @@
   "Street" : "Variations Dr",
   "Unit" : 1935
 }, {
-  "Email" : "jarvisjackson@gmail.com",
-  "FirstName" : "Jarvis",
-  "LastName" : "Jackson",
-  "Phone1" : 6784851094,
-  "Phone2" : 4047883700,
+  "Email" : "jprivett2@yahoo.com ",
+  "FirstName" : "Jesse",
+  "LastName" : "Privett",
+  "Phone1" : "",
+  "Phone2" : "",
   "Street" : "Variations Dr",
   "Unit" : 1936
 }, {
@@ -687,6 +687,14 @@
   "Street" : "Variations Dr",
   "Unit" : 1988
 }, { 
+  "Email" : "aevans4489@yahoo.com",
+  "FirstName" : "Allison",
+  "LastName" : "Evans",
+  "Phone1" : 4042346248,
+  "Phone2" : "",
+  "Street" : "Variations Dr",
+  "Unit" : 1990
+}, { 
   "Email" : "jane.d.marrazzo@gmail.com",
   "FirstName" : "Jane",
   "LastName" : "Marrazzo",
@@ -886,6 +894,14 @@
   "Phone2" : "",
   "Street" : "Variations Dr",
   "Unit" : 2017
+}, {  
+  "Email" : "",
+  "FirstName" : "Josue",
+  "LastName" : "Rosales",
+  "Phone1" : "",
+  "Phone2" : "",
+  "Street" : "Clairmeade Way",
+  "Unit" : 2051
 }, {
   "Email" : "miasmom2052@hotmail.com",
   "FirstName" : "Dora",

@@ -1,0 +1,25 @@
+{
+  "name": "The Variations Condominium Association",
+  "short_name": "Variations",
+  "icons": [
+    {
+      "src": "/img/logo2-tree-42x42px.png",
+      "type": "image/png",
+      "sizes": "42x42"
+    },
+    {
+      "src": "/img/logo2-tree.png",
+      "type": "image/png", 
+      "sizes": "292x271"
+    }    
+  ],
+  "start_url": "/index.html",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#9d9d9d",
+  "theme_color": "#216839",
+  "description": "The Variations Condominium Association web site containing homeowner's latest information.",
+  "dir": "ltr",
+  "lang": "en-US"
+}
