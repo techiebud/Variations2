@@ -28,6 +28,15 @@ export class AppHelpers {
 
     }
 
+    public static isMicrosoftBrowser(): boolean {
+
+         // detect IE8 and above, and edge
+         let isMSBrowser: boolean = (navigator.appName == "Microsoft Internet Explorer" ||  !!(navigator.userAgent.match(/Trident/) ||        
+         navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie === 1) || /Edge/.test(navigator.userAgent));     
+
+        return isMSBrowser;
+    }
+
 
     public static BlockUI(message: string = "Processing.....please wait."): void {
         var blockMessage: string = '<h3><img src="img/busy.gif" /> ' + message + '</h3>';

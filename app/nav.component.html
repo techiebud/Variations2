@@ -86,7 +86,7 @@
 
                             <li> <a [routerLink]="['forsale']">UNITS FOR SALE</a></li>
                             <!--<li class="hidden-xs"> <a [routerLink]="['forsale']">UNITS FOR SALE</a></li>-->
-                            <li class="dropdown">
+                            <li class="dropdown" *ngIf="!isMobile">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">RESOURCES</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="http://www.chambleega.com/" target="_blank">City of Chamblee</a></li>

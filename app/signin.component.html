@@ -25,7 +25,7 @@
 
         <div class="form-group row">
             <div class="col-md-4">
-                <input type="checkbox" formControlName="rememberMe">Remember me on this computer&nbsp;<i (click)="onInfoClicked()"
+                <input type="checkbox" formControlName="rememberMe" (click)="onRememberMeClicked($event)">Remember me on this computer&nbsp;<i (click)="onInfoClicked()"
                     class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" [title]="rememberMeInfoTitle"></i>
             </div>
         </div>

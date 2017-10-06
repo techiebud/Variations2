@@ -1,3 +1,4 @@
+import { AppHelpers } from './shared/app.common';
 import {Component, OnInit} from "@angular/core";
 import {
   FormGroup, 
@@ -51,6 +52,16 @@ export class SigninComponent implements OnInit {
 
         bootbox.alert("If checked, a persistent cookie will be saved to your computer/device to remember your login information and automatically sign you in on future visits.<br /><br ><em>Do not choose this option if you are on a public computer.</em>");
 
+    }
+
+    onRememberMeClicked(event: Event) {
+        if (AppHelpers.isMicrosoftBrowser()) {
+            bootbox.alert("Remember me functionality is currently not available in Microsoft browsers.  Consider using Chrome or Firefox.");
+            event.stopPropagation();
+            event.preventDefault();
+
+        }
+      
     }
 
 

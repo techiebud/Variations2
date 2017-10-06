@@ -1,7 +1,9 @@
 import {Component, OnInit} from "@angular/core";
-import {CookieService} from 'angular2-cookie/core';
+
 import {AuthService} from "./shared/auth.service";
+import {CookieService} from 'angular2-cookie/core';
 import {DataService} from "./shared/data.service";
+import { AppHelpers } from './shared/app.common';
 
 declare var $: any;
 
@@ -33,17 +35,28 @@ export class HomeComponent implements OnInit {
 
 
     ngOnInit() {
+
+        
         if (this._authService.isAuthenticated()) {
             return;
-        }
+        }   
+       
         var rememberMe: boolean = this._cookieService.get("rememberMe") === "1";
+        if (rememberMe)
+        {
+            if (AppHelpers.isMicrosoftBrowser())
+            {              
+                rememberMe = false;
+                this._authService.logout();
+            }
+        }
         if (rememberMe) {        
             //possible timing issue;  
             var retryCount: number = 0;       
             var repeatId = setInterval(() => {
                 retryCount++;
                 if (this._dataService.generalInformation) {
-                    clearInterval(repeatId);
+                    clearInterval(repeatId);                  
                     this.autoSignInUser();
                 }
                 else if (retryCount >= 20)
