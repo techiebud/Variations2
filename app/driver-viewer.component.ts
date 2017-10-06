@@ -3,12 +3,12 @@ import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 
 @Component({
-    templateUrl: "app/pdf-viewer.html",
+    templateUrl: "app/drive-viewer.html",
 })
 
-export class PdfViewerComponent implements OnInit {
+export class DroiveViewerComponent implements OnInit {
     id: string;
-    pdfSrc: string;
+    driveSrc: string;
     page: number = 1;
     private isMobile: boolean = false;
 
@@ -24,11 +24,9 @@ export class PdfViewerComponent implements OnInit {
         // tslint:disable-next-line:typedef
         this.route.params.subscribe((params) => {
             this.id = params["id"];
-            console.debug(this.id);
-            // pDFObject.embed(this.id);
-            this.pdfSrc = this.id;
-           // this.pdfSrc = "https://drive.google.com/file/d/0B0XxZGmv5AeFNklOOFg2LWRuZ0E/view";
-            // pDFObject.embed(this.id, "#var-viewer", { fallbackLink: false });
+            console.debug(this.id);          
+            this.driveSrc = this.id;
+          
         });
 
 
