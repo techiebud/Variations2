@@ -44,10 +44,10 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">DIRECTORY</a>
                                 <ul class="dropdown-menu">                                     
                                        <li><a [routerLink]="['residentSearch']">Resident Search</a></li>
-                                       <li><a [routerLink]="['board']">The Board</a></li>    
-                                       <li class="nav-divider"></li> 
-                                       <li><a [routerLink]="['driveViewer',' https://drive.google.com/file/d/0B0XxZGmv5AeFNlRDRnBsZmY5alk/view?usp=sharing']">Residential Directory (PDF)</a></li>                              
-                                </ul>
+                                       <li><a [routerLink]="['driveViewer','https://drive.google.com/file/d/0B0XxZGmv5AeFNlRDRnBsZmY5alk/view?usp=sharing']">Residential Directory</a></li>                              
+                                       <li><a [routerLink]="['board']">The Board</a></li>   
+                                </ul>        
+                                   
                             </li>
 
                             <li class="dropdown" *ngIf="isAuth()">
