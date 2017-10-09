@@ -25,3 +25,4 @@ export * from "./discussion.component";
 export * from "./general-information.component";
 export * from "./resident-search.component";
 export * from "./pdf-viewer.component";
+export * from "./drive-viewer.component";

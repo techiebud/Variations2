@@ -25,6 +25,7 @@
                                     <li><a [routerLink]="['eventsCalendar']">Events Calendar</a></li>
                                     <li><a [routerLink]="['pictures']">Pictures</a></li>
                                     <li><a [routerLink]="['generalInformation']">General Information</a></li>
+                                    <li><a [routerLink]="['driveViewer', 'https://docs.google.com/spreadsheets/d/1zxsjW0Eu3AO78fSEOwa7jeOSD6K7iC8TwLWh0XCthLk/edit#gid=798022606']">2017 Monthly Maintenance Category Spreadsheet</a></li>
                                     <li [hidden]="!false"><a id="discussion-board" #discussionBoard href="//forum.variationscondos.com?authtoken={{userForumToken()}}" target="_blank">Discussion Board</a></li>
                                     <li><a (click)="showDiscussionBoard()" href="#">Discussion Board</a></li>
                                     
@@ -45,33 +46,24 @@
                                        <li><a [routerLink]="['residentSearch']">Resident Search</a></li>
                                        <li><a [routerLink]="['board']">The Board</a></li>    
                                        <li class="nav-divider"></li> 
-                                       <li><a href="https://drive.google.com/file/d/0B0XxZGmv5AeFNlRDRnBsZmY5alk/view?usp=sharing" target="_blank">Residential Directory (PDF)</a></li>                              
+                                       <li><a [routerLink]="['driveViewer',' https://drive.google.com/file/d/0B0XxZGmv5AeFNlRDRnBsZmY5alk/view?usp=sharing']">Residential Directory (PDF)</a></li>                              
                                 </ul>
                             </li>
 
                             <li class="dropdown" *ngIf="isAuth()">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">DOCUMENTS</a>
-                                <ul class="dropdown-menu" *ngIf="isMobile">                                  
-                                    <li><a [routerLink]="['pdfViewer','/documents/HOAReferenceManual.pdf']">HOA Reference Manual</a></li>
-                                    <li><a [routerLink]="['pdfViewer','/documents/Budget.pdf']">2017 Budget</a></li> 
-                                    <li><a [routerLink]="['pdfViewer','/documents/CertificateOfLiabilityInsurance.pdf']">Certificate of Liability Insurance</a></li> 
-                                    <li><a [routerLink]="['pdfViewer','/documents/CodeOfEthicsAndConflictDisclosure.pdf']">Director/Officer Code of Ethics</a></li>                                    
-                                    <li><a [routerLink]="['pdfViewer','/documents/PropertyModificationRequest.pdf']">Property Modification Request</a></li>
-                                    <li><a [routerLink]="['pdfViewer','/documents/ByLaws.pdf']">Association Bylaws</a></li>
-                                    <li><a [routerLink]="['pdfViewer','/documents/Resolutions.pdf']">Resolutions</a></li>   
-                                    <li><a [routerLink]="['pdfViewer','/documents/RulesForAirbnb.pdf']">Rules for Airbnb</a></li>                                   
-                                    <li><a [routerLink]="['pdfViewer','/documents/InsuranceCoverageKeyInformation.pdf']">Insurance Coverage Key Information</a></li>                              
-                                </ul>
-                                  <ul class="dropdown-menu" *ngIf="!isMobile">                                  
-                                    <li><a href="/documents/HOAReferenceManual.pdf" target="_blank">HOA Reference Manual</a></li>
-                                    <li><a href="/documents/Budget.pdf" target="_blank">2017 Budget</a></li> 
-                                    <li><a href="/documents/CertificateOfLiabilityInsurance.pdf" target="_blank">Certificate of Liability Insurance</a></li> 
-                                    <li><a href="/documents/CodeOfEthicsAndConflictDisclosure.pdf" target="_blank">Director/Officer Code of Ethics</a></li>                                    
-                                    <li><a href="/documents/PropertyModificationRequest.pdf" target="_blank">Property Modification Request</a></li>
-                                    <li><a href="/documents/ByLaws.pdf" target="_blank">Association Bylaws</a></li>
-                                    <li><a href="/documents/Resolutions.pdf" target="_blank">Resolutions</a></li>     
-                                    <li><a href="/documents/RulesForAirbnb.pdf" target="_blank">Rules for Airbnb</a></li>   
-                                    <li><a href="/documents/InsuranceCoverageKeyInformation.pdf">Insurance Coverage Key Information</a></li>                                                                 
+                                <ul class="dropdown-menu">                                  
+                                    <li><a [routerLink]="['driveViewer','https://drive.google.com/file/d/0B0XxZGmv5AeFVGJPbTVJSDZrbG8/view?usp=sharing']">HOA Reference Manual</a></li>
+                                    <li><a [routerLink]="['driveViewer','https://drive.google.com/file/d/0B0XxZGmv5AeFVy15b19GY1lwajA/view?usp=sharing']">2017 Budget</a></li> 
+                                    <li><a [routerLink]="['driveViewer','https://drive.google.com/file/d/0B0XxZGmv5AeFOFJOc0VzSXJ6dHc/view?usp=sharing']">Certificate of Liability Insurance</a></li> 
+                                    <li><a [routerLink]="['driveViewer','https://drive.google.com/file/d/0B0XxZGmv5AeFRFYwRTVnYW5zNDA/view?usp=sharing']">Director/Officer Code of Ethics</a></li>                                    
+                                    <li><a [routerLink]="['driveViewer','https://drive.google.com/file/d/0B0XxZGmv5AeFbHhQUTJzdkdvZjg/view?usp=sharing']">Property Modification Request</a></li>
+                                    <li><a [routerLink]="['driveViewer','https://drive.google.com/file/d/0B0XxZGmv5AeFYjdxbkNLT2NKc2c/view?usp=sharing']">Association Bylaws</a></li>
+                                    <li><a [routerLink]="['driveViewer','https://drive.google.com/file/d/0B0XxZGmv5AeFb21PeUlXWDJHT1U/view?usp=sharing']">Resolutions</a></li>   
+                                    <li><a [routerLink]="['driveViewer','https://drive.google.com/file/d/0B0XxZGmv5AeFZnE3a181VC1FLUU/view?usp=sharing']">Rules for Airbnb</a></li>                                   
+                                    <li><a [routerLink]="['driveViewer','https://drive.google.com/file/d/0B0XxZGmv5AeFRWxJNnhvNUYtUlk/view?usp=sharing']">Insurance Coverage Key Information</a></li>  
+                                    <li><a [routerLink]="['driveViewer','https://drive.google.com/file/d/0B0XxZGmv5AeFTjFDMDhqeDNoU0E/view?usp=sharing']">Variations Strategic Plan 2017-20</a></li>
+                                    <li><a [routerLink]="['driveViewer','https://drive.google.com/file/d/0B0XxZGmv5AeFVjAwa25FRDNmdWc/view?usp=sharing']">Reserve Study - A Look Ahead (Slide Presentation)</a></li>                                                                                                                     
                                 </ul>
                             </li>
                            

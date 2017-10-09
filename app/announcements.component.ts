@@ -1,3 +1,4 @@
+import { ResidentSearchComponent } from './resident-search.component';
 import {Component, OnInit} from "@angular/core";
 import {Announcement} from "./shared/announcement.interface";
 import {AuthService} from "./shared/auth.service";
@@ -14,7 +15,7 @@ const DATA_TABLE: string = "Announcements";
 export class AnnouncementsComponent implements OnInit {
     announcements: Array<Announcement> = new Array<Announcement>();
     isLoading: boolean = true;
-    isError: boolean = false;
+    isError: boolean = false; 
 
     constructor(private _dataService: DataService) {
         //show Twitter message feeds
@@ -56,15 +57,31 @@ export class AnnouncementsComponent implements OnInit {
 
     prepData(data: any): void {
         this.announcements = [];
+      
         let announcements: {} = data;
         let announcementDates = Object.keys(announcements);
+    
 
         for (let i: number = announcementDates.length - 1; i >= 0; i--) {
             let announcementDate: Date = AppHelpers.parseDate(announcementDates[i]);
+            let url: string = announcements[announcementDates[i]].URL.toString();
+            let isRegularLink: boolean = false;
+          
+            var viewer = (url.toLowerCase().includes(".pdf")) ? "pdfViewer" : "driveViewer";
+            if (viewer === "driveViewer")
+            {
+                if (url.toLowerCase().startsWith("http:"))
+                {                   
+                    isRegularLink = true;
+                }
+            }
+
             let announcementRecord: Announcement = {
                 Date: announcementDate,
                 Title: announcements[announcementDates[i]].Title,
-                URL: announcements[announcementDates[i]].URL
+                URL: url,
+                Viewer: viewer,
+                IsRegularLink: isRegularLink
             }
             this.announcements.push(announcementRecord);
         }  //for loop
@@ -77,6 +94,7 @@ export class AnnouncementsComponent implements OnInit {
        
 
     }  //prepData
+
 
 
 }  //Announcements Component.

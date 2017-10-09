@@ -615,5 +615,14 @@ div#contents {
     margin-top: 40px;
 }
 }
+.var-popout {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 85px;
+  padding-right: 10px;
+  float: right;
+  opacity: .5;
+}
 
 

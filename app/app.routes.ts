@@ -15,6 +15,7 @@ import {
     ForsaleComponent,
     GeneralInformationComponent,
     HomeComponent,
+    DriveViewerComponent,
     PdfViewerComponent,
     PicturesComponent,
     ResetPasswordComponent,
@@ -39,6 +40,8 @@ const APP_ROUTES: Routes = [
     { path: "amenities", component: AmenitiesComponent },
     { path: "forsale", component: ForsaleComponent },
     { path: "fees", component: FeesComponent },
+    { path: "announcements/driveViewer/:id",component: DriveViewerComponent, canActivate: [AuthGuard] },
+    { path: "announcements/pdfViewer/:id",component: PdfViewerComponent, canActivate: [AuthGuard] },
     { path: "announcements",  component: AnnouncementsComponent, canActivate: [AuthGuard] },
     { path: "pictures",  component: PicturesComponent, canActivate: [AuthGuard] },
     { path: "services",  component: ServicesComponent },
@@ -56,7 +59,11 @@ const APP_ROUTES: Routes = [
     { path: "discussion",component: DiscussionComponent, canActivate: [AuthGuard] },
     { path: "residentSearch",component: ResidentSearchComponent, canActivate: [AuthGuard] },
     { path: "generalInformation",component: GeneralInformationComponent, canActivate: [AuthGuard] },
-    { path: "pdfViewer/:id",component: PdfViewerComponent, canActivate: [AuthGuard] }
+    { path: "pdfViewer/:id",component: PdfViewerComponent, canActivate: [AuthGuard] },
+    { path: "driveViewer/:id",component: DriveViewerComponent, canActivate: [AuthGuard] }
+   
+
+
 ];
 
 export const routing = RouterModule.forRoot(APP_ROUTES);
@@ -66,5 +73,5 @@ export const routedComponents = [AboutComponent, AnnouncementsComponent, Ameniti
                                  FeaturesComponent,ForsaleComponent, HomeComponent, PicturesComponent, ServicesComponent, SigninComponent, SignoutComponent, SignupComponent, UnderConstructionComponent,
                                  // tslint:disable-next-line:max-line-length
                                  ResetPasswordComponent, ForgotPasswordComponent, AccountProfileComponent, ChangeEmailComponent, ChangePasswordComponent, DiscussionComponent,
-                                 GeneralInformationComponent, ResidentSearchComponent, PdfViewerComponent];
+                                 GeneralInformationComponent, ResidentSearchComponent, PdfViewerComponent, DriveViewerComponent];
 
