@@ -625,4 +625,8 @@ div#contents {
   opacity: .5;
 }
 
+ul.dropdown-menu.community-dd {
+  right: -240px;
+}
+
 
