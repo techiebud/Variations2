@@ -1,3 +1,4 @@
+import { NotificationService } from './shared/notification.service';
 import {FooterComponent, NavComponent} from "./index";
 import { FormBuilder, ReactiveFormsModule } from "@angular/forms";
 import { routedComponents, routing } from "./app.routes";
@@ -40,7 +41,7 @@ export class SafePipe implements PipeTransform {
      PdfViewerComponent,
      SafePipe
    ],
-  providers: [FirebaseService, AuthService, DataService, CookieService, AuthGuard, FormBuilder  ],
+  providers: [FirebaseService, AuthService, DataService, NotificationService, CookieService, AuthGuard, FormBuilder  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

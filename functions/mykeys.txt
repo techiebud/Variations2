@@ -1,0 +1,15 @@
+
+> functions@ web-push C:\src\Variations2\functions
+> web-push "generate-vapid-keys"
+
+
+=======================================
+
+Public Key:
+BF1ZDvqSumSNgWPOAcWRhOz7-xXtt8boaOy6bQpjf1mEbOj1R3KXSC5Eb6FRf0wWgjq8EBM8FMI95FTR5HtlE8U
+
+Private Key:
+g1Z6EQk4lj4olYmqcAPISj4ry7-7TDcj9rW1bSJlPCY
+
+=======================================
+

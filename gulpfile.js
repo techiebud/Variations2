@@ -28,11 +28,15 @@ gulp.task("manifest", function() {
 	return gulp.src("manifest.json")
 	.pipe(gulp.dest("public"))	
 });
+gulp.task("service-worker", function() {
+	return gulp.src("service-worker.js")
+	.pipe(gulp.dest("public"))	
+});
 gulp.task("vendor", function() {
 	return gulp.src("js/vendor/*.*")
 	.pipe(gulp.dest("public/js/vendor"))	
 });
 
-gulp.task("public", ["html", "img", "css", "fonts", "documents", "favicon","manifest", "vendor"]);
+gulp.task("public", ["html", "img", "css", "fonts", "documents", "favicon","manifest", "service-worker", "vendor"]);
 
 

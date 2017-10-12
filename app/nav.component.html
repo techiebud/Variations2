@@ -99,6 +99,7 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="gravatar" src="{{userGravatarURL()}}"><i class="fa fa-caret-down fa-1" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu">
                                     <li><a [routerLink]="['accountProfile']">Account Profile</a></li>
+                                    <li *ngIf="isNotificationSupported && isNotificationReady"><a href="#" (click)="enableNotifications($event)">Enable Notifications</a></li>
                                     <li><a href="#" (click)="logout()">Sign Out</a></li>
                                 </ul>
                             </li>
