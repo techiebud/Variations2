@@ -1,6 +1,7 @@
 {
   "projects": {
-     "default": "project-4248197981206346819",
-    "staging": "variationsdev"
+     "production": "project-4248197981206346819",
+      "staging": "variationsdev",
+      "functions-prod": "project-5333406827865431386"
   }
 }

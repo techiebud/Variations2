@@ -11,6 +11,7 @@ interface NotificationOptions {
     lang?: string;
     tag?: string;
     badge?: string;
+    data: {};
 }
 @Injectable()
 export class NotificationService {
@@ -19,12 +20,15 @@ export class NotificationService {
         let notificationOptions: NotificationOptions = {
             body: "You have subscribed to notifications from The Variations web site.",
             icon: "/img/logo2-48x48.png",
-            badge: "/img/logo2-48x48.png"
+            badge: "/img/logo2-48x48.png",
+            data: {
+                notifyOnly: true
+            }
         };
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.ready
                 .then((swreg) => {
-                    swreg.showNotification("Notifications enabled (SW)", notificationOptions);
+                    swreg.showNotification("Notifications enabled", notificationOptions);
 
                 })
         }

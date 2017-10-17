@@ -27,7 +27,7 @@ export class NavComponent implements OnInit, AfterViewInit {
     @ViewChild("monthlyCrimeMap") monthlyCrimeMap: ElementRef;
     isMobile: boolean = false;
     isNotificationSupported: boolean = false;
-    isNotificationReady: boolean = false;  //set to true when feature is ready to deploy
+    isNotificationReady: boolean = true;  //set to true when feature is ready to deploy
 
 
     constructor(private _authService: AuthService, private _renderer: Renderer, private _dataService: DataService, private _notificationService: NotificationService) {
