@@ -1,3 +1,6 @@
+import { AppHelpers, AppSettings } from './app.common';
+import { AppComponent } from './../app.component';
+import { FirebaseService } from './firebase.service';
 import {Injectable } from "@angular/core";
 //I'm overriding the interface here because the one installed does not come with the badge option which is used on Android devices 
 //for the black and white icon on the top of the screen
@@ -50,7 +53,7 @@ export class NotificationService {
              //   debugger;
                 if (sub === null) {
                     // Create a new subscription
-                    console.log("PushSubscription (check)");
+                    console.log("PushSubscription (new)");
                     var vapidPublicKey = 'BF1ZDvqSumSNgWPOAcWRhOz7-xXtt8boaOy6bQpjf1mEbOj1R3KXSC5Eb6FRf0wWgjq8EBM8FMI95FTR5HtlE8U';
                     var convertedVapidPublicKey = this.urlBase64ToUint8Array(vapidPublicKey);
                     return reg.pushManager.subscribe({
@@ -62,8 +65,10 @@ export class NotificationService {
                 }
             })
             .then((newSub: PushSubscription) => {
-                console.log("PushSubscription", JSON.stringify(newSub));
-                return fetch('https://project-5333406827865431386.firebaseio.com/Subscriptions.json', {
+               // console.log("PushSubscription", JSON.stringify(newSub));
+                console.log("PushSubscription (check - fetch)");
+                const subscriptionsURL = AppSettings.FIREBASE_DEVELOPMENT.databaseURL  + "/Subscriptions.json";
+                return fetch(subscriptionsURL, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -86,7 +91,7 @@ export class NotificationService {
 
     getPermission() : void {
         Notification.requestPermission((result) => {
-            console.log('User Choice', result);
+         //   console.log('User Choice', result);
             if (result !== 'granted') {
                 toastr.warning("No notification permission granted!");
                 console.log('No notification permission granted!');

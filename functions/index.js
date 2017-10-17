@@ -22,46 +22,72 @@ const functions = require('firebase-functions');
 
 // The Firebase Admin SDK to access the Firebase Realtime Database. 
 const admin = require('firebase-admin');
-var cors = require('cors')({origin: true});
+var cors = require('cors')({ origin: true });
 var webpush = require('web-push');
-admin.initializeApp(functions.config().firebase);
+
+
+//note:  This is all dev.
+var serviceAccount = require("./variationsdev-firebase-adminsdk-11794-554be74803.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://variationsdev.firebaseio.com"
+});
 // [END import]
 
-// [START addMessage]
-// Take the text parameter passed to this HTTP endpoint and insert it into the
-// Realtime Database under the path /messages/:pushId/original
-// [START addMessageTrigger]
-exports.addMessage = functions.https.onRequest((req, res) => {
-// [END addMessageTrigger]
-  // Grab the text parameter.
-  const original = req.query.text;
-  // [START adminSdkPush]
-  // Push the new message into the Realtime Database using the Firebase Admin SDK.
-  admin.database().ref('/messages').push({original: original}).then(snapshot => {
-    // Redirect with 303 SEE OTHER to the URL of the pushed object in the Firebase console.
-    res.redirect(303, snapshot.ref);
-  });
-  // [END adminSdkPush]
-});
-// [END addMessage]
+exports.helloVariations = functions.https.onRequest(function(request, response) {
 
-// [START makeUppercase]
-// Listens for new messages added to /messages/:pushId/original and creates an
-// uppercase version of the message to /messages/:pushId/uppercase
-// [START makeUppercaseTrigger]
-exports.makeUppercase = functions.database.ref('/messages/{pushId}/original')
-    .onWrite(event => {
-// [END makeUppercaseTrigger]
-      // [START makeUppercaseBody]
-      // Grab the current value of what was written to the Realtime Database.
-      const original = event.data.val();
-      console.log('Uppercasing', event.params.pushId, original);
-      const uppercase = original.toUpperCase();
-      // You must return a Promise when performing asynchronous tasks inside a Functions such as
-      // writing to the Firebase Realtime Database.
-      // Setting an "uppercase" sibling in the Realtime Database returns a Promise.
-      return event.data.ref.parent.child('uppercase').set(uppercase);
-      // [END makeUppercaseBody]
+ // console.log("body: request.body");
+ cors(request, response, function () {
+
+  var whoIs = request.body.who;
+  var message = "<h1 style='color:red'>Hello " + whoIs + " from The Variations!</h1>";
+  console.log("request", request);
+  response.send(message);
+ });
+});
+
+exports.storeAnnouncements = functions.https.onRequest(function(request, response) { 
+   cors(request, response, function () {
+    console.log("request", request);
+    var announcementText = request.body.announcement;
+    console.log("announcementText", announcementText);
+    //console.log(response);
+    var announcement  =  {  
+      Title: announcementText,
+      URL: "http://usatoday.com"    
+      };
+    admin.database().ref().child("Announcements").child("20010201").set(announcement)   
+    .then(function () {
+      console.log("get Subscriptions");
+      webpush.setVapidDetails('mailto:variationscondos@gmail.com', 'BF1ZDvqSumSNgWPOAcWRhOz7-xXtt8boaOy6bQpjf1mEbOj1R3KXSC5Eb6FRf0wWgjq8EBM8FMI95FTR5HtlE8U', 'g1Z6EQk4lj4olYmqcAPISj4ry7-7TDcj9rW1bSJlPCY');
+      return admin.database().ref('Subscriptions').once('value');
+    }) 
+    .then(function (subscriptions) {
+      console.log("loop thru Subscriptions");
+      subscriptions.forEach(function (sub) {
+        var pushConfig = {
+          endpoint: sub.val().endpoint,
+          keys: {
+            auth: sub.val().keys.auth,
+            p256dh: sub.val().keys.p256dh
+          }
+        };
+
+        console.log("sendNotification");
+        var sendMessage = JSON.stringify({title: 'New Announcement', content: announcementText});
+        console.log("sendMessage", sendMessage);
+        webpush.sendNotification(pushConfig, sendMessage)
+          .catch(function(err) {
+            console.log("error:", err);
+          })
+      });
+      console.log("response status");
+      response.status(201).json({message: 'Announcement Stored', id: '12345'});
+    //  response.send("OK");
+    })
+    .catch(function (err) {
+      response.status(500).json({error: err});
     });
-// [END makeUppercase]
-// [END all]
+  });
+});

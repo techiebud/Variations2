@@ -6,7 +6,9 @@
     "lite": "lite-server",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "deploy": "tsc && gulp public && webpack && firebase deploy"
+    "deploy-all": "tsc && gulp public && webpack && firebase deploy",
+    "deploy-hosting": "tsc && gulp public && webpack && firebase deploy --only hosting",
+    "deploy-functions": "firebase deploy --only functions"   
   },
   "keywords": [
     "Variations"

@@ -1,3 +1,4 @@
+import { NotificationService } from './shared/notification.service';
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { AuthService } from "./shared/auth.service";
@@ -19,7 +20,7 @@ declare var WOW: any;
 
 export class AppComponent implements OnInit {
 
-    constructor(private _router: Router, private _authService: AuthService, private _dataService: DataService) {
+    constructor(private _router: Router, private _authService: AuthService, private _dataService: DataService, private _notificationService: NotificationService) {
 
         var toastrOptions: ToastrOptions = {
             closeButton: false,
@@ -81,7 +82,8 @@ export class AppComponent implements OnInit {
                     var firstName: string = snapshot.val().FirstName;
                     var lastName: string = snapshot.val().LastName;
                     var isBetaTester: boolean = snapshot.val().isBetaTester;
-                    localStorage.setItem("userProfile", JSON.stringify(user));                  
+                    localStorage.setItem("userProfile", JSON.stringify(user));  
+                  //  self._notificationService.getPermission();                
                     toastr.info("Welcome back, " + firstName + "!");
                     user.email = userSigninInfo.email;
                     user.password = userSigninInfo.password;
@@ -89,6 +91,7 @@ export class AppComponent implements OnInit {
                     user.lastName = lastName;
                     user.isBetaTester = isBetaTester;
                     self._authService.userForumToken = AppHelpers.logIntoForum(user, self._dataService.generalInformation.ForumAPIUrl, self._dataService.generalInformation.ForumAPIKey, self._dataService.generalInformation.SecurityKey);                 
+               
                 });
                 AppHelpers.prepMenuElements();
                 self._router.navigate(['announcements'])
@@ -125,6 +128,8 @@ export class AppComponent implements OnInit {
         this._dataService.getUserProfileUpdated().subscribe(() => {
             toastr.success("Your account profile has been updated");
         });
+
+    
 
     }
 

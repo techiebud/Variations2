@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "project-4248197981206346819"
+     "default": "project-4248197981206346819",
+    "staging": "variationsdev"
   }
 }

@@ -1,10 +1,23 @@
+import { DomainAPI } from './domain-api.interface';
 declare var $: any;
 import { User } from "./user.interface";
 
 export class AppSettings {
-    public static get FIREBASE_APP(): string { return 'https://thevariations.firebaseio.com'; }
-    public static get VARIATIONS_NAME(): string { return ' The Variations Condominium Association, Inc'; }
-    public static get MAXIMUM_USERS_PER_UNIT(): number { return 2; }
+    public static FIREBASE_APP: string = 'https://thevariations.firebaseio.com'; 
+    public static VARIATIONS_NAME: string = 'The Variations Condominium Association, Inc'; 
+    public static MAXIMUM_USERS_PER_UNIT: number = 2;
+    public static FIREBASE_PRODUCTION: DomainAPI  = {        
+            apiKey: "AIzaSyDOEDQzTcjBQ5Z5i4EAyGAJ1bvYdVcufZ0",
+            authDomain: "project-5333406827865431386.firebaseapp.com",
+            databaseURL: "https://project-5333406827865431386.firebaseio.com",
+            storageBucket: ""
+          };    
+    public static FIREBASE_DEVELOPMENT: DomainAPI = {
+        apiKey: "AIzaSyCGBVODhftzTK_WpQxucrf4f-lPy9q3ylk",
+        authDomain: "variationsdev.firebaseapp.com",
+        databaseURL: "https://variationsdev.firebaseio.com",
+        storageBucket: ""
+    }
 
 }
 
