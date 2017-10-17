@@ -56,6 +56,42 @@ exports.helloVariations = functions.https.onRequest(function (request, response)
   });
 });
 
+exports.sendMessage = functions.https.onRequest(function (request, response) {
+  cors(request, response, function () {
+    var inputMessage = request.body.message;
+    var message = { title: "Variations Notice", content: inputMessage, notifyOnly: true };
+    webpush.setVapidDetails('mailto:variationscondos@gmail.com', 'BF1ZDvqSumSNgWPOAcWRhOz7-xXtt8boaOy6bQpjf1mEbOj1R3KXSC5Eb6FRf0wWgjq8EBM8FMI95FTR5HtlE8U', 'g1Z6EQk4lj4olYmqcAPISj4ry7-7TDcj9rW1bSJlPCY');
+    return admin.database().ref('Subscriptions').once('value')
+      .then(function (subscriptions) {
+        console.log("looping thru Subscriptions");
+        subscriptions.forEach(function (sub) {
+          var pushConfig = {
+            endpoint: sub.val().endpoint,
+            keys: {
+              auth: sub.val().keys.auth,
+              p256dh: sub.val().keys.p256dh
+            }
+          };
+
+          var sendMessage = JSON.stringify(message);
+          console.log("sendNotification", sendMessage);
+          webpush.sendNotification(pushConfig, sendMessage)
+            .catch(function (err) {
+              console.log("error:", err);
+            })
+        });
+
+        console.log("response status");
+        response.status(201).json({ message: 'Message sent succesfully' });
+      })
+      .catch(function (err) {
+        response.status(500).json({ error: err });
+      });
+
+
+  });
+});
+
 exports.storeAnnouncements = functions.https.onRequest(function (request, response) {
   cors(request, response, function () {
     var postDate = request.body.date;
@@ -68,7 +104,7 @@ exports.storeAnnouncements = functions.https.onRequest(function (request, respon
     console.log("announcement", announcement);
     admin.database().ref().child("Announcements").child(postDate).set(announcement)
       .then(function () {
-     
+
         webpush.setVapidDetails('mailto:variationscondos@gmail.com', 'BF1ZDvqSumSNgWPOAcWRhOz7-xXtt8boaOy6bQpjf1mEbOj1R3KXSC5Eb6FRf0wWgjq8EBM8FMI95FTR5HtlE8U', 'g1Z6EQk4lj4olYmqcAPISj4ry7-7TDcj9rW1bSJlPCY');
         return admin.database().ref('Subscriptions').once('value');
       })
@@ -99,30 +135,10 @@ exports.storeAnnouncements = functions.https.onRequest(function (request, respon
         response.status(500).json({ error: err });
       });
 
-    
+
   });
 });
 
 /* function sendNotification(message) {
-  webpush.setVapidDetails('mailto:variationscondos@gmail.com', 'BF1ZDvqSumSNgWPOAcWRhOz7-xXtt8boaOy6bQpjf1mEbOj1R3KXSC5Eb6FRf0wWgjq8EBM8FMI95FTR5HtlE8U', 'g1Z6EQk4lj4olYmqcAPISj4ry7-7TDcj9rW1bSJlPCY');
-  return admin.database().ref('Subscriptions').once('value')
-    .then(function (subscriptions) {
-      console.log("looping thru Subscriptions");
-      subscriptions.forEach(function (sub) {
-        var pushConfig = {
-          endpoint: sub.val().endpoint,
-          keys: {
-            auth: sub.val().keys.auth,
-            p256dh: sub.val().keys.p256dh
-          }
-        };
-       
-        var sendMessage = JSON.stringify(message);
-        console.log("sendNotification", sendMessage);
-        webpush.sendNotification(pushConfig, sendMessage)
-          .catch(function (err) {
-            console.log("error:", err);
-          })
-      });
-    })
+  
 } */
