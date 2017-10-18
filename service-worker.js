@@ -17,7 +17,7 @@ self.addEventListener('notificationclick', function (event) {
   console.log('On notification click: ', event);
 
   let url = 'https://variationscondos.com';
-  url = "http://localhost:3000";
+ // url = "http://localhost:3000";
   let urlSignin = "https://variationscondos.com/signin";
   event.notification.close(); // Android needs explicit close.
   if (!event.notification.data.notifyOnly)

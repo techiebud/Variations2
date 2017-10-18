@@ -71,7 +71,7 @@ export class NotificationService {
             .then((newSub: PushSubscription) => {
                // console.log("PushSubscription", JSON.stringify(newSub));
                 console.log("PushSubscription (check - fetch)");
-                const subscriptionsURL = AppSettings.FIREBASE_DEVELOPMENT.databaseURL  + "/Subscriptions.json";
+                const subscriptionsURL = AppSettings.FIREBASE_PRODUCTION.databaseURL  + "/Subscriptions.json";
                 return fetch(subscriptionsURL, {
                     method: 'POST',
                     headers: {

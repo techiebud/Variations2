@@ -83,7 +83,7 @@ export class AppComponent implements OnInit {
                     var lastName: string = snapshot.val().LastName;
                     var isBetaTester: boolean = snapshot.val().isBetaTester;
                     localStorage.setItem("userProfile", JSON.stringify(user));  
-                  //  self._notificationService.getPermission();                
+                    self._notificationService.getPermission();                
                     toastr.info("Welcome back, " + firstName + "!");
                     user.email = userSigninInfo.email;
                     user.password = userSigninInfo.password;
