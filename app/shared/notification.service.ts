@@ -45,9 +45,8 @@ export class NotificationService {
         if (!('serviceWorker' in navigator)) {
             return;  //sorry, no can do.
         }
-
-
         let reg: ServiceWorkerRegistration;
+        let newSubscription: boolean = false;
         navigator.serviceWorker.ready
             .then((swreg: ServiceWorkerRegistration) => {
                 reg = swreg;
@@ -58,6 +57,7 @@ export class NotificationService {
                 if (sub === null) {
                     // Create a new subscription
                     console.log("PushSubscription (new)");
+                    newSubscription = true;
                     var vapidPublicKey = 'BF1ZDvqSumSNgWPOAcWRhOz7-xXtt8boaOy6bQpjf1mEbOj1R3KXSC5Eb6FRf0wWgjq8EBM8FMI95FTR5HtlE8U';
                     var convertedVapidPublicKey = this.urlBase64ToUint8Array(vapidPublicKey);
                     return reg.pushManager.subscribe({
@@ -70,21 +70,23 @@ export class NotificationService {
             })
             .then((newSub: PushSubscription) => {
                 // console.log("PushSubscription", JSON.stringify(newSub));
-                console.log("PushSubscription (check - fetch)", newSub);
-                //TODO:  Change to production before deploying
-                const subscriptionsURL = AppSettings.FIREBASE_DEVELOPMENT.databaseURL + "/Subscriptions.json";
-                //const subscriptionsURL = AppSettings.FIREBASE_PRODUCTION.databaseURL  + "/Subscriptions.json";
-                return fetch(subscriptionsURL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: JSON.stringify(newSub)
-                })
+                console.log("PushSubscription (check - fetch)", newSub);         
+                if (newSubscription) {
+                     //TODO:  Change to production before deploying
+                    const subscriptionsURL = AppSettings.FIREBASE_DEVELOPMENT.databaseURL + "/Subscriptions.json";
+                    //const subscriptionsURL = AppSettings.FIREBASE_PRODUCTION.databaseURL  + "/Subscriptions.json";
+                    return fetch(subscriptionsURL, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: JSON.stringify(newSub)
+                    })
+                }
             })
             .then((res: Response) => {
-                if (res.ok) {
+                if (res.ok && newSubscription) {
                     this.displayConfirmNotification();
                 }
             })
