@@ -7,7 +7,9 @@ declare var firebase: any;
 export class FirebaseService {
 
     constructor() { 
-        let config = AppSettings.FIREBASE_PRODUCTION;
+        //TODO:   Change to Production
+        let config = AppSettings.FIREBASE_DEVELOPMENT;
+      //  let config = AppSettings.FIREBASE_PRODUCTION;
         firebase.initializeApp(config);
 
     }

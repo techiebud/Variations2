@@ -1,7 +1,7 @@
 import { AppHelpers, AppSettings } from './app.common';
 import { AppComponent } from './../app.component';
 import { FirebaseService } from './firebase.service';
-import {Injectable } from "@angular/core";
+import { Injectable } from "@angular/core";
 //I'm overriding the interface here because the one installed does not come with the badge option which is used on Android devices 
 //for the black and white icon on the top of the screen
 interface NotificationOptions {
@@ -45,7 +45,7 @@ export class NotificationService {
         if (!('serviceWorker' in navigator)) {
             return;  //sorry, no can do.
         }
-    
+
 
         let reg: ServiceWorkerRegistration;
         navigator.serviceWorker.ready
@@ -54,7 +54,7 @@ export class NotificationService {
                 return swreg.pushManager.getSubscription();
             })
             .then((sub: PushSubscription) => {
-             //   debugger;
+                //   debugger;
                 if (sub === null) {
                     // Create a new subscription
                     console.log("PushSubscription (new)");
@@ -69,9 +69,11 @@ export class NotificationService {
                 }
             })
             .then((newSub: PushSubscription) => {
-               // console.log("PushSubscription", JSON.stringify(newSub));
-                console.log("PushSubscription (check - fetch)");
-                const subscriptionsURL = AppSettings.FIREBASE_PRODUCTION.databaseURL  + "/Subscriptions.json";
+                // console.log("PushSubscription", JSON.stringify(newSub));
+                console.log("PushSubscription (check - fetch)", newSub);
+                //TODO:  Change to production before deploying
+                const subscriptionsURL = AppSettings.FIREBASE_DEVELOPMENT.databaseURL + "/Subscriptions.json";
+                //const subscriptionsURL = AppSettings.FIREBASE_PRODUCTION.databaseURL  + "/Subscriptions.json";
                 return fetch(subscriptionsURL, {
                     method: 'POST',
                     headers: {
@@ -83,26 +85,26 @@ export class NotificationService {
             })
             .then((res: Response) => {
                 if (res.ok) {
-                   this.displayConfirmNotification();
+                    this.displayConfirmNotification();
                 }
             })
             .catch((err) => {
                 console.log(err);
-            }); 
+            });
     }
-    
-    
 
-    getPermission() : void {
+
+
+    getPermission(): void {
         Notification.requestPermission((result) => {
-         //   console.log('User Choice', result);
+            //   console.log('User Choice', result);
             if (result !== 'granted') {
                 toastr.warning("No notification permission granted!");
                 console.log('No notification permission granted!');
                 return;
             } else {
-               //this.displayConfirmNotification();
-               this.configurePushSub();
+                //this.displayConfirmNotification();
+                this.configurePushSub();
 
             }
         });

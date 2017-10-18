@@ -56,6 +56,9 @@
     <script src="js/vendor/wow.min.js"></script>
     <script src="js/vendor/promise.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.5/mobile-detect.min.js"></script>
+
+    <!-- misc app script for doing service worker stuff and other non Angular things -->
+    <script src="js/app/app.js"></script>
     <!-- main app script - includes dependency node modules -->
 
     <script src="app.bundle.js"></script>
@@ -72,33 +75,7 @@
         </div>
     </var-main>
 
-    <script>
-
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
-                // Registration was successful
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            }).catch(function (err) {
-                // registration failed :(
-                console.log('ServiceWorker registration failed: ', err);
-            });
-        }
-        $(document).ready(function ($) {
-
-            $(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) {
-                event.preventDefault();
-                $(this).ekkoLightbox();
-            });
-
-            $(document).delegate("a.pop", "click", function (event) {
-                event.preventDefault();
-                $('.imagepreview').attr('src', $(this).find('img').attr('src'));
-                $('#imagemodal').modal('show');
-                return false;
-            });
-
-        });
-    </script>
+ 
 
     <script>
         (function (i, s, o, g, r, a, m) {

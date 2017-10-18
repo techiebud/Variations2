@@ -8,7 +8,7 @@ self.addEventListener('activate', function (event) {
 });
 
 self.addEventListener('fetch', function (event) {
-  // console.log('[Service Worker] Fetch ....', event);    
+    console.log('[Service Worker] Fetch ....', event);    
 
 
 });
@@ -17,29 +17,34 @@ self.addEventListener('notificationclick', function (event) {
   console.log('On notification click: ', event);
 
   let url = 'https://variationscondos.com';
- // url = "http://localhost:3000";
+  //TODO:   Comment out before production
+  // url = "http://localhost:3000";
   let urlSignin = "https://variationscondos.com/signin";
   event.notification.close(); // Android needs explicit close.
-  if (!event.notification.data.notifyOnly)
-  {
-  event.waitUntil(
-    clients.matchAll({ type: 'window' }).then(windowClients => {
-      // Check if there is already a window/tab open with the target URL
-      for (var i = 0; i < windowClients.length; i++) {
-        var client = windowClients[i];
-        console.log("client", client);
-        // If so, just focus it.
-        if (client.url.startsWith(url) && 'focus' in client) {
-          return client.focus();
+  if (!event.notification.data.notifyOnly) {
+    event.waitUntil(
+      clients.matchAll({ type: 'window' }).then(windowClients => {
+        // Check if there is already a window/tab open with the target URL
+        for (var i = 0; i < windowClients.length; i++) {
+          var client = windowClients[i];
+          console.log("client", client);
+          // If so, just focus it.
+          if (client.url.startsWith(url) && 'focus' in client) {
+            // Send a message to the client.
+            client.postMessage({
+              msg: "New",
+              url: "https://techiebud.net"
+            });
+            return client.focus();
+          }
         }
-      }
-      // If not, then open the target URL in a new window/tab.
-      if (clients.openWindow) {
-        return clients.openWindow(urlSignin);
-      }
-    })
-  );
-};
+        // If not, then open the target URL in a new window/tab.
+        if (clients.openWindow) {
+          return clients.openWindow(urlSignin);
+        }
+      })
+    );
+  };
 });
 self.addEventListener('notificationclose', function (event) {
   console.log('On notification close: ', event);
@@ -55,9 +60,8 @@ self.addEventListener('push', function (event) {
   }
 
   optionData = {};
-  if ('notifyOnly' in data)
-  {
-    optionData = {notifyOnly: true};
+  if ('notifyOnly' in data) {
+    optionData = { notifyOnly: true };
   }
 
   var options = {

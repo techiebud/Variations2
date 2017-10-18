@@ -89,41 +89,7 @@
                 <i class="fa fa-spinner fa-spin fa-3x fa-fw margin-bottom col-md-6 col-md-offset-2"></i>&nbsp;Loading The Variations website.....please wait</div>
         </div>
     </var-main>
-    <!-- 
-        The script below is used for showing the pop-up of the loan payoff.
-        -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
-                // Registration was successful
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            }).catch(function (err) {
-                // registration failed :(
-                console.log('ServiceWorker registration failed: ', err);
-            });
-        }
-
-        $(document).ready(function ($) {
-
-            $(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) {
-                event.preventDefault();
-                $(this).ekkoLightbox();
-            });
-
-            $(document).delegate("a.pop", "click", function (event) {
-                event.preventDefault();
-                $('.imagepreview').attr('src', $(this).find('img').attr('src'));
-                $('#imagemodal').modal('show');
-                return false;
-            });
-            $(document).delegate("a#discussion-board", "click", function (event) {
-                event.preventDefault();
-                toastr.warning("Under Development");
-                return false;
-            });
-
-        });
-    </script>
+   
 
 
 

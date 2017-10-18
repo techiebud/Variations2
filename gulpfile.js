@@ -36,7 +36,11 @@ gulp.task("vendor", function() {
 	return gulp.src("js/vendor/*.*")
 	.pipe(gulp.dest("public/js/vendor"))	
 });
+gulp.task("appjs", function() {
+	return gulp.src("js/app/app.js")
+	.pipe(gulp.dest("public/js/app"))	
+});
 
-gulp.task("public", ["html", "img", "css", "fonts", "documents", "favicon","manifest", "service-worker", "vendor"]);
+gulp.task("public", ["html", "img", "css", "fonts", "documents", "favicon","manifest", "service-worker", "vendor", "appjs"]);
 
 

@@ -26,6 +26,7 @@ export class DataService {
         this.getResidents();
         localStorage.removeItem("UserEmails");
         localStorage.removeItem("UserEmails2");
+        //TODO:  Comment out before going to production
         //this.getAllUsersEmail(); 
         // this.getAllUsersEmail2();  
         // this.get();
@@ -225,7 +226,8 @@ export class DataService {
                     let allUserEmails: string = "";
                     // tslint:disable-next-line:forin
                     for (let user in allUsers) {
-                        allUserEmails += allUsers[user].Unit + "," + allUsers[user].Email + ";"; 
+                        //allUserEmails += allUsers[user].Unit + "," + allUsers[user].Email + ";"; 
+                        allUserEmails +=  allUsers[user].Email + ";"; 
 
                     }
 
