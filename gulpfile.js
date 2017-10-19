@@ -40,7 +40,11 @@ gulp.task("appjs", function() {
 	return gulp.src("js/app/app.js")
 	.pipe(gulp.dest("public/js/app"))	
 });
+gulp.task("info", function() {
+	return gulp.src("info*.html")
+	.pipe(gulp.dest("public"))	
+});
 
-gulp.task("public", ["html", "img", "css", "fonts", "documents", "favicon","manifest", "service-worker", "vendor", "appjs"]);
+gulp.task("public", ["html", "img", "css", "fonts", "documents", "favicon","manifest", "service-worker", "vendor", "appjs", "info"]);
 
 

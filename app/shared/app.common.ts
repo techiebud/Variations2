@@ -100,8 +100,7 @@ export class AppHelpers {
                 mode: CryptoJS.mode.CBC,
                 padding: CryptoJS.pad.Pkcs7
             });
-      /*  forumAPIUrl = "http://localhost:2111/api/Forum/key";  //TODO:  Comment out.
-        forumAPIUrl = "https://thevariations.us/api/Forum/key";  //TODO:  Comment out.*/
+   
         var url = `${forumAPIUrl}?apiKey=${forumAPIKey}&user=${thisUser}&email=${user.email}&pw=${pwdSecure}&remember=0`;
         //   toastr.info("url: " + url);
 

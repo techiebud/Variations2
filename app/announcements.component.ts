@@ -95,10 +95,11 @@ export class AnnouncementsComponent implements OnInit {
 
             var viewer = (url.toLowerCase().includes(".pdf")) ? "pdfViewer" : "driveViewer";
             if (viewer === "driveViewer") {
-                if (url.toLowerCase().startsWith("http:")) {
+                if (url.toLowerCase().startsWith("http:") || url.toLowerCase().endsWith('html')) {
                     isRegularLink = true;
                 }
             }
+
 
             let announcementRecord: Announcement = {
                 Date: announcementDate,

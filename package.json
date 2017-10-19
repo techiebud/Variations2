@@ -8,7 +8,8 @@
     "tsc:w": "tsc -w",
     "deploy-all": "tsc && gulp public && webpack && firebase deploy",
     "deploy-hosting": "tsc && gulp public && webpack && firebase deploy --only hosting",
-    "deploy-functions": "firebase deploy --only functions"   
+    "deploy-functions": "firebase deploy --only functions",
+    "gulp-only": "gulp public"
   },
   "keywords": [
     "Variations"
