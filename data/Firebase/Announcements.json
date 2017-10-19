@@ -1,23 +1,19 @@
-{   
-  "20170816": {
-    "Title": "RESULTS:  Electronic Voting Options Poll", 
-    "URL": "http://electionbuddy.com/results/VVU7XDJD5PTY"                  
+{
+  "20170816" : {
+    "Title" : "RESULTS:  Electronic Voting Options Poll",
+    "URL" : "http://electionbuddy.com/results/VVU7XDJD5PTY"
   },
-  "20170817": {
-     "Title": "RESULTS:  Tennis Courts Future Use Opinion Poll", 
-    "URL": "http://electionbuddy.com/results/MKQZQ7V4RZG2"
-  }, 
+  "20170817" : {
+    "Title" : "RESULTS:  Tennis Courts Future Use Opinion Poll",
+    "URL" : "http://electionbuddy.com/results/MKQZQ7V4RZG2"
+  },
   "20170822" : {
-    "Title": "Electronic Voting Result - Djonis Contract Approval",
-    "URL":  "https://drive.google.com/file/d/0B0XxZGmv5AeFX3lBU1JrYUJBUVk/view?usp=sharing"
-  }, 
+    "Title" : "Electronic Voting Result - Djonis Contract Approval",
+    "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFX3lBU1JrYUJBUVk/view?usp=sharing"
+  },
   "20170906" : {
     "Title" : "Electronic Voting Result - Mattus Contract Approval",
     "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFMXZha2xqQnY0a0E/view?usp=sharing"
-  },  
-  "20170914a" : {
-    "Title" : "August Financials",
-    "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFcjlpSFgzZUZOYkE/view?usp=sharing"
   },
   "20170919" : {
     "Title" : "Chamblee Signal Newsletter - September/October 2017",
@@ -25,15 +21,11 @@
   },
   "20170923" : {
     "Title" : "Chamblee's New Geographic Information System",
-    "URL": "http://chambleega.gov/299/GIS-Mapping"    
+    "URL" : "http://chambleega.gov/299/GIS-Mapping"
   },
   "20170925" : {
     "Title" : "Electronic Voting Result - 1906 Comcast Cable Request",
     "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFcXBRT05hWERqQnc/view?usp=sharing"
-  },
-  "20170927" : {
-    "Title" : "September Board Meeting Hilights and Follow-up",
-    "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFZmJBSExNYnZaQVk/view?usp=sharing"
   },
   "20170929" : {
     "Title" : "July Board Meeting Minutes",
@@ -51,28 +43,36 @@
     "Title" : "Chamblee Police Weekly Report - 10/5/17",
     "URL" : "https://app.robly.com/archive?id=2775caa0638060dd0e39ba41fa4ca997&v=true"
   },
-    "20171005a" : {
-    "Title" : "2018 Election Notice",
-    "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFNklOOFg2LWRuZ0E/view?usp=sharing"
-  },
   "20171011" : {
     "Title" : "October Board Meeting Agenda",
     "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFZ1U2bTU2UFRqT3M/view?usp=sharing"
-  },
-  "20171011a" : {
-    "Title" : "Electronic Voting Result - Windscreens for Tennis and Dog Courts",
-    "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFSy02eVNYOHBhUW8/view?usp=sharing"
   },
   "20171015" : {
     "Title" : "DECAzette October Newsletter",
     "URL" : "http://drive.google.com/file/d/0B0XxZGmv5AeFWUJsem5xTFRJY3M/view?usp=sharing"
   },
-  "20171016": {
+  "20171016" : {
     "Title" : "Halloween Social - 10/28",
     "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFYUd6VkdCRVZ5STg/view?usp=sharing"
   },
-  "20171017": {
+  "20171017" : {
     "Title" : "Sample Ballot for the DeKalb County Nov. 7th Election",
     "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFYVVrYm94TGhXYVU/view?usp=sharing"
+  },
+  "20171019" : {
+    "Title" : "September Board Meeting Minutes",
+    "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFSEt6M1FVX05XeHM/view?usp=sharing"
+  },
+  "20170914a" : {
+    "Title" : "August Financials",
+    "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFcjlpSFgzZUZOYkE/view?usp=sharing"
+  },
+  "20171005a" : {
+    "Title" : "2018 Election Notice",
+    "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFNklOOFg2LWRuZ0E/view?usp=sharing"
+  },
+  "20171011a" : {
+    "Title" : "Electronic Voting Result - Windscreens for Tennis and Dog Courts",
+    "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFSy02eVNYOHBhUW8/view?usp=sharing"
   }
 }
