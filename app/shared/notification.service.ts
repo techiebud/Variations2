@@ -73,8 +73,8 @@ export class NotificationService {
                 console.log("PushSubscription (check - fetch)", newSub);         
                 if (newSubscription) {
                      //TODO:  Change to production before deploying
-                    const subscriptionsURL = AppSettings.FIREBASE_DEVELOPMENT.databaseURL + "/Subscriptions.json";
-                    //const subscriptionsURL = AppSettings.FIREBASE_PRODUCTION.databaseURL  + "/Subscriptions.json";
+                    //const subscriptionsURL = AppSettings.FIREBASE_DEVELOPMENT.databaseURL + "/Subscriptions.json";
+                    const subscriptionsURL = AppSettings.FIREBASE_PRODUCTION.databaseURL  + "/Subscriptions.json";
                     return fetch(subscriptionsURL, {
                         method: 'POST',
                         headers: {

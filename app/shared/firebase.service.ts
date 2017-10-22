@@ -8,8 +8,8 @@ export class FirebaseService {
 
     constructor() { 
         //TODO:   Change to Production
-        let config = AppSettings.FIREBASE_DEVELOPMENT;
-      //  let config = AppSettings.FIREBASE_PRODUCTION;
+       // let config = AppSettings.FIREBASE_DEVELOPMENT;
+        let config = AppSettings.FIREBASE_PRODUCTION;
         firebase.initializeApp(config);
 
     }
