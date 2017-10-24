@@ -92,6 +92,12 @@ exports.sendMessage = functions.https.onRequest(function (request, response) {
   });
 });
 
+exports.logUserInfo = functions.https.onRequest(function (request, response) {
+  cors(request, response, function () {
+
+    console.log("UserInfo", functions.auth.user().id  );
+  })
+});
 exports.storeAnnouncements = functions.https.onRequest(function (request, response) {
   cors(request, response, function () {
     var postDate = request.body.date;
