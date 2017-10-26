@@ -33,9 +33,11 @@ export class SigninComponent implements OnInit {
           "rememberMe": [false]
          
         });
+      //  toastr.info("hello");
     }
 
     onSignin(): any { 
+        localStorage.removeItem("userHasLoggedIn");
         this._authService.signinUser(this.signinForm.value.userSigninInfo, this.signinForm.value.rememberMe);
     }
 

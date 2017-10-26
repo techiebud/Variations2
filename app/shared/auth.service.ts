@@ -25,9 +25,7 @@ export class AuthService {
     
         firebase.auth().onAuthStateChanged((user) => {
             localStorage.removeItem("token");
-            if (user) {
-                console.log("User has signed in");
-                console.log(user);
+            if (user) {             
                 localStorage.setItem("token", user.refreshToken);
                 this.userGravatarURL = "https://gravatar.com/avatar/"
                     + md5(user.email.trim().toLowerCase()) + "?d=mm"

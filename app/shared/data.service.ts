@@ -86,7 +86,7 @@ export class DataService {
             (snapshot) => {
                 let returnedData = snapshot.val();
                 this.residents = returnedData;
-                console.log(this.residents);
+              //  console.log(this.residents);
             },
             (error) => {
                 console.error(error);

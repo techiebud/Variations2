@@ -19,11 +19,14 @@
 // [START import]
 // The Cloud Functions for Firebase SDK to create Cloud Functions and setup triggers.
 const functions = require('firebase-functions');
-
 // The Firebase Admin SDK to access the Firebase Realtime Database. 
-const admin = require('firebase-admin');
+var admin = require('firebase-admin');
 var cors = require('cors')({ origin: true });
 var webpush = require('web-push');
+var moment = require('moment');
+var parser = require('ua-parser-js');
+var requestIp = require('request-ip');
+
 
 
 //note:  This is all dev.
@@ -95,8 +98,25 @@ exports.sendMessage = functions.https.onRequest(function (request, response) {
 exports.logUserInfo = functions.https.onRequest(function (request, response) {
   cors(request, response, function () {
 
-    console.log("UserInfo", functions.auth.user().id  );
-  })
+    //console.log(moment.utc().format());
+    var ua = parser(request.headers['user-agent']);
+    console.log(JSON.stringify(ua));
+    var dailyKeyId = moment.utc().format("YYYYMMDD");
+    var hourlyKeyId = moment.utc().format("hhmmssSSS");
+    var clientIp = requestIp.getClientIp(request); 
+    admin.database().ref("UserLog/" + dailyKeyId + "/" + hourlyKeyId).set({
+      User: request.body.username,
+      BrowserInfo: JSON.stringify(ua),
+      IPAddress: clientIp
+    })
+    .then(function() {
+      response.status(201);
+    })
+    .catch(function (err) {
+      response.status(500).json({error: err});
+    })       
+
+  });
 });
 exports.storeAnnouncements = functions.https.onRequest(function (request, response) {
   cors(request, response, function () {

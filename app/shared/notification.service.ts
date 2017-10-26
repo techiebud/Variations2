@@ -70,11 +70,11 @@ export class NotificationService {
             })
             .then((newSub: PushSubscription) => {
                 // console.log("PushSubscription", JSON.stringify(newSub));
-                console.log("PushSubscription (check - fetch)", newSub);         
+                console.log("PushSubscription (check - fetch)", newSub);
                 if (newSubscription) {
-                     //TODO:  Change to production before deploying
+                    //TODO:$$$  Change to production before deploying
                     //const subscriptionsURL = AppSettings.FIREBASE_DEVELOPMENT.databaseURL + "/Subscriptions.json";
-                    const subscriptionsURL = AppSettings.FIREBASE_PRODUCTION.databaseURL  + "/Subscriptions.json";
+                    const subscriptionsURL = AppSettings.FIREBASE_PRODUCTION.databaseURL + "/Subscriptions.json";
                     return fetch(subscriptionsURL, {
                         method: 'POST',
                         headers: {
@@ -86,8 +86,10 @@ export class NotificationService {
                 }
             })
             .then((res: Response) => {
-                if (res.ok && newSubscription) {
-                    this.displayConfirmNotification();
+                if (res) {
+                    if (res.ok && newSubscription) {
+                        this.displayConfirmNotification();
+                    }
                 }
             })
             .catch((err) => {

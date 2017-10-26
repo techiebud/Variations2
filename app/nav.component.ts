@@ -1,3 +1,4 @@
+/// <reference path="../jquery-extend.d.ts" /> –
 import { AfterViewInit, Component, ElementRef, OnInit, Renderer, ViewChild } from "@angular/core";
 
 import { AppHelpers } from "./shared/app.common";
@@ -32,9 +33,12 @@ export class NavComponent implements OnInit, AfterViewInit {
 
     constructor(private _authService: AuthService, private _renderer: Renderer, private _dataService: DataService, private _notificationService: NotificationService) {
 
-        const md = new MobileDetect(window.navigator.userAgent);
+        const md = new MobileDetect(window.navigator.userAgent);       
         this.isMobile = md.mobile();
         this.isNotificationSupported = ('Notification' in window);
+        //console.log($.ua);
+        console.log(JSON.stringify($.ua));
+    
 
 
 

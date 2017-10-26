@@ -24,6 +24,7 @@
     'angular2-cookie': 'node_modules/angular2-cookie', 
     'crypto-js': 'node_modules/crypto-js',
      'ng2-pdf-viewer': 'node_modules/ng2-pdf-viewer',
+     'moment': 'node_modules/moment',
     'pdfjs-dist': 'node_modules/pdfjs-dist'
   
   }; 
@@ -34,7 +35,8 @@
     'rxjs': { defaultExtension: 'js' },
     'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
     'ng2-pdf-viewer': { main: 'dist/index.js', defaultExtension: 'js' },
-    'pdfjs-dist': { defaultExtension: 'js' }
+    'pdfjs-dist': { defaultExtension: 'js' },
+    'moment': {main: 'moment.js', defaultExtension: 'js'}
   };
 
     

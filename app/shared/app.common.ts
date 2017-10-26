@@ -74,22 +74,15 @@ export class AppHelpers {
             $liTags.removeAttr("data-toggle");
             $liTags.removeAttr("data-target");
         }
-
-
     }
 
     public static logIntoForum(user: User, forumAPIUrl: string, forumAPIKey: string, securityKey: string = ""): string {
-        console.log("logIntoForum");
-        console.log("user: " + user);
-        var authToken: string = "";
-
-      
+        var thisUser = user.firstName + " " + user.lastName;    
+        console.log("logIntoForum:", thisUser );      
+        var authToken: string = "";      
         if (user.isBetaTester) {
             toastr.warning("testing forum");
-        }
-
-        var thisUser = user.firstName + " " + user.lastName;     
-       // let pwdSecure: any = CryptoJS.AES.encrypt(user.password, securityKey);      
+        }    
         var key = CryptoJS.enc.Utf8.parse(securityKey);
         var iv = CryptoJS.enc.Utf8.parse('8080808080808080');
 
