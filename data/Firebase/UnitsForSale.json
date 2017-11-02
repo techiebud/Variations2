@@ -79,7 +79,8 @@
     "URL": "https://www.redfin.com/GA/Atlanta/1990-Variations-Dr-NE-30329/home/23728846?utm_source=myredfin&utm_medium=email&utm_campaign=instant24_listings_update&utm_content=refresh_with_promo&riftinfo=ZXY9ZW1haWwmbD04NDQ2MzUyJnA9bGlzdGluZ191cGRhdGVzX2luc3RhbnRfMjQmdHM9MTUwNDY5MzcyNzA4MiZhPWNsaWNrJnM9c2F2ZWRfc2VhcmNoJnQ9YWRkcmVzcyZlbWFpbF9pZD04NDQ2MzUyXzE1MDQ2OTI0NTVfMyZ1cGRhdGVfdHlwZT03JnNhdmVkX3NlYXJjaF9pZD0xMjg1MDYyNSZsaXN0aW5nX2lkPTc0MDY2NDI5JnBvc2l0aW9uX251bWJlcj0y",    
     "imageURL" : "https://ssl.cdn-redfin.com/photo/82/bigphoto/023/5898023_1.jpg"
   },
-  "1998" : {       
+  "1998" : {      
+    "Status": "Pending", 
     "Street" : "Variations Drive",
     "URL": "https://www.redfin.com/GA/Atlanta/1998-Variations-Dr-NE-30329/home/23726324",
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2FIS1f8bah9j44vd1000000000.jpg?alt=media&token=397c7c42-86f0-4715-bfce-0ec3855b6549"
