@@ -116,6 +116,11 @@
     "URL" : "https://www.redfin.com/GA/Atlanta/2075-Clairmeade-Valley-Rd-NE-30329/unit-1/home/105590683?utm_medium=email&utm_campaign=instant24_listings_update&utm_source=myredfin",
     "imageURL" : "https://ssl.cdn-redfin.com/photo/82/mbpaddedwide/209/genMid.5636209_0.jpg"
   },
+  "2077" : {  
+    "Street" : "Clairmeade Valley Road",
+    "URL" : "https://www.zillow.com/homes/fsbo/mmm_pt/14557634_zpid/globalrelevanceex_sort/33.864972,-84.297431,33.85004,-84.320498_rect/15_zm/?view=public",
+    "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F2077.jpg?alt=media&token=8075e713-2347-4755-a58c-892fa537d36f"
+  },
   "2106" : {
     "SaleDate" : 20160728,
     "SalePrice" : 177900,
