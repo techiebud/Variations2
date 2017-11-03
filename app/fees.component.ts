@@ -14,11 +14,13 @@ const LOAN_PAYOFF_HEADER: string = "Loan Payoff Countdown!";
 export class FeesComponent implements OnInit {
     reserveBalance: number;
     reserveBalanceAsOf: string;
+    reserveNote: string;
 
 
     constructor(private _authService: AuthService, private _dataService: DataService) {
         this.reserveBalance = _dataService.generalInformation.ReserveBalance / 100;
         this.reserveBalanceAsOf = _dataService.generalInformation.ReserveBalanceAsOf;
+        this.reserveNote = _dataService.generalInformation.ReserveNote;
 
      }
 

@@ -3,7 +3,7 @@
     <div class="jumbotron">
         <h1><span><i class="fa fa-usd" aria-hidden="true"></i></span> Fees </h1>
         <p>Current HOA Fee: <strong>$360 / monthly</strong></p>
-        <p>Current Cash Reserves: <strong>{{reserveBalance | currency:'USD':true:'1.2-2'}}</strong> (as of {{reserveBalanceAsOf}})</p>
+        <p>Current Cash Reserves: <strong>{{reserveBalance | currency:'USD':true:'1.2-2'}}</strong><sup>1</sup> (as of {{reserveBalanceAsOf}})</p>
           <div *ngIf="isAuth()" class="well row col-md12">Homeowners can pay HOA Dues through <a href="https://www.bbt.com/business/cash-management/association-services/homeowner-payments-through-association-services.page"
             target="_blank">BB&T Association Services</a></div>
     </div>
@@ -14,21 +14,11 @@
 
         <div class="panel panel-primary">
 
-            <h2 class="panel-heading">Construction Loan</h2>
+         <!--    <h2 class="panel-heading">Construction Loan</h2> -->
 
-            <h4 class="panel-body">
-                In October 2005, the community voted overwhelmingly to borrow $1,600,000 to replace the siding and roofs on all 26 buildings
-                in the complex. The note is $19,000/month, and will be paid off at the end of December 2016.
-                <br/> <br/>
-                <a href="img/OneCommunityCountDown.png" data-toggle="lightbox" data-title="Loan Payoff Countdown!" data-footer="The Variations Condominium Association, Inc">
-                    <strong>Click here to view the latest figures for our loan payoff countdown.</strong>
-                </a>
-                <br/>
-                <br/>
-
-
-              
-            </h4>
+            <h5 class="panel-body">
+                <sup>1</sup><em>{{reserveNote}}</em>             
+            </h5>
             <!-- panel-body -->
 
         </div>

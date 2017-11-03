@@ -7,4 +7,5 @@ export interface GeneralInformation {
     CrimeMapURL: string;
     ReserveBalance: number;
     ReserveBalanceAsOf: string;
+    ReserveNote: string;
 }
