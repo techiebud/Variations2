@@ -103,7 +103,7 @@ export class NotificationService {
         Notification.requestPermission((result) => {
             //   console.log('User Choice', result);
             if (result !== 'granted') {
-                toastr.warning("No notification permission granted!");
+               // toastr.warning("No notification permission granted!");
                 console.log('No notification permission granted!');
                 return;
             } else {
