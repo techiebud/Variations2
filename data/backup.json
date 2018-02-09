@@ -502,7 +502,7 @@
     "Email" : "jprivett2@yahoo.com ",
     "FirstName" : "Jesse",
     "LastName" : "Privett",
-    "Phone1" : 4042762908,
+    "Phone1" : 4042764699,
     "Phone2" : "",
     "Street" : "Variations Dr",
     "Unit" : 1936
@@ -2778,7 +2778,9 @@
       "imageURL" : "https://variationscondos.com/img/1903.jpg"
     },
     "1906" : {
-      "Status" : "Pending",
+      "SaleDate" : "20171218",
+      "SalePrice" : 182500,
+      "Status" : "Sold",
       "Street" : "Variations Drive",
       "URL" : "https://www.redfin.com/GA/Atlanta/1906-Variations-Dr-NE-30329/home/23725783",
       "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1906.jpg?alt=media&token=c0125dfa-1238-4909-a928-3bc530e07472"
@@ -2981,6 +2983,16 @@
         "User" : "Johnny Sims"
       },
       "011251322" : {
+        "BrowserInfo" : "{\"ua\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36\",\"browser\":{\"name\":\"Chrome\",\"version\":\"64.0.3282.140\",\"major\":\"64\"},\"engine\":{\"name\":\"WebKit\",\"version\":\"537.36\"},\"os\":{\"name\":\"Windows\",\"version\":\"10\"},\"device\":{},\"cpu\":{\"architecture\":\"amd64\"}}",
+        "IPAddress" : "n/a",
+        "User" : "Johnny Sims"
+      },
+      "012227225" : {
+        "BrowserInfo" : "{\"ua\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36\",\"browser\":{\"name\":\"Chrome\",\"version\":\"64.0.3282.140\",\"major\":\"64\"},\"engine\":{\"name\":\"WebKit\",\"version\":\"537.36\"},\"os\":{\"name\":\"Windows\",\"version\":\"10\"},\"device\":{},\"cpu\":{\"architecture\":\"amd64\"}}",
+        "IPAddress" : "n/a",
+        "User" : "Johnny Sims"
+      },
+      "013624269" : {
         "BrowserInfo" : "{\"ua\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36\",\"browser\":{\"name\":\"Chrome\",\"version\":\"64.0.3282.140\",\"major\":\"64\"},\"engine\":{\"name\":\"WebKit\",\"version\":\"537.36\"},\"os\":{\"name\":\"Windows\",\"version\":\"10\"},\"device\":{},\"cpu\":{\"architecture\":\"amd64\"}}",
         "IPAddress" : "n/a",
         "User" : "Johnny Sims"
