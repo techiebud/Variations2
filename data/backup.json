@@ -1,79 +1,30 @@
 {
   "Announcements" : {
-    "20160814" : {
-      "Title" : "Welcome Newest Homeowners and Tenants",
-      "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFbnpza3FwdWZJNGc/view?usp=sharing"
+    "20180125" : {
+      "Title" : "November Board Meeting Minutes",
+      "URL" : "https://drive.google.com/file/d/1yz3-yT-79-qDrxMmyucLTRpfkgO5-qHL/view?usp=sharing"
     },
-    "20161208" : {
-      "Title" : "Chamblee Police Weekly Report 12/8/16",
-      "URL" : "https://app.robly.com/archive?id=06a3f78122a05bc4556cb3a32748d369"
+    "20180201" : {
+      "Title" : "Electronic Voting Result - Clark Construction Contract Approval For 1958 & 2051",
+      "URL" : "https://drive.google.com/file/d/1UA-PxqskSc632nPzP6VNSXWx9wPLkHF2/view?usp=sharing"
     },
-    "20161211" : {
-      "Title" : "October Board Meeting Minutes",
-      "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFbmtkWHNIQWY4V2s/view?usp=sharing"
+    "20180207" : {
+      "Title" : "Electronic Voting Result - Architectural Changes Approval For 1906 & 1936",
+      "URL" : "https://drive.google.com/file/d/1UQ05Yw4DApWwYHtzBKRAGedHMMpA-Nfq/view?usp=sharing"
     },
-    "20161221" : {
-      "Title" : "The Buford Highway Masterplan",
-      "URL" : "http://www.buhimasterplan.com/"
-    },
-    "20161224" : {
-      "Title" : "Chamblee Police Weekly Report - 12/23/16",
-      "URL" : "https://app.robly.com/archive?id=1640d2b8b00cda54b09f2739945cb032"
-    },
-    "20161230" : {
-      "Title" : "Chamblee Police Weekly Report - 12/29/16",
-      "URL" : "https://app.robly.com/archive?id=25d909b9187e41d5dec6af0456d4bba5"
-    },
-    "20170104" : {
-      "Title" : "City of Chamblee 2017 Budget",
-      "URL" : "http://www.chambleega.com/ArchiveCenter/ViewFile/Item/114"
-    },
-    "20170105" : {
-      "Title" : "Chamblee Police Weekly Report - 1/5/17",
-      "URL" : "https://app.robly.com/archive?id=339fe9028e382ce9660365385c962d23"
-    },
-    "20170109" : {
-      "Title" : "Chamblee Parks & Recreations - Winter Program Guide",
-      "URL" : "https://app.robly.com/archive?id=6898d6388e43b157d56982a936b23ffc"
-    },
-    "20170112" : {
-      "Title" : "January Board Meeting Agenda - 1/16",
-      "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFOGljNU14OU5RLUk/view?usp=sharing"
-    },
-    "20170113" : {
-      "Title" : "Chamblee Police Weekly Report - 1/12/17",
-      "URL" : "https://app.robly.com/archive?id=288a9c6a8b9092e13e0f6f8fad2d8f89"
-    },
-    "20160810a" : {
-      "Title" : "Smart911 Discussed By Chamblee Police Last Week",
-      "URL" : "https://www.smart911.com/"
-    },
-    "20161121A" : {
-      "Title" : "October's Financials",
-      "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFOFJ4dVQ5R2hrZFU/view?usp=sharing"
-    },
-    "20161121c" : {
-      "Title" : "Level 2 Drought Response - Residential Fact Sheet",
-      "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFYkRaaWJvajZhQkU/view?usp=sharing"
-    },
-    "20161211a" : {
-      "Title" : "Email Vote for 2017 Budget",
-      "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFZXRQSzlnSHBqNDA/view?usp=sharing"
-    },
-    "20170105a" : {
-      "Title" : "Be Ready! Winter Weather",
-      "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFQm1QaWFCY0l6SGM/view?usp=sharing"
-    },
-    "20170105b" : {
-      "Title" : "Winter Storms! Extreme Cold - Fact & Info Sheet",
-      "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFOEh5MmplekFjems/view?usp=sharing"
-    },
-    "20170105c" : {
-      "Title" : "Chamblee Signal Latest Newsletter",
-      "URL" : "http://www.chambleega.com/ArchiveCenter/ViewFile/Item/113"
+    "20180125a" : {
+      "Title" : "December Annual Homeowners Meeting Minutes",
+      "URL" : "https://drive.google.com/file/d/1NJ4e1RqAZHzDYtyzNMW5yPw176OMUBdm/view?usp=sharing"
     }
   },
   "BoardMembers" : {
+    "Architect Chairman" : {
+      "Address" : "2078 Clairmeade Valley Rd",
+      "DisplayOrder" : 5,
+      "Email" : "variationsarchitectural@gmail.com",
+      "Name" : "Pam Sellman",
+      "Phone" : "(770) 310-3778"
+    },
     "Community Manager" : {
       "DisplayOrder" : 6,
       "Email" : "elittle@condominiumconcepts.com",
@@ -81,13 +32,6 @@
       "Phone" : "(404) 917-0600 ext 250",
       "URL" : "http://www.condominiumconcepts.com/",
       "URLCaption" : "Condominium Concepts Management"
-    },
-    "Landscape and Architect Committee" : {
-      "Address" : "2054 Clairmeade Way",
-      "DisplayOrder" : 5,
-      "Email" : "gabear88@hotmail.com",
-      "Name" : "George Bahakel",
-      "Phone" : "(770) 475-1130 ext. 8333"
     },
     "President" : {
       "Address" : "2060 Clairmeade Way",
@@ -97,11 +41,11 @@
       "Phone" : "(404) 200-6283"
     },
     "Secretary" : {
-      "Address" : "2078 Clairmeade Valley Rd",
+      "Address" : "1967 Variations Drive",
       "DisplayOrder" : 4,
       "Email" : "variationssecretary@gmail.com",
-      "Name" : "Pam Sellman",
-      "Phone" : "(770) 310-3778"
+      "Name" : "Susie Hawkins",
+      "Phone" : "(404) 401-9519"
     },
     "Treasurer" : {
       "Address" : "1913 Variations Drive",
@@ -111,17 +55,21 @@
       "Phone" : "(404) 550-5235"
     },
     "Vice President" : {
-      "Address" : "2099 Clairmeade Valley Rd",
+      "Address" : "2011 Variations Drive",
       "DisplayOrder" : 2,
-      "Email" : "dlg2099@aol.com",
-      "Name" : "Donna Gibbas",
-      "Phone" : "(404) 636-5763"
+      "Email" : "variationsvp@gmail.com",
+      "Name" : "Rich Foster",
+      "Phone" : "(407) 408-6796"
     }
   },
   "GeneralInformation" : {
+    "CrimeMapURL" : "https://www.crimereports.com/home/#!/dashboard?lat=33.857405&lng=-84.30954&zoom=16&incident_types=Assault%252CAssault%2520with%2520Deadly%2520Weapon%252CBreaking%2520%2526%2520Entering%252CDisorder%252CDrugs%252CHomicide%252CKidnapping%252CLiquor%252COther%2520Sexual%2520Offense%252CProperty%2520Crime%252CProperty%2520Crime%2520Commercial%252CProperty%2520Crime%2520Residential%252CQuality%2520of%2520Life%252CRobbery%252CSexual%2520Assault%252CSexual%2520Offense%252CTheft%252CTheft%2520from%2520Vehicle%252CTheft%2520of%2520Vehicle&start_date={startDate}&end_date={endDate}&days=sunday%252Cmonday%252Ctuesday%252Cwednesday%252Cthursday%252Cfriday%252Csaturday&start_time=0&end_time=23&include_sex_offenders=true&current_tab=list&shapeIds=&shape_id=false",
     "ForumAPIKey" : "vBry7QpM9DM9kQliepqhS7reIuqBDGTF28OXlLvQ",
-    "ForumAPIUrl" : "https://thevariations.azurewebsites.net/api/Forum/key",
+    "ForumAPIUrl" : "https://thevariations.us/api/Forum/key",
     "MaximumUsersPerUnit" : 2,
+    "ReserveBalance" : 91953464,
+    "ReserveBalanceAsOf" : "January, 2018",
+    "ReserveNote" : "Includes $660,787.34 remaining loan balance which will quickly be absorbed as current capital improvement work progresses. ",
     "SecurityKey" : "va0ri0ati1o1n1sx",
     "TennisCourtAccessCode" : 2868
   },
@@ -133,6 +81,30 @@
     "ContactPhone" : "(404) 917-0600 ext 250"
   },
   "Pictures" : {
+    "20090718" : {
+      "Title" : "Pool Party",
+      "URL" : "https://photos.app.goo.gl/FPQbadWP5VZ8nrgX2"
+    },
+    "20100710" : {
+      "Title" : "Pool Party",
+      "URL" : "https://photos.app.goo.gl/p7PRy9keeQIQxKBD3"
+    },
+    "20120714" : {
+      "Title" : "Pool Party",
+      "URL" : "https://photos.google.com/share/AF1QipMiQd9Wb-bb8VhOrzs9BlRdHlJYVNhSS6CPLX2Q87wQcP9MWvfC3XATqKjDiwd5Uw?key=WXZYSWt6cGxtTHdrQVBkcy0wSFhxTS1wVFJtVndB"
+    },
+    "20130223" : {
+      "Title" : "Community Service Day",
+      "URL" : "https://photos.app.goo.gl/BSnusYxUmA3Pgrno2"
+    },
+    "20130417" : {
+      "Title" : "Wonderful Wednesday",
+      "URL" : "https://photos.google.com/album/AF1QipM-Dk4PEtS5v2Y0yT_psEzPNC8xBcKRRvEERc8x"
+    },
+    "20130613" : {
+      "Title" : "Community Service Day",
+      "URL" : "https://get.google.com/albumarchive/103316266726540507209/album/AF1QipMFeM_n4bq053ZplaE3ESZq2zesFKr9_kyPBb5g?source=pwa&authKey=CPXk8eeV-MWlIQ"
+    },
     "20160508" : {
       "Title" : "3 in 1 Pool Party",
       "URL" : "https://goo.gl/photos/GknD8gZzudjjW9Qs9"
@@ -148,6 +120,30 @@
     "20160704" : {
       "Title" : "Pool Decorations - July 4th, 2016 Holiday",
       "URL" : "https://goo.gl/photos/qgWM2qo6sQ9QmRji7"
+    },
+    "20170305" : {
+      "Title" : "Loan Payoff Celebration",
+      "URL" : "https://goo.gl/photos/c72bSFxUTWkjABww9"
+    },
+    "20170409" : {
+      "Title" : "The Great Chili Cook-off Competition",
+      "URL" : "https://goo.gl/photos/jjpT2qf2z64VMTFM6"
+    },
+    "20170410" : {
+      "Title" : "Old Television Tower Removal",
+      "URL" : "https://goo.gl/photos/MVJwqJSxPKuAfM8QA"
+    },
+    "20170701" : {
+      "Title" : "Early Independence Day Celebration",
+      "URL" : "https://photos.app.goo.gl/o6y6XeBK3LHdog203"
+    },
+    "20170801" : {
+      "Title" : "National Night Out (Police Awareness)",
+      "URL" : "http://techiebud.me/nno20170801"
+    },
+    "20170812" : {
+      "Title" : "International Food Night",
+      "URL" : "https://photos.app.goo.gl/58A3iWeOg6lDIexB3"
     }
   },
   "Residents" : [ {
@@ -167,18 +163,10 @@
     "Street" : "Variations Dr",
     "Unit" : 1902
   }, {
-    "Email" : "cedarom@gmail.com",
-    "FirstName" : "Albert",
-    "LastName" : "Cedarholm",
-    "Phone1" : 4043200941,
-    "Phone2" : "",
-    "Street" : "Variations Dr",
-    "Unit" : 1903
-  }, {
-    "Email" : "",
-    "FirstName" : "Lynn",
-    "LastName" : "Cedarholm",
-    "Phone1" : 6785608860,
+    "Email" : "tainn@me.com",
+    "FirstName" : "Tainn",
+    "LastName" : "Moscoso",
+    "Phone1" : "4048894353",
     "Phone2" : "",
     "Street" : "Variations Dr",
     "Unit" : 1903
@@ -207,10 +195,18 @@
     "Street" : "Variations Dr",
     "Unit" : 1905
   }, {
-    "Email" : "410moriah@gmail.com",
-    "FirstName" : "Donna",
-    "LastName" : "Moriah",
-    "Phone1" : 4042166255,
+    "Email" : "rcammons13@yahoo.com",
+    "FirstName" : "Randy",
+    "LastName" : "Ammons",
+    "Phone1" : 4042762908,
+    "Phone2" : "",
+    "Street" : "Variations Dr",
+    "Unit" : 1906
+  }, {
+    "Email" : "jprivett2@yahoo.com",
+    "FirstName" : "Jesse",
+    "LastName" : "Privett",
+    "Phone1" : 4042764699,
     "Phone2" : "",
     "Street" : "Variations Dr",
     "Unit" : 1906
@@ -271,7 +267,7 @@
     "Street" : "Variations Dr",
     "Unit" : 1912
   }, {
-    "Email" : "ballinger.robert@yahoo.com",
+    "Email" : "rwballinger17@gmail.com",
     "FirstName" : "Robert",
     "LastName" : "Ballinger",
     "Phone1" : 4045505235,
@@ -367,7 +363,7 @@
     "Street" : "Variations Dr",
     "Unit" : 1922
   }, {
-    "Email" : "",
+    "Email" : "bmaclin274@hotmail.com",
     "FirstName" : "Brendal",
     "LastName" : "Maclin",
     "Phone1" : 4043216523,
@@ -471,11 +467,11 @@
     "Street" : "Variations Dr",
     "Unit" : 1933
   }, {
-    "Email" : "shhorwick@mac.com",
-    "FirstName" : "Stephen",
-    "LastName" : "Horwick",
-    "Phone1" : 4042816567,
-    "Phone2" : 7068355149,
+    "Email" : "atdelk@icloud.com",
+    "FirstName" : "Austin",
+    "LastName" : "Delk",
+    "Phone1" : 3369537449,
+    "Phone2" : "",
     "Street" : "Variations Dr",
     "Unit" : 1934
   }, {
@@ -495,11 +491,19 @@
     "Street" : "Variations Dr",
     "Unit" : 1935
   }, {
-    "Email" : "jarvisjackson@gmail.com",
-    "FirstName" : "Jarvis",
-    "LastName" : "Jackson",
-    "Phone1" : 6784851094,
-    "Phone2" : 4047883700,
+    "Email" : "rcammons13@yahoo.com",
+    "FirstName" : "Randy",
+    "LastName" : "Ammons",
+    "Phone1" : 4042762908,
+    "Phone2" : "",
+    "Street" : "Variations Dr",
+    "Unit" : 1936
+  }, {
+    "Email" : "jprivett2@yahoo.com ",
+    "FirstName" : "Jesse",
+    "LastName" : "Privett",
+    "Phone1" : 4042762908,
+    "Phone2" : "",
     "Street" : "Variations Dr",
     "Unit" : 1936
   }, {
@@ -575,11 +579,11 @@
     "Street" : "Variations Dr",
     "Unit" : 1958
   }, {
-    "Email" : "adorable_kidd@hotmail.com",
-    "FirstName" : "Adora",
-    "LastName" : "Poon",
-    "Phone1" : 4042480990,
-    "Phone2" : 4042108504,
+    "Email" : "shhorwick@mac.com",
+    "FirstName" : "Stephen",
+    "LastName" : "Horwick",
+    "Phone1" : 4042816567,
+    "Phone2" : "",
     "Street" : "Variations Dr",
     "Unit" : 1960
   }, {
@@ -615,18 +619,10 @@
     "Street" : "Variations Dr",
     "Unit" : 1963
   }, {
-    "Email" : "lilkube@gmail.com",
-    "FirstName" : "Brett",
-    "LastName" : "Kube",
-    "Phone1" : 4042790470,
-    "Phone2" : "",
-    "Street" : "Variations Dr",
-    "Unit" : 1964
-  }, {
-    "Email" : "11skc23@gmail.com",
-    "FirstName" : "Sarah",
-    "LastName" : "Cook",
-    "Phone1" : 3364024097,
+    "Email" : "gilboyca@gmail.com",
+    "FirstName" : "Christina",
+    "LastName" : "Gilboy",
+    "Phone1" : 7703511552,
     "Phone2" : "",
     "Street" : "Variations Dr",
     "Unit" : 1964
@@ -695,8 +691,8 @@
     "Street" : "Variations Dr",
     "Unit" : 1969
   }, {
-    "Email" : "",
-    "FirstName" : "Benevieve",
+    "Email" : "fishergen@gmail.com",
+    "FirstName" : "Genevieve",
     "LastName" : "Cable",
     "Phone1" : 6784380572,
     "Phone2" : "",
@@ -855,19 +851,11 @@
     "Street" : "Variations Dr",
     "Unit" : 1988
   }, {
-    "Email" : "",
-    "FirstName" : "Leah",
-    "LastName" : "Lyman Waldron",
-    "Phone1" : "",
+    "Email" : "aevans4489@yahoo.com",
+    "FirstName" : "Allison",
+    "LastName" : "Evans",
+    "Phone1" : 4042346248,
     "Phone2" : "",
-    "Street" : "Variations Dr",
-    "Unit" : 1990
-  }, {
-    "Email" : "treehuggerguy@gmail.com",
-    "FirstName" : "Chris",
-    "LastName" : "Lyman Waldron",
-    "Phone1" : 6785610921,
-    "Phone2" : 6303364509,
     "Street" : "Variations Dr",
     "Unit" : 1990
   }, {
@@ -895,18 +883,10 @@
     "Street" : "Variations Dr",
     "Unit" : 1996
   }, {
-    "Email" : "jefftcoleman@comcast.net",
-    "FirstName" : "Jeff",
-    "LastName" : "Coleman",
-    "Phone1" : 4042810889,
-    "Phone2" : "",
-    "Street" : "Variations Dr",
-    "Unit" : 1998
-  }, {
-    "Email" : "landshark1609@gmail.com",
-    "FirstName" : "Tony",
-    "LastName" : "Long",
-    "Phone1" : 4049245588,
+    "Email" : "umm626@gmail.com",
+    "FirstName" : "Roberto",
+    "LastName" : "Moreno",
+    "Phone1" : 4047692555,
     "Phone2" : "",
     "Street" : "Variations Dr",
     "Unit" : 1998
@@ -1015,7 +995,7 @@
     "Street" : "Variations Dr",
     "Unit" : 2010
   }, {
-    "Email" : "rich0701@gmail.com",
+    "Email" : "richf0701@gmail.com",
     "FirstName" : "Rich",
     "LastName" : "Foster",
     "Phone1" : "4074086796",
@@ -1079,18 +1059,10 @@
     "Street" : "Variations Dr",
     "Unit" : 2017
   }, {
-    "Email" : "alberteinstein@comcast.net",
-    "FirstName" : "Rich",
-    "LastName" : "William",
-    "Phone1" : "",
-    "Phone2" : "",
-    "Street" : "Clairmeade Way",
-    "Unit" : 2051
-  }, {
-    "Email" : "melissamcmillana@gmail.com",
-    "FirstName" : "Melissa",
-    "LastName" : "McMillian",
-    "Phone1" : 4043759028,
+    "Email" : "josuerosales77@gmail.com",
+    "FirstName" : "Josue",
+    "LastName" : "Rosales",
+    "Phone1" : "2397458228",
     "Phone2" : "",
     "Street" : "Clairmeade Way",
     "Unit" : 2051
@@ -1167,10 +1139,10 @@
     "Street" : "Clairmeade Way",
     "Unit" : 2058
   }, {
-    "Email" : "marywoodruff777@gmail.com",
-    "FirstName" : "Mary",
-    "LastName" : "Woodruff",
-    "Phone1" : 6786872009,
+    "Email" : "mark.e.byers@gmail.com",
+    "FirstName" : "Mark",
+    "LastName" : "Byers",
+    "Phone1" : 4048087090,
     "Phone2" : "",
     "Street" : "Clairmeade Way",
     "Unit" : 2059
@@ -1503,6 +1475,22 @@
     "Street" : "Clairmeade Valley Rd",
     "Unit" : 2112
   } ],
+  "Subscriptions" : {
+    "-L4rWuaj39Kyj3Hy4RzD" : {
+      "endpoint" : "https://fcm.googleapis.com/fcm/send/cqvpVbNwpBE:APA91bGMDmc3oGhKaJT-gHraTc0gDEAcWt1_UEOL6VY_7qleH_NOW7-PG0cVE8WP552eDUwslNA9azyaLDPoxLx3ZuoE6qhvcz_h36zwzmBoUtEOtOTUjq7fkMczOg-jk3L5wODw_tq9",
+      "keys" : {
+        "auth" : "aAfCX4BF5sYZ7FCI2wcHLw==",
+        "p256dh" : "BKiYNXexV3M5lbrRq6IuB1HmbnsN18JTesuRYIM88mufxEbxmPGgAeLi3o_ayaxXNbL6ynqwW8p4Wvt4wpnl_-s="
+      }
+    },
+    "-L4rWuanjMFGmsyk_San" : {
+      "endpoint" : "https://fcm.googleapis.com/fcm/send/cqvpVbNwpBE:APA91bGMDmc3oGhKaJT-gHraTc0gDEAcWt1_UEOL6VY_7qleH_NOW7-PG0cVE8WP552eDUwslNA9azyaLDPoxLx3ZuoE6qhvcz_h36zwzmBoUtEOtOTUjq7fkMczOg-jk3L5wODw_tq9",
+      "keys" : {
+        "auth" : "aAfCX4BF5sYZ7FCI2wcHLw==",
+        "p256dh" : "BKiYNXexV3M5lbrRq6IuB1HmbnsN18JTesuRYIM88mufxEbxmPGgAeLi3o_ayaxXNbL6ynqwW8p4Wvt4wpnl_-s="
+      }
+    }
+  },
   "UnitKeys" : {
     "1901" : {
       "Key" : "f595590e-5e24-47ab-b563-d06e583a3f44"
@@ -1914,11 +1902,11 @@
       "Street" : "Variations Drive"
     },
     "1903" : {
-      "DirectoryEmail" : "unknown",
-      "DirectoryName" : "Cedarholm, Al and Lynn",
-      "Owner" : "Al and Lynn Cedarholm",
-      "PhoneNumber1" : 4043200941,
-      "PhoneNumber2" : 6785608860,
+      "DirectoryEmail" : "tainn@me.com",
+      "DirectoryName" : "Moscoso, Tainn",
+      "Owner" : "Tainn Moscoso",
+      "PhoneNumber1" : "",
+      "PhoneNumber2" : "",
       "RegisteredUsers" : 1,
       "Street" : "Variations Drive"
     },
@@ -1927,7 +1915,7 @@
       "DirectoryName" : "Fonseca, Pamela M. Rojas",
       "Owner" : "Pamela M. Rojas Fonseca",
       "PhoneNumber1" : 4049910244,
-      "RegisteredUsers" : 0,
+      "RegisteredUsers" : 1,
       "Street" : "Variations Drive"
     },
     "1905" : {
@@ -1949,7 +1937,7 @@
       "DirectoryName" : "Brooks, Thomas",
       "Owner" : "Thomas Brooks",
       "PhoneNumber1" : 4046340338,
-      "RegisteredUsers" : 0,
+      "RegisteredUsers" : 1,
       "Street" : "Variations Drive"
     },
     "1908" : {
@@ -1991,11 +1979,11 @@
       "Street" : "Variations Drive"
     },
     "1913" : {
-      "DirectoryEmail" : "ballinger.robert@yahoo.com",
+      "DirectoryEmail" : "rwballinger17@gmail.com ",
       "DirectoryName" : "Ballinger, Robert-Board Member",
       "Owner" : "Robert Ballinger",
       "PhoneNumber1" : "4045505235*",
-      "RegisteredUsers" : 0,
+      "RegisteredUsers" : 2,
       "Street" : "Variations Drive"
     },
     "1914" : {
@@ -2032,7 +2020,7 @@
     },
     "1918" : {
       "Owner" : "Glenn, John and Lois Morris",
-      "RegisteredUsers" : 1,
+      "RegisteredUsers" : 2,
       "Street" : "Variations Drive"
     },
     "1919" : {
@@ -2056,7 +2044,7 @@
     },
     "1922" : {
       "Owner" : "Hoai Trinh",
-      "RegisteredUsers" : 0,
+      "RegisteredUsers" : 1,
       "Street" : "Variations Drive"
     },
     "1923" : {
@@ -2067,7 +2055,7 @@
     },
     "1924" : {
       "Owner" : "Brannon Schenelle",
-      "RegisteredUsers" : 0,
+      "RegisteredUsers" : 1,
       "Street" : "Variations Drive"
     },
     "1925" : {
@@ -2086,7 +2074,7 @@
     },
     "1927" : {
       "Owner" : "Siavash Parvardgari",
-      "RegisteredUsers" : 1,
+      "RegisteredUsers" : 2,
       "Street" : "Variations Drive"
     },
     "1928" : {
@@ -2112,7 +2100,7 @@
     },
     "1931" : {
       "Owner" : "Russell Ogle and Gary Williams",
-      "RegisteredUsers" : 1,
+      "RegisteredUsers" : 2,
       "Street" : "Variations Drive"
     },
     "1932" : {
@@ -2128,14 +2116,7 @@
       "Street" : "Variations Drive"
     },
     "1934" : {
-      "AltAddress1" : "40 Old Toll Drive",
-      "AltAddress2" : "Blairsville, GA  30512",
-      "AltResidence" : "Dan Easton / Keith Cordle",
-      "DirectoryEmail" : "keithcordle@hotmail.com;mtmandan@windstream.net;shhorwick@mac.com",
-      "DirectoryName" : "Horwick, Stephen",
-      "Owner" : "Dan Easton",
-      "PhoneNumber1" : 4042816567,
-      "PhoneNumber2" : 7068355149,
+      "Owner" : "tbd",
       "RegisteredUsers" : 1,
       "Street" : "Variations Drive"
     },
@@ -2158,7 +2139,7 @@
     },
     "1938" : {
       "Owner" : "Steve Schneiderwind",
-      "RegisteredUsers" : 0,
+      "RegisteredUsers" : 1,
       "Street" : "Variations Drive"
     },
     "1939" : {
@@ -2212,13 +2193,13 @@
       "DirectoryName" : "Erskine, Janice",
       "Owner" : "Janice Erskine",
       "PhoneNumber1" : 4046369616,
-      "RegisteredUsers" : 0,
+      "RegisteredUsers" : 1,
       "Street" : "Variations Drive"
     },
     "1960" : {
       "DirectoryEmail" : "Unknown",
       "Owner" : "Adora Poon",
-      "RegisteredUsers" : 1,
+      "RegisteredUsers" : 2,
       "Street" : "Variations Drive"
     },
     "1961" : {
@@ -2226,7 +2207,7 @@
       "DirectoryName" : "Fuchs, Whitney",
       "Owner" : "Whitney Fuchs",
       "PhoneNumber1" : 7705304925,
-      "RegisteredUsers" : 1,
+      "RegisteredUsers" : 2,
       "Street" : "Variations Drive"
     },
     "1962" : {
@@ -2240,9 +2221,9 @@
       "Street" : "Variations Drive"
     },
     "1964" : {
-      "DirectoryEmail" : "lilkube@gmail.com",
-      "Owner" : "Brett Kube and Sarah Cook",
-      "RegisteredUsers" : 2,
+      "DirectoryEmail" : "dilboyca@gamil.com",
+      "Owner" : "Christina Dilboy",
+      "RegisteredUsers" : 1,
       "Street" : "Variations Drive"
     },
     "1965" : {
@@ -2264,12 +2245,12 @@
       "DirectoryName" : "Hawkins, Susie",
       "Owner" : "Susie Hawkins",
       "PhoneNumber1" : 4044019519,
-      "RegisteredUsers" : 1,
+      "RegisteredUsers" : 2,
       "Street" : "Variations Drive"
     },
     "1968" : {
       "Owner" : "Kerri Spivey",
-      "RegisteredUsers" : 1,
+      "RegisteredUsers" : 2,
       "Street" : "Variations Drive"
     },
     "1969" : {
@@ -2285,7 +2266,7 @@
       "Owner" : "Greg Fisher",
       "PhoneNumber1" : 7708536524,
       "PhoneNumber2" : 6784380572,
-      "RegisteredUsers" : 1,
+      "RegisteredUsers" : 2,
       "Street" : "Variations Drive"
     },
     "1971" : {
@@ -2315,7 +2296,7 @@
     },
     "1975" : {
       "Owner" : "James Woolley",
-      "RegisteredUsers" : 0,
+      "RegisteredUsers" : 1,
       "Street" : "Variations Drive"
     },
     "1976" : {
@@ -2346,7 +2327,7 @@
     "1980" : {
       "DirectoryEmail" : "jratlga@att.net;john.mccay@att.net",
       "Owner" : "J.R. Klimach ",
-      "RegisteredUsers" : 1,
+      "RegisteredUsers" : 2,
       "Street" : "Variations Drive"
     },
     "1982" : {
@@ -2379,13 +2360,13 @@
       "PhoneNumber1Prefix" : "Sheryl Cell",
       "PhoneNumber2" : "40459039340",
       "PhoneNumber2Prefix" : "Bill Cell",
-      "RegisteredUsers" : 1,
+      "RegisteredUsers" : 2,
       "Street" : "Variations Drive"
     },
     "1990" : {
-      "DirectoryEmail" : "chris@praxisucc.org",
-      "Owner" : "Chris Lyman Waldron",
-      "RegisteredUsers" : 2,
+      "DirectoryEmail" : "",
+      "Owner" : "TBD",
+      "RegisteredUsers" : 0,
       "Street" : "Variations Drive"
     },
     "1992" : {
@@ -2415,7 +2396,7 @@
       "PhoneNumber1Prefix" : "Jeff",
       "PhoneNumber2" : 4049245588,
       "PhoneNumber2Prefix" : "Tony",
-      "RegisteredUsers" : 2,
+      "RegisteredUsers" : 0,
       "Street" : "Variations Drive"
     },
     "2000" : {
@@ -2518,7 +2499,7 @@
     },
     "2015" : {
       "Owner" : "Ricky and Serena Wallace",
-      "RegisteredUsers" : 1,
+      "RegisteredUsers" : 2,
       "Street" : "Variations Drive"
     },
     "2016" : {
@@ -2527,7 +2508,7 @@
       "Owner" : "Rob Hewes",
       "PhoneNumber1" : 4042683281,
       "PhoneNumber2" : "4045936191*",
-      "RegisteredUsers" : 0,
+      "RegisteredUsers" : 1,
       "Street" : "Variations Drive"
     },
     "2017" : {
@@ -2536,9 +2517,9 @@
       "Street" : "Variations Drive"
     },
     "2051" : {
-      "DirectoryEmail" : "melissamcmillana@aol.com",
-      "Owner" : "Melissa McMillan",
-      "RegisteredUsers" : 2,
+      "DirectoryEmail" : "tbd",
+      "Owner" : "tbd",
+      "RegisteredUsers" : 0,
       "Street" : "Clairmeade Way"
     },
     "2052" : {
@@ -2603,12 +2584,12 @@
       "Owner" : "Shawn and Jamie Aughenbaugh",
       "PhoneNumber1" : "6784298221*",
       "PhoneNumber2" : 6787794705,
-      "RegisteredUsers" : 1,
+      "RegisteredUsers" : 2,
       "Street" : "Clairmeade Valley Road"
     },
     "2071" : {
       "Owner" : "Ginny Robinson",
-      "RegisteredUsers" : 0,
+      "RegisteredUsers" : 1,
       "Street" : "Clairmeade Valley Road"
     },
     "2072" : {
@@ -2632,7 +2613,7 @@
       "DiretoryName" : "Calhoun, Autumn Grace",
       "Owner" : "Autumn Calhoun",
       "PhoneNumber1" : 7707338716,
-      "RegisteredUsers" : 1,
+      "RegisteredUsers" : 2,
       "Street" : "Clairmeade Valley Road"
     },
     "2076" : {
@@ -2714,7 +2695,7 @@
       "DirectoryName" : "Farmer, Bill",
       "Owner" : "Bill Farmer",
       "PhoneNumber1" : 4048727651,
-      "RegisteredUsers" : 0,
+      "RegisteredUsers" : 1,
       "Street" : "Clairmeade Valley Road"
     },
     "2102" : {
@@ -2760,7 +2741,7 @@
     },
     "2108" : {
       "Owner" : "Robert Richardson",
-      "RegisteredUsers" : 1,
+      "RegisteredUsers" : 2,
       "Street" : "Clairmeade Valley Road"
     },
     "2109" : {
@@ -2788,6 +2769,20 @@
     }
   },
   "UnitsForSale" : {
+    "1903" : {
+      "SaleDate" : 20170510,
+      "SalePrice" : 155000,
+      "Status" : "Sold",
+      "Street" : "Variations Drive",
+      "URL" : "https://www.redfin.com/GA/Atlanta/1903-Variations-Dr-NE-30329/home/23725768",
+      "imageURL" : "https://variationscondos.com/img/1903.jpg"
+    },
+    "1906" : {
+      "Status" : "Pending",
+      "Street" : "Variations Drive",
+      "URL" : "https://www.redfin.com/GA/Atlanta/1906-Variations-Dr-NE-30329/home/23725783",
+      "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1906.jpg?alt=media&token=c0125dfa-1238-4909-a928-3bc530e07472"
+    },
     "1919" : {
       "SaleDate" : 20160804,
       "SalePrice" : 191000,
@@ -2804,6 +2799,14 @@
       "URL" : "https://www.redfin.com/GA/Atlanta/1929-Variations-Dr-NE-30329/unit-1929/home/56996706",
       "imageURL" : "https://ssl.cdn-redfin.com/photo/82/mbpaddedwide/437/genMid.5640437_1.jpg"
     },
+    "1934" : {
+      "SaleDate" : 20170612,
+      "SalePrice" : 196000,
+      "Status" : "Sold",
+      "Street" : "Variations Drive",
+      "URL" : "http://neg.ctimls.com/Report.asp?864NEG10751901",
+      "imageURL" : "https://ssl.cdn-redfin.com/photo/81/mbpaddedwide/521/genMid.8179521_22_0.jpg"
+    },
     "1935" : {
       "SaleDate" : 20160818,
       "SalePrice" : 154900,
@@ -2811,6 +2814,14 @@
       "Street" : "Variations Drive",
       "URL" : "https://www.redfin.com/GA/Atlanta/1935-Variations-Dr-NE-30329/home/23725776",
       "imageURL" : "https://2cdn.cbhomes.com/s3/mediasvc-prd/properties/7D6532bcda454f6-5693891.jpg"
+    },
+    "1936" : {
+      "SaleDate" : 20170908,
+      "SalePrice" : 150000,
+      "Status" : "Sold",
+      "Street" : "Variations Drive",
+      "URL" : "https://www.redfin.com/GA/Atlanta/1936-Variations-Dr-NE-30329/home/23810444",
+      "imageURL" : "https://ssl.cdn-redfin.com/photo/81/mbpaddedwide/138/genMid.8248138_0.jpg"
     },
     "1961" : {
       "SaleDate" : 20161207,
@@ -2820,6 +2831,20 @@
       "URL" : "https://www.redfin.com/GA/Atlanta/1961-Variations-Dr-NE-30329/home/23725761",
       "imageURL" : "https://ssl.cdn-redfin.com/photo/81/mbpaddedwide/981/genMid.8085981_0.jpg"
     },
+    "1964" : {
+      "SaleDate" : 20170824,
+      "SalePrice" : 184000,
+      "Status" : "Sold",
+      "Street" : "Variations Drive",
+      "URL" : "https://www.redfin.com/GA/Atlanta/1964-Variations-Dr-NE-30329/home/23725733?utm_source=myredfin&utm_medium=email&utm_campaign=instant24_listings_update&utm_content=refresh_with_promo&riftinfo=ZXY9ZW1haWwmbD04NDQ2MzUyJnA9bGlzdGluZ191cGRhdGVzX2luc3RhbnRfMjQmdHM9MTQ5OTE2Mzk4NzA0OCZhPWNsaWNrJnM9c2F2ZWRfc2VhcmNoJnQ9aW1hZ2UmZW1haWxfaWQ9ODQ0NjM1Ml8xNDk5MTYyOTA1XzMmcmVmcmVzaF92YXJpYW50PXJlZnJlc2hfd2l0aF9wcm9tbyZ1cGRhdGVfdHlwZT0xMSZzYXZlZF9zZWFyY2hfaWQ9MTI4NTA2MjUmbGlzdGluZ19pZD02OTMwNTkzNiZwb3NpdGlvbl9udW1iZXI9MA==",
+      "imageURL" : "https://ssl.cdn-redfin.com/photo/82/mbpaddedwide/272/genMid.5871272_0.jpg"
+    },
+    "1970" : {
+      "Status" : "Pending",
+      "Street" : "Variations Drive",
+      "URL" : "https://www.redfin.com/GA/Atlanta/1970-Variations-Dr-NE-30329/home/23725735",
+      "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1970.jpg?alt=media&token=7c786ec6-34de-48be-9e68-07189150b1bc"
+    },
     "1972" : {
       "SaleDate" : 20160525,
       "SalePrice" : 165000,
@@ -2827,6 +2852,14 @@
       "Street" : "Variations Drive",
       "URL" : "https://www.redfin.com/GA/Atlanta/1972-Variations-Dr-NE-30329/home/23869905",
       "imageURL" : "https://ssl.cdn-redfin.com/photo/82/mbpaddedwide/677/genMid.5660677_0.jpg"
+    },
+    "1990" : {
+      "SaleDate" : 20170905,
+      "SalePrice" : 196500,
+      "Status" : "Sold",
+      "Street" : "Variations Drive",
+      "URL" : "https://www.redfin.com/GA/Atlanta/1990-Variations-Dr-NE-30329/home/23728846?utm_source=myredfin&utm_medium=email&utm_campaign=instant24_listings_update&utm_content=refresh_with_promo&riftinfo=ZXY9ZW1haWwmbD04NDQ2MzUyJnA9bGlzdGluZ191cGRhdGVzX2luc3RhbnRfMjQmdHM9MTUwNDY5MzcyNzA4MiZhPWNsaWNrJnM9c2F2ZWRfc2VhcmNoJnQ9YWRkcmVzcyZlbWFpbF9pZD04NDQ2MzUyXzE1MDQ2OTI0NTVfMyZ1cGRhdGVfdHlwZT03JnNhdmVkX3NlYXJjaF9pZD0xMjg1MDYyNSZsaXN0aW5nX2lkPTc0MDY2NDI5JnBvc2l0aW9uX251bWJlcj0y",
+      "imageURL" : "https://ssl.cdn-redfin.com/photo/82/bigphoto/023/5898023_1.jpg"
     },
     "2010" : {
       "SaleDate" : 20160628,
@@ -2844,6 +2877,22 @@
       "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFX0plN2VMMHI3X1U/view?usp=sharing",
       "imageURL" : "https://s3.amazonaws.com/photoplan-cache.planomatic.com/tourFiles/29241/photocache/1006971-830w553h.jpg"
     },
+    "2051" : {
+      "SaleDate" : 20170915,
+      "SalePrice" : 187500,
+      "Status" : "Sold",
+      "Street" : "Clairmeade Way",
+      "URL" : "https://www.redfin.com/GA/Atlanta/2051-Clairmeade-Way-NE-30329/home/23873933?utm_source=myredfin&utm_medium=email&utm_campaign=instant_listings_update&utm_content=refresh_with_promo&riftinfo=ZXY9ZW1haWwmbD04NDQ2MzUyJnA9bGlzdGluZ191cGRhdGVzX2luc3RhbnRfMTUmdHM9MTUwMjQ4NTkwNjQ3NCZhPWNsaWNrJnM9c2F2ZWRfc2VhcmNoJnQ9dmlld19kZXRhaWxzJmVtYWlsX2lkPTg0NDYzNTJfMTUwMjQ4NTg5OV8yJnVwZGF0ZV90eXBlPTEmc2F2ZWRfc2VhcmNoX2lkPTEyODUwNjI1Jmxpc3RpbmdfaWQ9NzI5MzQzNjUmcG9zaXRpb25fbnVtYmVyPTA=#overview",
+      "imageURL" : "https://ssl.cdn-redfin.com/photo/81/mbpaddedwide/146/genMid.8241146_1_0.jpg"
+    },
+    "2059" : {
+      "SaleDate" : 20171229,
+      "SalePrice" : 198000,
+      "Status" : "Sold",
+      "Street" : "Clairmeade Way",
+      "URL" : "https://www.redfin.com/GA/Atlanta/2957-Clairmeade-Way-NE-30329/home/144236447",
+      "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F2059.jpg?alt=media&token=372d1ef2-a070-4ffc-b4ce-3b46d7aaa3d3"
+    },
     "2075" : {
       "SaleDate" : 20160728,
       "SalePrice" : 180000,
@@ -2851,6 +2900,11 @@
       "Street" : "Clairmeade Valley Road",
       "URL" : "https://www.redfin.com/GA/Atlanta/2075-Clairmeade-Valley-Rd-NE-30329/unit-1/home/105590683?utm_medium=email&utm_campaign=instant24_listings_update&utm_source=myredfin",
       "imageURL" : "https://ssl.cdn-redfin.com/photo/82/mbpaddedwide/209/genMid.5636209_0.jpg"
+    },
+    "2077" : {
+      "Street" : "Clairmeade Valley Road",
+      "URL" : "https://www.zillow.com/homes/fsbo/mmm_pt/14557634_zpid/globalrelevanceex_sort/33.864972,-84.297431,33.85004,-84.320498_rect/15_zm/?view=public",
+      "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F2077.jpg?alt=media&token=8075e713-2347-4755-a58c-892fa537d36f"
     },
     "2106" : {
       "SaleDate" : 20160728,
@@ -2869,12 +2923,68 @@
       "imageURL" : "https://variationscondos.com/img/2110Sold.JPG"
     },
     "2112" : {
-      "SaleDate" : 20160602,
+      "SaleDate" : 20160531,
       "SalePrice" : 175000,
       "Status" : "Sold",
       "Street" : "Clairmeade Valley Road",
       "URL" : "https://www.redfin.com/GA/Atlanta/2112-Clairmeade-Valley-Rd-NE-30329/home/23707335?utm_medium=email&utm_campaign=instant24_listings_update&utm_source=myredfin",
       "imageURL" : "https://1cdn.cbhomes.com/s3/mediasvc-prd/properties/B0af26FF8c7D42b-5680487.jpg?preset=lmain"
+    }
+  },
+  "UserLog" : {
+    "20180208" : {
+      "100916801" : {
+        "BrowserInfo" : "{\"ua\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36\",\"browser\":{\"name\":\"Chrome\",\"version\":\"64.0.3282.140\",\"major\":\"64\"},\"engine\":{\"name\":\"WebKit\",\"version\":\"537.36\"},\"os\":{\"name\":\"Windows\",\"version\":\"10\"},\"device\":{},\"cpu\":{\"architecture\":\"amd64\"}}",
+        "IPAddress" : "n/a",
+        "User" : "Variations Condos"
+      },
+      "101420286" : {
+        "BrowserInfo" : "{\"ua\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36\",\"browser\":{\"name\":\"Chrome\",\"version\":\"64.0.3282.140\",\"major\":\"64\"},\"engine\":{\"name\":\"WebKit\",\"version\":\"537.36\"},\"os\":{\"name\":\"Windows\",\"version\":\"10\"},\"device\":{},\"cpu\":{\"architecture\":\"amd64\"}}",
+        "IPAddress" : "n/a",
+        "User" : "Variations Condos"
+      },
+      "102442277" : {
+        "BrowserInfo" : "{\"ua\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36\",\"browser\":{\"name\":\"Chrome\",\"version\":\"64.0.3282.140\",\"major\":\"64\"},\"engine\":{\"name\":\"WebKit\",\"version\":\"537.36\"},\"os\":{\"name\":\"Windows\",\"version\":\"10\"},\"device\":{},\"cpu\":{\"architecture\":\"amd64\"}}",
+        "IPAddress" : "n/a",
+        "User" : "Variations Condos"
+      },
+      "102713305" : {
+        "BrowserInfo" : "{\"ua\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36\",\"browser\":{\"name\":\"Chrome\",\"version\":\"64.0.3282.140\",\"major\":\"64\"},\"engine\":{\"name\":\"WebKit\",\"version\":\"537.36\"},\"os\":{\"name\":\"Windows\",\"version\":\"10\"},\"device\":{},\"cpu\":{\"architecture\":\"amd64\"}}",
+        "IPAddress" : "n/a",
+        "User" : "Variations Condos"
+      },
+      "103523697" : {
+        "BrowserInfo" : "{\"ua\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36\",\"browser\":{\"name\":\"Chrome\",\"version\":\"64.0.3282.140\",\"major\":\"64\"},\"engine\":{\"name\":\"WebKit\",\"version\":\"537.36\"},\"os\":{\"name\":\"Windows\",\"version\":\"10\"},\"device\":{},\"cpu\":{\"architecture\":\"amd64\"}}",
+        "IPAddress" : "n/a",
+        "User" : "Variations Condos"
+      },
+      "103937149" : {
+        "BrowserInfo" : "{\"ua\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36\",\"browser\":{\"name\":\"Chrome\",\"version\":\"64.0.3282.140\",\"major\":\"64\"},\"engine\":{\"name\":\"WebKit\",\"version\":\"537.36\"},\"os\":{\"name\":\"Windows\",\"version\":\"10\"},\"device\":{},\"cpu\":{\"architecture\":\"amd64\"}}",
+        "IPAddress" : "n/a",
+        "User" : "Janie Sims"
+      },
+      "104244251" : {
+        "BrowserInfo" : "{\"ua\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36\",\"browser\":{\"name\":\"Chrome\",\"version\":\"64.0.3282.140\",\"major\":\"64\"},\"engine\":{\"name\":\"WebKit\",\"version\":\"537.36\"},\"os\":{\"name\":\"Windows\",\"version\":\"10\"},\"device\":{},\"cpu\":{\"architecture\":\"amd64\"}}",
+        "IPAddress" : "n/a",
+        "User" : "Variations Condos"
+      },
+      "104304675" : {
+        "BrowserInfo" : "{\"ua\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36\",\"browser\":{\"name\":\"Chrome\",\"version\":\"64.0.3282.140\",\"major\":\"64\"},\"engine\":{\"name\":\"WebKit\",\"version\":\"537.36\"},\"os\":{\"name\":\"Windows\",\"version\":\"10\"},\"device\":{},\"cpu\":{\"architecture\":\"amd64\"}}",
+        "IPAddress" : "n/a",
+        "User" : "Josie Sims"
+      }
+    },
+    "20180209" : {
+      "010453999" : {
+        "BrowserInfo" : "{\"ua\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36\",\"browser\":{\"name\":\"Chrome\",\"version\":\"64.0.3282.140\",\"major\":\"64\"},\"engine\":{\"name\":\"WebKit\",\"version\":\"537.36\"},\"os\":{\"name\":\"Windows\",\"version\":\"10\"},\"device\":{},\"cpu\":{\"architecture\":\"amd64\"}}",
+        "IPAddress" : "n/a",
+        "User" : "Johnny Sims"
+      },
+      "011251322" : {
+        "BrowserInfo" : "{\"ua\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36\",\"browser\":{\"name\":\"Chrome\",\"version\":\"64.0.3282.140\",\"major\":\"64\"},\"engine\":{\"name\":\"WebKit\",\"version\":\"537.36\"},\"os\":{\"name\":\"Windows\",\"version\":\"10\"},\"device\":{},\"cpu\":{\"architecture\":\"amd64\"}}",
+        "IPAddress" : "n/a",
+        "User" : "Johnny Sims"
+      }
     }
   },
   "Users" : {
@@ -2889,6 +2999,12 @@
       "FirstName" : "Joyce",
       "LastName" : "Warner",
       "Unit" : 1943
+    },
+    "1RcZ6Bbx9MhzU7z7iBbOu35xAq33" : {
+      "Email" : "ugaginny@yahoo.com",
+      "FirstName" : "Virginia",
+      "LastName" : "Robinson",
+      "Unit" : 2071
     },
     "1c2nwsRfgeVBDS0LvrLpHT7Tq2N2" : {
       "Email" : "jillian.robertson@att.net",
@@ -2908,12 +3024,6 @@
       "LastName" : "Trent",
       "Unit" : 2008
     },
-    "29IMT57qvfdMMvuGa1VTPrL2Mpy2" : {
-      "Email" : "alberteinstein@comcast.net",
-      "FirstName" : "William",
-      "LastName" : "Rich",
-      "Unit" : 2051
-    },
     "2TGsjCsr9TQHC2Ca8vQ9gFUkbZ33" : {
       "Email" : "sherylgolden5757@yahoo.com",
       "FirstName" : "Bill",
@@ -2932,23 +3042,29 @@
       "LastName" : "Steele",
       "Unit" : 2102
     },
-    "4o0OzvonaYcBqqqH7jAE48RPRGY2" : {
-      "Email" : "410moriah@gmail.com",
-      "FirstName" : "Donna",
-      "LastName" : "Moriah",
-      "Unit" : 1906
-    },
     "56UtPrcYEZMYTiwKON63GI65k3m2" : {
       "Email" : "adorable_kidd@hotmail.com",
       "FirstName" : "Adora",
       "LastName" : "Poon",
       "Unit" : 1960
     },
+    "5PWbFb2YPRNmN2G50kbwcBbYwNl1" : {
+      "Email" : "mark.e.byers@gmail.com",
+      "FirstName" : "Mark",
+      "LastName" : "Byers",
+      "Unit" : 2059
+    },
     "5TAdsrgmEGfVUn04ZcWnNp0YelP2" : {
       "Email" : "pollytrnr@yahoo.com",
       "FirstName" : "Polly",
       "LastName" : "Turner",
       "Unit" : 2003
+    },
+    "68edS2sYN7P2JjtKZas4PaVZADx1" : {
+      "Email" : "jrpjr59@gmail.com",
+      "FirstName" : "James",
+      "LastName" : "Peavy",
+      "Unit" : 1905
     },
     "6pwpG0NIjde6nJDrfpmhlewIAT83" : {
       "Email" : "philmitchell34@gmail.com",
@@ -2968,11 +3084,29 @@
       "LastName" : "Bonnell",
       "Unit" : 2007
     },
+    "9X0YFTJJu7Z51mfcHzo9nbUqVzq2" : {
+      "Email" : "tbrooks204@aol.com",
+      "FirstName" : "Thomas",
+      "LastName" : "Brooks",
+      "Unit" : 1907
+    },
     "ALtvpDO9svaZKbMcIVpcHX28lTh1" : {
       "Email" : "tomsheehan40@comcast.net",
       "FirstName" : "Tom",
       "LastName" : "Sheehan",
       "Unit" : 1928
+    },
+    "Akn23UW5UKe0BOEyv6Xxu6tV4w52" : {
+      "Email" : "fishergen@gmail.com",
+      "FirstName" : "Genevieve",
+      "LastName" : "Fisher",
+      "Unit" : 1970
+    },
+    "AmYCu0gRjvPB0rHJQjDVOAU6bi73" : {
+      "Email" : "farmer2you@aol.com",
+      "FirstName" : "William",
+      "LastName" : "Farmer",
+      "Unit" : 2101
     },
     "ApnITqeZNKVp5hdfQWk288j8nni2" : {
       "Email" : "marc.realestate@gmail.com",
@@ -2992,11 +3126,23 @@
       "LastName" : "Tumlin",
       "Unit" : 2085
     },
+    "BTeRzYJVt4fELsor20TEmpKHAn43" : {
+      "Email" : "rpgriff@earthlink.net",
+      "FirstName" : "Page",
+      "LastName" : "Griffin",
+      "Unit" : 2009
+    },
     "BiNoDgUf0dWtpKQnHo3VyUx6PPn1" : {
       "Email" : "richf0701@gmail.com",
       "FirstName" : "Rich",
       "LastName" : "Foster",
       "Unit" : 2011
+    },
+    "Blzl3EiB5LQYKOfD9OrDg2IFsXp1" : {
+      "Email" : "shhorwick@mac.com",
+      "FirstName" : "Stephen",
+      "LastName" : "Horwick",
+      "Unit" : 1960
     },
     "BnmY9ocSrKTWwz95tRUKyrlrQeo1" : {
       "Email" : "johnmalahy@aol.com",
@@ -3027,10 +3173,28 @@
       "LastName" : "Little",
       "Unit " : 1948
     },
+    "DBQFwZtcXaTjwDz2KQjj3aOMBUV2" : {
+      "Email" : "sherylgolden5757@comcast.net",
+      "FirstName" : "Sheryl",
+      "LastName" : "Golden",
+      "Unit" : 1988
+    },
+    "En1c6dCL0rXAbVWqnseBsKdLu6w1" : {
+      "Email" : "rckguitjustin@aim.com",
+      "FirstName" : "Justin",
+      "LastName" : "Boykin",
+      "Unit" : 1930
+    },
     "Ep20EXf7KORhrIu77eOiJJwHVj02" : {
       "FirstName" : "Johnny",
       "LastName" : "Sims",
       "Unit" : 2111
+    },
+    "FPGCJVbfbVR0fQHRyvKBpjPUpMx2" : {
+      "Email" : "woolley4u@aol.com",
+      "FirstName" : "James",
+      "LastName" : "Woolley",
+      "Unit" : 1975
     },
     "FfBuGkQapsZK2QKQm7uDteKMq9J3" : {
       "Email" : "cbryanmurals@gmail.com",
@@ -3068,6 +3232,12 @@
       "LastName" : "Blake",
       "Unit" : 2104
     },
+    "HnRVVSZkJQX3sPgkjS5DCX3uXd73" : {
+      "Email" : "lem10631@msn.com",
+      "FirstName" : "Lois",
+      "LastName" : "Morris",
+      "Unit" : 1918
+    },
     "I7faQ7HwBDeO82E96BUBaSgcHfz1" : {
       "Email" : "denise.marcellus@yahoo.com",
       "FirstName" : "Denise L",
@@ -3092,12 +3262,6 @@
       "LastName" : "Caughman",
       "Unit" : 1902
     },
-    "JbgkXU0oF0frOZA92G3fJjhv0mT2" : {
-      "Email" : "jefftcoleman@comcast.net",
-      "FirstName" : "Jeff",
-      "LastName" : "Coleman",
-      "Unit" : 1998
-    },
     "KF3WtOiJ7BfMITZ8R7nUFCbuDRF3" : {
       "Email" : "kara_ritter@yahoo.com",
       "FirstName" : "Greg",
@@ -3110,11 +3274,29 @@
       "LastName" : "Sahatevasukont",
       "Unit" : 1920
     },
+    "Kqw9TA4IxyMLqn06oTSuLlz1MxQ2" : {
+      "Email" : "atdelk@icloud.com",
+      "FirstName" : "Austin",
+      "LastName" : "Delk",
+      "Unit" : 1934
+    },
     "KvWMKEOQLOTT0ojuEFMnpU7NxmI2" : {
       "Email" : "jamesgang38@mac.com",
       "FirstName" : "Dylan",
       "LastName" : "James",
       "Unit" : 2010
+    },
+    "L8ucU3mtWEPAGBVMmnMXksUxzbt2" : {
+      "Email" : "katnoa2000@gmail.com",
+      "FirstName" : "KATHLEEN",
+      "LastName" : "NOA",
+      "Unit" : 1913
+    },
+    "LIddby9QAsadnB56TxHJr1t3hCJ3" : {
+      "Email" : "pamefonse@hotmail.com",
+      "FirstName" : "Pamela",
+      "LastName" : "Fonseca",
+      "Unit" : 1904
     },
     "LWLCXlDncRNTyXeI8NjKYVFhvUP2" : {
       "Email" : "andyts21@gmail.com",
@@ -3152,6 +3334,12 @@
       "LastName" : "Maxwell",
       "Unit" : 1901
     },
+    "OL40Z4AtlhT8t9Whp28pemhUiBP2" : {
+      "Email" : "kayla.morris777@gmail.com",
+      "FirstName" : "Kayla",
+      "LastName" : "Morris",
+      "Unit" : 1961
+    },
     "OvRYKV3tueRePdm0JCKUG4usjiJ3" : {
       "Email" : "brucebartnick@bellsouth.net",
       "FirstName" : "Bruce",
@@ -3170,18 +3358,6 @@
       "LastName" : "Stephens",
       "Unit" : 1937
     },
-    "PZk1WCUJ4KVGkVU9iyltHZA85xa2" : {
-      "Email" : "siaparr76@gmail.com",
-      "FirstName" : "Sia",
-      "LastName" : "Parr",
-      "Unit" : 1927
-    },
-    "QKVAUlalKBUBEUpsdvPfyS0FRag1" : {
-      "Email" : "shhorwick@mac.com",
-      "FirstName" : "Stephen",
-      "LastName" : "Horwick",
-      "Unit" : 1934
-    },
     "QQHhiz2n3rQ5qqdw8wthA6hy7ie2" : {
       "Email" : "phildavis61@gmail.com",
       "FirstName" : "Philip",
@@ -3194,17 +3370,17 @@
       "LastName" : "Jewell",
       "Unit" : 1932
     },
+    "R0mqUjzdlDew2341HzCmS4k6ykJ2" : {
+      "Email" : "john.mccay@att.net",
+      "FirstName" : "John",
+      "LastName" : "McCay",
+      "Unit" : 1980
+    },
     "Re9NrfVWxqMGPAJNlFBJ5BYDdY32" : {
       "Email" : "will3211@att.net",
       "FirstName" : "Gary",
       "LastName" : "Williams",
       "Unit" : 1931
-    },
-    "RsLQMk74bEdYmiAXsMO6d2E063r2" : {
-      "Email" : "leah.lyman@gmail.com",
-      "FirstName" : "Leah",
-      "LastName" : "Lyman Waldron",
-      "Unit" : 1990
     },
     "SEOrwXjINrXW42HwTa7ekCHRRNV2" : {
       "Email" : "lidocutter@aol.com",
@@ -3223,12 +3399,6 @@
       "FirstName" : "Peg",
       "LastName" : "Pettigrew",
       "Unit" : 2056
-    },
-    "TYytNFff2yOc6GohYAFI8V1U2e13" : {
-      "Email" : "lilkube@gmail.com",
-      "FirstName" : "Brett",
-      "LastName" : "Kube",
-      "Unit" : 1964
     },
     "UkSAI1xN9LPTxNFifKApRpdDig73" : {
       "Email" : "vmmatlanta@yahoo.com",
@@ -3254,6 +3424,18 @@
       "LastName" : "Beasley",
       "Unit" : 1919
     },
+    "WguCKvBmR1Ms7r3E1ev2saP4ltT2" : {
+      "Email" : "russellogle@gmail.com",
+      "FirstName" : "Russell",
+      "LastName" : "Ogle",
+      "Unit" : 1931
+    },
+    "WptzMsZ5NvcgsZkf50MP7Pp0Nal1" : {
+      "Email" : "rballinger@handsonatlanta.org",
+      "FirstName" : "Robert",
+      "LastName" : "Ballinger",
+      "Unit" : 1913
+    },
     "Ws9MO52O8OTX2Y9LVpQMiJG0Nb62" : {
       "Email" : "gabear88@hotmail.com",
       "FirstName" : "George",
@@ -3272,17 +3454,17 @@
       "LastName" : "Hawkins",
       "Unit" : 1982
     },
+    "XMQt9Vs5x7aWg7sh1voejnw5HRD2" : {
+      "Email" : "susiehawkins@bellsouth.net",
+      "FirstName" : "Susie",
+      "LastName" : "Hawkins",
+      "Unit" : 1967
+    },
     "YiKXJHUfepeOkjIJdYvBHkDaXfH2" : {
       "Email" : "gitrman12@gmail.com",
       "FirstName" : "Stephan",
       "LastName" : "Likman",
       "Unit" : 2001
-    },
-    "YiT5ng86zfgA7K7aY1MVSFUnG6w1" : {
-      "Email" : "landshark1609@gmail.com",
-      "FirstName" : "Tony",
-      "LastName" : "Long",
-      "Unit" : 1998
     },
     "Z1ebVc7nTdNmMZbNUgEYtx3MjoY2" : {
       "Email" : "jas8472@msn.com",
@@ -3302,6 +3484,12 @@
       "LastName" : "Tank",
       "Unit" : 1917
     },
+    "ZJvNepul2BWEIALuviSHMpGIm302" : {
+      "Email" : "serena.jane@gmail.com",
+      "FirstName" : "Serena",
+      "LastName" : "Wallace",
+      "Unit" : 2015
+    },
     "ZSSvCrTMygXT3kCRMCXCm7uVpoT2" : {
       "Email" : "lucianakohatsu@yahoo.com",
       "FirstName" : "Luciana",
@@ -3320,6 +3508,12 @@
       "LastName" : "Ferguson",
       "Unit" : 1912
     },
+    "aKJxrvEA1XV3RSiwMth7XwUHGG63" : {
+      "Email" : "janiceerskine4206@comcast.net",
+      "FirstName" : "Janice",
+      "LastName" : "Erskine",
+      "Unit" : 1958
+    },
     "cHip9UwszsUsBxbWWuARmR9fUQ93" : {
       "Email" : "joshdevos@gmail.com",
       "FirstName" : "Joshua",
@@ -3331,6 +3525,12 @@
       "FirstName" : "Pam",
       "LastName" : "Sellman",
       "Unit" : 2078
+    },
+    "e5khJSdKIleNdbmLTk52dEGpaXy1" : {
+      "Email" : "robhewes@comcast.net",
+      "FirstName" : "Rob",
+      "LastName" : "Hewes",
+      "Unit" : 2016
     },
     "eCcPMH4UFfP1HSMH5WuUMunijqG2" : {
       "Email" : "ashley.burman@gmail.com",
@@ -3344,11 +3544,23 @@
       "LastName" : "Pollack",
       "Unit" : 2057
     },
+    "f6n3szw8midcEDzMkNBCnpG4vhp2" : {
+      "Email" : "relaman@hotmail.com",
+      "FirstName" : "Robert",
+      "LastName" : "Elaman",
+      "Unit" : 2108
+    },
     "fVOsdF7p1Rg60Pki4j5TWqwpXzX2" : {
       "Email" : "alohaland@sbcglobal.net",
       "FirstName" : "Christopher",
       "LastName" : "Dillehay",
       "Unit" : 1947
+    },
+    "fYdIRsJGyYVrLzACDdP0H1e3ey32" : {
+      "Email" : "brannon.schnelle@gmail.com",
+      "FirstName" : "Brannon",
+      "LastName" : "Schnelle",
+      "Unit" : 1924
     },
     "fezjsJGMHCY0pOiuB0SpAyIybpl2" : {
       "Email" : "oylerc55@gmail.com",
@@ -3404,6 +3616,12 @@
       "LastName" : "Tutova",
       "Unit" : 2053
     },
+    "kQ6vX9x9IQehIIRF2Rf2bxhMri12" : {
+      "Email" : "sschneiderwind@yahoo.com",
+      "FirstName" : "Steve",
+      "LastName" : "Schneiderwind",
+      "Unit" : 1938
+    },
     "lGVHM3AP1GYULsAcdZdMf6rAtuI2" : {
       "Email" : "leighannpeterson@comcast.net",
       "FirstName" : "Leigh Ann",
@@ -3415,6 +3633,12 @@
       "FirstName" : "Sally",
       "LastName" : "Shornick",
       "Unit" : 1909
+    },
+    "lKGbEGLuf7RGlzoeYgTX0eCJrIF2" : {
+      "Email" : "umm626@gmail.com",
+      "FirstName" : "Roberto",
+      "LastName" : "Moreno",
+      "Unit" : 1998
     },
     "lU9McGfbYSbOVPCbYbubnxlxPQk1" : {
       "Email" : "jasminepeters78@gmail.com",
@@ -3434,11 +3658,11 @@
       "LastName" : "Connell",
       "Unit" : 2107
     },
-    "mQrtTOR9RgbAtiNfO6SKUpG12a53" : {
-      "Email" : "cedarom@gmail.com",
-      "FirstName" : "Albert",
-      "LastName" : "Cedarholm",
-      "Unit" : 1903
+    "m8j7vJSZJwdfqPl7zrlyskVRdQu2" : {
+      "Email" : "saughenbaugh@outlook.com",
+      "FirstName" : "Shawn",
+      "LastName" : "Aughenbaugh",
+      "Unit" : 2070
     },
     "mrZ0h4UNFWRLQjis6cfs3F6UG283" : {
       "Email" : "marywoodruff777@gmail.com",
@@ -3488,6 +3712,12 @@
       "LastName" : "Croushorn",
       "Unit" : 1994
     },
+    "qAl3bX8RhnaSgUZBUqW7oqd22Mv1" : {
+      "Email" : "rummont26@gmail.com",
+      "FirstName" : "Roberto",
+      "LastName" : "Moreno",
+      "Unit" : 1998
+    },
     "qFRZr5sSnmazndMVo4I5nXQMpMF2" : {
       "Email" : "jmurphy827@aol.com",
       "FirstName" : "Pamela",
@@ -3501,15 +3731,9 @@
       "Unit" : 1915
     },
     "qbyJIub4OZT96sdklHpNCKmiYDm2" : {
-      "FirstName" : "Janie",
+      "FirstName" : "Josie",
       "LastName" : "Sims",
       "Unit" : 2111
-    },
-    "r9W2pMXm1VTrHGloCfNdkqZC22w2" : {
-      "Email" : "11skc23@gmail.com",
-      "FirstName" : "Sarah",
-      "LastName" : "Cook",
-      "Unit" : 1964
     },
     "riFuFEPRIwduRMSdE4ihd910tno2" : {
       "Email" : "volunteermetals@gmail.com",
@@ -3523,11 +3747,29 @@
       "LastName" : "Haney",
       "Unit" : 2106
     },
+    "t5RKbbP9eCPyS7yMxL9W9WqnBXH3" : {
+      "Email" : "aevans4489@yahoo.com",
+      "FirstName" : "Allison",
+      "LastName" : "Evans",
+      "Unit" : 1990
+    },
+    "u7EH4OiBP1g50SgIURlQeoP380Z2" : {
+      "Email" : "tainn@me.com",
+      "FirstName" : "Tainn",
+      "LastName" : "Moscoso",
+      "Unit" : 1903
+    },
     "uJsY7iMMwwaJuB2Dg8SUnHKJdku2" : {
       "Email" : "eric.hoyle.eh@gmail.com",
       "FirstName" : "Eric",
       "LastName" : "Hoyle ",
       "Unit" : 2004
+    },
+    "uWWcJVXV6CYLJO6jE0t37DUXhMk2" : {
+      "Email" : "gilboyca@gmail.com",
+      "FirstName" : "Christina",
+      "LastName" : "Gilboy",
+      "Unit" : 1964
     },
     "umHs6jQvw5TtYO18I6tJjwdtuTo2" : {
       "Email" : "kgundaker@gmail.com",
@@ -3553,29 +3795,29 @@
       "LastName" : "Parramore",
       "Unit" : 2052
     },
+    "w7X5uhirTSYxluGwFZBLp3L2gvq2" : {
+      "Email" : "autumn@autumncalhoun.com",
+      "FirstName" : "Autumn",
+      "LastName" : "Wright",
+      "Unit" : 2075
+    },
+    "wWZQ6YQYGxNNjWTi6eRiMZ9kyZF3" : {
+      "Email" : "hoaitrinh21@gmail.com",
+      "FirstName" : "Hoai",
+      "LastName" : "Trinh",
+      "Unit" : 1922
+    },
     "xcEGgGYTCOVN8TP2bXyB8iAc3193" : {
       "Email" : "caroline_sisk@yahoo.com",
       "FirstName" : "Caroline",
       "LastName" : "Sisk",
       "Unit" : 2055
     },
-    "xmTeQ34NiYPpHGR07nIEKMpxd6y1" : {
-      "Email" : "treehuggerguy@gmail.com",
-      "FirstName" : "Chris",
-      "LastName" : "Lyman Waldron",
-      "Unit" : 1990
-    },
     "yLRLgn4Y8QRLJaBiF92SD5Vjy983" : {
       "Email" : "gwright1974@gmail.com",
       "FirstName" : "Gary",
       "LastName" : "Wright",
       "Unit" : 2075
-    },
-    "yZuvynOrQUeaBTAOjL9vqcITaNp1" : {
-      "Email" : "melissamcmillana@gmail.com",
-      "FirstName" : "Melissa",
-      "LastName" : "McMillan",
-      "Unit" : 2051
     },
     "zavIH2TvYEWKz0KrWPHFCTB3yk43" : {
       "Email" : "janicemoney@comcast.net",

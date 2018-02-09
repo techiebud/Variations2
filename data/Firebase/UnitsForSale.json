@@ -8,6 +8,7 @@
     "imageURL" : "https://variationscondos.com/img/1903.jpg"
   },
   "1906" : {   
+    "Status": "Pending",
     "Street" : "Variations Drive",
     "URL" : "https://www.redfin.com/GA/Atlanta/1906-Variations-Dr-NE-30329/home/23725783",
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1906.jpg?alt=media&token=c0125dfa-1238-4909-a928-3bc530e07472"
@@ -68,6 +69,12 @@
     "URL" : "https://www.redfin.com/GA/Atlanta/1964-Variations-Dr-NE-30329/home/23725733?utm_source=myredfin&utm_medium=email&utm_campaign=instant24_listings_update&utm_content=refresh_with_promo&riftinfo=ZXY9ZW1haWwmbD04NDQ2MzUyJnA9bGlzdGluZ191cGRhdGVzX2luc3RhbnRfMjQmdHM9MTQ5OTE2Mzk4NzA0OCZhPWNsaWNrJnM9c2F2ZWRfc2VhcmNoJnQ9aW1hZ2UmZW1haWxfaWQ9ODQ0NjM1Ml8xNDk5MTYyOTA1XzMmcmVmcmVzaF92YXJpYW50PXJlZnJlc2hfd2l0aF9wcm9tbyZ1cGRhdGVfdHlwZT0xMSZzYXZlZF9zZWFyY2hfaWQ9MTI4NTA2MjUmbGlzdGluZ19pZD02OTMwNTkzNiZwb3NpdGlvbl9udW1iZXI9MA==",
     "imageURL" : "https://ssl.cdn-redfin.com/photo/82/mbpaddedwide/272/genMid.5871272_0.jpg"
   },
+  "1970" : {  
+    "Status" : "Pending",    
+    "Street" : "Variations Drive",
+    "URL" : "https://www.redfin.com/GA/Atlanta/1970-Variations-Dr-NE-30329/home/23725735",
+    "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1970.jpg?alt=media&token=7c786ec6-34de-48be-9e68-07189150b1bc"
+  },
   "1972" : {
     "SaleDate" : 20160525,
     "SalePrice" : 165000,
@@ -83,13 +90,7 @@
     "Street" : "Variations Drive",
     "URL": "https://www.redfin.com/GA/Atlanta/1990-Variations-Dr-NE-30329/home/23728846?utm_source=myredfin&utm_medium=email&utm_campaign=instant24_listings_update&utm_content=refresh_with_promo&riftinfo=ZXY9ZW1haWwmbD04NDQ2MzUyJnA9bGlzdGluZ191cGRhdGVzX2luc3RhbnRfMjQmdHM9MTUwNDY5MzcyNzA4MiZhPWNsaWNrJnM9c2F2ZWRfc2VhcmNoJnQ9YWRkcmVzcyZlbWFpbF9pZD04NDQ2MzUyXzE1MDQ2OTI0NTVfMyZ1cGRhdGVfdHlwZT03JnNhdmVkX3NlYXJjaF9pZD0xMjg1MDYyNSZsaXN0aW5nX2lkPTc0MDY2NDI5JnBvc2l0aW9uX251bWJlcj0y",    
     "imageURL" : "https://ssl.cdn-redfin.com/photo/82/bigphoto/023/5898023_1.jpg"
-  },
-  "1998" : {      
-    "Status": "Pending", 
-    "Street" : "Variations Drive",
-    "URL": "https://www.redfin.com/GA/Atlanta/1998-Variations-Dr-NE-30329/home/23726324",
-    "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2FIS1f8bah9j44vd1000000000.jpg?alt=media&token=397c7c42-86f0-4715-bfce-0ec3855b6549"
-  },
+  },  
   "2010" : {
     "SaleDate" : 20160628,
     "SalePrice" : 159500,
@@ -115,6 +116,9 @@
     "imageURL" : "https://ssl.cdn-redfin.com/photo/81/mbpaddedwide/146/genMid.8241146_1_0.jpg"
   },
   "2059" : {  
+    "SaleDate" : 20171229,
+    "SalePrice" : 198000,
+    "Status": "Sold",
     "Street" : "Clairmeade Way",
     "URL" : "https://www.redfin.com/GA/Atlanta/2957-Clairmeade-Way-NE-30329/home/144236447",
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F2059.jpg?alt=media&token=372d1ef2-a070-4ffc-b4ce-3b46d7aaa3d3"
@@ -149,7 +153,7 @@
     "imageURL" : "https://variationscondos.com/img/2110Sold.JPG"
   },
   "2112" : {
-    "SaleDate" : 20160602,
+    "SaleDate" : 20160531,
     "SalePrice" : 175000,
     "Status" : "Sold",
     "Street" : "Clairmeade Valley Road",
