@@ -9,12 +9,14 @@ import {Management} from "./shared/management.interface";
 })
 export class GeneralInformationComponent implements OnInit {
     tennisCourtAccessCode: string;
+    poolAccessCode:  string;
     management: Management;
 
     constructor(private _dataService: DataService) {
 
         this.tennisCourtAccessCode = _dataService.generalInformation.TennisCourtAccessCode;
         this.management = _dataService.management;
+        this.poolAccessCode = _dataService.generalInformation.PoolAccessCode;
      }
 
     // tslint:disable-next-line:no-empty
@@ -22,12 +24,11 @@ export class GeneralInformationComponent implements OnInit {
 
     getTennisAccessCode() {
 
-
-            bootbox.alert("The Access Code is: " + this.tennisCourtAccessCode);
+            bootbox.alert("The Access Code for the tennnis court is: " + this.tennisCourtAccessCode);
     }
-
-
-
-
-
+    getPoolAccessCode() {
+        bootbox.alert("The Access Code for the pool area is: " + this.poolAccessCode);
+    }
 }
+
+

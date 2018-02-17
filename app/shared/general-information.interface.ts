@@ -8,4 +8,5 @@ export interface GeneralInformation {
     ReserveBalance: number;
     ReserveBalanceAsOf: string;
     ReserveNote: string;
+    PoolAccessCode:  string;
 }

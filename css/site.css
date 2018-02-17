@@ -633,4 +633,9 @@ ul.dropdown-menu.community-dd {
   color:  #216839; 
 }
 
+img#pool-image {
+  max-width:50%;
+  max-height:50%;
+}
+
 
