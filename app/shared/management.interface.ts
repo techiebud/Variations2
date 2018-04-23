@@ -1,4 +1,5 @@
 export interface Management {
+    AfterHoursPhone: string;
     Company: string;
     CompanyURL: string;
     ContactName: string;

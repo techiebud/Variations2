@@ -15,6 +15,11 @@
     "URL" : "https://www.redfin.com/GA/Atlanta/1906-Variations-Dr-NE-30329/home/23725783",
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1906.jpg?alt=media&token=c0125dfa-1238-4909-a928-3bc530e07472"
   },
+  "1909" : {    
+    "Street" : "Variations Drive",
+    "URL" :   "https://www.redfin.com/GA/Atlanta/1909-Variations-Dr-NE-30329/home/23725769",
+    "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1909.jpg?alt=media&token=a1bd43f1-78e7-43c2-a0f1-2dfbe8b20f18"
+  },
   "1919" : {
     "SaleDate" : 20160804,
     "SalePrice" : 191000,
@@ -78,12 +83,7 @@
     "Street" : "Variations Drive",
     "URL" : "https://www.redfin.com/GA/Atlanta/1970-Variations-Dr-NE-30329/home/23725735",
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1970.jpg?alt=media&token=7c786ec6-34de-48be-9e68-07189150b1bc"
-  },
-  "1971" : { 
-    "Street" : "Variations Drive",
-    "URL" : "https://www.zillow.com/homedetails/1971-Variations-Dr-NE-Atlanta-GA-30329/14557682_zpid/",
-    "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1971.jpg?alt=media&token=62225f3a-322c-4a1b-8088-a71f974f7394"
-  },
+  }, 
   "1972" : {
     "SaleDate" : 20160525,
     "SalePrice" : 165000,
