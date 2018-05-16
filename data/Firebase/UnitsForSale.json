@@ -16,6 +16,7 @@
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1906.jpg?alt=media&token=c0125dfa-1238-4909-a928-3bc530e07472"
   },
   "1909" : {    
+    "Status": "Pending",
     "Street" : "Variations Drive",
     "URL" :   "https://www.redfin.com/GA/Atlanta/1909-Variations-Dr-NE-30329/home/23725769",
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1909.jpg?alt=media&token=a1bd43f1-78e7-43c2-a0f1-2dfbe8b20f18"
@@ -146,12 +147,12 @@
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F2077.jpg?alt=media&token=8075e713-2347-4755-a58c-892fa537d36f"
   },
   "2106" : {
-    "SaleDate" : 20160728,
-    "SalePrice" : 177900,
+    "SaleDate" : 20180501,
+    "SalePrice" : 192500,
     "Status" : "Sold",
     "Street" : "Clairmeade Valley Road",
-    "URL" : "http://www.redfin.com/GA/Atlanta/2106-Clairmeade-Valley-Rd-NE-30329/home/23707331?utm_source=myredfin&utm_medium=email&utm_campaign=email_this_listing&utm_nooverride=1&utm_content=address",
-    "imageURL" : "https://ssl.cdn-redfin.com/photo/81/mbpaddedwide/589/genMid.8027589_0.jpg"
+    "URL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F2106.jpg?alt=media&token=3dc51037-455d-4790-a5b1-2a55120aa32b",
+    "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F2106.jpg?alt=media&token=3dc51037-455d-4790-a5b1-2a55120aa32b"
   },
   "2110" : {
     "SaleDate" : 20160805,
