@@ -133,6 +133,11 @@
     "URL" : "https://www.redfin.com/GA/Atlanta/2957-Clairmeade-Way-NE-30329/home/144236447",
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F2059.jpg?alt=media&token=372d1ef2-a070-4ffc-b4ce-3b46d7aaa3d3"
   },
+  "2071" : {    
+    "Street" : "Clairmeade Valley Road",
+    "URL" : "https://www.zillow.com/homedetails/2071-Clairmeade-Valley-Rd-NE-Atlanta-GA-30329/14557631_zpid/",
+    "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F2071.jpg?alt=media&token=b1bf5046-c6a2-46db-8761-3cb9c44fc4f5"
+  },
   "2075" : {
     "SaleDate" : 20160728,
     "SalePrice" : 180000,
