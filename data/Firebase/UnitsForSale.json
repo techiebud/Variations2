@@ -87,6 +87,11 @@
     "URL" : "https://www.redfin.com/GA/Atlanta/1970-Variations-Dr-NE-30329/home/23725735",
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1970.jpg?alt=media&token=7c786ec6-34de-48be-9e68-07189150b1bc"
   }, 
+  "1971" : {      
+    "Street" : "Variations Drive",
+    "URL": "https://www.redfin.com/GA/Atlanta/1971-Variations-Dr-NE-30329/home/23725762?utm_source=myredfin&utm_medium=email&utm_campaign=instant_listings_update&utm_content=refresh_with_promo&riftinfo=ZXY9ZW1haWwmbD04NDQ2MzUyJnA9bGlzdGluZ191cGRhdGVzX2luc3RhbnRfMTUmdHM9MTUyOTk1MTQ3MTc1MCZhPWNsaWNrJnM9c2F2ZWRfc2VhcmNoJnQ9dmlld19kZXRhaWxzJmVtYWlsX2lkPTg0NDYzNTJfMTUyOTk1MTQ2OF8yJnVwZGF0ZV90eXBlPTEmc2F2ZWRfc2VhcmNoX2lkPTEyODUwNjI1Jmxpc3RpbmdfaWQ9ODU3MDM5NzUmcHJvcGVydHlfaWQ9MjM3MjU3NjImcG9zaXRpb25fbnVtYmVyPTA=",    
+    "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1971.jpg?alt=media&token=0404aeb1-a0e0-4ee2-8150-9806e6c81cf0"
+  },  
   "1972" : {
     "SaleDate" : 20160525,
     "SalePrice" : 165000,
@@ -102,6 +107,13 @@
     "Street" : "Variations Drive",
     "URL": "https://www.redfin.com/GA/Atlanta/1990-Variations-Dr-NE-30329/home/23728846?utm_source=myredfin&utm_medium=email&utm_campaign=instant24_listings_update&utm_content=refresh_with_promo&riftinfo=ZXY9ZW1haWwmbD04NDQ2MzUyJnA9bGlzdGluZ191cGRhdGVzX2luc3RhbnRfMjQmdHM9MTUwNDY5MzcyNzA4MiZhPWNsaWNrJnM9c2F2ZWRfc2VhcmNoJnQ9YWRkcmVzcyZlbWFpbF9pZD04NDQ2MzUyXzE1MDQ2OTI0NTVfMyZ1cGRhdGVfdHlwZT03JnNhdmVkX3NlYXJjaF9pZD0xMjg1MDYyNSZsaXN0aW5nX2lkPTc0MDY2NDI5JnBvc2l0aW9uX251bWJlcj0y",    
     "imageURL" : "https://ssl.cdn-redfin.com/photo/82/bigphoto/023/5898023_1.jpg"
+  },  
+  "1998" : {   
+    "SaleDate": 20170905,
+    "SalePrice": 196500,
+    "Street" : "Variations Drive",
+    "URL": "https://www.redfin.com/GA/Atlanta/1998-Variations-Dr-NE-30329/home/23726324?utm_source=myredfin&utm_medium=email&utm_campaign=instant24_listings_update&utm_content=refresh_with_promo&riftinfo=ZXY9ZW1haWwmbD04NDQ2MzUyJnA9bGlzdGluZ191cGRhdGVzX2luc3RhbnRfMjQmdHM9MTUyODg4ODcwNjQzNSZhPWNsaWNrJnM9c2F2ZWRfc2VhcmNoJnQ9dmlld19kZXRhaWxzJmVtYWlsX2lkPTg0NDYzNTJfMTUyODg4NDc0N18zJnVwZGF0ZV90eXBlPTUmc2F2ZWRfc2VhcmNoX2lkPTEyODUwNjI1Jmxpc3RpbmdfaWQ9ODUzNTMwNDAmcHJvcGVydHlfaWQ9MjM3MjYzMjQmcG9zaXRpb25fbnVtYmVyPTA=",    
+    "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1998.jpg?alt=media&token=5a462a54-f861-475c-b3a4-94943dcd36a3"
   },  
   "2010" : {
     "SaleDate" : 20160628,
@@ -154,8 +166,8 @@
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F2077.jpg?alt=media&token=8075e713-2347-4755-a58c-892fa537d36f"
   },
   "2106" : {
-    "SaleDate" : 20180501,
-    "SalePrice" : 192500,
+    "SaleDate" : 20180504,
+    "SalePrice" : 192900,
     "Status" : "Sold",
     "Street" : "Clairmeade Valley Road",
     "URL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F2106.jpg?alt=media&token=3dc51037-455d-4790-a5b1-2a55120aa32b",

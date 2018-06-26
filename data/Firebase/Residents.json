@@ -79,11 +79,11 @@
   "Street" : "Variations Dr",
   "Unit" : 1908
 }, {
-  "Email" : "salshor@comcast.net",
-  "FirstName" : "Sally",
-  "LastName" : "Shornick",
-  "Phone1" : 6784880976,
-  "Phone2" : 4046342255,
+  "Email" : "akhaja@comcast.net",
+  "FirstName" : "Emery",
+  "LastName" : "Moore",
+  "Phone1" : "2022153089",
+  "Phone2" : "",
   "Street" : "Variations Dr",
   "Unit" : 1909
 }, {
@@ -1222,15 +1222,8 @@
   "Phone2" : "",
   "Street" : "Clairmeade Valley Rd",
   "Unit" : 2105
-}, {
-  "Email" : "jowmiller@gmail.com",
-  "FirstName" : "Jody",
-  "LastName" : "Miller",
-  "Phone1" : 6782942421,
-  "Phone2" : 4044353616,
-  "Street" : "Clairmeade Valley Rd",
-  "Unit" : 2106
-}, {
+},  
+{
   "Email" : "tesshaney@msn.com",
   "FirstName" : "Tess",
   "LastName" : "Haney",
