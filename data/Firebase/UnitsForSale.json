@@ -63,6 +63,11 @@
     "URL" : "https://www.redfin.com/GA/Atlanta/1936-Variations-Dr-NE-30329/home/23810444",
     "imageURL" : "https://ssl.cdn-redfin.com/photo/81/mbpaddedwide/138/genMid.8248138_0.jpg"
   },
+  "1947" : {   
+    "Street" : "Variations Drive",
+    "URL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1947.jpg?alt=media&token=44751eb9-a56a-4903-8d3c-db6db05672c3",
+    "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1947.jpg?alt=media&token=44751eb9-a56a-4903-8d3c-db6db05672c3"
+  }, 
   "1961" : {
     "SaleDate" : 20161207,
     "SalePrice" : 163000,
@@ -87,7 +92,8 @@
     "URL" : "https://www.redfin.com/GA/Atlanta/1970-Variations-Dr-NE-30329/home/23725735",
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1970.jpg?alt=media&token=7c786ec6-34de-48be-9e68-07189150b1bc"
   }, 
-  "1971" : {      
+  "1971" : {    
+    "Status": "Pending",  
     "Street" : "Variations Drive",
     "URL": "https://www.redfin.com/GA/Atlanta/1971-Variations-Dr-NE-30329/home/23725762?utm_source=myredfin&utm_medium=email&utm_campaign=instant_listings_update&utm_content=refresh_with_promo&riftinfo=ZXY9ZW1haWwmbD04NDQ2MzUyJnA9bGlzdGluZ191cGRhdGVzX2luc3RhbnRfMTUmdHM9MTUyOTk1MTQ3MTc1MCZhPWNsaWNrJnM9c2F2ZWRfc2VhcmNoJnQ9dmlld19kZXRhaWxzJmVtYWlsX2lkPTg0NDYzNTJfMTUyOTk1MTQ2OF8yJnVwZGF0ZV90eXBlPTEmc2F2ZWRfc2VhcmNoX2lkPTEyODUwNjI1Jmxpc3RpbmdfaWQ9ODU3MDM5NzUmcHJvcGVydHlfaWQ9MjM3MjU3NjImcG9zaXRpb25fbnVtYmVyPTA=",    
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1971.jpg?alt=media&token=0404aeb1-a0e0-4ee2-8150-9806e6c81cf0"
@@ -109,8 +115,7 @@
     "imageURL" : "https://ssl.cdn-redfin.com/photo/82/bigphoto/023/5898023_1.jpg"
   },  
   "1998" : {   
-    "SaleDate": 20170905,
-    "SalePrice": 196500,
+    "Status": "Pending",
     "Street" : "Variations Drive",
     "URL": "https://www.redfin.com/GA/Atlanta/1998-Variations-Dr-NE-30329/home/23726324?utm_source=myredfin&utm_medium=email&utm_campaign=instant24_listings_update&utm_content=refresh_with_promo&riftinfo=ZXY9ZW1haWwmbD04NDQ2MzUyJnA9bGlzdGluZ191cGRhdGVzX2luc3RhbnRfMjQmdHM9MTUyODg4ODcwNjQzNSZhPWNsaWNrJnM9c2F2ZWRfc2VhcmNoJnQ9dmlld19kZXRhaWxzJmVtYWlsX2lkPTg0NDYzNTJfMTUyODg4NDc0N18zJnVwZGF0ZV90eXBlPTUmc2F2ZWRfc2VhcmNoX2lkPTEyODUwNjI1Jmxpc3RpbmdfaWQ9ODUzNTMwNDAmcHJvcGVydHlfaWQ9MjM3MjYzMjQmcG9zaXRpb25fbnVtYmVyPTA=",    
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1998.jpg?alt=media&token=5a462a54-f861-475c-b3a4-94943dcd36a3"
@@ -148,6 +153,7 @@
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F2059.jpg?alt=media&token=372d1ef2-a070-4ffc-b4ce-3b46d7aaa3d3"
   },
   "2071" : {    
+    "Status" : "Pending",
     "Street" : "Clairmeade Valley Road",
     "URL" : "https://www.zillow.com/homedetails/2071-Clairmeade-Valley-Rd-NE-Atlanta-GA-30329/14557631_zpid/",
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F2071.jpg?alt=media&token=b1bf5046-c6a2-46db-8761-3cb9c44fc4f5"
