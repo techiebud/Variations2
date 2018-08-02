@@ -53,7 +53,7 @@
     "Status" : "Sold",
     "Street" : "Variations Drive",
     "URL" : "https://www.redfin.com/GA/Atlanta/1935-Variations-Dr-NE-30329/home/23725776",
-    "imageURL" : "https://2cdn.cbhomes.com/s3/mediasvc-prd/properties/7D6532bcda454f6-5693891.jpg"
+    "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1935.jpg?alt=media&token=41f28215-1a30-4f67-b6d2-5863e69e419e"
   },
   "1936" : { 
     "SaleDate" : 20170908,
@@ -199,7 +199,7 @@
     "Status" : "Sold",
     "Street" : "Clairmeade Valley Road",
     "URL" : "https://www.redfin.com/GA/Atlanta/2112-Clairmeade-Valley-Rd-NE-30329/home/23707335?utm_medium=email&utm_campaign=instant24_listings_update&utm_source=myredfin",
-    "imageURL" : "https://1cdn.cbhomes.com/s3/mediasvc-prd/properties/B0af26FF8c7D42b-5680487.jpg?preset=lmain"
+    "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F2112.jpg?alt=media&token=45aac185-fdf2-4319-b0dc-ee9086240016"
   }
 
 }
