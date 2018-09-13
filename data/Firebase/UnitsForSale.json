@@ -173,6 +173,9 @@
     "imageURL" : "https://ssl.cdn-redfin.com/photo/82/mbpaddedwide/209/genMid.5636209_0.jpg"
   },
   "2077" : {  
+    "SaleDate" : 20180907,
+    "SalePrice" : 225000,
+    "Status" : "Sold",
     "Street" : "Clairmeade Valley Road",
     "URL" : "https://www.zillow.com/homedetails/2077-Clairmeade-Valley-Rd-NE-Atlanta-GA-30329/14557634_zpid/",
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F2077.jpg?alt=media&token=8075e713-2347-4755-a58c-892fa537d36f"
