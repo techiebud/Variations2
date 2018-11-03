@@ -64,11 +64,15 @@
     "imageURL" : "https://ssl.cdn-redfin.com/photo/81/mbpaddedwide/138/genMid.8248138_0.jpg"
   },
   "1941" : {   
+    "Status": "Pending",
     "Street" : "Variations Drive",
     "URL" : "https://www.redfin.com/GA/Atlanta/1941-Variations-Dr-NE-30329/home/23881942",
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1941.jpg?alt=media&token=c09ceb25-8ad0-43c3-97d4-75501bda10a2"
   }, 
   "1947" : {   
+    "Status": "Sold",
+    "SaleDate": 20181015,
+    "SalePrice": 195000,
     "Street" : "Variations Drive",
     "URL" : "https://www.redfin.com/GA/Atlanta/1947-Variations-Dr-NE-30329/home/23725775",
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1947.jpg?alt=media&token=44751eb9-a56a-4903-8d3c-db6db05672c3"
@@ -144,6 +148,11 @@
     "Street" : "Variations Drive",
     "URL" : "https://drive.google.com/file/d/0B0XxZGmv5AeFX0plN2VMMHI3X1U/view?usp=sharing",
     "imageURL" : "https://s3.amazonaws.com/photoplan-cache.planomatic.com/tourFiles/29241/photocache/1006971-830w553h.jpg"
+  },
+  "2012" : {
+    "Street" : "Variations Drive",
+    "URL" : "https://www.redfin.com/GA/Atlanta/2012-Variations-Dr-NE-30329/home/23725754",
+    "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F2012.jpg?alt=media&token=68cc32c0-8cb5-4fd9-8fcd-39611a6bcae5"
   },
   "2051" : {    
     "SaleDate" : 20170915,
