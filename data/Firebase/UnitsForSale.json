@@ -152,6 +152,9 @@
     "imageURL" : "https://s3.amazonaws.com/photoplan-cache.planomatic.com/tourFiles/29241/photocache/1006971-830w553h.jpg"
   },
   "2012" : {
+    "SaleDate" : 20181214,
+    "SalePrice" : 195000,
+    "Status" : "Sold",
     "Street" : "Variations Drive",
     "URL" : "https://www.redfin.com/GA/Atlanta/2012-Variations-Dr-NE-30329/home/23725754",
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F2012.jpg?alt=media&token=68cc32c0-8cb5-4fd9-8fcd-39611a6bcae5"
