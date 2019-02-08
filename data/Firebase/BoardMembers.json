@@ -1,18 +1,18 @@
 {
   "Architect Chairman" : {
-    "Address" : "2011 Variations Drive",  
+    "Address" : "2059 Clairmeade Way",  
     "DisplayOrder" : 5,
     "Email" : "variationsarchitectural@gmail.com",   
-    "Name" : "Rich Foster",
-    "Phone" : "(407) 408-6796"
+    "Name" : "Mark Byers",
+    "Phone" : "(404) 808-7090"
   },
   "Community Manager" : {
     "DisplayOrder" : 6,
-    "Email" : "vpalmer@condominiumconcepts.com",
-    "Name" : "Victoria Palmer",
-    "Phone" : "(404) 917-0600 ext 239",
-    "URL" : "http://www.condominiumconcepts.com/",
-    "URLCaption" : "Condominium Concepts Management"
+    "Email" : "mike@tolleycm.com",
+    "Name" : "John Cenni",
+    "Phone" : "(770) 517-1761",
+    "URL" : "http://www.tolleycm.com/",
+    "URLCaption" : "Tolley Management Company"
   },
   "President" : {
     "Address" : "2016 Variations Drive",
