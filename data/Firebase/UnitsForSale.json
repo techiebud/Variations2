@@ -96,6 +96,7 @@
     "imageURL" : "https://ssl.cdn-redfin.com/photo/82/mbpaddedwide/272/genMid.5871272_0.jpg"
   },
   "1968" : {
+    "Status": "Pending",
     "Street" : "Variations Drive",
     "URL": "https://www.redfin.com/GA/Atlanta/1968-Variations-Dr-NE-30329/home/23725736",
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1968.jpg?alt=media&token=2fe0ed46-f8ca-4a40-b6ca-cab492f3dcfa"
@@ -171,6 +172,11 @@
     "Street" : "Clairmeade Way",
     "URL" : "https://www.redfin.com/GA/Atlanta/2051-Clairmeade-Way-NE-30329/home/23873933?utm_source=myredfin&utm_medium=email&utm_campaign=instant_listings_update&utm_content=refresh_with_promo&riftinfo=ZXY9ZW1haWwmbD04NDQ2MzUyJnA9bGlzdGluZ191cGRhdGVzX2luc3RhbnRfMTUmdHM9MTUwMjQ4NTkwNjQ3NCZhPWNsaWNrJnM9c2F2ZWRfc2VhcmNoJnQ9dmlld19kZXRhaWxzJmVtYWlsX2lkPTg0NDYzNTJfMTUwMjQ4NTg5OV8yJnVwZGF0ZV90eXBlPTEmc2F2ZWRfc2VhcmNoX2lkPTEyODUwNjI1Jmxpc3RpbmdfaWQ9NzI5MzQzNjUmcG9zaXRpb25fbnVtYmVyPTA=#overview",
     "imageURL" : "https://ssl.cdn-redfin.com/photo/81/mbpaddedwide/146/genMid.8241146_1_0.jpg"
+  },
+  "2055" : {  
+    "Street" : "Clairmeade Way",
+    "URL" : "https://www.redfin.com/GA/Atlanta/2055-Clairmeade-Way-NE-30329/home/23810949?utm_source=myredfin&utm_medium=email&utm_campaign=recommendations_update&riftinfo=ZXY9ZW1haWwmbD04NDQ2MzUyJnA9bGlzdGluZ191cGRhdGVzX3JlY29tbWVuZGF0aW9ucyZhPWNsaWNrJnM9cmVjb21tZW5kYXRpb25zJnQ9aW1hZ2UmZW1haWxfaWQ9ODQ0NjM1Ml8xNTUzMTM1MDUyXzYmdXBkYXRlX3R5cGU9MSZsaWxyX3Njb3JlPTAuMDY4OSZsaXN0aW5nX2lkPTEwMzI4MTg2MiZwcm9wZXJ0eV9pZD0yMzgxMDk0OSZwb3NpdGlvbl9udW1iZXI9MA==#overview",
+    "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F2055.jpg?alt=media&token=1125c535-aef4-440a-b455-af4d1527e0b2"
   },
   "2059" : {  
     "SaleDate" : 20171229,
