@@ -96,7 +96,9 @@
     "imageURL" : "https://ssl.cdn-redfin.com/photo/82/mbpaddedwide/272/genMid.5871272_0.jpg"
   },
   "1968" : {
-    "Status": "Pending",
+    "SaleDate": 20190328,
+    "SalePrice": 225000,
+    "Status": "Sold",
     "Street" : "Variations Drive",
     "URL": "https://www.redfin.com/GA/Atlanta/1968-Variations-Dr-NE-30329/home/23725736",
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1968.jpg?alt=media&token=2fe0ed46-f8ca-4a40-b6ca-cab492f3dcfa"
