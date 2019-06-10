@@ -952,18 +952,10 @@
   "Street" : "Clairmeade Way",
   "Unit" : 2054
 }, {
-  "Email" : "jsisk@emory.edu",
-  "FirstName" : "John",
-  "LastName" : "Sisk",
-  "Phone1" : 4047271151,
-  "Phone2" : "",
-  "Street" : "Clairmeade Way",
-  "Unit" : 2055
-}, {
-  "Email" : "caroline_sisk@yahoo.com",
-  "FirstName" : "Caroline",
-  "LastName" : "Sisk",
-  "Phone1" : 7705973589,
+  "Email" : "",
+  "FirstName" : "na",
+  "LastName" : "na",
+  "Phone1" : "",
   "Phone2" : "",
   "Street" : "Clairmeade Way",
   "Unit" : 2055

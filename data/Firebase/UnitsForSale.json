@@ -176,6 +176,9 @@
     "imageURL" : "https://ssl.cdn-redfin.com/photo/81/mbpaddedwide/146/genMid.8241146_1_0.jpg"
   },
   "2055" : {  
+    "SaleDate": 20190604,
+    "SalePrice": 248000,
+    "Status": "Sold",
     "Street" : "Clairmeade Way",
     "URL" : "https://www.redfin.com/GA/Atlanta/2055-Clairmeade-Way-NE-30329/home/23810949?utm_source=myredfin&utm_medium=email&utm_campaign=recommendations_update&riftinfo=ZXY9ZW1haWwmbD04NDQ2MzUyJnA9bGlzdGluZ191cGRhdGVzX3JlY29tbWVuZGF0aW9ucyZhPWNsaWNrJnM9cmVjb21tZW5kYXRpb25zJnQ9aW1hZ2UmZW1haWxfaWQ9ODQ0NjM1Ml8xNTUzMTM1MDUyXzYmdXBkYXRlX3R5cGU9MSZsaWxyX3Njb3JlPTAuMDY4OSZsaXN0aW5nX2lkPTEwMzI4MTg2MiZwcm9wZXJ0eV9pZD0yMzgxMDk0OSZwb3NpdGlvbl9udW1iZXI9MA==#overview",
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F2055.jpg?alt=media&token=1125c535-aef4-440a-b455-af4d1527e0b2"
