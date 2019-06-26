@@ -63,6 +63,11 @@
     "URL" : "https://www.redfin.com/GA/Atlanta/1936-Variations-Dr-NE-30329/home/23810444",
     "imageURL" : "https://ssl.cdn-redfin.com/photo/81/mbpaddedwide/138/genMid.8248138_0.jpg"
   },
+  "1939" : {     
+    "Street" : "Variations Drive",
+    "URL" : "https://www.redfin.com/GA/Atlanta/1939-Variations-Dr-NE-30329/home/23725779",
+    "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1939.jpg?alt=media&token=c9ef1b63-1712-4154-aab0-e3c2c4d1fa3a"
+  }, 
   "1941" : {   
     "SaleDate" : 20181109,
     "SalePrice" : 226000,
@@ -135,6 +140,11 @@
     "URL": "https://www.redfin.com/GA/Atlanta/1990-Variations-Dr-NE-30329/home/23728846?utm_source=myredfin&utm_medium=email&utm_campaign=instant24_listings_update&utm_content=refresh_with_promo&riftinfo=ZXY9ZW1haWwmbD04NDQ2MzUyJnA9bGlzdGluZ191cGRhdGVzX2luc3RhbnRfMjQmdHM9MTUwNDY5MzcyNzA4MiZhPWNsaWNrJnM9c2F2ZWRfc2VhcmNoJnQ9YWRkcmVzcyZlbWFpbF9pZD04NDQ2MzUyXzE1MDQ2OTI0NTVfMyZ1cGRhdGVfdHlwZT03JnNhdmVkX3NlYXJjaF9pZD0xMjg1MDYyNSZsaXN0aW5nX2lkPTc0MDY2NDI5JnBvc2l0aW9uX251bWJlcj0y",    
     "imageURL" : "https://ssl.cdn-redfin.com/photo/82/bigphoto/023/5898023_1.jpg"
   },  
+  "1992" : {     
+    "Street" : "Variations Drive",
+    "URL" : "https://www.redfin.com/GA/Atlanta/1992-Variations-Dr-NE-30329/home/23890898",
+    "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1992.jpg?alt=media&token=af06b810-426e-409b-83e7-302c0f0bdca2"
+  }, 
   "1998" : {   
     "SaleDate": 20180716,
     "SalePrice": 239500,
