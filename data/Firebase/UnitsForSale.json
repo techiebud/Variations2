@@ -92,6 +92,11 @@
     "URL" : "https://www.redfin.com/GA/Atlanta/1961-Variations-Dr-NE-30329/home/23725761",
     "imageURL" : "https://ssl.cdn-redfin.com/photo/81/mbpaddedwide/981/genMid.8085981_0.jpg"
   },
+  "1963" : {
+    "Street" : "Variations Drive",
+    "URL" : "https://www.redfin.com/GA/Atlanta/1963-Variations-Dr-NE-30329/unit-1963/home/142999117",
+    "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1963.jpg?alt=media&token=677e43c8-14e2-4591-a655-44d535107bb8"
+  },
   "1964" : {
     "SaleDate": 20170824,
     "SalePrice": 184000,
