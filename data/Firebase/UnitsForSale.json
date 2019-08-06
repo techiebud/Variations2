@@ -1,4 +1,9 @@
 {
+  "1901" : {                    
+    "Street" : "Variations Drive",
+    "URL" : "https://www.redfin.com/GA/Atlanta/1901-Variations-Dr-NE-30329/home/23725778",
+    "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1901.jpg?alt=media&token=99923e0f-f8c9-415f-b70e-a82de3bbd292"
+  },
   "1903" : {
     "SaleDate" : 20170510,
     "SalePrice" : 155000,
@@ -30,6 +35,14 @@
     "Street" : "Variations Drive",
     "URL" : "https://www.redfin.com/GA/Atlanta/1919-Variations-Dr-NE-30329/unit-1919/home/108420484?utm_source=myredfin&utm_medium=email&utm_campaign=instant_listings_update&riftinfo=ZXY9ZW1haWwmbD04NDQ2MzUyJnA9bGlzdGluZ191cGRhdGVzX2luc3RhbnRfMTUmdHM9MTQ2OTA0MTY2NjY0NCZhPWNsaWNrJnM9c2F2ZWRfc2VhcmNoJnQ9YWRkcmVzcyZlbWFpbF9pZD04NDQ2MzUyXzE0NjkwNDE2NjZfMiZ1cGRhdGVfdHlwZT0xJnNhdmVkX3NlYXJjaF9pZD0xMjg1MDYyNSZsaXN0aW5nX2lkPTYwNzUwMjAzJnBvc2l0aW9uX251bWJlcj0w",
     "imageURL" : "https://ssl.cdn-redfin.com/photo/82/bigphoto/319/5723319_0.jpg"
+  },
+  "1925" : {
+    "SaleDate" : 20190730,
+    "SalePrice" : 175000,
+    "Status" : "Sold",
+    "Street" : "Variations Drive",
+    "URL": "https://techiebud.me/2YDKMmL",
+    "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1925.jpg?alt=media&token=62267f53-da22-4407-94dd-64b7babc3c61"
   },
   "1929" : {
     "SaleDate" : 20160722,
