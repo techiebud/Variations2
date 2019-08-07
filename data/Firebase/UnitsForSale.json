@@ -77,6 +77,9 @@
     "imageURL" : "https://ssl.cdn-redfin.com/photo/81/mbpaddedwide/138/genMid.8248138_0.jpg"
   },
   "1939" : {     
+    "SaleDate" : 20190802,
+    "SalePrice" : 265000,
+    "Status": "Sold",
     "Street" : "Variations Drive",
     "URL" : "https://www.redfin.com/GA/Atlanta/1939-Variations-Dr-NE-30329/home/23725779",
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1939.jpg?alt=media&token=c9ef1b63-1712-4154-aab0-e3c2c4d1fa3a"
