@@ -1,9 +1,4 @@
-{
-  "1901" : {                    
-    "Street" : "Variations Drive",
-    "URL" : "https://www.redfin.com/GA/Atlanta/1901-Variations-Dr-NE-30329/home/23725778",
-    "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1901.jpg?alt=media&token=99923e0f-f8c9-415f-b70e-a82de3bbd292"
-  },
+{ 
   "1903" : {
     "SaleDate" : 20170510,
     "SalePrice" : 155000,
