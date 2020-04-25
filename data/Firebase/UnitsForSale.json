@@ -175,6 +175,14 @@
     "URL": "https://www.redfin.com/GA/Atlanta/1998-Variations-Dr-NE-30329/home/23726324?utm_source=myredfin&utm_medium=email&utm_campaign=instant24_listings_update&utm_content=refresh_with_promo&riftinfo=ZXY9ZW1haWwmbD04NDQ2MzUyJnA9bGlzdGluZ191cGRhdGVzX2luc3RhbnRfMjQmdHM9MTUyODg4ODcwNjQzNSZhPWNsaWNrJnM9c2F2ZWRfc2VhcmNoJnQ9dmlld19kZXRhaWxzJmVtYWlsX2lkPTg0NDYzNTJfMTUyODg4NDc0N18zJnVwZGF0ZV90eXBlPTUmc2F2ZWRfc2VhcmNoX2lkPTEyODUwNjI1Jmxpc3RpbmdfaWQ9ODUzNTMwNDAmcHJvcGVydHlfaWQ9MjM3MjYzMjQmcG9zaXRpb25fbnVtYmVyPTA=",    
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F1998.jpg?alt=media&token=5a462a54-f861-475c-b3a4-94943dcd36a3"
   },  
+  "2005" : {
+    "SaleDate" : 20200421,
+    "SalePrice" : 235000,
+    "Status" : "Sold",
+    "Street" : "Variations Drive",
+    "URL" : "https://www.redfin.com/GA/Atlanta/2005-Variations-Dr-NE-30329/home/23725650",
+    "imageURL" : "https://ssl.cdn-redfin.com/photo/82/bigphoto/411/6686411_2_4.jpg"
+  },
   "2010" : {
     "SaleDate" : 20160628,
     "SalePrice" : 159500,
@@ -240,11 +248,11 @@
     "imageURL" : "https://ssl.cdn-redfin.com/photo/82/mbpaddedwide/209/genMid.5636209_0.jpg"
   },
   "2077" : {  
-    "SaleDate" : 20180907,
-    "SalePrice" : 225000,
+    "SaleDate" : 20200228,
+    "SalePrice" : 259000,
     "Status" : "Sold",
     "Street" : "Clairmeade Valley Road",
-    "URL" : "https://www.zillow.com/homedetails/2077-Clairmeade-Valley-Rd-NE-Atlanta-GA-30329/14557634_zpid/",
+    "URL" : "https://www.redfin.com/GA/Atlanta/2077-Clairmeade-Valley-Rd-NE-30329/home/23707342",
     "imageURL" : "https://firebasestorage.googleapis.com/v0/b/project-5333406827865431386.appspot.com/o/images%2FForSale%2F2077.jpg?alt=media&token=8075e713-2347-4755-a58c-892fa537d36f"
   },
   "2106" : {
