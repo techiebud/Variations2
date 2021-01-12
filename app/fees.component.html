@@ -2,15 +2,14 @@
 
     <div class="jumbotron">
         <h1><span><i class="fa fa-usd" aria-hidden="true"></i></span> Fees </h1>
-        <p>Current HOA Fee: <strong>$375 / monthly</strong></p>
-        <p>Current Cash Reserves: <strong>{{reserveBalance | currency:'USD':true:'1.2-2'}}</strong><sup>1</sup> (as of {{reserveBalanceAsOf}})</p>
-          <div *ngIf="isAuth()" class="well row col-md12">Homeowners can pay HOA Dues through <a href="https://www.bbt.com/business/cash-management/association-services/homeowner-payments-through-association-services.page"
-            target="_blank">BB&T Association Services</a></div>
+        <p>Current HOA Fee: <strong>$400 / monthly</strong></p>
+        <p>Current Cash Reserves: <strong>{{reserveBalance | currency:'USD':true:'1.2-2'}}</strong><sup *ngIf="reserveNote">1</sup> (as of {{reserveBalanceAsOf}})</p>
+        <div *ngIf="isAuth()" class="well row col-md12">Contact <a href="https://byr.cincwebaxis.com/variations/home" target="_blank">Tolley Management</a> to learn about HOA payment options</div>
     </div>
 
   
 
-    <div class="row col-md-12">
+    <div class="row col-md-12" *ngIf="reserveNote">
 
         <div class="panel panel-primary">
 
