@@ -7,7 +7,7 @@
     "firebase-functions": "^2.1.0",
     "moment": "^2.19.1",
     "request-ip": "^2.0.2",
-    "ua-parser-js": "^0.7.17",
+    "ua-parser-js": "^0.7.24",
     "web-push": "^3.2.2"
   },
   "private": true,
